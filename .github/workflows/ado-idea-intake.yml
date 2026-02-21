@@ -52,13 +52,11 @@ jobs:
             $a = Get-Content $path | ConvertFrom-Json
             $done  = @($a.user_stories | Where-Object state -eq 'Done').Count
             $total = $a.user_stories.Count
-            $out = @"
-          **Epic:** $($a.epic.title)
-          **Maturity:** $($a.project_maturity)
-          **Features:** $($a.features.Count)
-          **Stories:** $total ($done Done / $($total - $done) New)
-          **Artifact:** \`docs/ADO/ado-artifacts.json\`
-          "@
+            $out = "**Epic:** $($a.epic.title)`n" +
+                   "**Maturity:** $($a.project_maturity)`n" +
+                   "**Features:** $($a.features.Count)`n" +
+                   "**Stories:** $total ($done Done / $($total - $done) New)`n" +
+                   "**Artifact:** ``docs/ADO/ado-artifacts.json``"
             echo "SUMMARY<<EOF" >> $env:GITHUB_OUTPUT
             echo $out >> $env:GITHUB_OUTPUT
             echo "EOF" >> $env:GITHUB_OUTPUT
