@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-02-21T22:43:51",
+  "generated_at": "2026-02-21T22:46:06",
   "generated_by": "ado-generate-artifacts.ps1 (skill 07-ado-idea-intake)",
   "ado_org": "https://dev.azure.com/marcopresta",
   "ado_project": "eva-poc",
@@ -16,195 +16,195 @@
   },
   "features": [
     {
+      "parent": "epic",
       "id_hint": "feature-1-secrets-infrastructure",
-      "tags": "threesystem-wiring-production-de;feature-1-secrets-infrastructure",
-      "title": "Feature 1 — Secrets & Infrastructure Prep",
+      "type": "Feature",
       "description": "Pre-condition for all workflows. Secrets must be on the repos before any workflow",
-      "type": "Feature",
-      "parent": "epic"
+      "title": "Feature 1 — Secrets & Infrastructure Prep",
+      "tags": "threesystem-wiring-production-de;feature-1-secrets-infrastructure"
     },
     {
+      "parent": "epic",
       "id_hint": "feature-2-adowebhookbridge-deplo",
-      "tags": "threesystem-wiring-production-de;feature-2-adowebhookbridge-deplo",
-      "title": "Feature 2 — ado-webhook-bridge Deployment",
+      "type": "Feature",
       "description": "Deploys the Azure Function that closes the ADO → GitHub direction of the wiring.",
-      "type": "Feature",
-      "parent": "epic"
+      "title": "Feature 2 — ado-webhook-bridge Deployment",
+      "tags": "threesystem-wiring-production-de;feature-2-adowebhookbridge-deplo"
     },
     {
+      "parent": "epic",
       "id_hint": "feature-3-github-workflow-rollou",
-      "tags": "threesystem-wiring-production-de;feature-3-github-workflow-rollou",
-      "title": "Feature 3 — GitHub Workflow Rollout",
-      "description": "Copies the four ready-to-deploy workflows to all project repos and verifies end-to-end.",
       "type": "Feature",
-      "parent": "epic"
+      "description": "Copies the four ready-to-deploy workflows to all project repos and verifies end-to-end.",
+      "title": "Feature 3 — GitHub Workflow Rollout",
+      "tags": "threesystem-wiring-production-de;feature-3-github-workflow-rollou"
     },
     {
+      "parent": "epic",
       "id_hint": "feature-4-ado-dispatch-pipeline-",
-      "tags": "threesystem-wiring-production-de;feature-4-ado-dispatch-pipeline-",
-      "title": "Feature 4 — ADO Dispatch Pipeline Scaffold",
-      "description": "Creates the ADO Pipeline YAML that will trigger `sprint-execute.yml` via",
       "type": "Feature",
-      "parent": "epic"
+      "description": "Creates the ADO Pipeline YAML that will trigger `sprint-execute.yml` via",
+      "title": "Feature 4 — ADO Dispatch Pipeline Scaffold",
+      "tags": "threesystem-wiring-production-de;feature-4-ado-dispatch-pipeline-"
     }
   ],
   "user_stories": [
     {
       "type": "Product Backlog Item",
-      "parent": "feature-1-secrets-infrastructure",
+      "evidence": {
+        "coverage_pct": null,
+        "notes": "",
+        "test_count": null
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-0] Story 1.1 — Fix WI description to include github_repo during import",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-0",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-0",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-0] Story 1.1 — Fix WI description to include github_repo during import",
+      "state": "New",
+      "parent": "feature-1-secrets-infrastructure"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-1-secrets-infrastructure",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-1] Story 1.2 — Set required secrets on all 30 eva-foundry repos",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-1",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-1",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-1] Story 1.2 — Set required secrets on all 30 eva-foundry repos",
+      "state": "New",
+      "parent": "feature-1-secrets-infrastructure"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-1-secrets-infrastructure",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-2] Story 1.3 — Create SPRINT_HEARTBEAT variable on sprint-eligible repos",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-2",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-2",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-2] Story 1.3 — Create SPRINT_HEARTBEAT variable on sprint-eligible repos",
+      "state": "New",
+      "parent": "feature-1-secrets-infrastructure"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-2-adowebhookbridge-deplo",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-3] Story 2.1 — Deploy ado-webhook-bridge to EsDAICoE-Sandbox",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-3",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-3",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-3] Story 2.1 — Deploy ado-webhook-bridge to EsDAICoE-Sandbox",
+      "state": "New",
+      "parent": "feature-2-adowebhookbridge-deplo"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-2-adowebhookbridge-deplo",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-4] Story 2.2 — Register ADO Service Hook",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-4",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-4",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-4] Story 2.2 — Register ADO Service Hook",
+      "state": "New",
+      "parent": "feature-2-adowebhookbridge-deplo"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-2-adowebhookbridge-deplo",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-5] Story 2.3 — Smoke test webhook loop",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-5",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-5",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-5] Story 2.3 — Smoke test webhook loop",
+      "state": "New",
+      "parent": "feature-2-adowebhookbridge-deplo"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-3-github-workflow-rollou",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-6] Story 3.1 — Copy ado-pr-bridge.yml and ado-idea-intake.yml to all repos",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-6",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-6",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-6] Story 3.1 — Copy ado-pr-bridge.yml and ado-idea-intake.yml to all repos",
+      "state": "New",
+      "parent": "feature-3-github-workflow-rollou"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-3-github-workflow-rollou",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-7] Story 3.2 — Copy watchdog-poll.yml and morning-summary.yml to active sprint repos",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-7",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-7",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "title": "[THRE-WI-7] Story 3.2 — Copy watchdog-poll.yml and morning-summary.yml to active sprint repos",
+      "state": "New",
+      "parent": "feature-3-github-workflow-rollou"
+    },
+    {
+      "type": "Product Backlog Item",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
-    },
-    {
-      "type": "Product Backlog Item",
-      "parent": "feature-3-github-workflow-rollou",
+      },
       "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-8] Story 3.3 — End-to-end smoke test",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
       "id_hint": "THRE-WI-8",
-      "state": "New",
       "tags": "threesystem-wiring-production-de;THRE-WI-8",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
-      "evidence": {
-        "coverage_pct": null,
-        "notes": "",
-        "test_count": null
-      }
+      "title": "[THRE-WI-8] Story 3.3 — End-to-end smoke test",
+      "state": "New",
+      "parent": "feature-3-github-workflow-rollou"
     },
     {
       "type": "Product Backlog Item",
-      "parent": "feature-4-ado-dispatch-pipeline-",
-      "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
-      "title": "[THRE-WI-9] Story 4.1 — Create ADO Pipeline dispatch YAML",
-      "id_hint": "THRE-WI-9",
-      "state": "New",
-      "tags": "threesystem-wiring-production-de;THRE-WI-9",
-      "iteration_path": "eva-poc\\Sprint-Backlog",
       "evidence": {
         "coverage_pct": null,
         "notes": "",
         "test_count": null
-      }
+      },
+      "acceptance_criteria": "TBD — add to docs/ADO/idea/ACCEPTANCE.md",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "id_hint": "THRE-WI-9",
+      "tags": "threesystem-wiring-production-de;THRE-WI-9",
+      "title": "[THRE-WI-9] Story 4.1 — Create ADO Pipeline dispatch YAML",
+      "state": "New",
+      "parent": "feature-4-ado-dispatch-pipeline-"
     }
   ],
   "sprints_needed": [
     {
+      "start_date": null,
       "finish_date": null,
-      "name": "Sprint-Backlog",
-      "start_date": null
+      "name": "Sprint-Backlog"
     }
   ]
 }
