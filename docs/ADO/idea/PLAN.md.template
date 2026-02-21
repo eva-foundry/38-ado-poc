@@ -1,0 +1,71 @@
+# Plan — <Feature or Initiative Title>
+
+<!-- Copy this file to docs/ADO/idea/PLAN.md and fill in all sections.
+     Each H2 = one ADO Feature. Each H3 = one User Story (Product Backlog Item).
+     Bullet points under H3 = Tasks (child work items). -->
+
+---
+
+## Feature 1 — <Feature Name>
+
+<!-- One or two sentences describing this feature. -->
+
+### Story 1.1 — <Story Title>
+
+**ID hint:** `<SLUG-WI-0>` (e.g., `APIM-WI-0`)
+
+**Sprint assignment:** Sprint-Backlog _(or specific sprint name)_
+
+**Tasks:**
+- [ ] Task A
+- [ ] Task B
+- [ ] Task C
+
+---
+
+### Story 1.2 — <Story Title>
+
+**ID hint:** `<SLUG-WI-1>`
+
+**Sprint assignment:** Sprint-Backlog
+
+**Tasks:**
+- [ ] Task A
+- [ ] Task B
+
+---
+
+## Feature 2 — <Feature Name>
+
+<!-- Description -->
+
+### Story 2.1 — <Story Title>
+
+**ID hint:** `<SLUG-WI-2>`
+
+**Sprint assignment:** Sprint-Backlog
+
+**Tasks:**
+- [ ] Task A
+
+---
+
+## Sprint Breakdown
+
+<!-- Optional table mapping stories to sprints. -->
+
+| Sprint | Stories |
+|--------|---------|
+| Sprint-Backlog | All of the above (initial intake) |
+| Sprint-N | Refine after discovery |
+
+---
+
+## Dependencies
+
+<!-- List blocking dependencies — reference by folder name or WI ID. -->
+
+| Dependency | Type | Needed by |
+|------------|------|-----------|
+| `33-eva-brain-v2` WI-7 | Deployment | Story 1.1 |
+| APIM import | Infrastructure | Story 2.1 |

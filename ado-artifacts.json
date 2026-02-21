@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-02-21T00:00:00",
+  "ado_org": "https://dev.azure.com/marcopresta",
+  "ado_project": "eva-poc",
+  "github_repo": "eva-foundry/38-ado-poc",
+  "project_maturity": "active",
+
+  "epic": {
+    "skip_if_id_exists": null,
+    "type": "Epic",
+    "title": "ADO Command Center",
+    "description": "Control plane for scrum execution across the EVA Platform. Reads ADO board, identifies active work items, dispatches project-specific copilot-agent runners. ADO is the system of record for work. GitHub is the system of record for code. Azure is the runtime. Copilot Cloud Agent is the developer acceleration layer.",
+    "tags": "ado-command-center;38",
+    "area_path": "eva-poc"
+  },
+
+  "features": [
+    {
+      "id_hint": "ado-infrastructure",
+      "type": "Feature",
+      "title": "ADO Infrastructure & Scripts",
+      "description": "ADO project setup, iteration management, work item hierarchy creation and closing scripts. ado-setup.ps1, ado-bootstrap-pull.ps1, ado-close-wi.ps1, ado-create-bug.ps1.",
+      "tags": "ado-command-center;ado-infrastructure",
+      "parent": "epic"
+    },
+    {
+      "id_hint": "ado-github-bridge",
+      "type": "Feature",
+      "title": "GitHub-ADO Async Bridge",
+      "description": "ADO Pipeline fires workflow_dispatch to GitHub. GitHub Actions runs DPDCA. Three-event model: sprint start, WI heartbeats, sprint complete. Observability: 6-layer monitoring stack.",
+      "tags": "ado-command-center;ado-github-bridge",
+      "parent": "epic"
+    },
+    {
+      "id_hint": "ado-project-onboarding",
+      "type": "Feature",
+      "title": "Project Onboarding Workflow",
+      "description": "cross-06-ado-project-onboard skill. Scans eva-foundation numbered project folders, classifies maturity, produces ado-artifacts.json + ado-import.ps1 for each project.",
+      "tags": "ado-command-center;ado-project-onboarding",
+      "parent": "epic"
+    },
+    {
+      "id_hint": "ado-idea-intake",
+      "type": "Feature",
+      "title": "ADO Idea Intake Pipeline",
+      "description": "Self-service work item creation from repo docs. Developer drops README/PLAN/ACCEPTANCE into docs/ADO/idea/. Skill 07 reads the files, generates ado-artifacts.json, GitHub Action imports to ADO. PR bridge (ado-pr-bridge.yml) keeps WI state in sync with PR lifecycle. ADO webhook bridge Azure Function propagates ADO events back to GitHub. Three-system model fully wired.",
+      "tags": "ado-command-center;ado-idea-intake",
+      "parent": "epic"
+    }
+  ],
+
+  "user_stories": [
+    {
+      "id_hint": "ado-wi-0",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts",
+      "acceptance_criteria": "Org eva-poc created with Scrum process. Epic id=4, Feature id=5 (Brain), id=6 (Faces). Sprint-0 through Sprint-6 created and team-assigned. All 4 PowerShell scripts operational. PAT never stored.",
+      "tags": "ado-command-center;ado-wi-0",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "Done",
+      "parent": "ado-infrastructure",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Completed 2026-02-20. Verified via PowerShell REST query." }
+    },
+    {
+      "id_hint": "ado-wi-1",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App",
+      "acceptance_criteria": "GitHub App connection exists in ADO Project Settings > GitHub connections. eva-foundry org linked. At minimum 14-az-finops + 1 repo verified as linked.",
+      "tags": "ado-command-center;ado-wi-1",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "Done",
+      "parent": "ado-infrastructure",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Completed 2026-02-21. GitHub App connection live." }
+    },
+    {
+      "id_hint": "ado-wi-2",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete",
+      "acceptance_criteria": "ado-artifacts.json exists in all 18 numbered project folders. ado-onboard-all.ps1 shows all 18 as imported. Board reflects correct maturity, sprints, and WI hierarchy per project.",
+      "tags": "ado-command-center;ado-wi-2",
+      "iteration_path": "eva-poc\\Sprint-6",
+      "state": "New",
+      "parent": "ado-project-onboarding",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "ACTIVE. Artifacts generated 2026-02-21. Pending review + import execution." }
+    },
+    {
+      "id_hint": "ado-wi-3",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml",
+      "acceptance_criteria": "sprint-execute.yml fires on workflow_dispatch from ADO Pipeline. WI heartbeat variable SPRINT_HEARTBEAT updated every 10 min. Watchdog fires ADO WARNING at 25 min stall. Morning summary posts at 07:00 ET.",
+      "tags": "ado-command-center;ado-wi-3",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "ado-github-bridge",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Templates created in .github/workflows/. Ready to copy to project repos." }
+    },
+    {
+      "id_hint": "ado-wi-4",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml",
+      "acceptance_criteria": "Skill 07-ado-idea-intake.skill.md exists in 29-foundry. README/PLAN/ACCEPTANCE.md.template created. ado-generate-artifacts.ps1 parses three files and writes valid ado-artifacts.json. ado-idea-intake.yml triggers on docs/ADO/idea/ push, commits artifact, posts PR comment.",
+      "tags": "ado-command-center;ado-wi-4",
+      "iteration_path": "eva-poc\\Sprint-6",
+      "state": "Done",
+      "parent": "ado-idea-intake",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Completed 2026-02-21. All files created this session." }
+    },
+    {
+      "id_hint": "ado-wi-5",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function",
+      "acceptance_criteria": "ado-pr-bridge.yml: PR open→Approved, review→Committed, merge→Done with evidence comment. ado-webhook-bridge Function deployed. ADO webhook subscription created for workitem.updated events. CI failure comment posted to ADO WI. Integration smoke test: open a PR with [WI-ID:N], verify state transitions in ADO.",
+      "tags": "ado-command-center;ado-wi-5",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "ado-idea-intake",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Files created 2026-02-21. Needs: GITHUB_TOKEN secret, ADO_PAT secret, Azure Function deployment, ADO webhook registration." }
+    }
+  ],
+
+  "sprints_needed": [
+    { "name": "Sprint-6", "start_date": "2026-02-20", "finish_date": "2026-02-28" },
+    { "name": "Sprint-Backlog", "start_date": null, "finish_date": null }
+  ]
+}

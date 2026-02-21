@@ -1,0 +1,775 @@
+**********************
+PowerShell transcript start
+Start time: 20260221105444
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 16444
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1054-ado-import-33-eva-brain-v2-live.log
+
+=== ADO Import: EVA Brain v2 ===
+Project maturity : active
+GitHub repo      : eva-foundry/33-eva-brain-v2
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-0
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-0 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-0 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-1
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-2
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-3
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-4
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-4 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-4 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-5
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-5 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-5 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-6
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=26 — 'EVA Brain v2'
+Feature: existing id=71 — 'Core API Restoration'
+Feature: existing id=72 — 'Test Quality & Coverage'
+Feature: existing id=73 — 'API Surface — Routes & Endpoints'
+Feature: existing id=74 — 'Sandbox Deployment & APIM'
+PBI: existing id=8 — '[WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes'
+PS>TerminatingError(): "The property 'Count' cannot be found on this object. Verify that the property exists."
+>> TerminatingError(): "The property 'Count' cannot be found on this object. Verify that the property exists."
+>> TerminatingError(): "The property 'Count' cannot be found on this object. Verify that the property exists."
+ERROR in 33-eva-brain-v2: The property 'Count' cannot be found on this object. Verify that the property exists.
+
+>>> 34-eva-agents
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1054-ado-import-34-eva-agents-live.log
+
+=== ADO Import: EVA Agents ===
+Project maturity : idea
+GitHub repo      : eva-foundry/34-eva-agents
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=27 — 'EVA Agents'
+Feature: existing id=75 — 'Agents Scope & Architecture Decision'
+PBI: existing id=76 — '[AGENTS-WI-0] Architecture decision — agent types, repos, Foundry deployment pattern'
+
+=== Import Summary: EVA Agents ===
+Epic id  : 27
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 35-agentic-code-fixing
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1054-ado-import-35-agentic-code-fixing-live.log
+
+=== ADO Import: Agentic Code Fixing ===
+Project maturity : poc
+GitHub repo      : eva-foundry/35-agentic-code-fixing
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=28 — 'Agentic Code Fixing'
+Feature: existing id=77 — 'Local Agent — BYOK + Foundry Local'
+Feature: existing id=78 — 'Web Dashboard & CLI'
+Feature: existing id=79 — 'EVA Platform Integration'
+PBI: existing id=80 — '[ACF-WI-0] PoC complete — local agent, 4-phase workflow, demo repo with intentional bugs'
+PBI: creating '[ACF-WI-1] Integrate with EVA repos — Copilot Cloud Agent creates PRs through pipeline'
+  -> PBI id=113
+
+=== Import Summary: Agentic Code Fixing ===
+Epic id  : 28
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 36-red-teaming
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1054-ado-import-36-red-teaming-live.log
+
+=== ADO Import: Red Teaming & Evaluation Framework ===
+Project maturity : active
+GitHub repo      : eva-foundry/36-red-teaming
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=29 — 'Red Teaming & Evaluation Framework'
+Feature: existing id=81 — 'Promptfoo Harness & HTTP Provider'
+Feature: existing id=82 — 'MITRE ATLAS Test Suites'
+Feature: existing id=83 — 'CI/CD Gate & Evidence Pack'
+PBI: existing id=84 — '[RT-WI-0] MVP complete — Promptfoo harness, ATLAS suites, CI gate, evidence pack'
+PBI: creating '[RT-WI-1] Phase 2 — LLM judge evaluators, 7 additional ATLAS tactics'
+  -> PBI id=114
+
+=== Import Summary: Red Teaming & Evaluation Framework ===
+Epic id  : 29
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 37-data-model
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1054-ado-import-37-data-model-live.log
+
+=== ADO Import: EVA Data Model ===
+Project maturity : complete
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=30 — 'EVA Data Model'
+Feature: existing id=85 — 'Core Model Layers (1–6)'
+Feature: existing id=86 — 'Extended Model Layers (7–11)'
+Feature: existing id=87 — 'Model Tooling — Validation & Assembly'
+PBI: existing id=88 — '[DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags'
+PBI: creating '[DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure'
+  -> PBI id=115
+PBI: creating '[DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1'
+  -> PBI id=116
+PBI: creating '[DM-WI-3] ADO-Data Model bidirectional tagging'
+  -> PBI id=117
+
+=== Import Summary: EVA Data Model ===
+Epic id  : 30
+Features : 3
+PBIs     : 4
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 38-ado-poc
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1054-ado-import-38-ado-poc-live.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-6
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=31 — 'ADO Command Center'
+Feature: existing id=89 — 'ADO Infrastructure & Scripts'
+Feature: existing id=90 — 'GitHub-ADO Async Bridge'
+Feature: existing id=91 — 'Project Onboarding Workflow'
+Feature: existing id=92 — 'ADO Idea Intake Pipeline'
+PBI: existing id=93 — '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+PBI: creating '[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App'
+  -> PBI id=118
+PBI: creating '[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete'
+  -> PBI id=119
+PBI: creating '[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml'
+  -> PBI id=120
+PBI: creating '[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml'
+  -> PBI id=121
+PBI: creating '[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function'
+  -> PBI id=122
+
+=== Import Summary: ADO Command Center ===
+Epic id  : 31
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 39-ado-dashboard
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1055-ado-import-39-ado-dashboard-live.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=32 — 'EVA ADO Dashboard'
+Feature: existing id=94 — 'Reference Components & Type Contract'
+Feature: existing id=95 — 'APIM Data Route (/v1/scrum/dashboard)'
+PBI: existing id=96 — '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+PBI: existing id=97 — '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+PBI: existing id=98 — '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : 32
+Features : 2
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Batch import complete.
+**********************
+PowerShell transcript end
+End time: 20260221105504
+**********************

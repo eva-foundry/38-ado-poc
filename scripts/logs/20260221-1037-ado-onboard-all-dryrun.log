@@ -1,0 +1,1504 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103725
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-onboard-all-dryrun.log
+
+EVA ADO Onboard — Project Registry Review
+Foundation : C:\AICOE\eva-foundation
+Date       : 2026-02-21 10:37 ET
+
+
+Projects ready to import (18 of 18):
+  14-az-finops
+  15-cdc
+  16-engineered-case-law
+  17-apim
+  18-azure-best
+  19-ai-gov
+  20-AssistMe
+  24-eva-brain
+  29-foundry
+  30-ui-bench
+  31-eva-faces
+  33-eva-brain-v2
+  34-eva-agents
+  35-agentic-code-fixing
+  36-red-teaming
+  37-data-model
+  38-ado-poc
+  39-ado-dashboard
+
+To import a single project:
+  $env:ADO_PAT = "<pat>"
+  cd C:\AICOE\eva-foundation\<NN-project>
+  .\ado-import.ps1 -DryRun   # preview first
+  .\ado-import.ps1
+
+To dry-run ALL ready projects (no ADO writes):
+  .\ado-onboard-all.ps1 -RunImport -DryRun
+
+To import ALL ready projects (REVIEW ARTIFACTS FIRST):
+  $env:ADO_PAT = "<pat>"
+  .\ado-onboard-all.ps1 -RunImport
+
+Running batch import (DRY-RUN)...
+
+>>> 14-az-finops
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-14-az-finops-dryrun.log
+
+=== ADO Import: AZ FinOps Pipeline ===
+Project maturity : empty
+GitHub repo      : eva-foundry/14-az-finops
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AZ FinOps Pipeline
+Feature: creating 'Azure Cost Management Export'
+  [DRY-RUN] Would create Feature : Azure Cost Management Export
+  -> Feature id=-1
+Feature: creating 'FinOps Power BI Dashboard'
+  [DRY-RUN] Would create Feature : FinOps Power BI Dashboard
+  -> Feature id=-1
+PBI: creating '[FINOPS-WI-0] Configure Azure Cost Management scheduled export'
+  [DRY-RUN] Would create Product Backlog Item : [FINOPS-WI-0] Configure Azure Cost Management scheduled export
+  -> PBI id=-1
+PBI: creating '[FINOPS-WI-1] Build Power BI dataset and FinOps reports'
+  [DRY-RUN] Would create Product Backlog Item : [FINOPS-WI-1] Build Power BI dataset and FinOps reports
+  -> PBI id=-1
+
+=== Import Summary: AZ FinOps Pipeline ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 15-cdc
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-15-cdc-dryrun.log
+
+=== ADO Import: CDC Integration (placeholder) ===
+Project maturity : empty
+GitHub repo      : eva-foundry/15-cdc
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: CDC Integration (placeholder)
+Feature: creating 'CDC Scope Definition'
+  [DRY-RUN] Would create Feature : CDC Scope Definition
+  -> Feature id=-1
+PBI: creating '[CDC-WI-0] Scope & technology decision for CDC integration'
+  [DRY-RUN] Would create Product Backlog Item : [CDC-WI-0] Scope & technology decision for CDC integration
+  -> PBI id=-1
+
+=== Import Summary: CDC Integration (placeholder) ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 16-engineered-case-law
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-16-engineered-case-law-dryrun.log
+
+=== ADO Import: Engineered Case Law Pipeline ===
+Project maturity : poc
+GitHub repo      : eva-foundry/16-engineered-case-law
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Engineered Case Law Pipeline
+Feature: creating 'Case Law Ingestion & Processing Pipeline'
+  [DRY-RUN] Would create Feature : Case Law Ingestion & Processing Pipeline
+  -> Feature id=-1
+Feature: creating 'Azure AI Search Integration'
+  [DRY-RUN] Would create Feature : Azure AI Search Integration
+  -> Feature id=-1
+PBI: creating '[ECL-WI-0] Pipeline executed — full_run.log, success_run.log, test_run.log evidence'
+  [DRY-RUN] Would create Product Backlog Item : [ECL-WI-0] Pipeline executed — full_run.log, success_run.log, test_run.log evidence
+  -> PBI id=-1
+PBI: creating '[ECL-WI-1] Case law indexed in Azure AI Search — APIM jurisprudence route smoke test'
+  [DRY-RUN] Would create Product Backlog Item : [ECL-WI-1] Case law indexed in Azure AI Search — APIM jurisprudence route smoke test
+  -> PBI id=-1
+
+=== Import Summary: Engineered Case Law Pipeline ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 17-apim
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-17-apim-dryrun.log
+
+=== ADO Import: APIM Gateway — IA Web API ===
+Project maturity : poc
+GitHub repo      : eva-foundry/17-apim
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: APIM Gateway — IA Web API
+Feature: creating 'IA Web API OpenAPI Spec v0.1.3'
+  [DRY-RUN] Would create Feature : IA Web API OpenAPI Spec v0.1.3
+  -> Feature id=-1
+Feature: creating 'Cosmos DB Container Definitions'
+  [DRY-RUN] Would create Feature : Cosmos DB Container Definitions
+  -> Feature id=-1
+Feature: creating 'Sandbox APIM Import & Cost Attribution'
+  [DRY-RUN] Would create Feature : Sandbox APIM Import & Cost Attribution
+  -> Feature id=-1
+PBI: creating '[APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined
+  -> PBI id=-1
+PBI: creating '[APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources
+  -> PBI id=-1
+PBI: creating '[APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live
+  -> PBI id=-1
+
+=== Import Summary: APIM Gateway — IA Web API ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 18-azure-best
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-18-azure-best-dryrun.log
+
+=== ADO Import: Azure Best Practices Reference Library ===
+Project maturity : active
+GitHub repo      : eva-foundry/18-azure-best
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Azure Best Practices Reference Library
+Feature: creating 'Infrastructure Reference Modules (01-06)'
+  [DRY-RUN] Would create Feature : Infrastructure Reference Modules (01-06)
+  -> Feature id=-1
+Feature: creating 'Platform Engineering Modules (07-10)'
+  [DRY-RUN] Would create Feature : Platform Engineering Modules (07-10)
+  -> Feature id=-1
+Feature: creating 'Consumption & Sourcing Protocol for EVA Projects'
+  [DRY-RUN] Would create Feature : Consumption & Sourcing Protocol for EVA Projects
+  -> Feature id=-1
+PBI: creating '[AB-WI-0] Infrastructure reference modules complete — 01 through 06 verified'
+  [DRY-RUN] Would create Product Backlog Item : [AB-WI-0] Infrastructure reference modules complete — 01 through 06 verified
+  -> PBI id=-1
+PBI: creating '[AB-WI-1] Platform engineering modules complete — 07 through 10 + APIM DevOps verified'
+  [DRY-RUN] Would create Product Backlog Item : [AB-WI-1] Platform engineering modules complete — 07 through 10 + APIM DevOps verified
+  -> PBI id=-1
+PBI: creating '[AB-WI-2] Sourcing protocol — all EVA projects reference 18-azure-best in their DEPENDENCIES.md'
+  [DRY-RUN] Would create Product Backlog Item : [AB-WI-2] Sourcing protocol — all EVA projects reference 18-azure-best in their DEPENDENCIES.md
+  -> PBI id=-1
+
+=== Import Summary: Azure Best Practices Reference Library ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 19-ai-gov
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-19-ai-gov-dryrun.log
+
+=== ADO Import: AI Governance Automation ===
+Project maturity : poc
+GitHub repo      : eva-foundry/19-ai-gov
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AI Governance Automation
+Feature: creating 'Governance Automation Schemas'
+  [DRY-RUN] Would create Feature : Governance Automation Schemas
+  -> Feature id=-1
+Feature: creating 'Policy-as-Code CI Gate'
+  [DRY-RUN] Would create Feature : Policy-as-Code CI Gate
+  -> Feature id=-1
+PBI: creating '[GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card
+  -> PBI id=-1
+PBI: creating '[GOV-WI-1] Policy-as-code CI gate — red-teaming evidence fed into ATO schema'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-1] Policy-as-code CI gate — red-teaming evidence fed into ATO schema
+  -> PBI id=-1
+
+=== Import Summary: AI Governance Automation ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 20-AssistMe
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-20-AssistMe-dryrun.log
+
+=== ADO Import: AssistMe Knowledge Management ===
+Project maturity : poc
+GitHub repo      : eva-foundry/20-AssistMe
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AssistMe Knowledge Management
+Feature: creating 'KMT Database Inventory'
+  [DRY-RUN] Would create Feature : KMT Database Inventory
+  -> Feature id=-1
+Feature: creating 'Bilingual Knowledge Articles (EN/FR r2r3)'
+  [DRY-RUN] Would create Feature : Bilingual Knowledge Articles (EN/FR r2r3)
+  -> Feature id=-1
+Feature: creating 'Knowledge Article Ingestion into EVA Pipeline'
+  [DRY-RUN] Would create Feature : Knowledge Article Ingestion into EVA Pipeline
+  -> Feature id=-1
+PBI: creating '[AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored
+  -> PBI id=-1
+PBI: creating '[AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search
+  -> PBI id=-1
+
+=== Import Summary: AssistMe Knowledge Management ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 24-eva-brain
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-24-eva-brain-dryrun.log
+
+=== ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Project maturity : retired
+GitHub repo      : eva-foundry/24-eva-brain
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2)
+Feature: creating 'Archive Reference — v1 Decomposition Artifacts'
+  [DRY-RUN] Would create Feature : Archive Reference — v1 Decomposition Artifacts
+  -> Feature id=-1
+PBI: creating '[BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2'
+  [DRY-RUN] Would create Product Backlog Item : [BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 29-foundry
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-29-foundry-dryrun.log
+
+=== ADO Import: EVA Foundry Hub ===
+Project maturity : active
+GitHub repo      : eva-foundry/29-foundry
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Foundry Hub
+Feature: creating 'Core Technical Skills Library'
+  [DRY-RUN] Would create Feature : Core Technical Skills Library
+  -> Feature id=-1
+Feature: creating 'DPDCA Session Workflow & Skill Versioning'
+  [DRY-RUN] Would create Feature : DPDCA Session Workflow & Skill Versioning
+  -> Feature id=-1
+Feature: creating 'Azure AI Foundry Hub Deployment'
+  [DRY-RUN] Would create Feature : Azure AI Foundry Hub Deployment
+  -> Feature id=-1
+PBI: creating '[FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection
+  -> PBI id=-1
+
+=== Import Summary: EVA Foundry Hub ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 30-ui-bench
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-30-ui-bench-dryrun.log
+
+=== ADO Import: EVA UI Testing Bench ===
+Project maturity : poc
+GitHub repo      : eva-foundry/30-ui-bench
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA UI Testing Bench
+Feature: creating 'Accessibility Testing Suite — jest-axe'
+  [DRY-RUN] Would create Feature : Accessibility Testing Suite — jest-axe
+  -> Feature id=-1
+Feature: creating 'Component Regression Suite — React Testing Library'
+  [DRY-RUN] Would create Feature : Component Regression Suite — React Testing Library
+  -> Feature id=-1
+PBI: creating '[UIB-WI-0] UI bench setup — jest, jest-axe, @testing-library/react configured'
+  [DRY-RUN] Would create Product Backlog Item : [UIB-WI-0] UI bench setup — jest, jest-axe, @testing-library/react configured
+  -> PBI id=-1
+PBI: creating '[UIB-WI-1] Accessibility baseline — all 31-eva-faces admin screens pass jest-axe (0 violations)'
+  [DRY-RUN] Would create Product Backlog Item : [UIB-WI-1] Accessibility baseline — all 31-eva-faces admin screens pass jest-axe (0 violations)
+  -> PBI id=-1
+
+=== Import Summary: EVA UI Testing Bench ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 31-eva-faces
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-31-eva-faces-dryrun.log
+
+=== ADO Import: EVA Faces ===
+Project maturity : active
+GitHub repo      : eva-foundry/31-eva-faces
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Faces
+Feature: creating 'Admin Face — 24+ Admin Screens'
+  [DRY-RUN] Would create Feature : Admin Face — 24+ Admin Screens
+  -> Feature id=-1
+Feature: creating 'EVA-JP Jurisprudence Pages'
+  [DRY-RUN] Would create Feature : EVA-JP Jurisprudence Pages
+  -> Feature id=-1
+Feature: creating 'ADO Dashboard Pages (FACES-WI-A/B/C)'
+  [DRY-RUN] Would create Feature : ADO Dashboard Pages (FACES-WI-A/B/C)
+  -> Feature id=-1
+Feature: creating 'Auth & RBAC Integration'
+  [DRY-RUN] Would create Feature : Auth & RBAC Integration
+  -> Feature id=-1
+PBI: creating '[FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService
+  -> PBI id=-1
+PBI: creating '[FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested
+  -> PBI id=-1
+PBI: creating '[FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories
+  -> PBI id=-1
+PBI: creating '[FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts
+  -> PBI id=-1
+PBI: creating '[FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages
+  -> PBI id=-1
+
+=== Import Summary: EVA Faces ===
+Epic id  : -1
+Features : 4
+PBIs     : 5
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 33-eva-brain-v2
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-33-eva-brain-v2-dryrun.log
+
+=== ADO Import: EVA Brain v2 ===
+Project maturity : active
+GitHub repo      : eva-foundry/33-eva-brain-v2
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-0
+  [DRY-RUN] Would ensure sprint: Sprint-0
+  Sprint: Sprint-1
+  [DRY-RUN] Would ensure sprint: Sprint-1
+  Sprint: Sprint-2
+  [DRY-RUN] Would ensure sprint: Sprint-2
+  Sprint: Sprint-3
+  [DRY-RUN] Would ensure sprint: Sprint-3
+  Sprint: Sprint-4
+  [DRY-RUN] Would ensure sprint: Sprint-4
+  Sprint: Sprint-5
+  [DRY-RUN] Would ensure sprint: Sprint-5
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v2
+Feature: creating 'Core API Restoration'
+  [DRY-RUN] Would create Feature : Core API Restoration
+  -> Feature id=-1
+Feature: creating 'Test Quality & Coverage'
+  [DRY-RUN] Would create Feature : Test Quality & Coverage
+  -> Feature id=-1
+Feature: creating 'API Surface — Routes & Endpoints'
+  [DRY-RUN] Would create Feature : API Surface — Routes & Endpoints
+  -> Feature id=-1
+Feature: creating 'Sandbox Deployment & APIM'
+  [DRY-RUN] Would create Feature : Sandbox Deployment & APIM
+  -> Feature id=-1
+PBI: creating '[WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes'
+  [DRY-RUN] Would create Product Backlog Item : [WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes
+  -> PBI id=-1
+PBI: creating '[WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat'
+  [DRY-RUN] Would create Product Backlog Item : [WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat
+  -> PBI id=-1
+PBI: creating '[WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)
+  -> PBI id=-1
+PBI: creating '[WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags'
+  [DRY-RUN] Would create Product Backlog Item : [WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags
+  -> PBI id=-1
+PBI: creating '[WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)
+  -> PBI id=-1
+PBI: creating '[WI-6] Apps registry API (G3) — 7 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-6] Apps registry API (G3) — 7 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing'
+  [DRY-RUN] Would create Product Backlog Item : [WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v2 ===
+Epic id  : -1
+Features : 4
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 34-eva-agents
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-34-eva-agents-dryrun.log
+
+=== ADO Import: EVA Agents ===
+Project maturity : idea
+GitHub repo      : eva-foundry/34-eva-agents
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Agents
+Feature: creating 'Agents Scope & Architecture Decision'
+  [DRY-RUN] Would create Feature : Agents Scope & Architecture Decision
+  -> Feature id=-1
+PBI: creating '[AGENTS-WI-0] Architecture decision — agent types, repos, Foundry deployment pattern'
+  [DRY-RUN] Would create Product Backlog Item : [AGENTS-WI-0] Architecture decision — agent types, repos, Foundry deployment pattern
+  -> PBI id=-1
+
+=== Import Summary: EVA Agents ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 35-agentic-code-fixing
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-35-agentic-code-fixing-dryrun.log
+
+=== ADO Import: Agentic Code Fixing ===
+Project maturity : poc
+GitHub repo      : eva-foundry/35-agentic-code-fixing
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Agentic Code Fixing
+Feature: creating 'Local Agent — BYOK + Foundry Local'
+  [DRY-RUN] Would create Feature : Local Agent — BYOK + Foundry Local
+  -> Feature id=-1
+Feature: creating 'Web Dashboard & CLI'
+  [DRY-RUN] Would create Feature : Web Dashboard & CLI
+  -> Feature id=-1
+Feature: creating 'EVA Platform Integration'
+  [DRY-RUN] Would create Feature : EVA Platform Integration
+  -> Feature id=-1
+PBI: creating '[ACF-WI-0] PoC complete — local agent, 4-phase workflow, demo repo with intentional bugs'
+  [DRY-RUN] Would create Product Backlog Item : [ACF-WI-0] PoC complete — local agent, 4-phase workflow, demo repo with intentional bugs
+  -> PBI id=-1
+PBI: creating '[ACF-WI-1] Integrate with EVA repos — Copilot Cloud Agent creates PRs through pipeline'
+  [DRY-RUN] Would create Product Backlog Item : [ACF-WI-1] Integrate with EVA repos — Copilot Cloud Agent creates PRs through pipeline
+  -> PBI id=-1
+
+=== Import Summary: Agentic Code Fixing ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 36-red-teaming
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-36-red-teaming-dryrun.log
+
+=== ADO Import: Red Teaming & Evaluation Framework ===
+Project maturity : active
+GitHub repo      : eva-foundry/36-red-teaming
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Red Teaming & Evaluation Framework
+Feature: creating 'Promptfoo Harness & HTTP Provider'
+  [DRY-RUN] Would create Feature : Promptfoo Harness & HTTP Provider
+  -> Feature id=-1
+Feature: creating 'MITRE ATLAS Test Suites'
+  [DRY-RUN] Would create Feature : MITRE ATLAS Test Suites
+  -> Feature id=-1
+Feature: creating 'CI/CD Gate & Evidence Pack'
+  [DRY-RUN] Would create Feature : CI/CD Gate & Evidence Pack
+  -> Feature id=-1
+PBI: creating '[RT-WI-0] MVP complete — Promptfoo harness, ATLAS suites, CI gate, evidence pack'
+  [DRY-RUN] Would create Product Backlog Item : [RT-WI-0] MVP complete — Promptfoo harness, ATLAS suites, CI gate, evidence pack
+  -> PBI id=-1
+PBI: creating '[RT-WI-1] Phase 2 — LLM judge evaluators, 7 additional ATLAS tactics'
+  [DRY-RUN] Would create Product Backlog Item : [RT-WI-1] Phase 2 — LLM judge evaluators, 7 additional ATLAS tactics
+  -> PBI id=-1
+
+=== Import Summary: Red Teaming & Evaluation Framework ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 37-data-model
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-37-data-model-dryrun.log
+
+=== ADO Import: EVA Data Model ===
+Project maturity : complete
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Data Model
+Feature: creating 'Core Model Layers (1–6)'
+  [DRY-RUN] Would create Feature : Core Model Layers (1–6)
+  -> Feature id=-1
+Feature: creating 'Extended Model Layers (7–11)'
+  [DRY-RUN] Would create Feature : Extended Model Layers (7–11)
+  -> Feature id=-1
+Feature: creating 'Model Tooling — Validation & Assembly'
+  [DRY-RUN] Would create Feature : Model Tooling — Validation & Assembly
+  -> Feature id=-1
+PBI: creating '[DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags
+  -> PBI id=-1
+PBI: creating '[DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure
+  -> PBI id=-1
+PBI: creating '[DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1
+  -> PBI id=-1
+PBI: creating '[DM-WI-3] ADO-Data Model bidirectional tagging'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-3] ADO-Data Model bidirectional tagging
+  -> PBI id=-1
+
+=== Import Summary: EVA Data Model ===
+Epic id  : -1
+Features : 3
+PBIs     : 4
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 38-ado-poc
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-38-ado-poc-dryrun.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: ADO Command Center
+Feature: creating 'ADO Infrastructure & Scripts'
+  [DRY-RUN] Would create Feature : ADO Infrastructure & Scripts
+  -> Feature id=-1
+Feature: creating 'GitHub-ADO Async Bridge'
+  [DRY-RUN] Would create Feature : GitHub-ADO Async Bridge
+  -> Feature id=-1
+Feature: creating 'Project Onboarding Workflow'
+  [DRY-RUN] Would create Feature : Project Onboarding Workflow
+  -> Feature id=-1
+Feature: creating 'ADO Idea Intake Pipeline'
+  [DRY-RUN] Would create Feature : ADO Idea Intake Pipeline
+  -> Feature id=-1
+PBI: creating '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts
+  -> PBI id=-1
+PBI: creating '[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App
+  -> PBI id=-1
+PBI: creating '[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete
+  -> PBI id=-1
+PBI: creating '[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function
+  -> PBI id=-1
+
+=== Import Summary: ADO Command Center ===
+Epic id  : -1
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 39-ado-dashboard
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-39-ado-dashboard-dryrun.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA ADO Dashboard
+Feature: creating 'Reference Components & Type Contract'
+  [DRY-RUN] Would create Feature : Reference Components & Type Contract
+  -> Feature id=-1
+Feature: creating 'APIM Data Route (/v1/scrum/dashboard)'
+  [DRY-RUN] Would create Feature : APIM Data Route (/v1/scrum/dashboard)
+  -> Feature id=-1
+PBI: creating '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache
+  -> PBI id=-1
+PBI: creating '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim
+  -> PBI id=-1
+PBI: creating '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge
+  -> PBI id=-1
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : -1
+Features : 2
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Batch import complete.
+**********************
+PowerShell transcript end
+End time: 20260221103728
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103731
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-onboard-all-dryrun.log
+
+EVA ADO Onboard — Project Registry Review
+Foundation : C:\AICOE\eva-foundation
+Date       : 2026-02-21 10:37 ET
+
+
+Projects ready to import (18 of 18):
+  14-az-finops
+  15-cdc
+  16-engineered-case-law
+  17-apim
+  18-azure-best
+  19-ai-gov
+  20-AssistMe
+  24-eva-brain
+  29-foundry
+  30-ui-bench
+  31-eva-faces
+  33-eva-brain-v2
+  34-eva-agents
+  35-agentic-code-fixing
+  36-red-teaming
+  37-data-model
+  38-ado-poc
+  39-ado-dashboard
+
+To import a single project:
+  $env:ADO_PAT = "<pat>"
+  cd C:\AICOE\eva-foundation\<NN-project>
+  .\ado-import.ps1 -DryRun   # preview first
+  .\ado-import.ps1
+
+To dry-run ALL ready projects (no ADO writes):
+  .\ado-onboard-all.ps1 -RunImport -DryRun
+
+To import ALL ready projects (REVIEW ARTIFACTS FIRST):
+  $env:ADO_PAT = "<pat>"
+  .\ado-onboard-all.ps1 -RunImport
+
+Running batch import (DRY-RUN)...
+
+>>> 14-az-finops
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-14-az-finops-dryrun.log
+
+=== ADO Import: AZ FinOps Pipeline ===
+Project maturity : empty
+GitHub repo      : eva-foundry/14-az-finops
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AZ FinOps Pipeline
+Feature: creating 'Azure Cost Management Export'
+  [DRY-RUN] Would create Feature : Azure Cost Management Export
+  -> Feature id=-1
+Feature: creating 'FinOps Power BI Dashboard'
+  [DRY-RUN] Would create Feature : FinOps Power BI Dashboard
+  -> Feature id=-1
+PBI: creating '[FINOPS-WI-0] Configure Azure Cost Management scheduled export'
+  [DRY-RUN] Would create Product Backlog Item : [FINOPS-WI-0] Configure Azure Cost Management scheduled export
+  -> PBI id=-1
+PBI: creating '[FINOPS-WI-1] Build Power BI dataset and FinOps reports'
+  [DRY-RUN] Would create Product Backlog Item : [FINOPS-WI-1] Build Power BI dataset and FinOps reports
+  -> PBI id=-1
+
+=== Import Summary: AZ FinOps Pipeline ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 15-cdc
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-15-cdc-dryrun.log
+
+=== ADO Import: CDC Integration (placeholder) ===
+Project maturity : empty
+GitHub repo      : eva-foundry/15-cdc
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: CDC Integration (placeholder)
+Feature: creating 'CDC Scope Definition'
+  [DRY-RUN] Would create Feature : CDC Scope Definition
+  -> Feature id=-1
+PBI: creating '[CDC-WI-0] Scope & technology decision for CDC integration'
+  [DRY-RUN] Would create Product Backlog Item : [CDC-WI-0] Scope & technology decision for CDC integration
+  -> PBI id=-1
+
+=== Import Summary: CDC Integration (placeholder) ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 16-engineered-case-law
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-16-engineered-case-law-dryrun.log
+
+=== ADO Import: Engineered Case Law Pipeline ===
+Project maturity : poc
+GitHub repo      : eva-foundry/16-engineered-case-law
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Engineered Case Law Pipeline
+Feature: creating 'Case Law Ingestion & Processing Pipeline'
+  [DRY-RUN] Would create Feature : Case Law Ingestion & Processing Pipeline
+  -> Feature id=-1
+Feature: creating 'Azure AI Search Integration'
+  [DRY-RUN] Would create Feature : Azure AI Search Integration
+  -> Feature id=-1
+PBI: creating '[ECL-WI-0] Pipeline executed — full_run.log, success_run.log, test_run.log evidence'
+  [DRY-RUN] Would create Product Backlog Item : [ECL-WI-0] Pipeline executed — full_run.log, success_run.log, test_run.log evidence
+  -> PBI id=-1
+PBI: creating '[ECL-WI-1] Case law indexed in Azure AI Search — APIM jurisprudence route smoke test'
+  [DRY-RUN] Would create Product Backlog Item : [ECL-WI-1] Case law indexed in Azure AI Search — APIM jurisprudence route smoke test
+  -> PBI id=-1
+
+=== Import Summary: Engineered Case Law Pipeline ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 17-apim
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-17-apim-dryrun.log
+
+=== ADO Import: APIM Gateway — IA Web API ===
+Project maturity : poc
+GitHub repo      : eva-foundry/17-apim
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: APIM Gateway — IA Web API
+Feature: creating 'IA Web API OpenAPI Spec v0.1.3'
+  [DRY-RUN] Would create Feature : IA Web API OpenAPI Spec v0.1.3
+  -> Feature id=-1
+Feature: creating 'Cosmos DB Container Definitions'
+  [DRY-RUN] Would create Feature : Cosmos DB Container Definitions
+  -> Feature id=-1
+Feature: creating 'Sandbox APIM Import & Cost Attribution'
+  [DRY-RUN] Would create Feature : Sandbox APIM Import & Cost Attribution
+  -> Feature id=-1
+PBI: creating '[APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined
+  -> PBI id=-1
+PBI: creating '[APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources
+  -> PBI id=-1
+PBI: creating '[APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live
+  -> PBI id=-1
+
+=== Import Summary: APIM Gateway — IA Web API ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 18-azure-best
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-18-azure-best-dryrun.log
+
+=== ADO Import: Azure Best Practices Reference Library ===
+Project maturity : active
+GitHub repo      : eva-foundry/18-azure-best
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Azure Best Practices Reference Library
+Feature: creating 'Infrastructure Reference Modules (01-06)'
+  [DRY-RUN] Would create Feature : Infrastructure Reference Modules (01-06)
+  -> Feature id=-1
+Feature: creating 'Platform Engineering Modules (07-10)'
+  [DRY-RUN] Would create Feature : Platform Engineering Modules (07-10)
+  -> Feature id=-1
+Feature: creating 'Consumption & Sourcing Protocol for EVA Projects'
+  [DRY-RUN] Would create Feature : Consumption & Sourcing Protocol for EVA Projects
+  -> Feature id=-1
+PBI: creating '[AB-WI-0] Infrastructure reference modules complete — 01 through 06 verified'
+  [DRY-RUN] Would create Product Backlog Item : [AB-WI-0] Infrastructure reference modules complete — 01 through 06 verified
+  -> PBI id=-1
+PBI: creating '[AB-WI-1] Platform engineering modules complete — 07 through 10 + APIM DevOps verified'
+  [DRY-RUN] Would create Product Backlog Item : [AB-WI-1] Platform engineering modules complete — 07 through 10 + APIM DevOps verified
+  -> PBI id=-1
+PBI: creating '[AB-WI-2] Sourcing protocol — all EVA projects reference 18-azure-best in their DEPENDENCIES.md'
+  [DRY-RUN] Would create Product Backlog Item : [AB-WI-2] Sourcing protocol — all EVA projects reference 18-azure-best in their DEPENDENCIES.md
+  -> PBI id=-1
+
+=== Import Summary: Azure Best Practices Reference Library ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 19-ai-gov
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-19-ai-gov-dryrun.log
+
+=== ADO Import: AI Governance Automation ===
+Project maturity : poc
+GitHub repo      : eva-foundry/19-ai-gov
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AI Governance Automation
+Feature: creating 'Governance Automation Schemas'
+  [DRY-RUN] Would create Feature : Governance Automation Schemas
+  -> Feature id=-1
+Feature: creating 'Policy-as-Code CI Gate'
+  [DRY-RUN] Would create Feature : Policy-as-Code CI Gate
+  -> Feature id=-1
+PBI: creating '[GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card
+  -> PBI id=-1
+PBI: creating '[GOV-WI-1] Policy-as-code CI gate — red-teaming evidence fed into ATO schema'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-1] Policy-as-code CI gate — red-teaming evidence fed into ATO schema
+  -> PBI id=-1
+
+=== Import Summary: AI Governance Automation ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 20-AssistMe
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-20-AssistMe-dryrun.log
+
+=== ADO Import: AssistMe Knowledge Management ===
+Project maturity : poc
+GitHub repo      : eva-foundry/20-AssistMe
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AssistMe Knowledge Management
+Feature: creating 'KMT Database Inventory'
+  [DRY-RUN] Would create Feature : KMT Database Inventory
+  -> Feature id=-1
+Feature: creating 'Bilingual Knowledge Articles (EN/FR r2r3)'
+  [DRY-RUN] Would create Feature : Bilingual Knowledge Articles (EN/FR r2r3)
+  -> Feature id=-1
+Feature: creating 'Knowledge Article Ingestion into EVA Pipeline'
+  [DRY-RUN] Would create Feature : Knowledge Article Ingestion into EVA Pipeline
+  -> Feature id=-1
+PBI: creating '[AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored
+  -> PBI id=-1
+PBI: creating '[AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search
+  -> PBI id=-1
+
+=== Import Summary: AssistMe Knowledge Management ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 24-eva-brain
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-24-eva-brain-dryrun.log
+
+=== ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Project maturity : retired
+GitHub repo      : eva-foundry/24-eva-brain
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2)
+Feature: creating 'Archive Reference — v1 Decomposition Artifacts'
+  [DRY-RUN] Would create Feature : Archive Reference — v1 Decomposition Artifacts
+  -> Feature id=-1
+PBI: creating '[BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2'
+  [DRY-RUN] Would create Product Backlog Item : [BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 29-foundry
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-29-foundry-dryrun.log
+
+=== ADO Import: EVA Foundry Hub ===
+Project maturity : active
+GitHub repo      : eva-foundry/29-foundry
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Foundry Hub
+Feature: creating 'Core Technical Skills Library'
+  [DRY-RUN] Would create Feature : Core Technical Skills Library
+  -> Feature id=-1
+Feature: creating 'DPDCA Session Workflow & Skill Versioning'
+  [DRY-RUN] Would create Feature : DPDCA Session Workflow & Skill Versioning
+  -> Feature id=-1
+Feature: creating 'Azure AI Foundry Hub Deployment'
+  [DRY-RUN] Would create Feature : Azure AI Foundry Hub Deployment
+  -> Feature id=-1
+PBI: creating '[FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection
+  -> PBI id=-1
+
+=== Import Summary: EVA Foundry Hub ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 30-ui-bench
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-30-ui-bench-dryrun.log
+
+=== ADO Import: EVA UI Testing Bench ===
+Project maturity : poc
+GitHub repo      : eva-foundry/30-ui-bench
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA UI Testing Bench
+Feature: creating 'Accessibility Testing Suite — jest-axe'
+  [DRY-RUN] Would create Feature : Accessibility Testing Suite — jest-axe
+  -> Feature id=-1
+Feature: creating 'Component Regression Suite — React Testing Library'
+  [DRY-RUN] Would create Feature : Component Regression Suite — React Testing Library
+  -> Feature id=-1
+PBI: creating '[UIB-WI-0] UI bench setup — jest, jest-axe, @testing-library/react configured'
+  [DRY-RUN] Would create Product Backlog Item : [UIB-WI-0] UI bench setup — jest, jest-axe, @testing-library/react configured
+  -> PBI id=-1
+PBI: creating '[UIB-WI-1] Accessibility baseline — all 31-eva-faces admin screens pass jest-axe (0 violations)'
+  [DRY-RUN] Would create Product Backlog Item : [UIB-WI-1] Accessibility baseline — all 31-eva-faces admin screens pass jest-axe (0 violations)
+  -> PBI id=-1
+
+=== Import Summary: EVA UI Testing Bench ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 31-eva-faces
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-31-eva-faces-dryrun.log
+
+=== ADO Import: EVA Faces ===
+Project maturity : active
+GitHub repo      : eva-foundry/31-eva-faces
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Faces
+Feature: creating 'Admin Face — 24+ Admin Screens'
+  [DRY-RUN] Would create Feature : Admin Face — 24+ Admin Screens
+  -> Feature id=-1
+Feature: creating 'EVA-JP Jurisprudence Pages'
+  [DRY-RUN] Would create Feature : EVA-JP Jurisprudence Pages
+  -> Feature id=-1
+Feature: creating 'ADO Dashboard Pages (FACES-WI-A/B/C)'
+  [DRY-RUN] Would create Feature : ADO Dashboard Pages (FACES-WI-A/B/C)
+  -> Feature id=-1
+Feature: creating 'Auth & RBAC Integration'
+  [DRY-RUN] Would create Feature : Auth & RBAC Integration
+  -> Feature id=-1
+PBI: creating '[FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService
+  -> PBI id=-1
+PBI: creating '[FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested
+  -> PBI id=-1
+PBI: creating '[FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories
+  -> PBI id=-1
+PBI: creating '[FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts
+  -> PBI id=-1
+PBI: creating '[FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages
+  -> PBI id=-1
+
+=== Import Summary: EVA Faces ===
+Epic id  : -1
+Features : 4
+PBIs     : 5
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 33-eva-brain-v2
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-33-eva-brain-v2-dryrun.log
+
+=== ADO Import: EVA Brain v2 ===
+Project maturity : active
+GitHub repo      : eva-foundry/33-eva-brain-v2
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-0
+  [DRY-RUN] Would ensure sprint: Sprint-0
+  Sprint: Sprint-1
+  [DRY-RUN] Would ensure sprint: Sprint-1
+  Sprint: Sprint-2
+  [DRY-RUN] Would ensure sprint: Sprint-2
+  Sprint: Sprint-3
+  [DRY-RUN] Would ensure sprint: Sprint-3
+  Sprint: Sprint-4
+  [DRY-RUN] Would ensure sprint: Sprint-4
+  Sprint: Sprint-5
+  [DRY-RUN] Would ensure sprint: Sprint-5
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v2
+Feature: creating 'Core API Restoration'
+  [DRY-RUN] Would create Feature : Core API Restoration
+  -> Feature id=-1
+Feature: creating 'Test Quality & Coverage'
+  [DRY-RUN] Would create Feature : Test Quality & Coverage
+  -> Feature id=-1
+Feature: creating 'API Surface — Routes & Endpoints'
+  [DRY-RUN] Would create Feature : API Surface — Routes & Endpoints
+  -> Feature id=-1
+Feature: creating 'Sandbox Deployment & APIM'
+  [DRY-RUN] Would create Feature : Sandbox Deployment & APIM
+  -> Feature id=-1
+PBI: creating '[WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes'
+  [DRY-RUN] Would create Product Backlog Item : [WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes
+  -> PBI id=-1
+PBI: creating '[WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat'
+  [DRY-RUN] Would create Product Backlog Item : [WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat
+  -> PBI id=-1
+PBI: creating '[WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)
+  -> PBI id=-1
+PBI: creating '[WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags'
+  [DRY-RUN] Would create Product Backlog Item : [WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags
+  -> PBI id=-1
+PBI: creating '[WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)
+  -> PBI id=-1
+PBI: creating '[WI-6] Apps registry API (G3) — 7 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-6] Apps registry API (G3) — 7 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing'
+  [DRY-RUN] Would create Product Backlog Item : [WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v2 ===
+Epic id  : -1
+Features : 4
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 34-eva-agents
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-34-eva-agents-dryrun.log
+
+=== ADO Import: EVA Agents ===
+Project maturity : idea
+GitHub repo      : eva-foundry/34-eva-agents
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Agents
+Feature: creating 'Agents Scope & Architecture Decision'
+  [DRY-RUN] Would create Feature : Agents Scope & Architecture Decision
+  -> Feature id=-1
+PBI: creating '[AGENTS-WI-0] Architecture decision — agent types, repos, Foundry deployment pattern'
+  [DRY-RUN] Would create Product Backlog Item : [AGENTS-WI-0] Architecture decision — agent types, repos, Foundry deployment pattern
+  -> PBI id=-1
+
+=== Import Summary: EVA Agents ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 35-agentic-code-fixing
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-35-agentic-code-fixing-dryrun.log
+
+=== ADO Import: Agentic Code Fixing ===
+Project maturity : poc
+GitHub repo      : eva-foundry/35-agentic-code-fixing
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Agentic Code Fixing
+Feature: creating 'Local Agent — BYOK + Foundry Local'
+  [DRY-RUN] Would create Feature : Local Agent — BYOK + Foundry Local
+  -> Feature id=-1
+Feature: creating 'Web Dashboard & CLI'
+  [DRY-RUN] Would create Feature : Web Dashboard & CLI
+  -> Feature id=-1
+Feature: creating 'EVA Platform Integration'
+  [DRY-RUN] Would create Feature : EVA Platform Integration
+  -> Feature id=-1
+PBI: creating '[ACF-WI-0] PoC complete — local agent, 4-phase workflow, demo repo with intentional bugs'
+  [DRY-RUN] Would create Product Backlog Item : [ACF-WI-0] PoC complete — local agent, 4-phase workflow, demo repo with intentional bugs
+  -> PBI id=-1
+PBI: creating '[ACF-WI-1] Integrate with EVA repos — Copilot Cloud Agent creates PRs through pipeline'
+  [DRY-RUN] Would create Product Backlog Item : [ACF-WI-1] Integrate with EVA repos — Copilot Cloud Agent creates PRs through pipeline
+  -> PBI id=-1
+
+=== Import Summary: Agentic Code Fixing ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 36-red-teaming
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-36-red-teaming-dryrun.log
+
+=== ADO Import: Red Teaming & Evaluation Framework ===
+Project maturity : active
+GitHub repo      : eva-foundry/36-red-teaming
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: Red Teaming & Evaluation Framework
+Feature: creating 'Promptfoo Harness & HTTP Provider'
+  [DRY-RUN] Would create Feature : Promptfoo Harness & HTTP Provider
+  -> Feature id=-1
+Feature: creating 'MITRE ATLAS Test Suites'
+  [DRY-RUN] Would create Feature : MITRE ATLAS Test Suites
+  -> Feature id=-1
+Feature: creating 'CI/CD Gate & Evidence Pack'
+  [DRY-RUN] Would create Feature : CI/CD Gate & Evidence Pack
+  -> Feature id=-1
+PBI: creating '[RT-WI-0] MVP complete — Promptfoo harness, ATLAS suites, CI gate, evidence pack'
+  [DRY-RUN] Would create Product Backlog Item : [RT-WI-0] MVP complete — Promptfoo harness, ATLAS suites, CI gate, evidence pack
+  -> PBI id=-1
+PBI: creating '[RT-WI-1] Phase 2 — LLM judge evaluators, 7 additional ATLAS tactics'
+  [DRY-RUN] Would create Product Backlog Item : [RT-WI-1] Phase 2 — LLM judge evaluators, 7 additional ATLAS tactics
+  -> PBI id=-1
+
+=== Import Summary: Red Teaming & Evaluation Framework ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 37-data-model
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-37-data-model-dryrun.log
+
+=== ADO Import: EVA Data Model ===
+Project maturity : complete
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Data Model
+Feature: creating 'Core Model Layers (1–6)'
+  [DRY-RUN] Would create Feature : Core Model Layers (1–6)
+  -> Feature id=-1
+Feature: creating 'Extended Model Layers (7–11)'
+  [DRY-RUN] Would create Feature : Extended Model Layers (7–11)
+  -> Feature id=-1
+Feature: creating 'Model Tooling — Validation & Assembly'
+  [DRY-RUN] Would create Feature : Model Tooling — Validation & Assembly
+  -> Feature id=-1
+PBI: creating '[DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags
+  -> PBI id=-1
+PBI: creating '[DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure
+  -> PBI id=-1
+PBI: creating '[DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1
+  -> PBI id=-1
+PBI: creating '[DM-WI-3] ADO-Data Model bidirectional tagging'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-3] ADO-Data Model bidirectional tagging
+  -> PBI id=-1
+
+=== Import Summary: EVA Data Model ===
+Epic id  : -1
+Features : 3
+PBIs     : 4
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 38-ado-poc
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-38-ado-poc-dryrun.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: ADO Command Center
+Feature: creating 'ADO Infrastructure & Scripts'
+  [DRY-RUN] Would create Feature : ADO Infrastructure & Scripts
+  -> Feature id=-1
+Feature: creating 'GitHub-ADO Async Bridge'
+  [DRY-RUN] Would create Feature : GitHub-ADO Async Bridge
+  -> Feature id=-1
+Feature: creating 'Project Onboarding Workflow'
+  [DRY-RUN] Would create Feature : Project Onboarding Workflow
+  -> Feature id=-1
+Feature: creating 'ADO Idea Intake Pipeline'
+  [DRY-RUN] Would create Feature : ADO Idea Intake Pipeline
+  -> Feature id=-1
+PBI: creating '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts
+  -> PBI id=-1
+PBI: creating '[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App
+  -> PBI id=-1
+PBI: creating '[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete
+  -> PBI id=-1
+PBI: creating '[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function
+  -> PBI id=-1
+
+=== Import Summary: ADO Command Center ===
+Epic id  : -1
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+>>> 39-ado-dashboard
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-39-ado-dashboard-dryrun.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA ADO Dashboard
+Feature: creating 'Reference Components & Type Contract'
+  [DRY-RUN] Would create Feature : Reference Components & Type Contract
+  -> Feature id=-1
+Feature: creating 'APIM Data Route (/v1/scrum/dashboard)'
+  [DRY-RUN] Would create Feature : APIM Data Route (/v1/scrum/dashboard)
+  -> Feature id=-1
+PBI: creating '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache
+  -> PBI id=-1
+PBI: creating '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim
+  -> PBI id=-1
+PBI: creating '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge
+  -> PBI id=-1
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : -1
+Features : 2
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Batch import complete.
+**********************
+PowerShell transcript end
+End time: 20260221103735
+**********************

@@ -1,0 +1,141 @@
+name: ADO Idea Intake
+
+# Trigger: any push that touches docs/ADO/idea/ files
+# Purpose: parse the three idea docs, generate ado-artifacts.json skeleton,
+#           post a PR comment with summary, then on main merge optionally
+#           import to ADO if ADO_PAT secret is present.
+#
+# Three-system wiring: GitHub → ADO (idea promotion)
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'docs/ADO/idea/README.md'
+      - 'docs/ADO/idea/PLAN.md'
+      - 'docs/ADO/idea/ACCEPTANCE.md'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no ADO import)'
+        required: false
+        default: 'true'
+        type: boolean
+
+jobs:
+  generate-artifacts:
+    name: Generate ado-artifacts.json
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate ado-artifacts.json
+        shell: pwsh
+        run: |
+          $repoRoot = $env:GITHUB_WORKSPACE
+          .\scripts\ado-generate-artifacts.ps1 -RepoRoot $repoRoot -DryRun:$false
+        env:
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+
+      - name: Read generated artifact summary
+        id: summary
+        shell: pwsh
+        run: |
+          $path = "docs/ADO/ado-artifacts.json"
+          if (Test-Path $path) {
+            $a = Get-Content $path | ConvertFrom-Json
+            $done  = @($a.user_stories | Where-Object state -eq 'Done').Count
+            $total = $a.user_stories.Count
+            $out = @"
+          **Epic:** $($a.epic.title)
+          **Maturity:** $($a.project_maturity)
+          **Features:** $($a.features.Count)
+          **Stories:** $total ($done Done / $($total - $done) New)
+          **Artifact:** \`docs/ADO/ado-artifacts.json\`
+          "@
+            echo "SUMMARY<<EOF" >> $env:GITHUB_OUTPUT
+            echo $out >> $env:GITHUB_OUTPUT
+            echo "EOF" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Commit generated artifact
+        shell: bash
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/ADO/ado-artifacts.json
+          git diff --staged --quiet || git commit -m "chore: regenerate ado-artifacts.json from idea docs [skip ci]"
+          git push
+
+      - name: Find open PR for this branch
+        id: find-pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              state: 'open',
+              head:  `${context.repo.owner}:${context.ref.replace('refs/heads/', '')}`,
+            });
+            return prs.length > 0 ? prs[0].number : '';
+          result-encoding: string
+
+      - name: Post PR comment with artifact summary
+        if: steps.find-pr.outputs.result != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = parseInt('${{ steps.find-pr.outputs.result }}');
+            const summary  = `${{ steps.summary.outputs.SUMMARY }}`;
+            const body = [
+              '### 📋 ADO Artifact Generated',
+              '',
+              summary,
+              '',
+              '> Review `docs/ADO/ado-artifacts.json` before merging.',
+              '> To import to ADO: set `ADO_PAT` secret and merge to `main`.',
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner:       context.repo.owner,
+              repo:        context.repo.repo,
+              issue_number: prNumber,
+              body,
+            });
+
+  import-to-ado:
+    name: Import to ADO (main only)
+    needs: generate-artifacts
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check ADO_PAT secret
+        id: check-secret
+        shell: pwsh
+        run: |
+          if ([string]::IsNullOrEmpty("$env:ADO_PAT")) {
+            Write-Host "ADO_PAT not set — skipping live import. Set the secret to enable."
+            echo "HAS_PAT=false" >> $env:GITHUB_OUTPUT
+          } else {
+            echo "HAS_PAT=true" >> $env:GITHUB_OUTPUT
+          }
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+
+      - name: Import artifacts to ADO
+        if: steps.check-secret.outputs.HAS_PAT == 'true'
+        shell: pwsh
+        run: |
+          $sharedScript = "scripts/ado-import-project.ps1"
+          & $sharedScript -ArtifactsFile "docs/ADO/ado-artifacts.json"
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}

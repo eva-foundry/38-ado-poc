@@ -1,0 +1,182 @@
+# morning-summary.yml
+# GitHub Actions workflow — Daily Sprint Status Digest
+#
+# PURPOSE:
+#   Runs every morning at 12:00 UTC (07:00 ET).
+#   Queries ADO for active sprint features and their WI states.
+#   Queries GitHub Actions for the status of any active sprint-execute run.
+#   Posts a structured summary comment on each active ADO Feature.
+#   ADO notification rules then push that comment to Teams and email.
+#
+# RESULT:
+#   Human wakes up to a Teams message showing exactly where every sprint stands.
+#   No terminal. No GitHub UI. Just Teams or email.
+#
+# SECRETS REQUIRED:
+#   ADO_ORG_URL         e.g. https://dev.azure.com/marcopresta
+#   ADO_PROJECT         e.g. eva-poc
+#   ADO_PAT             Work Items Read — no write permission needed here
+
+name: morning-summary
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for manual trigger"
+        required: false
+
+jobs:
+  morning-summary:
+    name: "Morning Sprint Status Digest"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      ADO_ORG_URL: ${{ secrets.ADO_ORG_URL }}
+      ADO_PROJECT: ${{ secrets.ADO_PROJECT }}
+      ADO_PAT: ${{ secrets.ADO_PAT }}
+
+    steps:
+
+      - name: Query active sprint features from ADO
+        id: features
+        run: |
+          ADO_AUTH=$(printf ":%s" "${ADO_PAT}" | base64 -w 0)
+
+          # WIQL query: all Features in Active state
+          FEATURE_RESP=$(curl -s -X POST \
+            "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/wiql?api-version=7.1" \
+            -H "Authorization: Basic ${ADO_AUTH}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"query\": \"SELECT [System.Id],[System.Title],[System.State],[System.IterationPath] FROM WorkItems WHERE [System.WorkItemType] = 'Feature' AND [System.State] IN ('Active','In Progress') ORDER BY [System.ChangedDate] DESC\"
+            }")
+
+          FEATURE_IDS=$(echo "${FEATURE_RESP}" | python3 -c \
+            "import sys,json; items=json.load(sys.stdin).get('workItems',[]); print(' '.join([str(x['id']) for x in items]))" 2>/dev/null)
+
+          echo "feature_ids=${FEATURE_IDS}" >> "${GITHUB_OUTPUT}"
+          echo "Found active features: ${FEATURE_IDS}"
+
+      - name: Build and post summary for each active feature
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ADO_AUTH=$(printf ":%s" "${ADO_PAT}" | base64 -w 0)
+          SUMMARY_DATE=$(TZ="America/Toronto" date "+%Y-%m-%d %H:%M ET")
+          FEATURE_IDS="${{ steps.features.outputs.feature_ids }}"
+
+          if [ -z "${FEATURE_IDS}" ]; then
+            echo "No active features found. Nothing to summarize."
+            exit 0
+          fi
+
+          # Read active GitHub sprint-execute runs for health check
+          GH_ACTIVE_RUNS=$(curl -s \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/sprint-execute.yml/runs?status=in_progress&per_page=5" \
+            -H "Authorization: Bearer ${GH_TOKEN}")
+
+          GH_RUN_COUNT=$(echo "${GH_ACTIVE_RUNS}" | python3 -c \
+            "import sys,json; print(len(json.load(sys.stdin).get('workflow_runs',[])))" 2>/dev/null || echo "0")
+
+          # Read heartbeat
+          HEARTBEAT_VALUE=$(curl -s \
+            "https://api.github.com/repos/${{ github.repository }}/actions/variables/SPRINT_HEARTBEAT" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            | python3 -c "import sys,json; print(json.load(sys.stdin).get('value',''))" 2>/dev/null || echo "")
+
+          HB_AGE_NOTE="No active sprint execution."
+          if [ -n "${HEARTBEAT_VALUE}" ] && [ "${GH_RUN_COUNT}" -gt 0 ]; then
+            HB_TIMESTAMP=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f1)
+            HB_WI_TAG=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f2)
+            HB_PHASE=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f3)
+            NOW_EPOCH=$(date +%s)
+            HB_EPOCH=$(date -d "${HB_TIMESTAMP}" +%s 2>/dev/null || echo "${NOW_EPOCH}")
+            AGE_MIN=$(( (NOW_EPOCH - HB_EPOCH) / 60 ))
+            HB_AGE_NOTE="Last heartbeat: ${AGE_MIN} min ago | WI: ${HB_WI_TAG} | Phase: ${HB_PHASE}"
+          fi
+
+          for FEATURE_ID in ${FEATURE_IDS}; do
+
+            # Fetch Feature details
+            FEATURE_DETAIL=$(curl -s \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${FEATURE_ID}?api-version=7.1" \
+              -H "Authorization: Basic ${ADO_AUTH}")
+
+            FEATURE_TITLE=$(echo "${FEATURE_DETAIL}" | python3 -c \
+              "import sys,json; print(json.load(sys.stdin)['fields']['System.Title'])" 2>/dev/null || echo "Feature ${FEATURE_ID}")
+            FEATURE_ITERATION=$(echo "${FEATURE_DETAIL}" | python3 -c \
+              "import sys,json; p=json.load(sys.stdin)['fields'].get('System.IterationPath',''); print(p.split('\\\\')[-1] if p else 'Unknown')" 2>/dev/null || echo "")
+
+            # Fetch child WIs of this Feature
+            CHILD_RESP=$(curl -s -X POST \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/wiql?api-version=7.1" \
+              -H "Authorization: Basic ${ADO_AUTH}" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"query\": \"SELECT [System.Id],[System.Title],[System.State],[System.Tags],[Microsoft.VSTS.Common.ClosedDate] FROM WorkItems WHERE [System.Parent] = ${FEATURE_ID} ORDER BY [System.State] ASC\"
+              }")
+
+            CHILD_IDS=$(echo "${CHILD_RESP}" | python3 -c \
+              "import sys,json; items=json.load(sys.stdin).get('workItems',[]); print(' '.join([str(x['id']) for x in items]))" 2>/dev/null)
+
+            # Build WI status lines
+            WI_LINES=""
+            DONE_COUNT=0
+            TOTAL_COUNT=0
+            COVERAGE_SUM=0
+            TEST_SUM=0
+
+            for WI_ID in ${CHILD_IDS}; do
+              WI_DETAIL=$(curl -s \
+                "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${WI_ID}?api-version=7.1" \
+                -H "Authorization: Basic ${ADO_AUTH}")
+
+              WI_STATE=$(echo "${WI_DETAIL}" | python3 -c \
+                "import sys,json; print(json.load(sys.stdin)['fields']['System.State'])" 2>/dev/null || echo "Unknown")
+              WI_TAGS=$(echo "${WI_DETAIL}" | python3 -c \
+                "import sys,json; print(json.load(sys.stdin)['fields'].get('System.Tags',''))" 2>/dev/null || echo "")
+              WI_TITLE=$(echo "${WI_DETAIL}" | python3 -c \
+                "import sys,json; print(json.load(sys.stdin)['fields']['System.Title'])" 2>/dev/null || echo "WI ${WI_ID}")
+              WI_TAG_LABEL=$(echo "${WI_TAGS}" | python3 -c \
+                "import sys; tags=[t.strip() for t in sys.stdin.read().split(';') if t.strip().startswith('WI-')]; print(tags[0] if tags else 'WI-${WI_ID}')" 2>/dev/null || echo "WI-${WI_ID}")
+
+              TOTAL_COUNT=$(( TOTAL_COUNT + 1 ))
+              if [ "${WI_STATE}" = "Done" ]; then
+                DONE_COUNT=$(( DONE_COUNT + 1 ))
+                WI_LINES="${WI_LINES}  ${WI_TAG_LABEL}  DONE  ${WI_TITLE}\n"
+              elif [ "${WI_STATE}" = "Active" ] || [ "${WI_STATE}" = "In Progress" ]; then
+                WI_LINES="${WI_LINES}  ${WI_TAG_LABEL}  IN-PROGRESS  ${WI_TITLE}\n"
+              else
+                WI_LINES="${WI_LINES}  ${WI_TAG_LABEL}  ${WI_STATE}  ${WI_TITLE}\n"
+              fi
+            done
+
+            # Build final summary comment
+            SUMMARY_TEXT="EVA Sprint Status -- ${SUMMARY_DATE}
+
+Feature ${FEATURE_ID}: ${FEATURE_TITLE}
+Iteration: ${FEATURE_ITERATION}
+Progress: ${DONE_COUNT} of ${TOTAL_COUNT} WIs complete
+
+Work Items:
+$(echo -e "${WI_LINES}")
+GitHub Actions: ${GH_RUN_COUNT} active sprint run(s)
+Heartbeat: ${HB_AGE_NOTE}
+
+Board: ${ADO_ORG_URL}/${ADO_PROJECT}/_boards"
+
+            echo "Posting summary for Feature ${FEATURE_ID}:"
+            echo "${SUMMARY_TEXT}"
+
+            curl -s -o /dev/null -w "ADO comment response for Feature ${FEATURE_ID}: %{http_code}\n" \
+              -X POST \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${FEATURE_ID}/comments?api-version=7.1" \
+              -H "Authorization: Basic ${ADO_AUTH}" \
+              -H "Content-Type: application/json" \
+              -d "{\"text\": \"${SUMMARY_TEXT}\"}"
+
+          done

@@ -1,0 +1,571 @@
+**********************
+PowerShell transcript start
+Start time: 20260221104303
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log"
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: ADO Command Center ==="
+=== ADO Import: ADO Command Center ===
+PS>ParameterBinding(Out-File): name="InputObject"; value="Project maturity : active"
+Project maturity : active
+PS>ParameterBinding(Out-File): name="InputObject"; value="GitHub repo      : eva-foundry/38-ado-poc"
+GitHub repo      : eva-foundry/38-ado-poc
+PS>ParameterBinding(Out-File): name="InputObject"; value="Dry run          : False"
+Dry run          : False
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="Ensuring sprints..."
+Ensuring sprints...
+PS>ParameterBinding(Out-File): name="InputObject"; value="  Sprint: Sprint-6"
+  Sprint: Sprint-6
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+PS>ParameterBinding(Out-File): name="InputObject"; value="  Sprint: Sprint-Backlog"
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+PS>ParameterBinding(Out-File): name="InputObject"; value="Epic: existing id=31 — 'ADO Command Center'"
+Epic: existing id=31 — 'ADO Command Center'
+PS>ParameterBinding(Out-File): name="InputObject"; value="Feature: creating 'ADO Infrastructure & Scripts'"
+Feature: creating 'ADO Infrastructure & Scripts'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> Feature id=89"
+  -> Feature id=89
+PS>ParameterBinding(Out-File): name="InputObject"; value="Feature: creating 'GitHub-ADO Async Bridge'"
+Feature: creating 'GitHub-ADO Async Bridge'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> Feature id=90"
+  -> Feature id=90
+PS>ParameterBinding(Out-File): name="InputObject"; value="Feature: creating 'Project Onboarding Workflow'"
+Feature: creating 'Project Onboarding Workflow'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> Feature id=91"
+  -> Feature id=91
+PS>ParameterBinding(Out-File): name="InputObject"; value="Feature: creating 'ADO Idea Intake Pipeline'"
+Feature: creating 'ADO Idea Intake Pipeline'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> Feature id=92"
+  -> Feature id=92
+PS>ParameterBinding(Out-File): name="InputObject"; value="PBI: creating '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'"
+PBI: creating '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> PBI id=93"
+  -> PBI id=93
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> ParameterBinding(Out-File): name="InputObject"; value="[31mERROR in 38-ado-poc: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}[0m"
+ERROR in 38-ado-poc: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 39-ado-dashboard[0m"
+>>> 39-ado-dashboard
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log"
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA ADO Dashboard ==="
+=== ADO Import: EVA ADO Dashboard ===
+PS>ParameterBinding(Out-File): name="InputObject"; value="Project maturity : poc"
+Project maturity : poc
+PS>ParameterBinding(Out-File): name="InputObject"; value="GitHub repo      : eva-foundry/39-ado-dashboard"
+GitHub repo      : eva-foundry/39-ado-dashboard
+PS>ParameterBinding(Out-File): name="InputObject"; value="Dry run          : False"
+Dry run          : False
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="Ensuring sprints..."
+Ensuring sprints...
+PS>ParameterBinding(Out-File): name="InputObject"; value="  Sprint: Sprint-Backlog"
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+PS>ParameterBinding(Out-File): name="InputObject"; value="Epic: existing id=32 — 'EVA ADO Dashboard'"
+Epic: existing id=32 — 'EVA ADO Dashboard'
+PS>ParameterBinding(Out-File): name="InputObject"; value="Feature: creating 'Reference Components & Type Contract'"
+Feature: creating 'Reference Components & Type Contract'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> Feature id=94"
+  -> Feature id=94
+PS>ParameterBinding(Out-File): name="InputObject"; value="Feature: creating 'APIM Data Route (/v1/scrum/dashboard)'"
+Feature: creating 'APIM Data Route (/v1/scrum/dashboard)'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> Feature id=95"
+  -> Feature id=95
+PS>ParameterBinding(Out-File): name="InputObject"; value="PBI: creating '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'"
+PBI: creating '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> PBI id=96"
+  -> PBI id=96
+PS>ParameterBinding(Out-File): name="InputObject"; value="PBI: creating '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'"
+PBI: creating '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> PBI id=97"
+  -> PBI id=97
+PS>ParameterBinding(Out-File): name="InputObject"; value="PBI: creating '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'"
+PBI: creating '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+PS>ParameterBinding(Out-File): name="InputObject"; value="  -> PBI id=98"
+  -> PBI id=98
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="=== Import Summary: EVA ADO Dashboard ==="
+=== Import Summary: EVA ADO Dashboard ===
+PS>ParameterBinding(Out-File): name="InputObject"; value="Epic id  : 32"
+Epic id  : 32
+PS>ParameterBinding(Out-File): name="InputObject"; value="Features : 2"
+Features : 2
+PS>ParameterBinding(Out-File): name="InputObject"; value="PBIs     : 3"
+PBIs     : 3
+PS>ParameterBinding(Out-File): name="InputObject"; value="Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems"
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="Microsoft.PowerShell.Commands.Internal.Format.FormatStartData"
+>> ParameterBinding(Out-File): name="InputObject"; value="Microsoft.PowerShell.Commands.Internal.Format.GroupStartData"
+>> ParameterBinding(Out-File): name="InputObject"; value="Microsoft.PowerShell.Commands.Internal.Format.FormatEntryData"
+>> ParameterBinding(Out-File): name="InputObject"; value="Microsoft.PowerShell.Commands.Internal.Format.FormatEntryData"
+>> ParameterBinding(Out-File): name="InputObject"; value="Microsoft.PowerShell.Commands.Internal.Format.FormatEntryData"
+>> ParameterBinding(Out-File): name="InputObject"; value="Microsoft.PowerShell.Commands.Internal.Format.GroupEndData"
+>> ParameterBinding(Out-File): name="InputObject"; value="Microsoft.PowerShell.Commands.Internal.Format.FormatEndData"
+PS>ParameterBinding(Out-File): name="InputObject"; value=""
+
+PS>ParameterBinding(Out-File): name="InputObject"; value="[32mBatch import complete.[0m"
+Batch import complete.
+**********************
+PowerShell transcript end
+End time: 20260221104307
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221104334
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 1544
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-6
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=31 — 'ADO Command Center'
+Feature: existing id=89 — 'ADO Infrastructure & Scripts'
+Feature: existing id=90 — 'GitHub-ADO Async Bridge'
+Feature: existing id=91 — 'Project Onboarding Workflow'
+Feature: existing id=92 — 'ADO Idea Intake Pipeline'
+PBI: existing id=93 — '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+ERROR in 38-ado-poc: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 39-ado-dashboard
+PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=32 — 'EVA ADO Dashboard'
+Feature: existing id=94 — 'Reference Components & Type Contract'
+Feature: existing id=95 — 'APIM Data Route (/v1/scrum/dashboard)'
+PBI: existing id=96 — '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+PBI: existing id=97 — '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+PBI: existing id=98 — '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : 32
+Features : 2
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Batch import complete.
+**********************
+PowerShell transcript end
+End time: 20260221104336
+**********************

@@ -1,0 +1,244 @@
+# watchdog-poll.yml
+# GitHub Actions workflow — Sprint Execution Watchdog
+#
+# PURPOSE:
+#   Runs every 15 minutes while a sprint may be active.
+#   Checks the SPRINT_HEARTBEAT repository variable to detect stall or crash.
+#   Posts ADO alerts and Teams messages if the heartbeat is too old.
+#
+# STALL THRESHOLDS:
+#   > 25 min since last heartbeat AND run still in_progress  ->  WARNING posted to ADO
+#   > 45 min since last heartbeat AND run still in_progress  ->  ALERT posted to ADO + Teams
+#   Action concluded:failure                                 ->  CRITICAL alert immediately
+#
+# SECRETS REQUIRED:
+#   ADO_ORG_URL         e.g. https://dev.azure.com/marcopresta
+#   ADO_PROJECT         e.g. eva-poc
+#   ADO_PAT             Work Items Read/Write
+#   TEAMS_WEBHOOK_URL   Incoming webhook for Teams critical alerts
+
+name: watchdog-poll
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason for manual trigger (for audit)"
+        required: false
+
+jobs:
+  watchdog:
+    name: "Watchdog: Check Sprint Heartbeat"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    env:
+      ADO_ORG_URL: ${{ secrets.ADO_ORG_URL }}
+      ADO_PROJECT: ${{ secrets.ADO_PROJECT }}
+      ADO_PAT: ${{ secrets.ADO_PAT }}
+      TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+
+    steps:
+
+      - name: Check for active sprint-execute runs
+        id: check_runs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Get all currently in_progress workflow runs for sprint-execute
+          ACTIVE_RUNS=$(curl -s \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/sprint-execute.yml/runs?status=in_progress&per_page=5" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json")
+
+          RUN_COUNT=$(echo "${ACTIVE_RUNS}" | python3 -c \
+            "import sys,json; d=json.load(sys.stdin); print(len(d.get('workflow_runs',[])))")
+
+          echo "active_run_count=${RUN_COUNT}" >> "${GITHUB_OUTPUT}"
+
+          if [ "${RUN_COUNT}" = "0" ]; then
+            echo "No active sprint-execute runs. Watchdog has nothing to check."
+            exit 0
+          fi
+
+          # Extract the most recent active run details
+          ACTIVE_RUN_ID=$(echo "${ACTIVE_RUNS}" | python3 -c \
+            "import sys,json; runs=json.load(sys.stdin)['workflow_runs']; print(runs[0]['id'])")
+          ACTIVE_RUN_URL=$(echo "${ACTIVE_RUNS}" | python3 -c \
+            "import sys,json; runs=json.load(sys.stdin)['workflow_runs']; print(runs[0]['html_url'])")
+          ACTIVE_RUN_CREATED=$(echo "${ACTIVE_RUNS}" | python3 -c \
+            "import sys,json; runs=json.load(sys.stdin)['workflow_runs']; print(runs[0]['created_at'])")
+
+          echo "active_run_id=${ACTIVE_RUN_ID}" >> "${GITHUB_OUTPUT}"
+          echo "active_run_url=${ACTIVE_RUN_URL}" >> "${GITHUB_OUTPUT}"
+          echo "active_run_created=${ACTIVE_RUN_CREATED}" >> "${GITHUB_OUTPUT}"
+          echo "Found active sprint run id=${ACTIVE_RUN_ID} started=${ACTIVE_RUN_CREATED}"
+
+      - name: Read heartbeat variable
+        id: heartbeat
+        if: steps.check_runs.outputs.active_run_count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Read the SPRINT_HEARTBEAT variable set by sprint-execute.yml
+          HEARTBEAT_RESP=$(curl -s \
+            "https://api.github.com/repos/${{ github.repository }}/actions/variables/SPRINT_HEARTBEAT" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json")
+
+          HEARTBEAT_VALUE=$(echo "${HEARTBEAT_RESP}" | python3 -c \
+            "import sys,json; d=json.load(sys.stdin); print(d.get('value',''))" 2>/dev/null)
+
+          if [ -z "${HEARTBEAT_VALUE}" ]; then
+            echo "SPRINT_HEARTBEAT variable is empty or not set."
+            echo "heartbeat_age_min=0" >> "${GITHUB_OUTPUT}"
+            echo "heartbeat_wi_tag=unknown" >> "${GITHUB_OUTPUT}"
+            echo "heartbeat_phase=unknown" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          echo "Heartbeat raw value: ${HEARTBEAT_VALUE}"
+
+          # Parse: timestamp|wi_tag|phase|project|run_id
+          HB_TIMESTAMP=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f1)
+          HB_WI_TAG=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f2)
+          HB_PHASE=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f3)
+          HB_PROJECT=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f4)
+          HB_RUN_ID=$(echo "${HEARTBEAT_VALUE}" | cut -d'|' -f5)
+
+          # Calculate age in minutes
+          NOW_EPOCH=$(date +%s)
+          HB_EPOCH=$(date -d "${HB_TIMESTAMP}" +%s 2>/dev/null || echo "${NOW_EPOCH}")
+          AGE_MIN=$(( (NOW_EPOCH - HB_EPOCH) / 60 ))
+
+          echo "heartbeat_age_min=${AGE_MIN}" >> "${GITHUB_OUTPUT}"
+          echo "heartbeat_wi_tag=${HB_WI_TAG}" >> "${GITHUB_OUTPUT}"
+          echo "heartbeat_phase=${HB_PHASE}" >> "${GITHUB_OUTPUT}"
+          echo "heartbeat_project=${HB_PROJECT}" >> "${GITHUB_OUTPUT}"
+          echo "heartbeat_run_id=${HB_RUN_ID}" >> "${GITHUB_OUTPUT}"
+          echo "Heartbeat age: ${AGE_MIN} min | WI: ${HB_WI_TAG} | Phase: ${HB_PHASE}"
+
+      - name: Evaluate stall status and post alerts
+        if: steps.check_runs.outputs.active_run_count != '0'
+        run: |
+          ADO_AUTH=$(printf ":%s" "${ADO_PAT}" | base64 -w 0)
+
+          AGE_MIN="${{ steps.heartbeat.outputs.heartbeat_age_min }}"
+          WI_TAG="${{ steps.heartbeat.outputs.heartbeat_wi_tag }}"
+          PHASE="${{ steps.heartbeat.outputs.heartbeat_phase }}"
+          PROJECT="${{ steps.heartbeat.outputs.heartbeat_project }}"
+          RUN_URL="${{ steps.check_runs.outputs.active_run_url }}"
+          TIMESTAMP=$(TZ="America/Toronto" date "+%Y-%m-%d %H:%M ET")
+
+          # Helper: post ADO comment to the sprint Feature
+          # Uses PROJECT to look up active Feature WI id.
+          # Simplified: posts to the Feature known for this project.
+          # In production: look up Feature from SPRINT_HEARTBEAT run_id context.
+          post_ado_alert() {
+            local message="$1"
+            # Lookup active Feature WI by querying ADO for Features in Active state
+            FEATURE_LIST=$(curl -s -X POST \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/wiql?api-version=7.1" \
+              -H "Authorization: Basic ${ADO_AUTH}" \
+              -H "Content-Type: application/json" \
+              -d "{\"query\": \"SELECT [System.Id] FROM WorkItems WHERE [System.WorkItemType] = 'Feature' AND [System.State] = 'Active' ORDER BY [System.ChangedDate] DESC\"}")
+
+            FEATURE_IDS=$(echo "${FEATURE_LIST}" | python3 -c \
+              "import sys,json; items=json.load(sys.stdin).get('workItems',[]); print(' '.join([str(x['id']) for x in items[:3]]))" 2>/dev/null)
+
+            for FID in ${FEATURE_IDS}; do
+              curl -s -o /dev/null \
+                -X POST \
+                "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${FID}/comments?api-version=7.1" \
+                -H "Authorization: Basic ${ADO_AUTH}" \
+                -H "Content-Type: application/json" \
+                -d "{\"text\": \"[${TIMESTAMP}] ${message}\"}"
+            done
+          }
+
+          post_teams_alert() {
+            local message="$1"
+            if [ -n "${TEAMS_WEBHOOK_URL}" ]; then
+              curl -s -o /dev/null \
+                -X POST "${TEAMS_WEBHOOK_URL}" \
+                -H "Content-Type: application/json" \
+                -d "{\"text\": \"${message}\"}"
+            fi
+          }
+
+          # Decision tree
+          if [ "${AGE_MIN}" -gt 45 ]; then
+            MSG="ALERT: Sprint execution stalled. No heartbeat in ${AGE_MIN} min. WI: ${WI_TAG} Phase: ${PHASE} Project: ${PROJECT}. Manual intervention may be required. Run: ${RUN_URL}"
+            echo "${MSG}"
+            post_ado_alert "${MSG}"
+            post_teams_alert "ALERT: Sprint stalled ${AGE_MIN}min silent | ${WI_TAG} ${PHASE} | ${PROJECT} | ${RUN_URL}"
+
+          elif [ "${AGE_MIN}" -gt 25 ]; then
+            MSG="WARNING: Heartbeat gap detected. Last heartbeat ${AGE_MIN} min ago. WI: ${WI_TAG} Phase: ${PHASE}. May be slow — monitoring continues. Run: ${RUN_URL}"
+            echo "${MSG}"
+            post_ado_alert "${MSG}"
+            # No Teams alert for WARNING — would be too noisy for slow but healthy runs
+
+          else
+            echo "Heartbeat is ${AGE_MIN} min old. WI: ${WI_TAG} Phase: ${PHASE}. Normal."
+          fi
+
+      - name: Check for recently failed sprint runs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ADO_AUTH=$(printf ":%s" "${ADO_PAT}" | base64 -w 0)
+          TIMESTAMP=$(TZ="America/Toronto" date "+%Y-%m-%d %H:%M ET")
+
+          # Check for runs that failed in the last 20 minutes
+          FAILED_RUNS=$(curl -s \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/sprint-execute.yml/runs?status=failure&per_page=3" \
+            -H "Authorization: Bearer ${GH_TOKEN}")
+
+          echo "${FAILED_RUNS}" | python3 - << 'PYCHECK'
+          import sys, json
+          from datetime import datetime, timezone, timedelta
+
+          data = json.load(sys.stdin.buffer if hasattr(sys.stdin,'buffer') else sys.stdin)
+          cutoff = datetime.now(timezone.utc) - timedelta(minutes=20)
+          recent_failures = []
+          for run in data.get('workflow_runs', []):
+              updated = run.get('updated_at', '')
+              try:
+                  ts = datetime.fromisoformat(updated.replace('Z','+00:00'))
+                  if ts > cutoff:
+                      recent_failures.append(run)
+              except Exception:
+                  pass
+
+          if recent_failures:
+              print(f"RECENT_FAILURES={len(recent_failures)}")
+              for r in recent_failures:
+                  print(f"FAILED_RUN_URL={r['html_url']}")
+          else:
+              print("No recent failures in the last 20 min.")
+          PYCHECK
+
+          # If there were recent failures, alert via Teams
+          # (ADO notification via pipeline run failure is handled by ADO notification rules)
+          FAILED_COUNT=$(echo "${FAILED_RUNS}" | python3 -c "
+          import sys,json
+          from datetime import datetime,timezone,timedelta
+          data=json.load(sys.stdin)
+          cutoff=datetime.now(timezone.utc)-timedelta(minutes=20)
+          n=sum(1 for r in data.get('workflow_runs',[]) if datetime.fromisoformat(r.get('updated_at','1970-01-01T00:00:00Z').replace('Z','+00:00'))>cutoff)
+          print(n)
+          " 2>/dev/null || echo "0")
+
+          if [ "${FAILED_COUNT}" -gt 0 ]; then
+            FAILED_URL=$(echo "${FAILED_RUNS}" | python3 -c \
+              "import sys,json; runs=json.load(sys.stdin)['workflow_runs']; print(runs[0]['html_url'] if runs else '')" 2>/dev/null)
+            if [ -n "${TEAMS_WEBHOOK_URL}" ]; then
+              curl -s -o /dev/null \
+                -X POST "${TEAMS_WEBHOOK_URL}" \
+                -H "Content-Type: application/json" \
+                -d "{\"text\": \"CRITICAL: Sprint execution FAILED in the last 20 min. Run: ${FAILED_URL}\"}"
+            fi
+          fi

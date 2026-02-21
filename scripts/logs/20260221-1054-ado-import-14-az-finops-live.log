@@ -1,0 +1,84 @@
+**********************
+PowerShell transcript start
+Start time: 20260221105416
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 16444
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1054-ado-import-14-az-finops-live.log
+
+=== ADO Import: AZ FinOps Pipeline ===
+Project maturity : empty
+GitHub repo      : eva-foundry/14-az-finops
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "Id",
+  "typeName": "Microsoft.TeamFoundation.Work.WebApi.Exceptions.InvalidTeamSettingsIterationException, Microsoft.TeamFoundation.Work.WebApi",
+  "typeKey": "InvalidTeamSettingsIterationException",
+  "errorCode": 0,
+  "eventId": 0
+}"
+Epic: existing id=15 — 'AZ FinOps Pipeline'
+Feature: existing id=33 — 'Azure Cost Management Export'
+Feature: existing id=34 — 'FinOps Power BI Dashboard'
+PBI: existing id=35 — '[FINOPS-WI-0] Configure Azure Cost Management scheduled export'
+PBI: existing id=36 — '[FINOPS-WI-1] Build Power BI dataset and FinOps reports'
+
+=== Import Summary: AZ FinOps Pipeline ===
+Epic id  : 15
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221105418
+**********************

@@ -1,0 +1,1146 @@
+**********************
+PowerShell transcript start
+Start time: 20260221162726
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 20104
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1627-ado-onboard-all-live.log
+
+EVA ADO Onboard — Project Registry Review
+Foundation : C:\AICOE\eva-foundation
+Date       : 2026-02-21 16:27 ET
+
+
+Projects ready to import (18 of 18):
+  14-az-finops
+  15-cdc
+  16-engineered-case-law
+  17-apim
+  18-azure-best
+  19-ai-gov
+  20-AssistMe
+  24-eva-brain
+  29-foundry
+  30-ui-bench
+  31-eva-faces
+  33-eva-brain-v2
+  34-eva-agents
+  35-agentic-code-fixing
+  36-red-teaming
+  37-data-model
+  38-ado-poc
+  39-ado-dashboard
+
+To import a single project:
+  $env:ADO_PAT = "<pat>"
+  cd C:\AICOE\eva-foundation\<NN-project>
+  .\ado-import.ps1 -DryRun   # preview first
+  .\ado-import.ps1
+
+To dry-run ALL ready projects (no ADO writes):
+  .\ado-onboard-all.ps1 -RunImport -DryRun
+
+To import ALL ready projects (REVIEW ARTIFACTS FIRST):
+  $env:ADO_PAT = "<pat>"
+  .\ado-onboard-all.ps1 -RunImport
+
+Running batch import (LIVE)...
+
+>>> 14-az-finops
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 14-az-finops: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 15-cdc
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 15-cdc: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 16-engineered-case-law
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 16-engineered-case-law: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 17-apim
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 17-apim: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 18-azure-best
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 18-azure-best: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 19-ai-gov
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 19-ai-gov: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 20-AssistMe
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 20-AssistMe: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 24-eva-brain
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 24-eva-brain: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 29-foundry
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 29-foundry: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 30-ui-bench
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 30-ui-bench: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 31-eva-faces
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 31-eva-faces: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 33-eva-brain-v2
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 33-eva-brain-v2: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 34-eva-agents
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 34-eva-agents: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 35-agentic-code-fixing
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 35-agentic-code-fixing: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 36-red-teaming
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 36-red-teaming: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 37-data-model
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 37-data-model: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 38-ado-poc
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 38-ado-poc: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+>>> 39-ado-dashboard
+PS>TerminatingError(): "At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement."
+ERROR in 39-ado-dashboard: At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:147 char:65
++         if ($fromIdx -lt 0)                         { $machine }
++                                                                 ~
+Missing closing ')' in expression.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:9
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++         ~~~~~~
+Unexpected token 'elseif' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:148 char:53
++         elseif ($fromIdx -ge ($machine.Length - 1)) { @() }
++                                                     ~
+Unexpected token '{' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:135 char:21
++ function Set-WIDone {
++                     ~
+Missing closing '}' in statement block or type definition.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:150 char:5
++     )
++     ~
+Unexpected token ')' in expression or statement.
+
+At C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:172 char:1
++ }
++ ~
+Unexpected token '}' in expression or statement.
+
+Batch import complete.
+**********************
+PowerShell transcript end
+End time: 20260221162727
+**********************

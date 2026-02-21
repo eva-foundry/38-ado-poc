@@ -1,0 +1,50 @@
+# <Feature or Initiative Title>
+
+<!-- Copy this file to docs/ADO/idea/README.md and fill in all sections. -->
+<!-- This file is read by skill 07-ado-idea-intake to generate docs/ADO/ado-artifacts.json -->
+
+---
+
+## Metadata
+
+```
+github_repo:      eva-foundry/<repo-name>
+owner:            <your name / team>
+maturity:         idea
+date:             <YYYY-MM-DD>
+depends_on:       <other project folders, comma-separated, or "none">
+```
+
+---
+
+## What Is This?
+
+<!-- One paragraph. What is being built and what problem it solves.
+     Be specific enough that a new team member understands without context. -->
+
+## Why Now?
+
+<!-- One paragraph. What event, milestone, or user need triggers this work?
+     Reference sprint, WI, or external dependency if applicable. -->
+
+## Who Uses It?
+
+<!-- Audience: developer, end-user, admin, automated system, etc. -->
+
+## Success Looks Like
+
+<!-- One sentence: when is this feature "done enough"?
+     Example: "When a developer can drop three files and ADO is updated without
+     touching the REST API directly." -->
+
+## Out of Scope
+
+<!-- List explicitly what this initiative does NOT include.
+     Helps prevent scope creep during sprint planning. -->
+- TBD
+
+## Links
+
+- Related ADO Epic: _none yet_
+- Related GitHub issue: _none yet_
+- Design doc: _none yet_

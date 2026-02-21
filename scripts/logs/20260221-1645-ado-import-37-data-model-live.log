@@ -1,0 +1,71 @@
+**********************
+PowerShell transcript start
+Start time: 20260221164516
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 14160
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-37-data-model-live.log
+
+=== ADO Import: EVA Data Model ===
+Project maturity : complete
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=30 — 'EVA Data Model'
+Feature: existing id=85 — 'Core Model Layers (1–6)'
+Feature: existing id=86 — 'Extended Model Layers (7–11)'
+Feature: existing id=87 — 'Model Tooling — Validation & Assembly'
+PBI: existing id=88 — '[DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags'
+  id=88 already Done — skipping state transitions
+PBI: existing id=115 — '[DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure'
+  id=115 already Done — skipping state transitions
+PBI: existing id=116 — '[DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1'
+  id=116 already Done — skipping state transitions
+PBI: existing id=117 — '[DM-WI-3] ADO-Data Model bidirectional tagging'
+
+=== Import Summary: EVA Data Model ===
+Epic id  : 30
+Features : 3
+PBIs     : 4
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221164517
+**********************

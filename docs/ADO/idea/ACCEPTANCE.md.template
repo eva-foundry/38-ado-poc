@@ -1,0 +1,56 @@
+# Acceptance Criteria — <Feature or Initiative Title>
+
+<!-- Copy this file to docs/ADO/idea/ACCEPTANCE.md and fill in all sections.
+     Each H2 matches a story ID hint from PLAN.md.
+     Check [x] when the criterion is verified — this sets story state to "Done" in ADO. -->
+
+---
+
+## Definition of Done (applies to all stories)
+
+- [ ] Code reviewed by at least one peer (PR approved)
+- [ ] tsc / build passes (no compile errors)
+- [ ] Tests pass: vitest / jest / pytest — zero failures
+- [ ] jest-axe: 0 accessibility violations (UI stories only)
+- [ ] APIM smoke test passes (API stories only)
+- [ ] Evidence comment posted to ADO WI (test count, coverage, deployment URL)
+- [ ] README updated with new capabilities
+- [ ] No secrets or PATs in code
+
+---
+
+## <SLUG-WI-0> — <Story 1.1 Title>
+
+**Parent feature:** Feature 1
+
+- [ ] <Specific criterion 1 — measurable and observable>
+- [ ] <Specific criterion 2>
+- [ ] <Specific criterion 3>
+
+**Evidence required:**
+- [ ] Test run log (N/N passing)
+- [ ] Deployment URL (if applicable)
+- [ ] Screenshot or curl output
+
+---
+
+## <SLUG-WI-1> — <Story 1.2 Title>
+
+**Parent feature:** Feature 1
+
+- [ ] <Criterion 1>
+- [ ] <Criterion 2>
+
+**Evidence required:**
+- [ ] Test run log
+
+---
+
+## <SLUG-WI-2> — <Story 2.1 Title>
+
+**Parent feature:** Feature 2
+
+- [ ] <Criterion 1>
+
+**Evidence required:**
+- [ ] Integration test output

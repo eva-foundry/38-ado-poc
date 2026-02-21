@@ -1,0 +1,118 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103727
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-29-foundry-dryrun.log
+
+=== ADO Import: EVA Foundry Hub ===
+Project maturity : active
+GitHub repo      : eva-foundry/29-foundry
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Foundry Hub
+Feature: creating 'Core Technical Skills Library'
+  [DRY-RUN] Would create Feature : Core Technical Skills Library
+  -> Feature id=-1
+Feature: creating 'DPDCA Session Workflow & Skill Versioning'
+  [DRY-RUN] Would create Feature : DPDCA Session Workflow & Skill Versioning
+  -> Feature id=-1
+Feature: creating 'Azure AI Foundry Hub Deployment'
+  [DRY-RUN] Would create Feature : Azure AI Foundry Hub Deployment
+  -> Feature id=-1
+PBI: creating '[FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection
+  -> PBI id=-1
+
+=== Import Summary: EVA Foundry Hub ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103727
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103733
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-29-foundry-dryrun.log
+
+=== ADO Import: EVA Foundry Hub ===
+Project maturity : active
+GitHub repo      : eva-foundry/29-foundry
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Foundry Hub
+Feature: creating 'Core Technical Skills Library'
+  [DRY-RUN] Would create Feature : Core Technical Skills Library
+  -> Feature id=-1
+Feature: creating 'DPDCA Session Workflow & Skill Versioning'
+  [DRY-RUN] Would create Feature : DPDCA Session Workflow & Skill Versioning
+  -> Feature id=-1
+Feature: creating 'Azure AI Foundry Hub Deployment'
+  [DRY-RUN] Would create Feature : Azure AI Foundry Hub Deployment
+  -> Feature id=-1
+PBI: creating '[FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners
+  -> PBI id=-1
+PBI: creating '[FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection'
+  [DRY-RUN] Would create Product Backlog Item : [FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection
+  -> PBI id=-1
+
+=== Import Summary: EVA Foundry Hub ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103733
+**********************

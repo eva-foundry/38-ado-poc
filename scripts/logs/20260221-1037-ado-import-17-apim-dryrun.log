@@ -1,0 +1,118 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103726
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-17-apim-dryrun.log
+
+=== ADO Import: APIM Gateway — IA Web API ===
+Project maturity : poc
+GitHub repo      : eva-foundry/17-apim
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: APIM Gateway — IA Web API
+Feature: creating 'IA Web API OpenAPI Spec v0.1.3'
+  [DRY-RUN] Would create Feature : IA Web API OpenAPI Spec v0.1.3
+  -> Feature id=-1
+Feature: creating 'Cosmos DB Container Definitions'
+  [DRY-RUN] Would create Feature : Cosmos DB Container Definitions
+  -> Feature id=-1
+Feature: creating 'Sandbox APIM Import & Cost Attribution'
+  [DRY-RUN] Would create Feature : Sandbox APIM Import & Cost Attribution
+  -> Feature id=-1
+PBI: creating '[APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined
+  -> PBI id=-1
+PBI: creating '[APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources
+  -> PBI id=-1
+PBI: creating '[APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live
+  -> PBI id=-1
+
+=== Import Summary: APIM Gateway — IA Web API ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103726
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103732
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-17-apim-dryrun.log
+
+=== ADO Import: APIM Gateway — IA Web API ===
+Project maturity : poc
+GitHub repo      : eva-foundry/17-apim
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: APIM Gateway — IA Web API
+Feature: creating 'IA Web API OpenAPI Spec v0.1.3'
+  [DRY-RUN] Would create Feature : IA Web API OpenAPI Spec v0.1.3
+  -> Feature id=-1
+Feature: creating 'Cosmos DB Container Definitions'
+  [DRY-RUN] Would create Feature : Cosmos DB Container Definitions
+  -> Feature id=-1
+Feature: creating 'Sandbox APIM Import & Cost Attribution'
+  [DRY-RUN] Would create Feature : Sandbox APIM Import & Cost Attribution
+  -> Feature id=-1
+PBI: creating '[APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined
+  -> PBI id=-1
+PBI: creating '[APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-1] Cosmos DB container definitions authored for all APIM-backed resources
+  -> PBI id=-1
+PBI: creating '[APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-WI-2] OpenAPI spec imported into marco-sandbox-apim — all routes live
+  -> PBI id=-1
+
+=== Import Summary: APIM Gateway — IA Web API ===
+Epic id  : -1
+Features : 3
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103732
+**********************

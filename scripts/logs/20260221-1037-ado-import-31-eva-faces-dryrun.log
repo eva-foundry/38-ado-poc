@@ -1,0 +1,136 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103727
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-31-eva-faces-dryrun.log
+
+=== ADO Import: EVA Faces ===
+Project maturity : active
+GitHub repo      : eva-foundry/31-eva-faces
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Faces
+Feature: creating 'Admin Face — 24+ Admin Screens'
+  [DRY-RUN] Would create Feature : Admin Face — 24+ Admin Screens
+  -> Feature id=-1
+Feature: creating 'EVA-JP Jurisprudence Pages'
+  [DRY-RUN] Would create Feature : EVA-JP Jurisprudence Pages
+  -> Feature id=-1
+Feature: creating 'ADO Dashboard Pages (FACES-WI-A/B/C)'
+  [DRY-RUN] Would create Feature : ADO Dashboard Pages (FACES-WI-A/B/C)
+  -> Feature id=-1
+Feature: creating 'Auth & RBAC Integration'
+  [DRY-RUN] Would create Feature : Auth & RBAC Integration
+  -> Feature id=-1
+PBI: creating '[FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService
+  -> PBI id=-1
+PBI: creating '[FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested
+  -> PBI id=-1
+PBI: creating '[FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories
+  -> PBI id=-1
+PBI: creating '[FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts
+  -> PBI id=-1
+PBI: creating '[FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages
+  -> PBI id=-1
+
+=== Import Summary: EVA Faces ===
+Epic id  : -1
+Features : 4
+PBIs     : 5
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103727
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103733
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-31-eva-faces-dryrun.log
+
+=== ADO Import: EVA Faces ===
+Project maturity : active
+GitHub repo      : eva-foundry/31-eva-faces
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Faces
+Feature: creating 'Admin Face — 24+ Admin Screens'
+  [DRY-RUN] Would create Feature : Admin Face — 24+ Admin Screens
+  -> Feature id=-1
+Feature: creating 'EVA-JP Jurisprudence Pages'
+  [DRY-RUN] Would create Feature : EVA-JP Jurisprudence Pages
+  -> Feature id=-1
+Feature: creating 'ADO Dashboard Pages (FACES-WI-A/B/C)'
+  [DRY-RUN] Would create Feature : ADO Dashboard Pages (FACES-WI-A/B/C)
+  -> Feature id=-1
+Feature: creating 'Auth & RBAC Integration'
+  [DRY-RUN] Would create Feature : Auth & RBAC Integration
+  -> Feature id=-1
+PBI: creating '[FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService
+  -> PBI id=-1
+PBI: creating '[FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested
+  -> PBI id=-1
+PBI: creating '[FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories
+  -> PBI id=-1
+PBI: creating '[FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts
+  -> PBI id=-1
+PBI: creating '[FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages'
+  [DRY-RUN] Would create Product Backlog Item : [FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages
+  -> PBI id=-1
+
+=== Import Summary: EVA Faces ===
+Epic id  : -1
+Features : 4
+PBIs     : 5
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103733
+**********************

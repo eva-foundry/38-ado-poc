@@ -1,0 +1,94 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103726
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-24-eva-brain-dryrun.log
+
+=== ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Project maturity : retired
+GitHub repo      : eva-foundry/24-eva-brain
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2)
+Feature: creating 'Archive Reference — v1 Decomposition Artifacts'
+  [DRY-RUN] Would create Feature : Archive Reference — v1 Decomposition Artifacts
+  -> Feature id=-1
+PBI: creating '[BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2'
+  [DRY-RUN] Would create Product Backlog Item : [BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103726
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103733
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-24-eva-brain-dryrun.log
+
+=== ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Project maturity : retired
+GitHub repo      : eva-foundry/24-eva-brain
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2)
+Feature: creating 'Archive Reference — v1 Decomposition Artifacts'
+  [DRY-RUN] Would create Feature : Archive Reference — v1 Decomposition Artifacts
+  -> Feature id=-1
+PBI: creating '[BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2'
+  [DRY-RUN] Would create Product Backlog Item : [BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Epic id  : -1
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103733
+**********************

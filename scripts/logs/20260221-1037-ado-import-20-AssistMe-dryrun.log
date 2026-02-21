@@ -1,0 +1,112 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103726
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-20-AssistMe-dryrun.log
+
+=== ADO Import: AssistMe Knowledge Management ===
+Project maturity : poc
+GitHub repo      : eva-foundry/20-AssistMe
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AssistMe Knowledge Management
+Feature: creating 'KMT Database Inventory'
+  [DRY-RUN] Would create Feature : KMT Database Inventory
+  -> Feature id=-1
+Feature: creating 'Bilingual Knowledge Articles (EN/FR r2r3)'
+  [DRY-RUN] Would create Feature : Bilingual Knowledge Articles (EN/FR r2r3)
+  -> Feature id=-1
+Feature: creating 'Knowledge Article Ingestion into EVA Pipeline'
+  [DRY-RUN] Would create Feature : Knowledge Article Ingestion into EVA Pipeline
+  -> Feature id=-1
+PBI: creating '[AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored
+  -> PBI id=-1
+PBI: creating '[AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search
+  -> PBI id=-1
+
+=== Import Summary: AssistMe Knowledge Management ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103726
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103733
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-20-AssistMe-dryrun.log
+
+=== ADO Import: AssistMe Knowledge Management ===
+Project maturity : poc
+GitHub repo      : eva-foundry/20-AssistMe
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AssistMe Knowledge Management
+Feature: creating 'KMT Database Inventory'
+  [DRY-RUN] Would create Feature : KMT Database Inventory
+  -> Feature id=-1
+Feature: creating 'Bilingual Knowledge Articles (EN/FR r2r3)'
+  [DRY-RUN] Would create Feature : Bilingual Knowledge Articles (EN/FR r2r3)
+  -> Feature id=-1
+Feature: creating 'Knowledge Article Ingestion into EVA Pipeline'
+  [DRY-RUN] Would create Feature : Knowledge Article Ingestion into EVA Pipeline
+  -> Feature id=-1
+PBI: creating '[AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored
+  -> PBI id=-1
+PBI: creating '[AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search'
+  [DRY-RUN] Would create Product Backlog Item : [AM-WI-1] Knowledge articles ingested via 16-engineered-case-law pipeline into Azure AI Search
+  -> PBI id=-1
+
+=== Import Summary: AssistMe Knowledge Management ===
+Epic id  : -1
+Features : 3
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103733
+**********************

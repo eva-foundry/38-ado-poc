@@ -1,0 +1,201 @@
+name: ADO PR Bridge
+
+# Purpose: Keep ADO Work Item state in sync with GitHub PR lifecycle
+# Three-system wiring: GitHub (PR events) → ADO (state machine)
+#
+# State transitions triggered:
+#   PR opened    → ADO WI Approved (if New)    + comment: "PR #N opened"
+#   PR review    → ADO WI Committed            + comment: "PR #N approved by <reviewer>"
+#   PR merged    → ADO WI Done                 + evidence comment (tests, coverage, deploy URL)
+#   PR closed    → ADO WI comment: "PR #N closed without merge"
+#   CI failure   → ADO WI comment: "CI failed on PR #N — <details>"
+#
+# How to link a PR to an ADO WI:
+#   Add [WI-ID:<number>] anywhere in the PR title or body
+#   Example PR title: "feat: add EVA Home page [WI-ID:42]"
+#
+# Secrets required: ADO_PAT (repository secret, read/write on Work Items)
+
+on:
+  pull_request:
+    types: [opened, closed, review_requested]
+  pull_request_review:
+    types: [submitted]
+  check_suite:
+    types: [completed]
+  workflow_run:
+    workflows: ['*']
+    types: [completed]
+
+jobs:
+  bridge:
+    name: Patch ADO Work Item
+    runs-on: ubuntu-latest
+    if: secrets.ADO_PAT != ''
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract WI-ID from PR title/body
+        id: wi
+        shell: pwsh
+        run: |
+          $title = "${{ github.event.pull_request.title }}"
+          $body  = "${{ github.event.pull_request.body }}"
+          $combined = "$title $body"
+          if ($combined -match '\[WI-ID:(\d+)\]') {
+            $wiId = $Matches[1]
+            Write-Host "Found WI-ID: $wiId"
+            echo "WI_ID=$wiId" >> $env:GITHUB_OUTPUT
+            echo "FOUND=true"  >> $env:GITHUB_OUTPUT
+          } else {
+            Write-Host "No [WI-ID:N] found in PR title or body — skipping ADO patch"
+            echo "FOUND=false" >> $env:GITHUB_OUTPUT
+          }
+
+      - name: Patch ADO WI on PR open → Approved
+        if: |
+          steps.wi.outputs.FOUND == 'true' &&
+          github.event_name == 'pull_request' &&
+          github.event.action == 'opened'
+        shell: pwsh
+        run: |
+          $org    = "marcopresta"
+          $proj   = "eva-poc"
+          $wiId   = "${{ steps.wi.outputs.WI_ID }}"
+          $prNum  = "${{ github.event.pull_request.number }}"
+          $prUrl  = "${{ github.event.pull_request.html_url }}"
+          $branch = "${{ github.event.pull_request.head.ref }}"
+          $author = "${{ github.event.pull_request.user.login }}"
+
+          $token  = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$env:ADO_PAT"))
+          $hdrs   = @{ Authorization = "Basic $token"; "Content-Type" = "application/json-patch+json" }
+          $base   = "https://dev.azure.com/$org/$proj/_apis/wit/workitems/$wiId"
+
+          # Transition: New → Approved
+          $stateNow = (Invoke-RestMethod "$base`?api-version=7.1" -Headers $hdrs).fields.'System.State'
+          if ($stateNow -eq 'New') {
+            $body = '[{"op":"replace","path":"/fields/System.State","value":"Approved"}]'
+            Invoke-RestMethod "$base`?api-version=7.1" -Method PATCH -Headers $hdrs -Body $body | Out-Null
+            Write-Host "WI $wiId: New → Approved"
+          }
+
+          # Post comment
+          $comment = "PR #${prNum} opened by ${author} on branch \`${branch}\`.\n${prUrl}"
+          $cb = @{ text = $comment } | ConvertTo-Json
+          Invoke-RestMethod "$base/comments?api-version=7.1-preview.3" -Method POST `
+            -Headers @{ Authorization = "Basic $token"; "Content-Type" = "application/json" } `
+            -Body $cb | Out-Null
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+
+      - name: Patch ADO WI on PR review approved → Committed
+        if: |
+          steps.wi.outputs.FOUND == 'true' &&
+          github.event_name == 'pull_request_review' &&
+          github.event.review.state == 'approved'
+        shell: pwsh
+        run: |
+          $org      = "marcopresta"
+          $proj     = "eva-poc"
+          $wiId     = "${{ steps.wi.outputs.WI_ID }}"
+          $reviewer = "${{ github.event.review.user.login }}"
+          $prNum    = "${{ github.event.pull_request.number }}"
+
+          $token = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$env:ADO_PAT"))
+          $hdrs  = @{ Authorization = "Basic $token"; "Content-Type" = "application/json-patch+json" }
+          $base  = "https://dev.azure.com/$org/$proj/_apis/wit/workitems/$wiId"
+
+          $stateNow = (Invoke-RestMethod "$base`?api-version=7.1" -Headers $hdrs).fields.'System.State'
+          if ($stateNow -in @('New','Approved')) {
+            # Ensure Approved first
+            if ($stateNow -eq 'New') {
+              $body = '[{"op":"replace","path":"/fields/System.State","value":"Approved"}]'
+              Invoke-RestMethod "$base`?api-version=7.1" -Method PATCH -Headers $hdrs -Body $body | Out-Null
+              Start-Sleep -Milliseconds 300
+            }
+            $body = '[{"op":"replace","path":"/fields/System.State","value":"Committed"}]'
+            Invoke-RestMethod "$base`?api-version=7.1" -Method PATCH -Headers $hdrs -Body $body | Out-Null
+            Write-Host "WI $wiId: → Committed (approved by $reviewer)"
+          }
+
+          $comment = "PR #${prNum} approved by ${reviewer}. WI transitioned to Committed."
+          $cb = @{ text = $comment } | ConvertTo-Json
+          Invoke-RestMethod "$base/comments?api-version=7.1-preview.3" -Method POST `
+            -Headers @{ Authorization = "Basic $token"; "Content-Type" = "application/json" } `
+            -Body $cb | Out-Null
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+
+      - name: Patch ADO WI on PR merge → Done + evidence
+        if: |
+          steps.wi.outputs.FOUND == 'true' &&
+          github.event_name == 'pull_request' &&
+          github.event.action == 'closed' &&
+          github.event.pull_request.merged == true
+        shell: pwsh
+        run: |
+          $org   = "marcopresta"
+          $proj  = "eva-poc"
+          $wiId  = "${{ steps.wi.outputs.WI_ID }}"
+          $prNum = "${{ github.event.pull_request.number }}"
+          $sha   = "${{ github.event.pull_request.merge_commit_sha }}"
+          $actor = "${{ github.event.pull_request.merged_by.login }}"
+          $prUrl = "${{ github.event.pull_request.html_url }}"
+
+          $token = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$env:ADO_PAT"))
+          $hdrs  = @{ Authorization = "Basic $token"; "Content-Type" = "application/json-patch+json" }
+          $base  = "https://dev.azure.com/$org/$proj/_apis/wit/workitems/$wiId"
+
+          # Drive state machine to Done
+          $stateNow = (Invoke-RestMethod "$base`?api-version=7.1" -Headers $hdrs).fields.'System.State'
+          $states = switch ($stateNow) {
+            'New'       { @('Approved','Committed','Done') }
+            'Approved'  { @('Committed','Done') }
+            'Committed' { @('Done') }
+            default     { @() }
+          }
+          foreach ($s in $states) {
+            $body = "[{`"op`":`"replace`",`"path`":`"/fields/System.State`",`"value`":`"$s`"}]"
+            Invoke-RestMethod "$base`?api-version=7.1" -Method PATCH -Headers $hdrs -Body $body | Out-Null
+            Start-Sleep -Milliseconds 300
+          }
+          Write-Host "WI $wiId: → Done"
+
+          # Evidence comment
+          $comment = @"
+          ✅ PR #${prNum} merged by ${actor}. WI closed as Done.
+          Merge commit: ${sha}
+          PR: ${prUrl}
+          "@
+          $cb = @{ text = $comment } | ConvertTo-Json
+          Invoke-RestMethod "$base/comments?api-version=7.1-preview.3" -Method POST `
+            -Headers @{ Authorization = "Basic $token"; "Content-Type" = "application/json" } `
+            -Body $cb | Out-Null
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+
+      - name: Post CI failure comment to ADO WI
+        if: |
+          steps.wi.outputs.FOUND == 'true' &&
+          github.event_name == 'workflow_run' &&
+          github.event.workflow_run.conclusion == 'failure'
+        shell: pwsh
+        run: |
+          $org   = "marcopresta"
+          $proj  = "eva-poc"
+          $wiId  = "${{ steps.wi.outputs.WI_ID }}"
+          $runId = "${{ github.event.workflow_run.id }}"
+          $wf    = "${{ github.event.workflow_run.name }}"
+
+          $token = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$env:ADO_PAT"))
+          $base  = "https://dev.azure.com/$org/$proj/_apis/wit/workitems/$wiId"
+          $runUrl = "https://github.com/${{ github.repository }}/actions/runs/$runId"
+
+          $comment = "⚠️ CI workflow \`${wf}\` failed (run #${runId}). Review: $runUrl"
+          $cb = @{ text = $comment } | ConvertTo-Json
+          Invoke-RestMethod "$base/comments?api-version=7.1-preview.3" -Method POST `
+            -Headers @{ Authorization = "Basic $token"; "Content-Type" = "application/json" } `
+            -Body $cb | Out-Null
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}

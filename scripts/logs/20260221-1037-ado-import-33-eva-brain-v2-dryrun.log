@@ -1,0 +1,178 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103727
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-33-eva-brain-v2-dryrun.log
+
+=== ADO Import: EVA Brain v2 ===
+Project maturity : active
+GitHub repo      : eva-foundry/33-eva-brain-v2
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-0
+  [DRY-RUN] Would ensure sprint: Sprint-0
+  Sprint: Sprint-1
+  [DRY-RUN] Would ensure sprint: Sprint-1
+  Sprint: Sprint-2
+  [DRY-RUN] Would ensure sprint: Sprint-2
+  Sprint: Sprint-3
+  [DRY-RUN] Would ensure sprint: Sprint-3
+  Sprint: Sprint-4
+  [DRY-RUN] Would ensure sprint: Sprint-4
+  Sprint: Sprint-5
+  [DRY-RUN] Would ensure sprint: Sprint-5
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v2
+Feature: creating 'Core API Restoration'
+  [DRY-RUN] Would create Feature : Core API Restoration
+  -> Feature id=-1
+Feature: creating 'Test Quality & Coverage'
+  [DRY-RUN] Would create Feature : Test Quality & Coverage
+  -> Feature id=-1
+Feature: creating 'API Surface — Routes & Endpoints'
+  [DRY-RUN] Would create Feature : API Surface — Routes & Endpoints
+  -> Feature id=-1
+Feature: creating 'Sandbox Deployment & APIM'
+  [DRY-RUN] Would create Feature : Sandbox Deployment & APIM
+  -> Feature id=-1
+PBI: creating '[WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes'
+  [DRY-RUN] Would create Product Backlog Item : [WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes
+  -> PBI id=-1
+PBI: creating '[WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat'
+  [DRY-RUN] Would create Product Backlog Item : [WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat
+  -> PBI id=-1
+PBI: creating '[WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)
+  -> PBI id=-1
+PBI: creating '[WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags'
+  [DRY-RUN] Would create Product Backlog Item : [WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags
+  -> PBI id=-1
+PBI: creating '[WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)
+  -> PBI id=-1
+PBI: creating '[WI-6] Apps registry API (G3) — 7 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-6] Apps registry API (G3) — 7 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing'
+  [DRY-RUN] Would create Product Backlog Item : [WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v2 ===
+Epic id  : -1
+Features : 4
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103727
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103733
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-33-eva-brain-v2-dryrun.log
+
+=== ADO Import: EVA Brain v2 ===
+Project maturity : active
+GitHub repo      : eva-foundry/33-eva-brain-v2
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-0
+  [DRY-RUN] Would ensure sprint: Sprint-0
+  Sprint: Sprint-1
+  [DRY-RUN] Would ensure sprint: Sprint-1
+  Sprint: Sprint-2
+  [DRY-RUN] Would ensure sprint: Sprint-2
+  Sprint: Sprint-3
+  [DRY-RUN] Would ensure sprint: Sprint-3
+  Sprint: Sprint-4
+  [DRY-RUN] Would ensure sprint: Sprint-4
+  Sprint: Sprint-5
+  [DRY-RUN] Would ensure sprint: Sprint-5
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  [DRY-RUN] Would find-or-create Epic: EVA Brain v2
+Feature: creating 'Core API Restoration'
+  [DRY-RUN] Would create Feature : Core API Restoration
+  -> Feature id=-1
+Feature: creating 'Test Quality & Coverage'
+  [DRY-RUN] Would create Feature : Test Quality & Coverage
+  -> Feature id=-1
+Feature: creating 'API Surface — Routes & Endpoints'
+  [DRY-RUN] Would create Feature : API Surface — Routes & Endpoints
+  -> Feature id=-1
+Feature: creating 'Sandbox Deployment & APIM'
+  [DRY-RUN] Would create Feature : Sandbox Deployment & APIM
+  -> Feature id=-1
+PBI: creating '[WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes'
+  [DRY-RUN] Would create Product Backlog Item : [WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes
+  -> PBI id=-1
+PBI: creating '[WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat'
+  [DRY-RUN] Would create Product Backlog Item : [WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat
+  -> PBI id=-1
+PBI: creating '[WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)
+  -> PBI id=-1
+PBI: creating '[WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags'
+  [DRY-RUN] Would create Product Backlog Item : [WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags
+  -> PBI id=-1
+PBI: creating '[WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)'
+  [DRY-RUN] Would create Product Backlog Item : [WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)
+  -> PBI id=-1
+PBI: creating '[WI-6] Apps registry API (G3) — 7 endpoints'
+  [DRY-RUN] Would create Product Backlog Item : [WI-6] Apps registry API (G3) — 7 endpoints
+  -> PBI id=-1
+PBI: creating '[WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing'
+  [DRY-RUN] Would create Product Backlog Item : [WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing
+  -> PBI id=-1
+
+=== Import Summary: EVA Brain v2 ===
+Epic id  : -1
+Features : 4
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103733
+**********************

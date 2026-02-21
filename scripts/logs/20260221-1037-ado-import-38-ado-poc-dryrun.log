@@ -1,0 +1,146 @@
+**********************
+PowerShell transcript start
+Start time: 20260221103728
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-38-ado-poc-dryrun.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: ADO Command Center
+Feature: creating 'ADO Infrastructure & Scripts'
+  [DRY-RUN] Would create Feature : ADO Infrastructure & Scripts
+  -> Feature id=-1
+Feature: creating 'GitHub-ADO Async Bridge'
+  [DRY-RUN] Would create Feature : GitHub-ADO Async Bridge
+  -> Feature id=-1
+Feature: creating 'Project Onboarding Workflow'
+  [DRY-RUN] Would create Feature : Project Onboarding Workflow
+  -> Feature id=-1
+Feature: creating 'ADO Idea Intake Pipeline'
+  [DRY-RUN] Would create Feature : ADO Idea Intake Pipeline
+  -> Feature id=-1
+PBI: creating '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts
+  -> PBI id=-1
+PBI: creating '[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App
+  -> PBI id=-1
+PBI: creating '[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete
+  -> PBI id=-1
+PBI: creating '[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function
+  -> PBI id=-1
+
+=== Import Summary: ADO Command Center ===
+Epic id  : -1
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103728
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260221103734
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15116
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1037-ado-import-38-ado-poc-dryrun.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: ADO Command Center
+Feature: creating 'ADO Infrastructure & Scripts'
+  [DRY-RUN] Would create Feature : ADO Infrastructure & Scripts
+  -> Feature id=-1
+Feature: creating 'GitHub-ADO Async Bridge'
+  [DRY-RUN] Would create Feature : GitHub-ADO Async Bridge
+  -> Feature id=-1
+Feature: creating 'Project Onboarding Workflow'
+  [DRY-RUN] Would create Feature : Project Onboarding Workflow
+  -> Feature id=-1
+Feature: creating 'ADO Idea Intake Pipeline'
+  [DRY-RUN] Would create Feature : ADO Idea Intake Pipeline
+  -> Feature id=-1
+PBI: creating '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts
+  -> PBI id=-1
+PBI: creating '[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App
+  -> PBI id=-1
+PBI: creating '[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete
+  -> PBI id=-1
+PBI: creating '[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function
+  -> PBI id=-1
+
+=== Import Summary: ADO Command Center ===
+Epic id  : -1
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221103734
+**********************

@@ -1,0 +1,554 @@
+# sprint-execute.yml
+# GitHub Actions workflow — EVA Sprint Execution
+#
+# PURPOSE:
+#   Receives a sprint dispatch from ADO (workflow_dispatch),
+#   executes DPDCA for each WI in the sprint,
+#   posts live progress to ADO,
+#   closes each WI in ADO on completion,
+#   creates a PR for all sprint changes.
+#
+# TRIGGERED BY:
+#   ADO Pipeline stage "Dispatch" via POST to GitHub API:
+#   POST /repos/{owner}/{repo}/actions/workflows/sprint-execute.yml/dispatches
+#
+# TEMPLATE NOTE:
+#   This file is the project-agnostic template from 38-ado-poc.
+#   Copy to each project repo as .github/workflows/sprint-execute.yml.
+#   Project-specific values come from inputs and repository secrets.
+#
+# SECRETS REQUIRED (set in repository Settings > Secrets):
+#   ADO_ORG_URL              e.g. https://dev.azure.com/marcopresta
+#   ADO_PROJECT              e.g. eva-poc
+#   ADO_PAT                  Personal Access Token — Work Items Read/Write, Build Read
+#   FOUNDRY_HUB_ENDPOINT     Azure AI Foundry hub endpoint URL
+#   FOUNDRY_SP_SECRET        Service principal secret for Foundry auth
+#   ROLES_API_URL            URL of eva-roles-api (for /evaluate-cost-tags)
+#   TEAMS_WEBHOOK_URL        Incoming webhook URL for Teams critical alerts
+
+name: sprint-execute
+
+on:
+  workflow_dispatch:
+    inputs:
+      wi_ids:
+        description: "Comma-separated ADO Work Item IDs (e.g. 7,8,9)"
+        required: true
+        type: string
+      project:
+        description: "Project ID (e.g. eva-brain-v2)"
+        required: true
+        type: string
+      sprint:
+        description: "Sprint name (e.g. Sprint-6)"
+        required: true
+        type: string
+      feature_id:
+        description: "ADO Feature Work Item ID (for Feature-level rollup comments)"
+        required: true
+        type: string
+      skill_version:
+        description: "Foundry skill version"
+        required: false
+        default: "1.0.0"
+        type: string
+      ado_pipeline_build_id:
+        description: "ADO Pipeline Build ID that triggered this dispatch (for traceability)"
+        required: false
+        type: string
+
+jobs:
+  execute-sprint:
+    name: "DPDCA Sprint Execution"
+    runs-on: ubuntu-latest
+    timeout-minutes: 900
+
+    env:
+      ADO_ORG_URL: ${{ secrets.ADO_ORG_URL }}
+      ADO_PROJECT: ${{ secrets.ADO_PROJECT }}
+      ADO_PAT: ${{ secrets.ADO_PAT }}
+      FOUNDRY_HUB_ENDPOINT: ${{ secrets.FOUNDRY_HUB_ENDPOINT }}
+      FOUNDRY_SP_SECRET: ${{ secrets.FOUNDRY_SP_SECRET }}
+      ROLES_API_URL: ${{ secrets.ROLES_API_URL }}
+      TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
+      PROJECT: ${{ github.event.inputs.project }}
+      SPRINT: ${{ github.event.inputs.sprint }}
+      FEATURE_ID: ${{ github.event.inputs.feature_id }}
+      SKILL_VERSION: ${{ github.event.inputs.skill_version }}
+      GH_RUN_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+    steps:
+
+      # --- Setup -----------------------------------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt --quiet
+
+      # --- Helpers (inline bash functions used throughout) -----------------
+
+      - name: Write shared helper script
+        run: |
+          cat > /tmp/eva-helpers.sh << 'HELPERS'
+          #!/usr/bin/env bash
+          # Shared helper functions for sprint-execute workflow.
+          # Source this file at the start of each bash step that needs it.
+
+          ADO_AUTH=$(printf ":%s" "${ADO_PAT}" | base64 -w 0)
+
+          # post_wi_comment WI_ID MESSAGE
+          # Posts a plain-text comment to an ADO Work Item.
+          post_wi_comment() {
+            local wi_id="$1"
+            local message="$2"
+            local timestamp
+            timestamp=$(TZ="America/Toronto" date "+%Y-%m-%d %H:%M ET")
+            local full_message="[${timestamp}] ${message}"
+            curl -s -o /dev/null -w "%{http_code}" \
+              -X POST \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${wi_id}/comments?api-version=7.1" \
+              -H "Authorization: Basic ${ADO_AUTH}" \
+              -H "Content-Type: application/json" \
+              -d "{\"text\": \"${full_message}\"}"
+          }
+
+          # patch_wi_state WI_ID STATE
+          # Sets the ADO Work Item state (e.g. Active, Done, Needs Attention).
+          patch_wi_state() {
+            local wi_id="$1"
+            local state="$2"
+            curl -s -o /dev/null \
+              -X PATCH \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${wi_id}?api-version=7.1" \
+              -H "Authorization: Basic ${ADO_AUTH}" \
+              -H "Content-Type: application/json-patch+json" \
+              -d "[{\"op\": \"replace\", \"path\": \"/fields/System.State\", \"value\": \"${state}\"}]"
+          }
+
+          # update_heartbeat WI_TAG DPDCA_PHASE
+          # Updates the SPRINT_HEARTBEAT GitHub repository variable.
+          # Used by watchdog-poll.yml to detect stall.
+          update_heartbeat() {
+            local wi_tag="$1"
+            local phase="$2"
+            local ts
+            ts=$(date -u "+%Y-%m-%dT%H:%M:%SZ")
+            local value="${ts}|${wi_tag}|${phase}|${PROJECT}|${{ github.run_id }}"
+            curl -s -o /dev/null \
+              -X PATCH \
+              "https://api.github.com/repos/${{ github.repository }}/actions/variables/SPRINT_HEARTBEAT" \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              -d "{\"name\": \"SPRINT_HEARTBEAT\", \"value\": \"${value}\"}" || true
+          }
+
+          # post_teams_alert MESSAGE
+          # Sends a plain-text message to Teams via incoming webhook.
+          post_teams_alert() {
+            local message="$1"
+            if [ -z "${TEAMS_WEBHOOK_URL}" ]; then
+              echo "INFO: TEAMS_WEBHOOK_URL not set, skipping Teams alert."
+              return 0
+            fi
+            curl -s -o /dev/null \
+              -X POST "${TEAMS_WEBHOOK_URL}" \
+              -H "Content-Type: application/json" \
+              -d "{\"text\": \"${message}\"}"
+          }
+
+          HELPERS
+          chmod +x /tmp/eva-helpers.sh
+
+      # --- Resolve cost attribution ----------------------------------------
+
+      - name: Resolve cost attribution tags
+        id: attribution
+        run: |
+          source /tmp/eva-helpers.sh
+
+          ATTRIBUTION=$(curl -s -X POST \
+            "${ROLES_API_URL}/evaluate-cost-tags" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"context\": {
+                \"project\": \"${PROJECT}\",
+                \"sprint\": \"${SPRINT}\",
+                \"wi_tag\": \"${{ github.event.inputs.wi_ids }}\"
+              }
+            }")
+
+          BUSINESS_UNIT=$(echo "${ATTRIBUTION}" | python3 -c \
+            "import sys,json; d=json.load(sys.stdin); print(d.get('business_unit','unknown'))")
+          CLIENT_ID=$(echo "${ATTRIBUTION}" | python3 -c \
+            "import sys,json; d=json.load(sys.stdin); print(d.get('client_id','unknown'))")
+
+          if [ "${BUSINESS_UNIT}" = "unknown" ] || [ "${BUSINESS_UNIT}" = "null" ]; then
+            echo "ERROR: Cost attribution failed. Register project in EVA User Directory."
+            echo "       No un-attributed sprints allowed."
+            post_wi_comment "${FEATURE_ID}" \
+              "Sprint BLOCKED: cost attribution unresolved for project ${PROJECT}. Register in EVA User Directory first."
+            exit 1
+          fi
+
+          echo "business_unit=${BUSINESS_UNIT}" >> "${GITHUB_OUTPUT}"
+          echo "client_id=${CLIENT_ID}" >> "${GITHUB_OUTPUT}"
+          echo "Attribution resolved: business_unit=${BUSINESS_UNIT} client_id=${CLIENT_ID}"
+          echo "{\"business_unit\":\"${BUSINESS_UNIT}\",\"client_id\":\"${CLIENT_ID}\"}" \
+            > /tmp/attribution.json
+
+      # --- Sprint start notification ----------------------------------------
+
+      - name: Post sprint start to ADO Feature
+        run: |
+          source /tmp/eva-helpers.sh
+          post_wi_comment "${FEATURE_ID}" \
+            "Sprint execution started. Project: ${PROJECT} Sprint: ${SPRINT} WIs: ${{ github.event.inputs.wi_ids }} GitHub run: ${GH_RUN_URL}"
+          post_teams_alert \
+            "Sprint started: ${PROJECT} ${SPRINT} | WIs: ${{ github.event.inputs.wi_ids }} | ${GH_RUN_URL}"
+
+      # --- WI execution loop -----------------------------------------------
+      # Iterates over each WI ID in the comma-separated input list.
+      # For each WI: runs full DPDCA cycle, validates output, posts progress to ADO.
+      # Skips WIs already in Done state (safe to re-run failed sprints).
+
+      - name: Execute DPDCA loop for all WIs
+        id: dpdca_loop
+        env:
+          BUSINESS_UNIT: ${{ steps.attribution.outputs.business_unit }}
+          CLIENT_ID: ${{ steps.attribution.outputs.client_id }}
+        run: |
+          source /tmp/eva-helpers.sh
+
+          EVIDENCE_DIR="${RUNNER_TEMP}/evidence"
+          mkdir -p "${EVIDENCE_DIR}"
+
+          COMPLETED_WIS=""
+          FAILED_WI=""
+          ROLLUP=""
+
+          IFS=',' read -ra WI_LIST <<< "${{ github.event.inputs.wi_ids }}"
+
+          for WI_ID in "${WI_LIST[@]}"; do
+            WI_ID=$(echo "${WI_ID}" | tr -d ' ')
+
+            # Fetch WI state — skip if already Done
+            WI_STATE=$(curl -s \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${WI_ID}?api-version=7.1" \
+              -H "Authorization: Basic $(printf ":%s" "${ADO_PAT}" | base64 -w 0)" \
+              | python3 -c \
+                "import sys,json; d=json.load(sys.stdin); print(d['fields']['System.State'])" 2>/dev/null)
+
+            WI_TAG=$(curl -s \
+              "${ADO_ORG_URL}/${ADO_PROJECT}/_apis/wit/workitems/${WI_ID}?api-version=7.1" \
+              -H "Authorization: Basic $(printf ":%s" "${ADO_PAT}" | base64 -w 0)" \
+              | python3 -c \
+                "import sys,json; d=json.load(sys.stdin); \
+                 tags=d['fields'].get('System.Tags',''); \
+                 t=[x.strip() for x in tags.split(';') if x.strip().startswith('WI-')]; \
+                 print(t[0] if t else 'WI-' + '${WI_ID}')" 2>/dev/null)
+            WI_TAG="${WI_TAG:-WI-${WI_ID}}"
+
+            if [ "${WI_STATE}" = "Done" ]; then
+              echo "WI ${WI_TAG} (id=${WI_ID}) is already Done — skipping."
+              ROLLUP="${ROLLUP}\n  ${WI_TAG}  DONE  (pre-existing)"
+              COMPLETED_WIS="${COMPLETED_WIS} ${WI_TAG}"
+              continue
+            fi
+
+            # --- Mark WI Active and post start comment ---
+            patch_wi_state "${WI_ID}" "Active"
+            post_wi_comment "${WI_ID}" \
+              "${WI_TAG} started. Project: ${PROJECT} Sprint: ${SPRINT} Run: ${GH_RUN_URL}"
+
+            # --- Start background heartbeat timer ---
+            # Writes a timestamp every 10 min so watchdog can detect stall.
+            CURRENT_PHASE="Init"
+            heartbeat_loop() {
+              while true; do
+                sleep 600
+                update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+              done
+            }
+            heartbeat_loop &
+            HEARTBEAT_PID=$!
+
+            DPDCA_OK=true
+            WI_EVIDENCE_DIR="${EVIDENCE_DIR}/${WI_TAG}"
+            mkdir -p "${WI_EVIDENCE_DIR}"
+            ELAPSED_START=$(date +%s)
+
+            # --- Define phase ---
+            CURRENT_PHASE="Define"
+            update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+            post_wi_comment "${WI_ID}" "${WI_TAG} Define phase started."
+
+            # Call Foundry session-workflow-agent for Define phase
+            DEFINE_RESP=$(curl -s -X POST \
+              "${FOUNDRY_HUB_ENDPOINT}/agents/session-workflow-agent/invoke" \
+              -H "Authorization: Bearer $(curl -s -X POST \
+                'https://login.microsoftonline.com/common/oauth2/v2.0/token' \
+                -d "grant_type=client_credentials&client_id=$(echo ${FOUNDRY_SP_SECRET} | cut -d: -f1)&client_secret=$(echo ${FOUNDRY_SP_SECRET} | cut -d: -f2)&scope=https://ml.azure.com/.default" \
+                | python3 -c 'import sys,json; print(json.load(sys.stdin).get("access_token","ERROR"))')" \
+              -H "Content-Type: application/json" \
+              -H "x-eva-project-id: ${PROJECT}" \
+              -H "x-eva-wi-tag: ${WI_TAG}" \
+              -H "x-eva-business-unit: ${BUSINESS_UNIT}" \
+              -H "x-eva-client-id: ${CLIENT_ID}" \
+              -H "x-eva-sprint: ${SPRINT}" \
+              -d "{
+                \"phase\": \"Define\",
+                \"wi_id\": \"${WI_ID}\",
+                \"wi_tag\": \"${WI_TAG}\",
+                \"project\": \"${PROJECT}\",
+                \"sprint\": \"${SPRINT}\",
+                \"skill_version\": \"${SKILL_VERSION}\"
+              }") || DPDCA_OK=false
+
+            # --- Plan phase ---
+            CURRENT_PHASE="Plan"
+            update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+            post_wi_comment "${WI_ID}" "${WI_TAG} Plan phase started."
+
+            PLAN_RESP=$(curl -s -X POST \
+              "${FOUNDRY_HUB_ENDPOINT}/agents/session-workflow-agent/invoke" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"phase\": \"Plan\",
+                \"wi_id\": \"${WI_ID}\",
+                \"wi_tag\": \"${WI_TAG}\",
+                \"project\": \"${PROJECT}\",
+                \"sprint\": \"${SPRINT}\",
+                \"skill_version\": \"${SKILL_VERSION}\",
+                \"define_output\": ${DEFINE_RESP:-{}}
+              }") || DPDCA_OK=false
+
+            # --- Do phase ---
+            CURRENT_PHASE="Do"
+            update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+            post_wi_comment "${WI_ID}" "${WI_TAG} Do phase started."
+
+            DO_RESP=$(curl -s -X POST \
+              "${FOUNDRY_HUB_ENDPOINT}/agents/session-workflow-agent/invoke" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"phase\": \"Do\",
+                \"wi_id\": \"${WI_ID}\",
+                \"wi_tag\": \"${WI_TAG}\",
+                \"project\": \"${PROJECT}\",
+                \"sprint\": \"${SPRINT}\",
+                \"skill_version\": \"${SKILL_VERSION}\",
+                \"plan_output\": ${PLAN_RESP:-{}}
+              }") || DPDCA_OK=false
+
+            # --- Check phase (run tests + tsc) ---
+            CURRENT_PHASE="Check"
+            update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+            post_wi_comment "${WI_ID}" "${WI_TAG} Check phase started (tests + tsc)."
+
+            # Run tests
+            pytest tests/ \
+              --tb=short \
+              --junitxml="${WI_EVIDENCE_DIR}/pytest-results.xml" \
+              --cov=. \
+              --cov-report=json:"${WI_EVIDENCE_DIR}/coverage.json" \
+              --cov-report=xml:"${WI_EVIDENCE_DIR}/coverage.xml" \
+              -q 2>&1 | tee "${WI_EVIDENCE_DIR}/pytest-output.txt" || DPDCA_OK=false
+
+            # Run tsc if tsconfig.json present
+            if [ -f "tsconfig.json" ]; then
+              npx tsc --noEmit 2>&1 | tee "${WI_EVIDENCE_DIR}/tsc-output.txt" || DPDCA_OK=false
+            fi
+
+            # --- Output validation (fail fast, fail loud) ---
+            # Checks that tests ran, count did not regress, tsc is clean.
+            TEST_COUNT=$(python3 -c "
+          import xml.etree.ElementTree as ET, sys
+          try:
+              tree = ET.parse('${WI_EVIDENCE_DIR}/pytest-results.xml')
+              tests = int(tree.getroot().get('tests', 0))
+              failures = int(tree.getroot().get('failures', 0))
+              errors = int(tree.getroot().get('errors', 0))
+              print(tests)
+              if failures + errors > 0:
+                  sys.exit(1)
+          except Exception as e:
+              print(0)
+              sys.exit(1)
+          " 2>/dev/null) || DPDCA_OK=false
+
+            COVERAGE=$(python3 -c "
+          import json, sys
+          try:
+              with open('${WI_EVIDENCE_DIR}/coverage.json') as f:
+                  d = json.load(f)
+              pct = d['totals']['percent_covered']
+              print(round(pct, 1))
+          except Exception:
+              print(0)
+          " 2>/dev/null)
+
+            TSC_CLEAN="true"
+            if [ -f "${WI_EVIDENCE_DIR}/tsc-output.txt" ]; then
+              if grep -q "error TS" "${WI_EVIDENCE_DIR}/tsc-output.txt"; then
+                TSC_CLEAN="false"
+                DPDCA_OK=false
+              fi
+            fi
+
+            # --- Act phase ---
+            CURRENT_PHASE="Act"
+            update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+            post_wi_comment "${WI_ID}" "${WI_TAG} Act phase started."
+
+            ACT_RESP=$(curl -s -X POST \
+              "${FOUNDRY_HUB_ENDPOINT}/agents/session-workflow-agent/invoke" \
+              -H "Content-Type: application/json" \
+              -d "{
+                \"phase\": \"Act\",
+                \"wi_id\": \"${WI_ID}\",
+                \"wi_tag\": \"${WI_TAG}\",
+                \"project\": \"${PROJECT}\",
+                \"sprint\": \"${SPRINT}\",
+                \"check_results\": {
+                  \"test_count\": ${TEST_COUNT:-0},
+                  \"coverage\": ${COVERAGE:-0},
+                  \"tsc_clean\": ${TSC_CLEAN}
+                }
+              }") || true
+
+            # --- Stop heartbeat ---
+            kill "${HEARTBEAT_PID}" 2>/dev/null || true
+
+            # --- Save attribution alongside evidence ---
+            cp /tmp/attribution.json "${WI_EVIDENCE_DIR}/attribution.json"
+
+            ELAPSED_END=$(date +%s)
+            ELAPSED_MIN=$(( (ELAPSED_END - ELAPSED_START) / 60 ))
+
+            # --- Write wi-summary.json ---
+            cat > "${WI_EVIDENCE_DIR}/wi-summary.json" << SUMMARY
+          {
+            "wi_id": "${WI_ID}",
+            "wi_tag": "${WI_TAG}",
+            "project": "${PROJECT}",
+            "sprint": "${SPRINT}",
+            "test_count": ${TEST_COUNT:-0},
+            "coverage_pct": ${COVERAGE:-0},
+            "tsc_clean": ${TSC_CLEAN},
+            "elapsed_minutes": ${ELAPSED_MIN},
+            "status": "$([ "${DPDCA_OK}" = "true" ] && echo "Done" || echo "Failed")",
+            "github_run_id": "${{ github.run_id }}",
+            "github_run_url": "${GH_RUN_URL}"
+          }
+          SUMMARY
+
+            # --- Handle outcome ---
+            if [ "${DPDCA_OK}" = "true" ]; then
+              CURRENT_PHASE="Done"
+              update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+
+              # Close WI in ADO
+              patch_wi_state "${WI_ID}" "Done"
+              post_wi_comment "${WI_ID}" \
+                "${WI_TAG} DONE. Tests: ${TEST_COUNT} Coverage: ${COVERAGE}pct tsc: ${TSC_CLEAN} Elapsed: ${ELAPSED_MIN}min"
+
+              COMPLETED_WIS="${COMPLETED_WIS} ${WI_TAG}"
+              ROLLUP="${ROLLUP}\n  ${WI_TAG}  DONE  ${TEST_COUNT} tests  ${COVERAGE}pct  ${ELAPSED_MIN}min"
+
+              # Post rollup to Feature after each WI completion
+              post_wi_comment "${FEATURE_ID}" \
+                "${SPRINT} rollup (${PROJECT}): DONE: ${COMPLETED_WIS} | REMAINING: see WI list | Run: ${GH_RUN_URL}"
+
+            else
+              CURRENT_PHASE="Failed"
+              update_heartbeat "${WI_TAG}" "${CURRENT_PHASE}"
+              patch_wi_state "${WI_ID}" "Needs Attention"
+              post_wi_comment "${WI_ID}" \
+                "${WI_TAG} FAILED. Tests: ${TEST_COUNT:-0} Coverage: ${COVERAGE:-0}pct tsc: ${TSC_CLEAN} See run: ${GH_RUN_URL}"
+
+              FAILED_WI="${WI_TAG}"
+              ROLLUP="${ROLLUP}\n  ${WI_TAG}  FAILED"
+              post_teams_alert \
+                "ALERT: Sprint FAILED on ${WI_TAG} project ${PROJECT} sprint ${SPRINT}. Run: ${GH_RUN_URL}"
+
+              # Stop processing remaining WIs to avoid cascading failures
+              break
+            fi
+
+          done  # end WI loop
+
+          # --- Save loop outputs for later steps ---
+          echo "completed_wis=${COMPLETED_WIS}" >> "${GITHUB_OUTPUT}"
+          echo "failed_wi=${FAILED_WI}" >> "${GITHUB_OUTPUT}"
+          echo "evidence_dir=${EVIDENCE_DIR}" >> "${GITHUB_OUTPUT}"
+
+          # Fail the step if any WI failed
+          if [ -n "${FAILED_WI}" ]; then
+            exit 1
+          fi
+
+      # --- Create PR -------------------------------------------------------
+
+      - name: Create sprint PR
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="sprint/${{ github.event.inputs.sprint }}-${{ github.event.inputs.project }}"
+          git config user.email "sprint-bot@eva-aicoe.ca"
+          git config user.name "Sprint Bot"
+          git checkout -b "${BRANCH}" 2>/dev/null || git checkout "${BRANCH}"
+          git add -A
+          git diff --cached --quiet || git commit \
+            -m "[${{ github.event.inputs.sprint }}] DPDCA complete — ${{ github.event.inputs.project }} AB#$(echo "${{ github.event.inputs.wi_ids }}" | tr ',' ' #')"
+          git push origin "${BRANCH}" --force
+
+          gh pr create \
+            --title "[${{ github.event.inputs.sprint }}] Sprint results — ${{ github.event.inputs.project }}" \
+            --body "Automated PR from sprint-execute.yml
+          Project: ${{ github.event.inputs.project }}
+          Sprint: ${{ github.event.inputs.sprint }}
+          WIs: ${{ github.event.inputs.wi_ids }}
+          ADO Pipeline Build: ${{ github.event.inputs.ado_pipeline_build_id }}
+          GitHub run: ${GH_RUN_URL}" \
+            --base main \
+            --head "${BRANCH}" || echo "PR already exists or no changes — skipping"
+
+      # --- Upload evidence artifacts ----------------------------------------
+
+      - name: Upload evidence artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "sprint-evidence-${{ github.event.inputs.sprint }}-${{ github.event.inputs.project }}"
+          path: "${{ steps.dpdca_loop.outputs.evidence_dir }}"
+          retention-days: 90
+
+      # --- Post sprint complete notification --------------------------------
+
+      - name: Post sprint complete to ADO and Teams
+        if: success()
+        run: |
+          source /tmp/eva-helpers.sh
+          post_wi_comment "${FEATURE_ID}" \
+            "Sprint COMPLETE. Project: ${PROJECT} Sprint: ${SPRINT} Completed WIs: ${{ steps.dpdca_loop.outputs.completed_wis }} Run: ${GH_RUN_URL}"
+          post_teams_alert \
+            "Sprint COMPLETE: ${PROJECT} ${SPRINT} | WIs done: ${{ steps.dpdca_loop.outputs.completed_wis }} | ${GH_RUN_URL}"
+
+      # --- Post failure notification -----------------------------------------
+
+      - name: Post failure notification
+        if: failure()
+        run: |
+          source /tmp/eva-helpers.sh
+          post_wi_comment "${FEATURE_ID}" \
+            "Sprint FAILED. Project: ${PROJECT} Sprint: ${SPRINT} Failed on: ${{ steps.dpdca_loop.outputs.failed_wi }} Run: ${GH_RUN_URL}"
+          post_teams_alert \
+            "CRITICAL: Sprint FAILED. ${PROJECT} ${SPRINT} | Failed on: ${{ steps.dpdca_loop.outputs.failed_wi }} | ${GH_RUN_URL}"

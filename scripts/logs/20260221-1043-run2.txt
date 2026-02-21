@@ -1,0 +1,538 @@
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-onboard-all-live.log
+
+EVA ADO Onboard — Project Registry Review
+Foundation : C:\AICOE\eva-foundation
+Date       : 2026-02-21 10:43 ET
+
+
+Folder                 Maturity Epic                                WIs Artifact
+                                                                        s
+------                 -------- ----                                --- --------
+14-az-finops           empty    AZ FinOps Pipeline                    2 yes     
+15-cdc                 empty    CDC Integration (placeholder)         1 yes     
+16-engineered-case-law poc      Engineered Case Law Pipeline          2 yes     
+17-apim                poc      APIM Gateway — IA Web API             3 yes     
+18-azure-best          active   Azure Best Practices Reference L...   3 yes     
+19-ai-gov              poc      AI Governance Automation              2 yes     
+20-AssistMe            poc      AssistMe Knowledge Management         2 yes     
+24-eva-brain           retired  EVA Brain v1 (Retired — supersed...   1 yes     
+29-foundry             active   EVA Foundry Hub                       3 yes     
+30-ui-bench            poc      EVA UI Testing Bench                  2 yes     
+31-eva-faces           active   EVA Faces                             5 yes     
+33-eva-brain-v2        active   EVA Brain v2                          8 yes     
+34-eva-agents          idea     EVA Agents                            1 yes     
+35-agentic-code-fixing poc      Agentic Code Fixing                   2 yes     
+36-red-teaming         active   Red Teaming & Evaluation Framework    2 yes     
+37-data-model          complete EVA Data Model                        4 yes     
+38-ado-poc             active   ADO Command Center                    6 yes     
+39-ado-dashboard       poc      EVA ADO Dashboard                     3 yes     
+
+
+Projects ready to import (18 of 18):
+  14-az-finops
+  15-cdc
+  16-engineered-case-law
+  17-apim
+  18-azure-best
+  19-ai-gov
+  20-AssistMe
+  24-eva-brain
+  29-foundry
+  30-ui-bench
+  31-eva-faces
+  33-eva-brain-v2
+  34-eva-agents
+  35-agentic-code-fixing
+  36-red-teaming
+  37-data-model
+  38-ado-poc
+  39-ado-dashboard
+
+To import a single project:
+  $env:ADO_PAT = "<pat>"
+  cd C:\AICOE\eva-foundation\<NN-project>
+  .\ado-import.ps1 -DryRun   # preview first
+  .\ado-import.ps1
+
+To dry-run ALL ready projects (no ADO writes):
+  .\ado-onboard-all.ps1 -RunImport -DryRun
+
+To import ALL ready projects (REVIEW ARTIFACTS FIRST):
+  $env:ADO_PAT = "<pat>"
+  .\ado-onboard-all.ps1 -RunImport
+
+Running batch import (LIVE)...
+
+>>> 14-az-finops
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-14-az-finops-live.log
+
+=== ADO Import: AZ FinOps Pipeline ===
+Project maturity : empty
+GitHub repo      : eva-foundry/14-az-finops
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=15 — 'AZ FinOps Pipeline'
+Feature: existing id=33 — 'Azure Cost Management Export'
+Feature: existing id=34 — 'FinOps Power BI Dashboard'
+PBI: existing id=35 — '[FINOPS-WI-0] Configure Azure Cost Management scheduled export'
+PBI: existing id=36 — '[FINOPS-WI-1] Build Power BI dataset and FinOps reports'
+
+=== Import Summary: AZ FinOps Pipeline ===
+Epic id  : 15
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+finops-wi-0 35 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+finops-wi-1 36 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+
+
+>>> 15-cdc
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-15-cdc-live.log
+
+=== ADO Import: CDC Integration (placeholder) ===
+Project maturity : empty
+GitHub repo      : eva-foundry/15-cdc
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=16 — 'CDC Integration (placeholder)'
+Feature: existing id=37 — 'CDC Scope Definition'
+PBI: existing id=38 — '[CDC-WI-0] Scope & technology decision for CDC integration'
+
+=== Import Summary: CDC Integration (placeholder) ===
+Epic id  : 16
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag      Id State Url
+---      -- ----- ---
+cdc-wi-0 38 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/38
+
+
+>>> 16-engineered-case-law
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-16-engineered-case-law-live.log
+
+=== ADO Import: Engineered Case Law Pipeline ===
+Project maturity : poc
+GitHub repo      : eva-foundry/16-engineered-case-law
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=17 — 'Engineered Case Law Pipeline'
+Feature: existing id=39 — 'Case Law Ingestion & Processing Pipeline'
+Feature: existing id=40 — 'Azure AI Search Integration'
+PBI: existing id=41 — '[ECL-WI-0] Pipeline executed — full_run.log, success_run.log, test_run.log evidence'
+ERROR in 16-engineered-case-law: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/41?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 17-apim
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-17-apim-live.log
+
+=== ADO Import: APIM Gateway — IA Web API ===
+Project maturity : poc
+GitHub repo      : eva-foundry/17-apim
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=18 — 'APIM Gateway — IA Web API'
+Feature: existing id=42 — 'IA Web API OpenAPI Spec v0.1.3'
+Feature: existing id=43 — 'Cosmos DB Container Definitions'
+Feature: existing id=44 — 'Sandbox APIM Import & Cost Attribution'
+PBI: existing id=45 — '[APIM-WI-0] OpenAPI spec v0.1.3 authored — all EVA routes defined'
+ERROR in 17-apim: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/45?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 18-azure-best
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-18-azure-best-live.log
+
+=== ADO Import: Azure Best Practices Reference Library ===
+Project maturity : active
+GitHub repo      : eva-foundry/18-azure-best
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=19 — 'Azure Best Practices Reference Library'
+Feature: existing id=46 — 'Infrastructure Reference Modules (01-06)'
+Feature: existing id=47 — 'Platform Engineering Modules (07-10)'
+Feature: existing id=48 — 'Consumption & Sourcing Protocol for EVA Projects'
+PBI: existing id=49 — '[AB-WI-0] Infrastructure reference modules complete — 01 through 06 verified'
+ERROR in 18-azure-best: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/49?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 19-ai-gov
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-19-ai-gov-live.log
+
+=== ADO Import: AI Governance Automation ===
+Project maturity : poc
+GitHub repo      : eva-foundry/19-ai-gov
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=20 — 'AI Governance Automation'
+Feature: existing id=50 — 'Governance Automation Schemas'
+Feature: existing id=51 — 'Policy-as-Code CI Gate'
+PBI: existing id=52 — '[GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card'
+ERROR in 19-ai-gov: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/52?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 20-AssistMe
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-20-AssistMe-live.log
+
+=== ADO Import: AssistMe Knowledge Management ===
+Project maturity : poc
+GitHub repo      : eva-foundry/20-AssistMe
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=21 — 'AssistMe Knowledge Management'
+Feature: existing id=53 — 'KMT Database Inventory'
+Feature: existing id=54 — 'Bilingual Knowledge Articles (EN/FR r2r3)'
+Feature: existing id=55 — 'Knowledge Article Ingestion into EVA Pipeline'
+PBI: existing id=56 — '[AM-WI-0] KMT inventory complete — KMT-DATABASE-INVENTORY-COMPLETE.json authored'
+ERROR in 20-AssistMe: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/56?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 24-eva-brain
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-24-eva-brain-live.log
+
+=== ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
+Project maturity : retired
+GitHub repo      : eva-foundry/24-eva-brain
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=22 — 'EVA Brain v1 (Retired — superseded by 33-eva-brain-v2)'
+Feature: existing id=57 — 'Archive Reference — v1 Decomposition Artifacts'
+PBI: existing id=58 — '[BRAIN-V1-WI-0] Archive v1 artifacts — mark repo retired, link to 33-eva-brain-v2'
+ERROR in 24-eva-brain: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/58?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 29-foundry
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-29-foundry-live.log
+
+=== ADO Import: EVA Foundry Hub ===
+Project maturity : active
+GitHub repo      : eva-foundry/29-foundry
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=23 — 'EVA Foundry Hub'
+Feature: existing id=59 — 'Core Technical Skills Library'
+Feature: existing id=60 — 'DPDCA Session Workflow & Skill Versioning'
+Feature: existing id=61 — 'Azure AI Foundry Hub Deployment'
+PBI: existing id=62 — '[FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills'
+ERROR in 29-foundry: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/62?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 30-ui-bench
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-30-ui-bench-live.log
+
+=== ADO Import: EVA UI Testing Bench ===
+Project maturity : poc
+GitHub repo      : eva-foundry/30-ui-bench
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=24 — 'EVA UI Testing Bench'
+Feature: existing id=63 — 'Accessibility Testing Suite — jest-axe'
+Feature: existing id=64 — 'Component Regression Suite — React Testing Library'
+PBI: existing id=65 — '[UIB-WI-0] UI bench setup — jest, jest-axe, @testing-library/react configured'
+ERROR in 30-ui-bench: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/65?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 31-eva-faces
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-31-eva-faces-live.log
+
+=== ADO Import: EVA Faces ===
+Project maturity : active
+GitHub repo      : eva-foundry/31-eva-faces
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=25 — 'EVA Faces'
+Feature: existing id=66 — 'Admin Face — 24+ Admin Screens'
+Feature: existing id=67 — 'EVA-JP Jurisprudence Pages'
+Feature: existing id=68 — 'ADO Dashboard Pages (FACES-WI-A/B/C)'
+Feature: existing id=69 — 'Auth & RBAC Integration'
+PBI: existing id=70 — '[FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService'
+ERROR in 31-eva-faces: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/70?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 33-eva-brain-v2
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-33-eva-brain-v2-live.log
+
+=== ADO Import: EVA Brain v2 ===
+Project maturity : active
+GitHub repo      : eva-foundry/33-eva-brain-v2
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-0
+  Sprint: Sprint-1
+  Sprint: Sprint-2
+  Sprint: Sprint-3
+  Sprint: Sprint-4
+  Sprint: Sprint-5
+  Sprint: Sprint-6
+Epic: existing id=26 — 'EVA Brain v2'
+Feature: existing id=71 — 'Core API Restoration'
+Feature: existing id=72 — 'Test Quality & Coverage'
+Feature: existing id=73 — 'API Surface — Routes & Endpoints'
+Feature: existing id=74 — 'Sandbox Deployment & APIM'
+PBI: existing id=8 — '[WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes'
+ERROR in 33-eva-brain-v2: Index was outside the bounds of the array.
+
+>>> 34-eva-agents
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-34-eva-agents-live.log
+
+=== ADO Import: EVA Agents ===
+Project maturity : idea
+GitHub repo      : eva-foundry/34-eva-agents
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=27 — 'EVA Agents'
+Feature: existing id=75 — 'Agents Scope & Architecture Decision'
+PBI: existing id=76 — '[AGENTS-WI-0] Architecture decision — agent types, repos, Foundry deployment pattern'
+
+=== Import Summary: EVA Agents ===
+Epic id  : 27
+Features : 1
+PBIs     : 1
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+agents-wi-0 76 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+
+
+>>> 35-agentic-code-fixing
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-35-agentic-code-fixing-live.log
+
+=== ADO Import: Agentic Code Fixing ===
+Project maturity : poc
+GitHub repo      : eva-foundry/35-agentic-code-fixing
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=28 — 'Agentic Code Fixing'
+Feature: existing id=77 — 'Local Agent — BYOK + Foundry Local'
+Feature: existing id=78 — 'Web Dashboard & CLI'
+Feature: existing id=79 — 'EVA Platform Integration'
+PBI: existing id=80 — '[ACF-WI-0] PoC complete — local agent, 4-phase workflow, demo repo with intentional bugs'
+ERROR in 35-agentic-code-fixing: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/80?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 36-red-teaming
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-36-red-teaming-live.log
+
+=== ADO Import: Red Teaming & Evaluation Framework ===
+Project maturity : active
+GitHub repo      : eva-foundry/36-red-teaming
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=29 — 'Red Teaming & Evaluation Framework'
+Feature: existing id=81 — 'Promptfoo Harness & HTTP Provider'
+Feature: existing id=82 — 'MITRE ATLAS Test Suites'
+Feature: existing id=83 — 'CI/CD Gate & Evidence Pack'
+PBI: existing id=84 — '[RT-WI-0] MVP complete — Promptfoo harness, ATLAS suites, CI gate, evidence pack'
+ERROR in 36-red-teaming: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/84?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 37-data-model
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
+
+=== ADO Import: EVA Data Model ===
+Project maturity : complete
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=30 — 'EVA Data Model'
+Feature: existing id=85 — 'Core Model Layers (1–6)'
+Feature: existing id=86 — 'Extended Model Layers (7–11)'
+Feature: existing id=87 — 'Model Tooling — Validation & Assembly'
+PBI: existing id=88 — '[DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags'
+ERROR in 37-data-model: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/88?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 38-ado-poc
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-6
+  Sprint: Sprint-Backlog
+Epic: existing id=31 — 'ADO Command Center'
+Feature: existing id=89 — 'ADO Infrastructure & Scripts'
+Feature: existing id=90 — 'GitHub-ADO Async Bridge'
+Feature: existing id=91 — 'Project Onboarding Workflow'
+Feature: existing id=92 — 'ADO Idea Intake Pipeline'
+PBI: existing id=93 — '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+ERROR in 38-ado-poc: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/93?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "You must pass a valid patch document in the body of the request.",
+  "typeName": "Microsoft.VisualStudio.Services.Common.VssPropertyValidationException, Microsoft.VisualStudio.Services.Common",
+  "typeKey": "VssPropertyValidationException",
+  "errorCode": 0,
+  "eventId": 3000
+}
+
+>>> 39-ado-dashboard
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+Epic: existing id=32 — 'EVA ADO Dashboard'
+Feature: existing id=94 — 'Reference Components & Type Contract'
+Feature: existing id=95 — 'APIM Data Route (/v1/scrum/dashboard)'
+PBI: existing id=96 — '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+PBI: existing id=97 — '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+PBI: existing id=98 — '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : 32
+Features : 2
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag       Id State Url
+---       -- ----- ---
+dash-wi-0 96 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/96
+dash-wi-1 97 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/97
+dash-wi-2 98 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/98
+
+
+Batch import complete.
