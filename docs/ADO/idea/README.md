@@ -8,6 +8,7 @@
 github_repo:      eva-foundry/38-ado-poc
 owner:            marco.presta / EsDAICoE
 maturity:         active
+last_updated:     2026-02-21
 date:             2026-02-21
 depends_on:       38-ado-poc (scripts complete), 33-eva-brain-v2 WI-7 (APIM)
 ```
