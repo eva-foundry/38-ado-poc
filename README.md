@@ -204,3 +204,5 @@ The PAT is **always** passed as `$env:ADO_PAT`. It is **never** written to any f
 | `38-ado-poc` | `33-eva-brain-v2` | Dispatches DPDCA runner; receives WI close events |
 | `33-eva-brain-v2` + `17-apim` | `39-ado-dashboard` | APIM route exposes ADO data; EVA Portal + sprint views consume it |
 | `39-ado-dashboard` | `31-eva-faces` | Delivered as EVAHomePage.tsx + SprintBoardPage.tsx inside eva-faces |
+
+<!-- eva-cli test PR -->
