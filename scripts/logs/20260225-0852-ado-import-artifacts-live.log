@@ -1,0 +1,552 @@
+**********************
+PowerShell transcript start
+Start time: 20260225085210
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\03-poc-enhanced-docs.json
+Process ID: 16024
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0852-ado-import-artifacts-live.log
+
+=== ADO Import: 03-poc-enhanced-docs ===
+Project maturity : poc
+GitHub repo      : eva-foundry/03-poc-enhanced-docs
+Dry run          : False
+
+Epic: creating '03-poc-enhanced-docs'
+  -> Epic id=255
+Feature: existing id=229 — 'Timeline: 3 Weeks (15 working days)'
+Feature: creating 'Week 1: Diagram Generation (Days 1-5)'
+  -> Feature id=256
+Feature: creating 'Week 2: Enhanced Markdown + MkDocs Setup (Days 6-10)'
+  -> Feature id=257
+Feature: creating 'Week 3: Interactive Features + Deployment (Days 11-15)'
+  -> Feature id=258
+Feature: existing id=233 — 'Success Criteria'
+Feature: existing id=234 — 'Risk Mitigation'
+Feature: creating 'Integration with POC #1'
+  -> Feature id=259
+Feature: existing id=236 — 'Next Steps After POC'
+Feature: creating 'Collaboration with POC #1'
+  -> Feature id=260
+PBI: creating '[F03-02-001] Day 1: Diagram Generator Tool Foundation'
+  -> PBI id=261
+PBI: creating '[F03-02-002] Day 2: Mermaid Diagram Templates (Part 1)'
+  -> PBI id=262
+PBI: creating '[F03-02-003] Day 3: Diagram Generation - Architecture & Security (Phase 00-01)'
+  -> PBI id=263
+PBI: creating '[F03-02-004] Day 4: Diagram Generation - Platform & Data/AI (Phase 02-03)'
+  -> PBI id=264
+PBI: creating '[F03-02-005] Day 5: Diagram Generation - Remaining Phases + Review'
+  -> PBI id=265
+PBI: creating '[F03-03-001] Day 6: Markdown Enhancer Tool'
+  -> PBI id=266
+PBI: creating '[F03-03-002] Day 7: Enhance Markdown Files (Part 1: Phases 00-02)'
+  -> PBI id=267
+PBI: creating '[F03-03-003] Day 8: Enhance Markdown Files (Part 2: Phases 03-99)'
+  -> PBI id=268
+PBI: creating '[F03-03-004] Day 9: MkDocs Configuration (Part 1: Basic Setup)'
+  -> PBI id=269
+PBI: creating '[F03-03-005] Day 10: MkDocs Configuration (Part 2: ESDC Branding)'
+  -> PBI id=270
+PBI: creating '[F03-04-001] Day 11: Interactive Features (Part 1: Tooltips & Zoom)'
+  -> PBI id=271
+PBI: creating '[F03-04-002] Day 12: Interactive Features (Part 2: Navigation & UX)'
+  -> PBI id=272
+PBI: creating '[F03-04-003] Day 13: Testing (Cross-Browser, Accessibility, Performance)'
+  -> PBI id=273
+PBI: creating '[F03-04-004] Day 14: Deployment to Azure Static Web Apps'
+  -> PBI id=274
+PBI: creating '[F03-04-005] Day 15: Documentation, Demo Video, and POC Presentation'
+  -> PBI id=275
+PBI: creating '[F03-05-001] Diagram Generation'
+  -> PBI id=276
+PBI: creating '[F03-05-002] Enhanced Markdown'
+  -> PBI id=277
+PBI: creating '[F03-05-003] MkDocs Site'
+  -> PBI id=278
+PBI: creating '[F03-05-004] Testing & Quality'
+  -> PBI id=279
+PBI: creating '[F03-05-005] Deployment'
+  -> PBI id=280
+
+=== Import Summary: 03-poc-enhanced-docs ===
+Epic id  : 255
+Features : 9
+PBIs     : 20
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+F03-02-001 261 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-02-002 262 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-02-003 263 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-02-004 264 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-02-005 265 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-03-001 266 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-03-002 267 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-03-003 268 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-03-004 269 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-03-005 270 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-04-001 271 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-04-002 272 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-04-003 273 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-04-004 274 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-04-005 275 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-05-001 276 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-05-002 277 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-05-003 278 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-05-004 279 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F03-05-005 280 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+**********************
+PowerShell transcript end
+End time: 20260225085218
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225085222
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\05-extract-cases.json
+Process ID: 18604
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0852-ado-import-artifacts-live.log
+
+=== ADO Import: 05-extract-cases ===
+Project maturity : active
+GitHub repo      : eva-foundry/05-extract-cases
+Dry run          : False
+
+Epic: creating '05-extract-cases'
+  -> Epic id=281
+Feature: creating 'Purpose (Phase-1, authoritative)'
+  -> Feature id=282
+Feature: creating 'Non-goals (explicit)'
+  -> Feature id=283
+Feature: creating 'Authoritative Phase-1 data flow'
+  -> Feature id=284
+Feature: creating 'Canonical `metadata_storage_path` (critical)'
+  -> Feature id=285
+Feature: creating 'Why case-level (for future developers)'
+  -> Feature id=286
+Feature: creating 'Dry-run, validation, and deterministic failures'
+  -> Feature id=287
+Feature: creating 'Notes on repository contents'
+  -> Feature id=288
+Feature: creating 'Future evolution (out of scope for Project 05 Phase-1)'
+  -> Feature id=289
+PBI: creating '[F05-03-001] 1) Input'
+  -> PBI id=290
+PBI: creating '[F05-03-002] 2) Aggregation strategy'
+  -> PBI id=291
+PBI: creating '[F05-03-003] 3) Metadata enrichment (Plan-2)'
+  -> PBI id=292
+PBI: creating '[F05-03-004] 4) Export'
+  -> PBI id=293
+PBI: creating '[F05-03-005] 5) Ingestion'
+PS>TerminatingError(Invoke-RestMethod): "
+
+    
+        
+        
+            body {
+                margin: 0;
+                color: #000;
+                font-family: "-apple-system",BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Ubuntu,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            }
+            header {
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+                margin-bottom: 20px;
+                background-color: #0078d4;
+                color: white;
+            }
+            img {
+                border: 0 none;
+            }
+            header img.logo {
+                height: 20px;
+                margin: 9px 5px 0 9px;
+            }
+            header .title {
+                vertical-align: top;
+            }
+            #content { text-align: center; }
+            #content img { width: 320px; height: 320px; }
+            #message h2 { font-size: 28px; font-weight: 200; margin: 40px 0 10px; }
+            #message p  { font-size: 17px; font-weight: 300; margin: 0; }
+            #message p.subheading { font-size: 14px; color: #212121; font-weight: 300; margin: 0; }
+            a {color:#0778d4;}
+            #errorref { font-size: 13px; color: #737373; margin-top: 24px }
+        
+        Azure DevOps Services Unavailable
+    
+    
+        
+            
+            Azure DevOps Services
+        
+        
+            
+            
+                Sorry! Our services aren't available right now.
+                We're working to restore all services as quickly as possible. Please check back soon.
+                To see the latest status on our services, please visit our support page.
+            
+            
+                
+                    Ref A: 99826F8E9F4F4FD09866641B85E980CF Ref B: YTO221100611040 Ref C: 2026-02-25T13:52:25Z
+                
+            
+        
+    
+
+"
+  [WARN] HTTP 503 — retrying in 2s...
+  -> PBI id=294
+PBI: creating '[F05-06-001] Standard usage (random selection):'
+  -> PBI id=295
+PBI: creating '[F05-06-002] CSV-driven selection (for accuracy testing):'
+  -> PBI id=296
+PBI: creating '[F05-06-003] Expected files in `--out`:'
+  -> PBI id=297
+
+=== Import Summary: 05-extract-cases ===
+Epic id  : 281
+Features : 8
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+F05-03-001 290 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F05-03-002 291 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F05-03-003 292 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F05-03-004 293 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F05-03-005 294 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F05-06-001 295 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F05-06-002 296 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F05-06-003 297 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+**********************
+PowerShell transcript end
+End time: 20260225085231
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225085235
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\06-jp-auto-extraction.json
+Process ID: 18500
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0852-ado-import-artifacts-live.log
+
+=== ADO Import: 06-jp-auto-extraction ===
+Project maturity : poc
+GitHub repo      : eva-foundry/06-jp-auto-extraction
+Dry run          : False
+
+Epic: creating '06-jp-auto-extraction'
+  -> Epic id=298
+Feature: existing id=207 — 'Overview'
+Feature: creating 'Problem Statement'
+  -> Feature id=299
+Feature: creating 'Environment & Dependency Strategy'
+  -> Feature id=300
+Feature: creating 'Phase 1 ? Input Preparation & Validation'
+  -> Feature id=301
+Feature: creating 'Phase 2 ? Browser Automation Implementation'
+  -> Feature id=302
+Feature: creating 'Operational procedure for first run'
+  -> Feature id=303
+Feature: creating 'Phase 3 ? Citation Parsing'
+  -> Feature id=304
+Feature: creating 'Phase 4 ? Output & Traceability'
+  -> Feature id=305
+Feature: creating 'Evidence capture & run artifacts'
+  -> Feature id=306
+Feature: creating 'Phase 5 ? Error Handling & Resilience'
+  -> Feature id=307
+Feature: creating 'Phase 6 ? Validation & Quality Assurance'
+  -> Feature id=308
+Feature: creating 'Technical Specifications'
+  -> Feature id=309
+Feature: creating 'Risk Assessment'
+  -> Feature id=310
+Feature: creating 'Future Enhancements'
+  -> Feature id=311
+Feature: creating 'Summary'
+  -> Feature id=312
+Feature: creating 'Change summary (2026-01-21)'
+  -> Feature id=313
+PBI: creating '[F06-03-001] Workstation constraint summary'
+  -> PBI id=314
+PBI: creating '[F06-03-002] Baseline execution environment'
+  -> PBI id=315
+PBI: creating '[F06-03-003] Alternate execution paths (documented only)'
+  -> PBI id=316
+PBI: creating '[F06-04-001] Objectives'
+  -> PBI id=317
+PBI: creating '[F06-04-002] Tasks'
+  -> PBI id=318
+PBI: creating '[F06-04-003] Deliverables'
+  -> PBI id=319
+PBI: creating '[F06-05-001] Objectives'
+  -> PBI id=320
+PBI: creating '[F06-05-002] Architecture Decisions'
+  -> PBI id=321
+PBI: creating '[F06-05-003] Tasks'
+  -> PBI id=322
+PBI: creating '[F06-05-004] Deliverables'
+  -> PBI id=323
+PBI: creating '[F06-07-001] Objectives'
+  -> PBI id=324
+PBI: creating '[F06-07-002] Citation Formats'
+  -> PBI id=325
+PBI: creating '[F06-07-003] Parsing Algorithm'
+  -> PBI id=326
+PBI: creating '[F06-07-004] Deliverables'
+  -> PBI id=327
+PBI: creating '[F06-08-001] Objectives'
+  -> PBI id=328
+PBI: creating '[F06-08-002] Output Formats'
+  -> PBI id=329
+PBI: creating '[F06-08-003] Logging Strategy'
+  -> PBI id=330
+PBI: creating '[F06-08-004] Deliverables'
+  -> PBI id=331
+PBI: creating '[F06-10-001] Objectives'
+  -> PBI id=332
+PBI: creating '[F06-10-002] Error Scenarios'
+  -> PBI id=333
+PBI: creating '[F06-10-003] Resilience Features'
+  -> PBI id=334
+PBI: creating '[F06-10-004] Deliverables'
+  -> PBI id=335
+PBI: creating '[F06-11-001] Objectives'
+  -> PBI id=336
+PBI: creating '[F06-11-002] Validation Strategy'
+  -> PBI id=337
+PBI: creating '[F06-11-003] Success Criteria'
+  -> PBI id=338
+PBI: creating '[F06-11-004] Deliverables'
+  -> PBI id=339
+PBI: creating '[F06-12-001] Dependencies'
+  -> PBI id=340
+PBI: creating '[F06-12-002] System Requirements'
+  -> PBI id=341
+PBI: creating '[F06-12-003] Performance Expectations'
+  -> PBI id=342
+PBI: creating '[F06-12-004] Maintenance Considerations'
+  -> PBI id=343
+PBI: creating '[F06-13-001] High Risk'
+  -> PBI id=344
+PBI: creating '[F06-13-002] Medium Risk'
+  -> PBI id=345
+PBI: creating '[F06-13-003] Low Risk'
+  -> PBI id=346
+PBI: creating '[F06-14-001] Phase 7+ (Not Included)'
+  -> PBI id=347
+
+=== Import Summary: 06-jp-auto-extraction ===
+Epic id  : 298
+Features : 16
+PBIs     : 34
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+F06-03-001 314 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-03-002 315 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-03-003 316 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-04-001 317 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-04-002 318 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-04-003 319 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-05-001 320 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-05-002 321 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-05-003 322 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-05-004 323 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-07-001 324 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-07-002 325 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-07-003 326 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-07-004 327 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-08-001 328 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-08-002 329 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-08-003 330 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-08-004 331 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-10-001 332 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-10-002 333 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-10-003 334 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-10-004 335 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-11-001 336 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-11-002 337 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-11-003 338 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-11-004 339 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-12-001 340 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-12-002 341 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-12-003 342 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-12-004 343 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-13-001 344 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-13-002 345 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-13-003 346 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F06-14-001 347 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+**********************
+PowerShell transcript end
+End time: 20260225085248
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225085252
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\07-foundation-layer.json
+Process ID: 19336
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0852-ado-import-artifacts-live.log
+
+=== ADO Import: 07-foundation-layer ===
+Project maturity : active
+GitHub repo      : eva-foundry/07-foundation-layer
+Dry run          : False
+
+Epic: creating '07-foundation-layer'
+  -> Epic id=348
+Feature: creating 'Goal'
+  -> Feature id=349
+Feature: creating 'Key Discovery Findings'
+  -> Feature id=350
+Feature: creating 'Project Phases'
+  -> Feature id=351
+Feature: existing id=208 — 'Project Structure'
+Feature: existing id=233 — 'Success Criteria'
+Feature: creating 'Deploying Project 07 to Other Projects'
+  -> Feature id=352
+Feature: creating 'Troubleshooting'
+  -> Feature id=353
+Feature: creating 'References'
+  -> Feature id=354
+Feature: creating 'Change Log'
+  -> Feature id=355
+PBI: creating '[F07-02-001] **?? CRITICAL Pattern #1: Windows Enterprise Encoding Safety**'
+  -> PBI id=356
+PBI: creating '[F07-02-002] **? Pattern #2: Professional Component Architecture**'
+  -> PBI id=357
+PBI: creating '[F07-02-003] **? Pattern #3: Zero-Setup Execution**'
+  -> PBI id=358
+PBI: creating '[F07-02-004] **?? Patterns Pending Broader Validation**'
+  -> PBI id=359
+PBI: creating '[F07-03-001] Phase 1: Discovery (?? IN PROGRESS)'
+  -> PBI id=360
+PBI: creating '[F07-03-002] Phase 2: Design (complete - January 29, 2026)'
+  -> PBI id=361
+PBI: creating '[F07-03-003] Phase 5: Workspace Management (? TESTED - v1.5.2 - January 30, 2026)'
+  -> PBI id=362
+PBI: creating '[F07-03-004] Phase 3: Development (? COMPLETE - January 29, 2026)'
+  -> PBI id=363
+PBI: creating '[F07-03-005] Phase 4: Testing (? READY - Pester 5.x Upgraded)'
+  -> PBI id=364
+PBI: creating '[F07-03-006] Phase 5: Implementation (?? ON HOLD - Waiting for Testing)'
+  -> PBI id=365
+PBI: creating '[F07-05-001] **Primary Success Metrics**'
+  -> PBI id=366
+PBI: creating '[F07-05-002] **Secondary Success Metrics**'
+  -> PBI id=367
+PBI: creating '[F07-06-001] Quick Deployment Guide'
+  -> PBI id=368
+PBI: creating '[F07-06-002] Deployment Decision Tree'
+  -> PBI id=369
+PBI: creating '[F07-06-003] What Gets Deployed'
+  -> PBI id=370
+PBI: creating '[F07-06-004] Supported Project Types'
+  -> PBI id=371
+PBI: creating '[F07-07-001] Common Issues'
+  -> PBI id=372
+PBI: creating '[F07-08-001] Deployment Tools'
+  -> PBI id=373
+PBI: creating '[F07-08-002] Documentation'
+  -> PBI id=374
+
+=== Import Summary: 07-foundation-layer ===
+Epic id  : 348
+Features : 9
+PBIs     : 19
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+F07-02-001 356 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-02-002 357 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-02-003 358 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-02-004 359 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-03-001 360 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-03-002 361 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-03-003 362 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-03-004 363 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-03-005 364 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-03-006 365 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-05-001 366 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-05-002 367 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-06-001 368 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-06-002 369 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-06-003 370 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-06-004 371 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-07-001 372 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-08-001 373 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F07-08-002 374 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+**********************
+PowerShell transcript end
+End time: 20260225085300
+**********************

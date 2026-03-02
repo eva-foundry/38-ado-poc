@@ -1,0 +1,149 @@
+**********************
+PowerShell transcript start
+Start time: 20260226225101
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -File C:\AICOE\eva-foundry\51-ACA\ado-import.ps1 -DryRun
+Process ID: 28664
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260226-2251-ado-import-51-ACA-dryrun.log
+
+=== ADO Import: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Project maturity : active
+GitHub repo      : eva-foundry/51-ACA
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-1
+  [DRY-RUN] Would ensure sprint: Sprint-1
+  Sprint: Sprint-2
+  [DRY-RUN] Would ensure sprint: Sprint-2
+  Sprint: Sprint-3
+  [DRY-RUN] Would ensure sprint: Sprint-3
+  [DRY-RUN] Would find-or-create Epic: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS
+Feature: creating 'Foundation -- Repo Scaffold, Docker, CI, Health endpoints'
+  [DRY-RUN] Would create Feature : Foundation -- Repo Scaffold, Docker, CI, Health endpoints
+  -> Feature id=-1
+Feature: creating 'Collection -- MSAL Auth, Resource Graph, Cost Management pull'
+  [DRY-RUN] Would create Feature : Collection -- MSAL Auth, Resource Graph, Cost Management pull
+  -> Feature id=-1
+Feature: creating 'Analysis -- 12-rule heuristic engine, FindingsAssembler'
+  [DRY-RUN] Would create Feature : Analysis -- 12-rule heuristic engine, FindingsAssembler
+  -> Feature id=-1
+Feature: creating 'API -- FastAPI service: auth, collection, billing, admin, APIM'
+  [DRY-RUN] Would create Feature : API -- FastAPI service: auth, collection, billing, admin, APIM
+  -> Feature id=-1
+Feature: creating 'Frontend -- React 19, Fluent UI v9, 10 Spark screens'
+  [DRY-RUN] Would create Feature : Frontend -- React 19, Fluent UI v9, 10 Spark screens
+  -> Feature id=-1
+Feature: creating 'Billing -- Stripe Checkout, Webhook lifecycle, Entitlements'
+  [DRY-RUN] Would create Feature : Billing -- Stripe Checkout, Webhook lifecycle, Entitlements
+  -> Feature id=-1
+Feature: creating 'Delivery -- Jinja2 templates, ZIP packager, Blob SAS URLs'
+  [DRY-RUN] Would create Feature : Delivery -- Jinja2 templates, ZIP packager, Blob SAS URLs
+  -> Feature id=-1
+Feature: creating 'Observability -- App Insights, Log Analytics, GA4, Clarity'
+  [DRY-RUN] Would create Feature : Observability -- App Insights, Log Analytics, GA4, Clarity
+  -> Feature id=-1
+Feature: creating 'i18n and a11y -- 5 locales, multi-currency, WCAG 2.1 AA'
+  [DRY-RUN] Would create Feature : i18n and a11y -- 5 locales, multi-currency, WCAG 2.1 AA
+  -> Feature id=-1
+Feature: creating 'Hardening -- APIM cache, rate limiting, idempotency, PIPEDA'
+  [DRY-RUN] Would create Feature : Hardening -- APIM cache, rate limiting, idempotency, PIPEDA
+  -> Feature id=-1
+Feature: creating 'Phase 2 Infra -- Terraform private landing zone, Lighthouse Mode C'
+  [DRY-RUN] Would create Feature : Phase 2 Infra -- Terraform private landing zone, Lighthouse Mode C
+  -> Feature id=-1
+Feature: creating 'Data Model -- ACA model server (port 8011), WBS tracking'
+  [DRY-RUN] Would create Feature : Data Model -- ACA model server (port 8011), WBS tracking
+  -> Feature id=-1
+PBI: creating '[ACA-S01] Repo scaffold + docker-compose + health endpoint verified'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S01] Repo scaffold + docker-compose + health endpoint verified
+  -> PBI id=-1
+PBI: creating '[ACA-S02] Data model server on port 8011 seeded -- 27 endpoints, 11 containers, 10 screens'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S02] Data model server on port 8011 seeded -- 27 endpoints, 11 containers, 10 screens
+  -> PBI id=-1
+PBI: creating '[ACA-S03] ADO project 51-aca created -- ado-artifacts.json + ado-import.ps1'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S03] ADO project 51-aca created -- ado-artifacts.json + ado-import.ps1
+  -> PBI id=-1
+PBI: creating '[ACA-S04] Mode A delegated MSAL auth -- POST /v1/auth/connect implemented'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S04] Mode A delegated MSAL auth -- POST /v1/auth/connect implemented
+  -> PBI id=-1
+PBI: creating '[ACA-S05] Resource Graph + Cost Management collector job implemented'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S05] Resource Graph + Cost Management collector job implemented
+  -> PBI id=-1
+PBI: creating '[ACA-S06] 12-rule heuristic analysis engine -- AnalysisJob exits 0 with findings'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S06] 12-rule heuristic analysis engine -- AnalysisJob exits 0 with findings
+  -> PBI id=-1
+PBI: creating '[ACA-S07] GET /v1/reports/tier1 returns findings for authenticated subscriber'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S07] GET /v1/reports/tier1 returns findings for authenticated subscriber
+  -> PBI id=-1
+PBI: creating '[ACA-S08] Admin endpoints -- kpis, customers, grant, lock, reconcile, runs all return 200'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S08] Admin endpoints -- kpis, customers, grant, lock, reconcile, runs all return 200
+  -> PBI id=-1
+PBI: creating '[ACA-S09] Stripe checkout + webhook + entitlements flow end-to-end'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S09] Stripe checkout + webhook + entitlements flow end-to-end
+  -> PBI id=-1
+PBI: creating '[ACA-S10] APIM entitlement cache policy deployed -- 60s TTL, tier gating template'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S10] APIM entitlement cache policy deployed -- 60s TTL, tier gating template
+  -> PBI id=-1
+PBI: creating '[ACA-S11] 5 customer-facing Spark screens -- LoginPage through UpgradePage'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S11] 5 customer-facing Spark screens -- LoginPage through UpgradePage
+  -> PBI id=-1
+PBI: creating '[ACA-S12] 5 admin Spark screens -- AdminDashboard through AdminControls'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S12] 5 admin Spark screens -- AdminDashboard through AdminControls
+  -> PBI id=-1
+PBI: creating '[ACA-S13] Phase 1 infrastructure -- Cosmos + Container Apps + ACR deployed via bootstrap.sh'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S13] Phase 1 infrastructure -- Cosmos + Container Apps + ACR deployed via bootstrap.sh
+  -> PBI id=-1
+PBI: creating '[ACA-S14] GA4 + Clarity instrumentation -- analytics-spec.md events firing'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S14] GA4 + Clarity instrumentation -- analytics-spec.md events firing
+  -> PBI id=-1
+PBI: creating '[ACA-S15] Delivery service -- ZIP packager + Blob SAS URL + SHA-256 verification'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S15] Delivery service -- ZIP packager + Blob SAS URL + SHA-256 verification
+  -> PBI id=-1
+PBI: creating '[ACA-S16] Veritas trust score >= 0.50 -- EVA-STORY tags in source files'
+  [DRY-RUN] Would create Product Backlog Item : [ACA-S16] Veritas trust score >= 0.50 -- EVA-STORY tags in source files
+  -> PBI id=-1
+
+=== Import Summary: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Epic id  : -1
+Features : 12
+PBIs     : 16
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag     Id State Url
+---     -- ----- ---
+aca-s01 -1 Done  (dry-run)
+aca-s02 -1 Done  (dry-run)
+aca-s03 -1 New   (dry-run)
+aca-s04 -1 New   (dry-run)
+aca-s05 -1 New   (dry-run)
+aca-s06 -1 New   (dry-run)
+aca-s07 -1 New   (dry-run)
+aca-s08 -1 Done  (dry-run)
+aca-s09 -1 New   (dry-run)
+aca-s10 -1 New   (dry-run)
+aca-s11 -1 Done  (dry-run)
+aca-s12 -1 Done  (dry-run)
+aca-s13 -1 New   (dry-run)
+aca-s14 -1 New   (dry-run)
+aca-s15 -1 New   (dry-run)
+aca-s16 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260226225101
+**********************

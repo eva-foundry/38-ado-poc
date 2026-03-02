@@ -1,0 +1,91 @@
+**********************
+PowerShell transcript start
+Start time: 20260222111354
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -NoProfile -ExecutionPolicy Bypass -File docs\ADO\idea\ado-import.ps1 -DryRun
+Process ID: 1996
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260222-1113-ado-import-idea-dryrun.log
+
+=== ADO Import: EVA Data Model — Maintenance & Extension Tooling ===
+Project maturity : planned
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-8
+  [DRY-RUN] Would ensure sprint: Sprint-8
+  Sprint: Sprint-9
+  [DRY-RUN] Would ensure sprint: Sprint-9
+  [DRY-RUN] Would find-or-create Epic: EVA Data Model — Maintenance & Extension Tooling
+Feature: creating 'CI Gate & Same-PR Enforcement'
+  [DRY-RUN] Would create Feature : CI Gate & Same-PR Enforcement
+  -> Feature id=-1
+Feature: creating 'Automated Drift Detection'
+  [DRY-RUN] Would create Feature : Automated Drift Detection
+  -> Feature id=-1
+Feature: creating 'Coverage Gaps Surface'
+  [DRY-RUN] Would create Feature : Coverage Gaps Surface
+  -> Feature id=-1
+Feature: creating 'Model-Sync Agent'
+  [DRY-RUN] Would create Feature : Model-Sync Agent
+  -> Feature id=-1
+PBI: creating '[DM-MAINT-WI-0] coverage-gaps.ps1 — requirements with zero test coverage'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-0] coverage-gaps.ps1 — requirements with zero test coverage
+  -> PBI id=-1
+PBI: creating '[DM-MAINT-WI-1] GitHub Action — validate-model on every PR'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-1] GitHub Action — validate-model on every PR
+  -> PBI id=-1
+PBI: creating '[DM-MAINT-WI-4] sync-from-source.ps1 — add -OutputFormat json mode'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-4] sync-from-source.ps1 — add -OutputFormat json mode
+  -> PBI id=-1
+PBI: creating '[DM-MAINT-WI-3] Scheduled drift-detection workflow'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-3] Scheduled drift-detection workflow
+  -> PBI id=-1
+PBI: creating '[DM-MAINT-WI-2] Same-PR enforcement — source change without model update = blocking comment'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-2] Same-PR enforcement — source change without model update = blocking comment
+  -> PBI id=-1
+PBI: creating '[DM-MAINT-WI-5] Wire coverage-gaps.ps1 into drift-detection workflow'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-5] Wire coverage-gaps.ps1 into drift-detection workflow
+  -> PBI id=-1
+PBI: creating '[DM-MAINT-WI-6] model-sync-agent scaffold'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-6] model-sync-agent scaffold
+  -> PBI id=-1
+PBI: creating '[DM-MAINT-WI-7] Integrate model-sync-agent into sprint-execute.yml Do phase'
+  [DRY-RUN] Would create Product Backlog Item : [DM-MAINT-WI-7] Integrate model-sync-agent into sprint-execute.yml Do phase
+  -> PBI id=-1
+
+=== Import Summary: EVA Data Model — Maintenance & Extension Tooling ===
+Epic id  : -1
+Features : 4
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag           Id State Url
+---           -- ----- ---
+dm-maint-wi-0 -1 New   (dry-run)
+dm-maint-wi-1 -1 New   (dry-run)
+dm-maint-wi-4 -1 New   (dry-run)
+dm-maint-wi-3 -1 New   (dry-run)
+dm-maint-wi-2 -1 New   (dry-run)
+dm-maint-wi-5 -1 New   (dry-run)
+dm-maint-wi-6 -1 New   (dry-run)
+dm-maint-wi-7 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260222111354
+**********************

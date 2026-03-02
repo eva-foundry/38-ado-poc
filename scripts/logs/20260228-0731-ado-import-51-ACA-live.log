@@ -1,0 +1,486 @@
+**********************
+PowerShell transcript start
+Start time: 20260228073145
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -NoProfile -File .\ado-import.ps1
+Process ID: 26792
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260228-0731-ado-import-51-ACA-live.log
+
+=== ADO Import: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Project maturity : active
+GitHub repo      : eva-foundry/51-ACA
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-1
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-1' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+  Sprint: Sprint-2
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-2' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+  Sprint: Sprint-3
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-3' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-Backlog' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+Epic: creating 'Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS'
+  -> Epic id=2788
+Feature: creating 'Foundation -- Repo Scaffold, Docker, CI, Health endpoints'
+  -> Feature id=2789
+Feature: creating 'Collection -- MSAL Auth, Resource Graph, Cost Management pull'
+  -> Feature id=2790
+Feature: creating 'Analysis -- 12-rule heuristic engine, FindingsAssembler'
+  -> Feature id=2791
+Feature: creating 'API -- FastAPI service: auth, collection, billing, admin, APIM'
+  -> Feature id=2792
+Feature: creating 'Frontend -- React 19, Fluent UI v9, 10 Spark screens'
+  -> Feature id=2793
+Feature: creating 'Billing -- Stripe Checkout, Webhook lifecycle, Entitlements'
+  -> Feature id=2794
+Feature: creating 'Delivery -- Jinja2 templates, ZIP packager, Blob SAS URLs'
+  -> Feature id=2795
+Feature: creating 'Observability -- App Insights, Log Analytics, GA4, Clarity'
+  -> Feature id=2796
+Feature: creating 'i18n and a11y -- 5 locales, multi-currency, WCAG 2.1 AA'
+  -> Feature id=2797
+Feature: creating 'Hardening -- APIM cache, rate limiting, idempotency, PIPEDA'
+  -> Feature id=2798
+Feature: creating 'Phase 2 Infra -- Terraform private landing zone, Lighthouse Mode C'
+  -> Feature id=2799
+Feature: creating 'Data Model -- ACA model server (port 8011), WBS tracking'
+  -> Feature id=2800
+Feature: creating 'Azure Best Practices -- Service catalog, IaC templates, 12 rules reference'
+  -> Feature id=2801
+Feature: creating 'DPDCA Cloud Agent -- GitHub Copilot agent story scaffolding'
+  -> Feature id=2802
+PBI: creating '[ACA-01-001] As a developer I can run `docker-compose up` and all services start'
+  -> PBI id=2803
+PBI: creating '[ACA-01-002] As a developer I can run `pytest services/ -x -q` and all tests pass'
+  -> PBI id=2804
+PBI: creating '[ACA-01-003] As a developer I can hit http://localhost:8080/health and get status=ok'
+  -> PBI id=2805
+PBI: creating '[ACA-01-004] As a developer I can run the data-model on port 8011 (start.ps1)'
+  -> PBI id=2806
+PBI: creating '[ACA-01-005] As a developer I can use the .env.example as a complete checklist'
+  -> PBI id=2807
+PBI: creating '[ACA-01-006] As a developer, every PR triggers ruff lint. Zero lint errors = green.'
+  -> PBI id=2808
+PBI: creating '[ACA-01-007] As a developer, every PR triggers mypy type check. No unresolved types.'
+  -> PBI id=2809
+PBI: creating '[ACA-01-008] As a developer, every PR triggers pytest. No test failures = merge allowed.'
+  -> PBI id=2810
+PBI: creating '[ACA-01-009] As a developer, main branch push triggers axe-core a11y check on frontend.'
+  -> PBI id=2811
+PBI: creating '[ACA-01-010] As an operator I can run infra/phase1-marco/main.bicep and get 7 Cosmos containers'
+  -> PBI id=2812
+PBI: creating '[ACA-01-011] As an operator all secrets are in marcosandkv20260203 (no .env in production)'
+  -> PBI id=2813
+PBI: creating '[ACA-01-012] As an operator the API Container App has managed identity approved on KV'
+  -> PBI id=2814
+PBI: creating '[ACA-01-013] As an operator the collector job has managed identity with Cosmos read/write'
+  -> PBI id=2815
+PBI: creating '[ACA-01-014] As an operator OIDC is configured on the GitHub Actions workflow for EsDAICoE-Sandbox'
+  -> PBI id=2816
+PBI: creating '[ACA-01-015] As an operator infra/phase1-marco/bootstrap.sh exists and provisions all'
+  -> PBI id=2817
+PBI: creating '[ACA-01-016] As a developer all 4 Dockerfiles build without error on ubuntu-latest'
+  -> PBI id=2818
+PBI: creating '[ACA-01-017] As an operator deploy-phase1.yml pushes 4 images to marcosandacr20260203'
+  -> PBI id=2819
+PBI: creating '[ACA-01-018] As an operator collector-schedule.yml triggers nightly at 02:00 UTC'
+  -> PBI id=2820
+PBI: creating '[ACA-01-019] As an operator PUBLIC_APP_URL and PUBLIC_API_URL are read from env vars;'
+  -> PBI id=2821
+PBI: creating '[ACA-01-020] As a developer .env.example documents the Azure free hostname pattern'
+  -> PBI id=2822
+PBI: creating '[ACA-01-021] As an operator ACA_ALLOWED_ORIGINS is seeded from the Phase 1 free hostname'
+  -> PBI id=2823
+PBI: creating '[ACA-02-001] As a client using Mode A (delegated) I see a PASS/FAIL/WARN status'
+  -> PBI id=2824
+PBI: creating '[ACA-02-002] As a client with missing Cost Management Reader role I see a clear'
+  -> PBI id=2825
+PBI: creating '[ACA-02-003] As a client with PASS_WITH_WARNINGS I can still proceed with collection'
+  -> PBI id=2826
+PBI: creating '[ACA-02-004] As an operator I can pass --preflight-only to the collector to validate'
+  -> PBI id=2827
+PBI: creating '[ACA-02-005] As the system I collect all Azure resources via Resource Graph in < 60s'
+  -> PBI id=2828
+PBI: creating '[ACA-02-006] As the system I save inventory to Cosmos with partition_key=subscriptionId'
+  -> PBI id=2829
+PBI: creating '[ACA-02-007] As the system I capture: resource type, name, SKU, region, resource group, tags'
+  -> PBI id=2830
+PBI: creating '[ACA-02-008] As the system I collect 91 days of daily cost rows via Cost Management Query API'
+  -> PBI id=2831
+PBI: creating '[ACA-02-009] As the system I capture: date, MeterCategory, MeterName, resourceGroup,'
+  -> PBI id=2832
+PBI: creating '[ACA-02-010] As the system I handle rate limiting (429) with exponential backoff + retry'
+  -> PBI id=2833
+PBI: creating '[ACA-02-011] As the system I collect all Advisor recommendations across all categories'
+  -> PBI id=2834
+PBI: creating '[ACA-02-012] As the system I collect Policy compliance state (compliant / non-compliant counts)'
+  -> PBI id=2835
+PBI: creating '[ACA-02-013] As the system I collect network signals: NSG rule counts, private DNS zones,'
+  -> PBI id=2836
+PBI: creating '[ACA-02-014] As the system I update scan status in Cosmos: queued -> running -> succeeded/failed'
+  -> PBI id=2837
+PBI: creating '[ACA-02-015] As the system I write stats to the scan record (inventoryCount, costRows, advisorRecs)'
+  -> PBI id=2838
+PBI: creating '[ACA-02-016] As the API I expose GET /v1/scans/:scanId so the frontend can poll status'
+  -> PBI id=2839
+PBI: creating '[ACA-02-017] As the system, after mark_collection_complete sets status=collected, the analysis'
+  -> PBI id=2840
+PBI: creating '[ACA-03-001] As the system I load all 12 rules from ALL_RULES and run each in sequence'
+  -> PBI id=2841
+PBI: creating '[ACA-03-002] As the system I handle a rule failure in isolation (one rule crash does not'
+  -> PBI id=2842
+PBI: creating '[ACA-03-003] As the system I persist each Finding to Cosmos with full schema:'
+  -> PBI id=2843
+PBI: creating '[ACA-03-004] As the system I update AnalysisRun status: queued -> running -> succeeded/failed'
+  -> PBI id=2844
+PBI: creating '[ACA-03-005] As the system I write findingsSummary to the analysis run record'
+  -> PBI id=2845
+PBI: creating '[ACA-03-006] As a Tier 1 client calling GET /v1/findings/:scanId I receive findings'
+  -> PBI id=2846
+PBI: creating '[ACA-03-007] As a Tier 1 client I do not receive narrative or deliverable_template_id'
+  -> PBI id=2847
+PBI: creating '[ACA-03-008] As a Tier 2 client I receive the full finding including narrative and'
+  -> PBI id=2848
+PBI: creating '[ACA-03-009] As a Tier 3 client I receive the full finding including deliverable_template_id'
+  -> PBI id=2849
+PBI: creating '[ACA-03-010] As the red-team agent I can assert that Tier 1 tokens never leak'
+  -> PBI id=2850
+PBI: creating '[ACA-03-011] R-01 Dev Box auto-stop: returns finding when annual Dev Box cost > $1,000'
+  -> PBI id=2851
+PBI: creating '[ACA-03-012] R-02 Log retention: returns finding when annual LA cost > $500 in non-prod'
+  -> PBI id=2852
+PBI: creating '[ACA-03-013] R-03 Defender mismatch: returns finding when annual Defender cost > $2,000'
+  -> PBI id=2853
+PBI: creating '[ACA-03-014] R-04 Compute scheduling: returns finding when annual schedulable compute > $5,000'
+  -> PBI id=2854
+PBI: creating '[ACA-03-015] R-05 Anomaly detection: returns finding for each category with z-score > 3.0'
+  -> PBI id=2855
+PBI: creating '[ACA-03-016] R-06 Stale environments: returns finding when >= 3 App Service sites exist'
+  -> PBI id=2856
+PBI: creating '[ACA-03-017] R-07 Search SKU oversize: returns finding when annual Search cost > $2,000'
+  -> PBI id=2857
+PBI: creating '[ACA-03-018] R-08 ACR consolidation: returns finding when >= 3 registries exist'
+  -> PBI id=2858
+PBI: creating '[ACA-03-019] R-09 DNS sprawl: returns finding when annual DNS cost > $1,000'
+  -> PBI id=2859
+PBI: creating '[ACA-03-020] Unit test for R-01 devbox_autostop: fixture with Dev Box cost > $1,000 -> finding'
+  -> PBI id=2860
+PBI: creating '[ACA-03-021] Unit test for R-02 log_retention: fixture with LA cost > $500 -> finding'
+  -> PBI id=2861
+PBI: creating '[ACA-03-022] Unit test for R-03 defender_mismatch: fixture with Defender cost > $2,000 -> finding'
+  -> PBI id=2862
+PBI: creating '[ACA-03-023] Unit test for R-04 compute_scheduling: fixture with schedulable > $5,000 -> finding'
+  -> PBI id=2863
+PBI: creating '[ACA-03-024] Unit test for R-05 anomaly_detection: fixture with z-score > 3.0 -> finding'
+  -> PBI id=2864
+PBI: creating '[ACA-03-025] Unit test for R-06 stale_environments: fixture with >= 3 App Services -> finding'
+  -> PBI id=2865
+PBI: creating '[ACA-03-026] Unit test for R-07 search_sku_oversize: fixture with Search cost > $2,000 -> finding'
+  -> PBI id=2866
+PBI: creating '[ACA-03-027] Unit test for R-08 acr_consolidation: fixture with >= 3 registries -> finding'
+  -> PBI id=2867
+PBI: creating '[ACA-03-028] Unit test for R-09 dns_sprawl: fixture with DNS cost > $1,000 -> finding'
+  -> PBI id=2868
+PBI: creating '[ACA-03-029] Unit test for R-10 savings_plan_coverage: fixture with compute > $20,000 -> finding'
+  -> PBI id=2869
+PBI: creating '[ACA-03-030] Unit test for R-11 apim_token_budget: fixture with APIM + OpenAI -> finding'
+  -> PBI id=2870
+PBI: creating '[ACA-03-031] Unit test for R-12 chargeback_gap: fixture with total cost > $5,000 -> finding'
+  -> PBI id=2871
+PBI: creating '[ACA-03-032] Negative tests for each rule: below-threshold fixture -> no finding returned'
+  -> PBI id=2872
+PBI: creating '[ACA-03-033] FindingsAssembler unit test: mock rule list -> correct Cosmos upsert payload'
+  -> PBI id=2873
+PBI: creating '[ACA-04-001] As a client I can sign in via Microsoft Identity (any Microsoft tenant);'
+  -> PBI id=2874
+PBI: creating '[ACA-04-002] As the API I validate the JWT on every authenticated endpoint using'
+  -> PBI id=2875
+PBI: creating '[ACA-04-003] As the API I extract subscriptionId from the session (stored after connect);'
+  -> PBI id=2876
+PBI: creating '[ACA-04-004] As a client I can connect my Azure subscription (POST /v1/auth/connect)'
+  -> PBI id=2877
+PBI: creating '[ACA-04-005] As a client I can disconnect (POST /v1/auth/disconnect) and all access'
+  -> PBI id=2878
+PBI: creating '[ACA-04-006] As a developer auth.py is reworked: MSAL authority=common, no EsDAICoE'
+  -> PBI id=2879
+PBI: creating '[ACA-04-007] As the frontend LoginPage, sign-in CTA calls MSAL.js with'
+  -> PBI id=2880
+PBI: creating '[ACA-04-008] POST /v1/auth/connect         -- Connect Azure subscription'
+  -> PBI id=2881
+PBI: creating '[ACA-04-009] POST /v1/auth/preflight       -- Run pre-flight probes'
+  -> PBI id=2882
+PBI: creating '[ACA-04-010] POST /v1/auth/disconnect      -- Disconnect subscription'
+  -> PBI id=2883
+PBI: creating '[ACA-04-011] POST /v1/collect/start        -- Trigger collector job (was /v1/scans)'
+  -> PBI id=2884
+PBI: creating '[ACA-04-012] GET  /v1/collect/status       -- Poll collection progress (was /v1/scans/:scanId)'
+  -> PBI id=2885
+PBI: creating '[ACA-04-013] GET  /v1/reports/tier1        -- Tier 1 findings report (was /v1/findings/:scanId)'
+  -> PBI id=2886
+PBI: creating '[ACA-04-014] POST /v1/billing/checkout     -- Stripe checkout (tier2 or tier3 in body)'
+  -> PBI id=2887
+PBI: creating '[ACA-04-015] GET  /v1/billing/portal       -- Stripe billing portal redirect URL'
+  -> PBI id=2888
+PBI: creating '[ACA-04-016] POST /v1/webhooks/stripe      -- Stripe event handler'
+  -> PBI id=2889
+PBI: creating '[ACA-04-017] As the gateway I validate JWT signature on all /v1/* routes'
+  -> PBI id=2890
+PBI: creating '[ACA-04-018] As the gateway I cache /v1/entitlements response for 60s per subscriptionId'
+  -> PBI id=2891
+PBI: creating '[ACA-04-019] As the gateway I return 403 with TIER_REQUIRED error when a Tier 1'
+  -> PBI id=2892
+PBI: creating '[ACA-04-020] As the gateway I enforce subscription key throttling (100 req/min default)'
+  -> PBI id=2893
+PBI: creating '[ACA-04-021] As the gateway I forward X-Subscription-Id header to the API on all calls'
+  -> PBI id=2894
+PBI: creating '[ACA-04-022] GET  /v1/admin/kpis'
+  -> PBI id=2895
+PBI: creating '[ACA-04-023] GET  /v1/admin/customers?query='
+  -> PBI id=2896
+PBI: creating '[ACA-04-024] POST /v1/admin/entitlements/grant'
+  -> PBI id=2897
+PBI: creating '[ACA-04-025] POST /v1/admin/subscriptions/:subscriptionId/lock'
+  -> PBI id=2898
+PBI: creating '[ACA-04-026] POST /v1/admin/stripe/reconcile'
+  -> PBI id=2899
+PBI: creating '[ACA-04-027] GET  /v1/admin/runs?type=scan|analysis|delivery'
+  -> PBI id=2900
+PBI: creating '[ACA-04-028] services/api/app/db/cosmos.py upsert_item() must accept partition_key as a'
+  -> PBI id=2901
+PBI: creating '[ACA-05-001] roles.ts defines ACA_Admin, ACA_Support, ACA_FinOps role constants'
+  -> PBI id=2902
+PBI: creating '[ACA-05-002] useAuth.ts wraps MSAL PublicClientApplication; exposes user, roles,'
+  -> PBI id=2903
+PBI: creating '[ACA-05-003] RequireAuth.tsx: if !isAuthenticated redirect to /'
+  -> PBI id=2904
+PBI: creating '[ACA-05-004] RequireRole.tsx: if user lacks anyOf roles, redirect to /app/connect'
+  -> PBI id=2905
+PBI: creating '[ACA-05-005] All admin routes require RequireAuth + RequireRole (ACA_Admin|Support|FinOps)'
+  -> PBI id=2906
+PBI: creating '[ACA-05-006] CustomerLayout.tsx: top nav with logo, LanguageSelector, user menu'
+  -> PBI id=2907
+PBI: creating '[ACA-05-007] AdminLayout.tsx: top nav + left sidebar with admin nav items'
+  -> PBI id=2908
+PBI: creating '[ACA-05-008] NavCustomer.tsx: links to /app/connect, /app/status, /app/findings'
+  -> PBI id=2909
+PBI: creating '[ACA-05-009] NavAdmin.tsx: links to /admin/dashboard, /admin/customers,'
+  -> PBI id=2910
+PBI: creating '[ACA-05-010] AppShell.tsx: root component with FluentProvider + ConsentBanner +'
+  -> PBI id=2911
+PBI: creating '[ACA-05-011] router.tsx uses createBrowserRouter (not BrowserRouter + <Routes>)'
+  -> PBI id=2912
+PBI: creating '[ACA-05-012] Route / -> LoginPage (no auth required)'
+  -> PBI id=2913
+PBI: creating '[ACA-05-013] Routes /app/* -> RequireAuth -> CustomerLayout -> Outlet'
+  -> PBI id=2914
+PBI: creating '[ACA-05-014] Routes /admin/* -> RequireAuth -> RequireRole -> AdminLayout -> Outlet'
+  -> PBI id=2915
+PBI: creating '[ACA-05-015] Code-split: all page components lazy-loaded with React.lazy'
+  -> PBI id=2916
+PBI: creating '[ACA-05-016] LoginPage (/) -- Entra ID login CTA + dev bypass link'
+  -> PBI id=2917
+PBI: creating '[ACA-05-017] ConnectSubscriptionPage (/app/connect) -- Mode A/B/C radio group;'
+  -> PBI id=2918
+PBI: creating '[ACA-05-018] CollectionStatusPage (/app/status/:subscriptionId) -- polls'
+  -> PBI id=2919
+PBI: creating '[ACA-05-019] FindingsTier1Page (/app/findings/:subscriptionId) -- renders Tier 1'
+  -> PBI id=2920
+PBI: creating '[ACA-05-020] UpgradePage (/app/upgrade/:subscriptionId) -- Tier 2 vs Tier 3 cards;'
+  -> PBI id=2921
+PBI: creating '[ACA-05-021] AdminDashboardPage (/admin/dashboard) -- calls GET /v1/admin/kpis;'
+  -> PBI id=2922
+PBI: creating '[ACA-05-022] AdminCustomersPage (/admin/customers) -- search input calls'
+  -> PBI id=2923
+PBI: creating '[ACA-05-023] AdminBillingPage (/admin/billing) -- Stripe billing portal link;'
+  -> PBI id=2924
+PBI: creating '[ACA-05-024] AdminRunsPage (/admin/runs) -- lists runs from GET /v1/admin/runs;'

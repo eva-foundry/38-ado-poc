@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "schema": "eva.reconciliation.v2",
+    "generated_at": "2026-02-25T06:37:40.899Z",
+    "repo": "C:\\AICOE\\eva-foundation\\38-ado-poc",
+    "discovery_path": "C:\\AICOE\\eva-foundation\\38-ado-poc\\.eva\\discovery.json"
+  },
+  "coverage": {
+    "stories_total": 13,
+    "stories_with_artifacts": 13,
+    "stories_with_evidence": 0,
+    "consistency_score": 0
+  },
+  "features": [
+    {
+      "id": "F38-01",
+      "title": "1. Problem Statement",
+      "story_count": 0,
+      "stories_with_artifacts": 0,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 0,
+      "gap_count": 0
+    },
+    {
+      "id": "F38-02",
+      "title": "2. Solution: EVA ADO Command Center",
+      "story_count": 0,
+      "stories_with_artifacts": 0,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 0,
+      "gap_count": 0
+    },
+    {
+      "id": "F38-03",
+      "title": "3. Architecture ? 5 Layers",
+      "story_count": 5,
+      "stories_with_artifacts": 5,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F38-04",
+      "title": "4. Data Flow: ADO ? `37-data-model`",
+      "story_count": 0,
+      "stories_with_artifacts": 0,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 0,
+      "gap_count": 0
+    },
+    {
+      "id": "F38-05",
+      "title": "5. Design Decisions",
+      "story_count": 8,
+      "stories_with_artifacts": 8,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 50,
+      "gap_count": 0
+    },
+    {
+      "id": "F38-06",
+      "title": "6. Phasing",
+      "story_count": 0,
+      "stories_with_artifacts": 0,
+      "stories_with_evidence": 0,
+      "consistency_score": 0,
+      "mti": 0,
+      "gap_count": 0
+    }
+  ],
+  "gaps": []
+}

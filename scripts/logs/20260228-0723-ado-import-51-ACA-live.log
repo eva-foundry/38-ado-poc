@@ -1,0 +1,269 @@
+**********************
+PowerShell transcript start
+Start time: 20260228072326
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -NoProfile -File .\ado-import.ps1
+Process ID: 16048
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260228-0723-ado-import-51-ACA-live.log
+
+=== ADO Import: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Project maturity : active
+GitHub repo      : eva-foundry/51-ACA
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-1
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-1' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+  Sprint: Sprint-2
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-2' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+  Sprint: Sprint-3
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node bdc77574-8d8d-462d-9603-33c73dda2d51. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-3' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+Epic: creating 'Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS'
+  -> Epic id=2759
+Feature: creating 'Foundation -- Repo Scaffold, Docker, CI, Health endpoints'
+  -> Feature id=2760
+Feature: creating 'Collection -- MSAL Auth, Resource Graph, Cost Management pull'
+  -> Feature id=2761
+Feature: creating 'Analysis -- 12-rule heuristic engine, FindingsAssembler'
+  -> Feature id=2762
+Feature: creating 'API -- FastAPI service: auth, collection, billing, admin, APIM'
+  -> Feature id=2763
+Feature: creating 'Frontend -- React 19, Fluent UI v9, 10 Spark screens'
+  -> Feature id=2764
+Feature: creating 'Billing -- Stripe Checkout, Webhook lifecycle, Entitlements'
+  -> Feature id=2765
+Feature: creating 'Delivery -- Jinja2 templates, ZIP packager, Blob SAS URLs'
+  -> Feature id=2766
+Feature: creating 'Observability -- App Insights, Log Analytics, GA4, Clarity'
+  -> Feature id=2767
+Feature: creating 'i18n and a11y -- 5 locales, multi-currency, WCAG 2.1 AA'
+  -> Feature id=2768
+Feature: creating 'Hardening -- APIM cache, rate limiting, idempotency, PIPEDA'
+  -> Feature id=2769
+Feature: creating 'Phase 2 Infra -- Terraform private landing zone, Lighthouse Mode C'
+  -> Feature id=2770
+Feature: creating 'Data Model -- ACA model server (port 8011), WBS tracking'
+  -> Feature id=2771
+PBI: creating '[ACA-S01] Repo scaffold + docker-compose + health endpoint verified'
+  -> PBI id=2772
+PBI: creating '[ACA-S02] Data model server on port 8011 seeded -- 27 endpoints, 11 containers, 10 screens'
+  -> PBI id=2773
+PBI: creating '[ACA-S03] ADO project 51-aca created -- ado-artifacts.json + ado-import.ps1'
+  -> PBI id=2774
+PBI: creating '[ACA-S04] Mode A delegated MSAL auth -- POST /v1/auth/connect implemented'
+  -> PBI id=2775
+PBI: creating '[ACA-S05] Resource Graph + Cost Management collector job implemented'
+  -> PBI id=2776
+PBI: creating '[ACA-S06] 12-rule heuristic analysis engine -- AnalysisJob exits 0 with findings'
+  -> PBI id=2777
+PBI: creating '[ACA-S07] GET /v1/reports/tier1 returns findings for authenticated subscriber'
+  -> PBI id=2778
+PBI: creating '[ACA-S08] Admin endpoints -- kpis, customers, grant, lock, reconcile, runs all return 200'
+  -> PBI id=2779
+PBI: creating '[ACA-S09] Stripe checkout + webhook + entitlements flow end-to-end'
+  -> PBI id=2780
+PBI: creating '[ACA-S10] APIM entitlement cache policy deployed -- 60s TTL, tier gating template'
+  -> PBI id=2781
+PBI: creating '[ACA-S11] 5 customer-facing Spark screens -- LoginPage through UpgradePage'
+  -> PBI id=2782
+PBI: creating '[ACA-S12] 5 admin Spark screens -- AdminDashboard through AdminControls'
+  -> PBI id=2783
+PBI: creating '[ACA-S13] Phase 1 infrastructure -- Cosmos + Container Apps + ACR deployed via bootstrap.sh'
+  -> PBI id=2784
+PBI: creating '[ACA-S14] GA4 + Clarity instrumentation -- analytics-spec.md events firing'
+  -> PBI id=2785
+PBI: creating '[ACA-S15] Delivery service -- ZIP packager + Blob SAS URL + SHA-256 verification'
+  -> PBI id=2786
+PBI: creating '[ACA-S16] Veritas trust score >= 0.50 -- EVA-STORY tags in source files'
+  -> PBI id=2787
+
+=== Import Summary: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Epic id  : 2759
+Features : 12
+PBIs     : 16
+Board    : https://dev.azure.com/marcopresta/51-aca/_workitems
+
+
+Tag       Id State Url
+---       -- ----- ---
+aca-s01 2772 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s02 2773 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s03 2774 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s04 2775 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s05 2776 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s06 2777 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s07 2778 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s08 2779 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s09 2780 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s10 2781 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s11 2782 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s12 2783 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s13 2784 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s14 2785 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s15 2786 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s16 2787 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+
+**********************
+PowerShell transcript end
+End time: 20260228072343
+**********************

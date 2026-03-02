@@ -1,10 +1,39 @@
-# STATUS — EVA ADO PoC
+# STATUS -- EVA ADO PoC
 
-**Last verified:** 2026-02-21 (run6 — zero errors)  
-**Verified by:** copilot-agent + manual log review  
-**ADO Org:** `https://dev.azure.com/marcopresta`  
-**Project:** `eva-poc` (Scrum)  
+**Last verified:** 2026-02-25 08:20 ET (session 5 -- WBS seeding prep)
+**Verified by:** copilot-agent session 5
+**ADO Org:** `https://dev.azure.com/marcopresta`
+**Project:** `eva-poc` (Scrum)
 **GitHub Org:** `https://github.com/orgs/eva-foundry` (30 repos, all private)
+
+---
+
+## Session 5 Update (2026-02-25 08:20 ET)
+
+| Action | Detail | Result |
+|---|---|---|
+| WBS layer complete | 3234 WBS records in data model (program/streams/projects/features/stories) | [INFO] |
+| endpoint linkage | 186 endpoints + 46 screens now have wbs_id set | [INFO] |
+| wbs-to-ado.ps1 written | Reads WBS layer, generates per-project ado-artifacts.json, calls ado-import-project.ps1 | [DONE] |
+| full-bootstrap.ps1 | Phase 7 = ADO seeding added to master replay script | [DONE] |
+| Dry-run result | 42 artifacts built, 42/42 import_success, 0 failed, 1920 PBIs staged | [PASS] |
+| Next action | Run wbs-to-ado.ps1 (live, requires ADO_PAT) to create work items in ADO | [READY] |
+
+### WBS Seed Coverage Plan
+
+| Scope | Count |
+|---|---|
+| WBS project nodes | 51 |
+| WBS features | 751 |
+| WBS stories (to become PBIs) | 2165 |
+| Estimated ADO Epics created | 51 (1 per project) |
+| Estimated ADO Features created | 751 |
+| Estimated ADO PBIs created | 2165 |
+
+**Previously loaded (run6):** 18 projects, 48 features, 55 PBIs
+**After WBS seeding:** 51 projects, 751 features, ~2165 PBIs
+
+Script: `48-eva-veritas/.evidence/20260225-ado-seed/wbs-to-ado.ps1`
 
 ---
 
@@ -15,12 +44,12 @@
 | Import runs | 6 (run6 = zero errors) |
 | Projects loaded | 18 / 18 ✅ |
 | Epics created | 18 (ids 15–32) |
-| Features created | 47 (ids 33–95) |
-| PBIs total | 52 |
-| PBIs Done | 25 |
-| PBIs New (active/backlog) | 27 |
+| Features created | 48 (ids 33–95 + 138) |
+| PBIs total | 55 |
+| PBIs Done | 27 |
+| PBIs New (active/backlog) | 28 |
 | Sprints assigned to team | 25 / 25 ✅ |
-| Last run log | `scripts/logs/20260221-1628-ado-onboard-all-live.log` |
+| Last run log | `scripts/logs/20260221-2026-37-data-model-api.log` |
 
 ---
 
@@ -43,7 +72,7 @@
 | `34-eva-agents` | 27 | EVA Agents | 2 | 2 | 0 | 2 |
 | `35-agentic-code-fixing` | 28 | Agentic Code Fixing | 2 | 2 | 1 | 1 |
 | `36-red-teaming` | 29 | Red Teaming | 3 | 3 | 1 | 2 |
-| `37-data-model` | 30 | EVA Data Model | 3 | 4 | 4 | 0 |
+| `37-data-model` | 30 | EVA Data Model | 4 | 7 | 6 | 1 |
 | `38-ado-poc` | 31 | ADO Command Center | 3 | 5 | 2 | 3 |
 | `39-ado-dashboard` | 32 | ADO Dashboard | 2 | 2 | 0 | 2 |
 
@@ -103,9 +132,11 @@ See [`docs/ADO/THREE-SYSTEM-WIRING.md`](docs/ADO/THREE-SYSTEM-WIRING.md) for ful
 ADO_ORG_URL    = https://dev.azure.com/marcopresta
 ADO_PROJECT    = eva-poc
 ADO_TEAM       = eva-poc Team
-EPICS          = ids 15–32  (one per project folder)
-FEATURES       = ids 33–95  (2-3 per project)
-PBIS           = ids 96–122 + pre-existing 7–14 (brain v2)
+WBS_SEED_RUN   = 2026-02-25 08:51-09:07 ET  (42/42 LIVE -- COMPLETE)
+EPICS          = 42 project epics (prior: 15-32 manual; now WBS-seeded batch)
+FEATURES       = 751 WBS features -> ADO Features (ids ~900-1079)
+PBIS           = 1920 WBS stories -> ADO PBIs (ids 600-2718)
+ONE_FAILED     = 29-foundry F29-18-008 title 299 chars (ADO limit 255); fixed + retried OK
 ```
 
 ---

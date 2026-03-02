@@ -1,0 +1,165 @@
+**********************
+PowerShell transcript start
+Start time: 20260226225116
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -File C:\AICOE\eva-foundry\51-ACA\ado-import.ps1
+Process ID: 19416
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260226-2251-ado-import-51-ACA-live.log
+
+=== ADO Import: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Project maturity : active
+GitHub repo      : eva-foundry/51-ACA
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-1
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-1' assigned to team.
+  Sprint: Sprint-2
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-2' assigned to team.
+  Sprint: Sprint-3
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-3' assigned to team.
+Epic: creating 'Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS'
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "TF401346: Invalid Area/Iteration id given for work item -1, field \u0027System.AreaId\u0027.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItemFieldInvalidTreeIdException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "WorkItemFieldInvalidTreeIdException",
+  "errorCode": 600171,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/$Epic?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "TF401346: Invalid Area/Iteration id given for work item -1, field \u0027System.AreaId\u0027.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItemFieldInvalidTreeIdException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "WorkItemFieldInvalidTreeIdException",
+  "errorCode": 600171,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/$Epic?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "TF401346: Invalid Area/Iteration id given for work item -1, field \u0027System.AreaId\u0027.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItemFieldInvalidTreeIdException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "WorkItemFieldInvalidTreeIdException",
+  "errorCode": 600171,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/$Epic?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "TF401346: Invalid Area/Iteration id given for work item -1, field \u0027System.AreaId\u0027.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItemFieldInvalidTreeIdException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "WorkItemFieldInvalidTreeIdException",
+  "errorCode": 600171,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/$Epic?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "TF401346: Invalid Area/Iteration id given for work item -1, field \u0027System.AreaId\u0027.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItemFieldInvalidTreeIdException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "WorkItemFieldInvalidTreeIdException",
+  "errorCode": 600171,
+  "eventId": 3200
+}"
+ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/$Epic?api-version=7.1 => HTTP 400 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "TF401346: Invalid Area/Iteration id given for work item -1, field \u0027System.AreaId\u0027.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItemFieldInvalidTreeIdException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "WorkItemFieldInvalidTreeIdException",
+  "errorCode": 600171,
+  "eventId": 3200
+}
+Exception: C:\AICOE\eva-foundry\38-ado-poc\scripts\ado-import-project.ps1:116:13
+Line |
+ 116 |              throw "ADO $Method $Uri => HTTP $status : $msg"
+     |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | ADO Post
+     | https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems/$Epic?api-version=7.1 => HTTP 400 :  {   "$id": "1",   "innerException": null,   "message": "TF401346: Invalid Area/Iteration id given for work item -1, field \u0027System.AreaId\u0027.",   "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.WorkItemFieldInvalidTreeIdException, Microsoft.TeamFoundation.WorkItemTracking.Server",   "typeKey": "WorkItemFieldInvalidTreeIdException",   "errorCode": 600171,   "eventId": 3200 }
+
+**********************
+PowerShell transcript end
+End time: 20260226225118
+**********************

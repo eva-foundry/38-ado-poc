@@ -1,0 +1,1564 @@
+**********************
+PowerShell transcript start
+Start time: 20260225083200
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json -DryRun
+Process ID: 17404
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 38-ado-poc ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083201
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083202
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json -DryRun
+Process ID: 17140
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 39-ado-dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083202
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083203
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json -DryRun
+Process ID: 22712
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 40-eva-control-plane ===
+Project maturity : active
+GitHub repo      : eva-foundry/40-eva-control-plane
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083203
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083205
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\41-eva-cli.json -DryRun
+Process ID: 16360
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 41-eva-cli ===
+Project maturity : poc
+GitHub repo      : eva-foundry/41-eva-cli
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083206
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083208
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\42-learn-foundry.json -DryRun
+Process ID: 17808
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 42-learn-foundry ===
+Project maturity : poc
+GitHub repo      : eva-foundry/42-learn-foundry
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083208
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083209
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\43-spark.json -DryRun
+Process ID: 22308
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 43-spark ===
+Project maturity : active
+GitHub repo      : eva-foundry/43-spark
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083209
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083210
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\44-eva-jp-spark.json -DryRun
+Process ID: 18060
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 44-eva-jp-spark ===
+Project maturity : active
+GitHub repo      : eva-foundry/44-eva-jp-spark
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083210
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083212
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\45-aicoe-page.json -DryRun
+Process ID: 8020
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 45-aicoe-page ===
+Project maturity : poc
+GitHub repo      : eva-foundry/45-aicoe-page
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083212
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083213
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\46-accelerator.json -DryRun
+Process ID: 20284
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 46-accelerator ===
+Project maturity : poc
+GitHub repo      : eva-foundry/46-accelerator
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083213
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083214
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\48-eva-veritas.json -DryRun
+Process ID: 22328
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 48-eva-veritas ===
+Project maturity : active
+GitHub repo      : eva-foundry/48-eva-veritas
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083215
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083216
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\49-eva-dtl.json -DryRun
+Process ID: 17636
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 49-eva-dtl ===
+Project maturity : active
+GitHub repo      : eva-foundry/49-eva-dtl
+Dry run          : True
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+Line |
+ 241 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+**********************
+PowerShell transcript end
+End time: 20260225083216
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083249
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\01-documentation-generator.json -DryRun
+Process ID: 20588
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 01-documentation-generator ===
+Project maturity : active
+GitHub repo      : eva-foundry/01-documentation-generator
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 01-documentation-generator
+Feature: creating 'Overview'
+  [DRY-RUN] Would create Feature : Overview
+  -> Feature id=-1
+Feature: creating 'Project Structure'
+  [DRY-RUN] Would create Feature : Project Structure
+  -> Feature id=-1
+Feature: creating 'Features'
+  [DRY-RUN] Would create Feature : Features
+  -> Feature id=-1
+Feature: creating 'Setup Instructions'
+  [DRY-RUN] Would create Feature : Setup Instructions
+  -> Feature id=-1
+Feature: creating 'Usage (After Full Migration)'
+  [DRY-RUN] Would create Feature : Usage (After Full Migration)
+  -> Feature id=-1
+Feature: creating 'Migration Status'
+  [DRY-RUN] Would create Feature : Migration Status
+  -> Feature id=-1
+Feature: creating 'Development'
+  [DRY-RUN] Would create Feature : Development
+  -> Feature id=-1
+Feature: creating 'Related Documentation'
+  [DRY-RUN] Would create Feature : Related Documentation
+  -> Feature id=-1
+Feature: creating 'Contributing'
+  [DRY-RUN] Would create Feature : Contributing
+  -> Feature id=-1
+Feature: creating 'License'
+  [DRY-RUN] Would create Feature : License
+  -> Feature id=-1
+PBI: creating '[F01-03-001] ? Completed (Migrated from automation/)'
+  [DRY-RUN] Would create Product Backlog Item : [F01-03-001] ? Completed (Migrated from automation/)
+  -> PBI id=-1
+PBI: creating '[F01-03-002] ?? Pending Migration (See PLAN.md)'
+  [DRY-RUN] Would create Product Backlog Item : [F01-03-002] ?? Pending Migration (See PLAN.md)
+  -> PBI id=-1
+PBI: creating '[F01-04-001] 1. Prerequisites'
+  [DRY-RUN] Would create Product Backlog Item : [F01-04-001] 1. Prerequisites
+  -> PBI id=-1
+PBI: creating '[F01-04-002] 2. Installation'
+  [DRY-RUN] Would create Product Backlog Item : [F01-04-002] 2. Installation
+  -> PBI id=-1
+PBI: creating '[F01-04-003] 3. Configuration'
+  [DRY-RUN] Would create Product Backlog Item : [F01-04-003] 3. Configuration
+  -> PBI id=-1
+PBI: creating '[F01-04-004] 4. Run Tests'
+  [DRY-RUN] Would create Product Backlog Item : [F01-04-004] 4. Run Tests
+  -> PBI id=-1
+PBI: creating '[F01-05-001] Basic Generation'
+  [DRY-RUN] Would create Product Backlog Item : [F01-05-001] Basic Generation
+  -> PBI id=-1
+PBI: creating '[F01-05-002] CLI (Coming in Phase 4)'
+  [DRY-RUN] Would create Product Backlog Item : [F01-05-002] CLI (Coming in Phase 4)
+  -> PBI id=-1
+PBI: creating '[F01-07-001] Running Tests During Development'
+  [DRY-RUN] Would create Product Backlog Item : [F01-07-001] Running Tests During Development
+  -> PBI id=-1
+PBI: creating '[F01-07-002] Adding New Validators'
+  [DRY-RUN] Would create Product Backlog Item : [F01-07-002] Adding New Validators
+  -> PBI id=-1
+PBI: creating '[F01-07-003] Code Quality'
+  [DRY-RUN] Would create Product Backlog Item : [F01-07-003] Code Quality
+  -> PBI id=-1
+
+=== Import Summary: 01-documentation-generator ===
+Epic id  : -1
+Features : 10
+PBIs     : 11
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F01-03-001 -1 New   (dry-run)
+F01-03-002 -1 New   (dry-run)
+F01-04-001 -1 New   (dry-run)
+F01-04-002 -1 New   (dry-run)
+F01-04-003 -1 New   (dry-run)
+F01-04-004 -1 New   (dry-run)
+F01-05-001 -1 New   (dry-run)
+F01-05-002 -1 New   (dry-run)
+F01-07-001 -1 New   (dry-run)
+F01-07-002 -1 New   (dry-run)
+F01-07-003 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083249
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083250
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\02-poc-agent-skills.json -DryRun
+Process ID: 4272
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 02-poc-agent-skills ===
+Project maturity : poc
+GitHub repo      : eva-foundry/02-poc-agent-skills
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 02-poc-agent-skills
+Feature: creating 'Timeline: 3 Weeks (15 working days)'
+  [DRY-RUN] Would create Feature : Timeline: 3 Weeks (15 working days)
+  -> Feature id=-1
+Feature: creating 'Week 1: Foundation Extraction (Days 1-5)'
+  [DRY-RUN] Would create Feature : Week 1: Foundation Extraction (Days 1-5)
+  -> Feature id=-1
+Feature: creating 'Week 2: First Skills + Orchestrator (Days 6-10)'
+  [DRY-RUN] Would create Feature : Week 2: First Skills + Orchestrator (Days 6-10)
+  -> Feature id=-1
+Feature: creating 'Week 3: Additional Skills + Demonstration (Days 11-15)'
+  [DRY-RUN] Would create Feature : Week 3: Additional Skills + Demonstration (Days 11-15)
+  -> Feature id=-1
+Feature: creating 'Success Criteria'
+  [DRY-RUN] Would create Feature : Success Criteria
+  -> Feature id=-1
+Feature: creating 'Risk Mitigation'
+  [DRY-RUN] Would create Feature : Risk Mitigation
+  -> Feature id=-1
+Feature: creating 'Integration with POC #2'
+  [DRY-RUN] Would create Feature : Integration with POC #2
+  -> Feature id=-1
+Feature: creating 'Next Steps After POC'
+  [DRY-RUN] Would create Feature : Next Steps After POC
+  -> Feature id=-1
+PBI: creating '[F02-02-001] Day 1: AgentSkillBase Abstract Class'
+  [DRY-RUN] Would create Product Backlog Item : [F02-02-001] Day 1: AgentSkillBase Abstract Class
+  -> PBI id=-1
+PBI: creating '[F02-02-002] Day 2: PromptTemplate System'
+  [DRY-RUN] Would create Product Backlog Item : [F02-02-002] Day 2: PromptTemplate System
+  -> PBI id=-1
+PBI: creating '[F02-02-003] Day 3: ValidatorFramework'
+  [DRY-RUN] Would create Product Backlog Item : [F02-02-003] Day 3: ValidatorFramework
+  -> PBI id=-1
+PBI: creating '[F02-02-004] Day 4: EvidenceCollector System'
+  [DRY-RUN] Would create Product Backlog Item : [F02-02-004] Day 4: EvidenceCollector System
+  -> PBI id=-1
+PBI: creating '[F02-02-005] Day 5: Integration Testing + Documentation'
+  [DRY-RUN] Would create Product Backlog Item : [F02-02-005] Day 5: Integration Testing + Documentation
+  -> PBI id=-1
+PBI: creating '[F02-03-001] Day 6: DocumentationGeneratorSkill (Part 1)'
+  [DRY-RUN] Would create Product Backlog Item : [F02-03-001] Day 6: DocumentationGeneratorSkill (Part 1)
+  -> PBI id=-1
+PBI: creating '[F02-03-002] Day 7: DocumentationGeneratorSkill (Part 2) + Manifest'
+  [DRY-RUN] Would create Product Backlog Item : [F02-03-002] Day 7: DocumentationGeneratorSkill (Part 2) + Manifest
+  -> PBI id=-1
+PBI: creating '[F02-03-003] Day 8: Skill Manifest System'
+  [DRY-RUN] Would create Product Backlog Item : [F02-03-003] Day 8: Skill Manifest System
+  -> PBI id=-1
+PBI: creating '[F02-03-004] Day 9: SkillOrchestrator (Part 1)'
+  [DRY-RUN] Would create Product Backlog Item : [F02-03-004] Day 9: SkillOrchestrator (Part 1)
+  -> PBI id=-1
+PBI: creating '[F02-03-005] Day 10: SkillOrchestrator (Part 2) + Integration Tests'
+  [DRY-RUN] Would create Product Backlog Item : [F02-03-005] Day 10: SkillOrchestrator (Part 2) + Integration Tests
+  -> PBI id=-1
+PBI: creating '[F02-04-001] Day 11: CodeGeneratorSkill (New Capability)'
+  [DRY-RUN] Would create Product Backlog Item : [F02-04-001] Day 11: CodeGeneratorSkill (New Capability)
+  -> PBI id=-1
+PBI: creating '[F02-04-002] Day 12: ArchitectureAnalyzerSkill (New Capability)'
+  [DRY-RUN] Would create Product Backlog Item : [F02-04-002] Day 12: ArchitectureAnalyzerSkill (New Capability)
+  -> PBI id=-1
+PBI: creating '[F02-04-003] Day 13: Multi-Skill Workflow Demonstration'
+  [DRY-RUN] Would create Product Backlog Item : [F02-04-003] Day 13: Multi-Skill Workflow Demonstration
+  -> PBI id=-1
+PBI: creating '[F02-04-004] Day 14: Comprehensive Documentation'
+  [DRY-RUN] Would create Product Backlog Item : [F02-04-004] Day 14: Comprehensive Documentation
+  -> PBI id=-1
+PBI: creating '[F02-04-005] Day 15: Testing, Refinement, and POC Presentation'
+  [DRY-RUN] Would create Product Backlog Item : [F02-04-005] Day 15: Testing, Refinement, and POC Presentation
+  -> PBI id=-1
+PBI: creating '[F02-05-001] Technical Metrics'
+  [DRY-RUN] Would create Product Backlog Item : [F02-05-001] Technical Metrics
+  -> PBI id=-1
+PBI: creating '[F02-05-002] Quality Metrics'
+  [DRY-RUN] Would create Product Backlog Item : [F02-05-002] Quality Metrics
+  -> PBI id=-1
+PBI: creating '[F02-05-003] Strategic Metrics'
+  [DRY-RUN] Would create Product Backlog Item : [F02-05-003] Strategic Metrics
+  -> PBI id=-1
+
+=== Import Summary: 02-poc-agent-skills ===
+Epic id  : -1
+Features : 8
+PBIs     : 18
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F02-02-001 -1 New   (dry-run)
+F02-02-002 -1 New   (dry-run)
+F02-02-003 -1 New   (dry-run)
+F02-02-004 -1 New   (dry-run)
+F02-02-005 -1 New   (dry-run)
+F02-03-001 -1 New   (dry-run)
+F02-03-002 -1 New   (dry-run)
+F02-03-003 -1 New   (dry-run)
+F02-03-004 -1 New   (dry-run)
+F02-03-005 -1 New   (dry-run)
+F02-04-001 -1 New   (dry-run)
+F02-04-002 -1 New   (dry-run)
+F02-04-003 -1 New   (dry-run)
+F02-04-004 -1 New   (dry-run)
+F02-04-005 -1 New   (dry-run)
+F02-05-001 -1 New   (dry-run)
+F02-05-002 -1 New   (dry-run)
+F02-05-003 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083251
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083252
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\03-poc-enhanced-docs.json -DryRun
+Process ID: 20196
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 03-poc-enhanced-docs ===
+Project maturity : poc
+GitHub repo      : eva-foundry/03-poc-enhanced-docs
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 03-poc-enhanced-docs
+Feature: creating 'Timeline: 3 Weeks (15 working days)'
+  [DRY-RUN] Would create Feature : Timeline: 3 Weeks (15 working days)
+  -> Feature id=-1
+Feature: creating 'Week 1: Diagram Generation (Days 1-5)'
+  [DRY-RUN] Would create Feature : Week 1: Diagram Generation (Days 1-5)
+  -> Feature id=-1
+Feature: creating 'Week 2: Enhanced Markdown + MkDocs Setup (Days 6-10)'
+  [DRY-RUN] Would create Feature : Week 2: Enhanced Markdown + MkDocs Setup (Days 6-10)
+  -> Feature id=-1
+Feature: creating 'Week 3: Interactive Features + Deployment (Days 11-15)'
+  [DRY-RUN] Would create Feature : Week 3: Interactive Features + Deployment (Days 11-15)
+  -> Feature id=-1
+Feature: creating 'Success Criteria'
+  [DRY-RUN] Would create Feature : Success Criteria
+  -> Feature id=-1
+Feature: creating 'Risk Mitigation'
+  [DRY-RUN] Would create Feature : Risk Mitigation
+  -> Feature id=-1
+Feature: creating 'Integration with POC #1'
+  [DRY-RUN] Would create Feature : Integration with POC #1
+  -> Feature id=-1
+Feature: creating 'Next Steps After POC'
+  [DRY-RUN] Would create Feature : Next Steps After POC
+  -> Feature id=-1
+Feature: creating 'Collaboration with POC #1'
+  [DRY-RUN] Would create Feature : Collaboration with POC #1
+  -> Feature id=-1
+PBI: creating '[F03-02-001] Day 1: Diagram Generator Tool Foundation'
+  [DRY-RUN] Would create Product Backlog Item : [F03-02-001] Day 1: Diagram Generator Tool Foundation
+  -> PBI id=-1
+PBI: creating '[F03-02-002] Day 2: Mermaid Diagram Templates (Part 1)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-02-002] Day 2: Mermaid Diagram Templates (Part 1)
+  -> PBI id=-1
+PBI: creating '[F03-02-003] Day 3: Diagram Generation - Architecture & Security (Phase 00-01)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-02-003] Day 3: Diagram Generation - Architecture & Security (Phase 00-01)
+  -> PBI id=-1
+PBI: creating '[F03-02-004] Day 4: Diagram Generation - Platform & Data/AI (Phase 02-03)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-02-004] Day 4: Diagram Generation - Platform & Data/AI (Phase 02-03)
+  -> PBI id=-1
+PBI: creating '[F03-02-005] Day 5: Diagram Generation - Remaining Phases + Review'
+  [DRY-RUN] Would create Product Backlog Item : [F03-02-005] Day 5: Diagram Generation - Remaining Phases + Review
+  -> PBI id=-1
+PBI: creating '[F03-03-001] Day 6: Markdown Enhancer Tool'
+  [DRY-RUN] Would create Product Backlog Item : [F03-03-001] Day 6: Markdown Enhancer Tool
+  -> PBI id=-1
+PBI: creating '[F03-03-002] Day 7: Enhance Markdown Files (Part 1: Phases 00-02)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-03-002] Day 7: Enhance Markdown Files (Part 1: Phases 00-02)
+  -> PBI id=-1
+PBI: creating '[F03-03-003] Day 8: Enhance Markdown Files (Part 2: Phases 03-99)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-03-003] Day 8: Enhance Markdown Files (Part 2: Phases 03-99)
+  -> PBI id=-1
+PBI: creating '[F03-03-004] Day 9: MkDocs Configuration (Part 1: Basic Setup)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-03-004] Day 9: MkDocs Configuration (Part 1: Basic Setup)
+  -> PBI id=-1
+PBI: creating '[F03-03-005] Day 10: MkDocs Configuration (Part 2: ESDC Branding)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-03-005] Day 10: MkDocs Configuration (Part 2: ESDC Branding)
+  -> PBI id=-1
+PBI: creating '[F03-04-001] Day 11: Interactive Features (Part 1: Tooltips & Zoom)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-04-001] Day 11: Interactive Features (Part 1: Tooltips & Zoom)
+  -> PBI id=-1
+PBI: creating '[F03-04-002] Day 12: Interactive Features (Part 2: Navigation & UX)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-04-002] Day 12: Interactive Features (Part 2: Navigation & UX)
+  -> PBI id=-1
+PBI: creating '[F03-04-003] Day 13: Testing (Cross-Browser, Accessibility, Performance)'
+  [DRY-RUN] Would create Product Backlog Item : [F03-04-003] Day 13: Testing (Cross-Browser, Accessibility, Performance)
+  -> PBI id=-1
+PBI: creating '[F03-04-004] Day 14: Deployment to Azure Static Web Apps'
+  [DRY-RUN] Would create Product Backlog Item : [F03-04-004] Day 14: Deployment to Azure Static Web Apps
+  -> PBI id=-1
+PBI: creating '[F03-04-005] Day 15: Documentation, Demo Video, and POC Presentation'
+  [DRY-RUN] Would create Product Backlog Item : [F03-04-005] Day 15: Documentation, Demo Video, and POC Presentation
+  -> PBI id=-1
+PBI: creating '[F03-05-001] Diagram Generation'
+  [DRY-RUN] Would create Product Backlog Item : [F03-05-001] Diagram Generation
+  -> PBI id=-1
+PBI: creating '[F03-05-002] Enhanced Markdown'
+  [DRY-RUN] Would create Product Backlog Item : [F03-05-002] Enhanced Markdown
+  -> PBI id=-1
+PBI: creating '[F03-05-003] MkDocs Site'
+  [DRY-RUN] Would create Product Backlog Item : [F03-05-003] MkDocs Site
+  -> PBI id=-1
+PBI: creating '[F03-05-004] Testing & Quality'
+  [DRY-RUN] Would create Product Backlog Item : [F03-05-004] Testing & Quality
+  -> PBI id=-1
+PBI: creating '[F03-05-005] Deployment'
+  [DRY-RUN] Would create Product Backlog Item : [F03-05-005] Deployment
+  -> PBI id=-1
+
+=== Import Summary: 03-poc-enhanced-docs ===
+Epic id  : -1
+Features : 9
+PBIs     : 20
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F03-02-001 -1 New   (dry-run)
+F03-02-002 -1 New   (dry-run)
+F03-02-003 -1 New   (dry-run)
+F03-02-004 -1 New   (dry-run)
+F03-02-005 -1 New   (dry-run)
+F03-03-001 -1 New   (dry-run)
+F03-03-002 -1 New   (dry-run)
+F03-03-003 -1 New   (dry-run)
+F03-03-004 -1 New   (dry-run)
+F03-03-005 -1 New   (dry-run)
+F03-04-001 -1 New   (dry-run)
+F03-04-002 -1 New   (dry-run)
+F03-04-003 -1 New   (dry-run)
+F03-04-004 -1 New   (dry-run)
+F03-04-005 -1 New   (dry-run)
+F03-05-001 -1 New   (dry-run)
+F03-05-002 -1 New   (dry-run)
+F03-05-003 -1 New   (dry-run)
+F03-05-004 -1 New   (dry-run)
+F03-05-005 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083252
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083253
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\05-extract-cases.json -DryRun
+Process ID: 22532
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 05-extract-cases ===
+Project maturity : active
+GitHub repo      : eva-foundry/05-extract-cases
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 05-extract-cases
+Feature: creating 'Purpose (Phase-1, authoritative)'
+  [DRY-RUN] Would create Feature : Purpose (Phase-1, authoritative)
+  -> Feature id=-1
+Feature: creating 'Non-goals (explicit)'
+  [DRY-RUN] Would create Feature : Non-goals (explicit)
+  -> Feature id=-1
+Feature: creating 'Authoritative Phase-1 data flow'
+  [DRY-RUN] Would create Feature : Authoritative Phase-1 data flow
+  -> Feature id=-1
+Feature: creating 'Canonical `metadata_storage_path` (critical)'
+  [DRY-RUN] Would create Feature : Canonical `metadata_storage_path` (critical)
+  -> Feature id=-1
+Feature: creating 'Why case-level (for future developers)'
+  [DRY-RUN] Would create Feature : Why case-level (for future developers)
+  -> Feature id=-1
+Feature: creating 'Dry-run, validation, and deterministic failures'
+  [DRY-RUN] Would create Feature : Dry-run, validation, and deterministic failures
+  -> Feature id=-1
+Feature: creating 'Notes on repository contents'
+  [DRY-RUN] Would create Feature : Notes on repository contents
+  -> Feature id=-1
+Feature: creating 'Future evolution (out of scope for Project 05 Phase-1)'
+  [DRY-RUN] Would create Feature : Future evolution (out of scope for Project 05 Phase-1)
+  -> Feature id=-1
+PBI: creating '[F05-03-001] 1) Input'
+  [DRY-RUN] Would create Product Backlog Item : [F05-03-001] 1) Input
+  -> PBI id=-1
+PBI: creating '[F05-03-002] 2) Aggregation strategy'
+  [DRY-RUN] Would create Product Backlog Item : [F05-03-002] 2) Aggregation strategy
+  -> PBI id=-1
+PBI: creating '[F05-03-003] 3) Metadata enrichment (Plan-2)'
+  [DRY-RUN] Would create Product Backlog Item : [F05-03-003] 3) Metadata enrichment (Plan-2)
+  -> PBI id=-1
+PBI: creating '[F05-03-004] 4) Export'
+  [DRY-RUN] Would create Product Backlog Item : [F05-03-004] 4) Export
+  -> PBI id=-1
+PBI: creating '[F05-03-005] 5) Ingestion'
+  [DRY-RUN] Would create Product Backlog Item : [F05-03-005] 5) Ingestion
+  -> PBI id=-1
+PBI: creating '[F05-06-001] Standard usage (random selection):'
+  [DRY-RUN] Would create Product Backlog Item : [F05-06-001] Standard usage (random selection):
+  -> PBI id=-1
+PBI: creating '[F05-06-002] CSV-driven selection (for accuracy testing):'
+  [DRY-RUN] Would create Product Backlog Item : [F05-06-002] CSV-driven selection (for accuracy testing):
+  -> PBI id=-1
+PBI: creating '[F05-06-003] Expected files in `--out`:'
+  [DRY-RUN] Would create Product Backlog Item : [F05-06-003] Expected files in `--out`:
+  -> PBI id=-1
+
+=== Import Summary: 05-extract-cases ===
+Epic id  : -1
+Features : 8
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F05-03-001 -1 New   (dry-run)
+F05-03-002 -1 New   (dry-run)
+F05-03-003 -1 New   (dry-run)
+F05-03-004 -1 New   (dry-run)
+F05-03-005 -1 New   (dry-run)
+F05-06-001 -1 New   (dry-run)
+F05-06-002 -1 New   (dry-run)
+F05-06-003 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083253
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083255
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\06-jp-auto-extraction.json -DryRun
+Process ID: 21344
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 06-jp-auto-extraction ===
+Project maturity : poc
+GitHub repo      : eva-foundry/06-jp-auto-extraction
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 06-jp-auto-extraction
+Feature: creating 'Overview'
+  [DRY-RUN] Would create Feature : Overview
+  -> Feature id=-1
+Feature: creating 'Problem Statement'
+  [DRY-RUN] Would create Feature : Problem Statement
+  -> Feature id=-1
+Feature: creating 'Environment & Dependency Strategy'
+  [DRY-RUN] Would create Feature : Environment & Dependency Strategy
+  -> Feature id=-1
+Feature: creating 'Phase 1 ? Input Preparation & Validation'
+  [DRY-RUN] Would create Feature : Phase 1 ? Input Preparation & Validation
+  -> Feature id=-1
+Feature: creating 'Phase 2 ? Browser Automation Implementation'
+  [DRY-RUN] Would create Feature : Phase 2 ? Browser Automation Implementation
+  -> Feature id=-1
+Feature: creating 'Operational procedure for first run'
+  [DRY-RUN] Would create Feature : Operational procedure for first run
+  -> Feature id=-1
+Feature: creating 'Phase 3 ? Citation Parsing'
+  [DRY-RUN] Would create Feature : Phase 3 ? Citation Parsing
+  -> Feature id=-1
+Feature: creating 'Phase 4 ? Output & Traceability'
+  [DRY-RUN] Would create Feature : Phase 4 ? Output & Traceability
+  -> Feature id=-1
+Feature: creating 'Evidence capture & run artifacts'
+  [DRY-RUN] Would create Feature : Evidence capture & run artifacts
+  -> Feature id=-1
+Feature: creating 'Phase 5 ? Error Handling & Resilience'
+  [DRY-RUN] Would create Feature : Phase 5 ? Error Handling & Resilience
+  -> Feature id=-1
+Feature: creating 'Phase 6 ? Validation & Quality Assurance'
+  [DRY-RUN] Would create Feature : Phase 6 ? Validation & Quality Assurance
+  -> Feature id=-1
+Feature: creating 'Technical Specifications'
+  [DRY-RUN] Would create Feature : Technical Specifications
+  -> Feature id=-1
+Feature: creating 'Risk Assessment'
+  [DRY-RUN] Would create Feature : Risk Assessment
+  -> Feature id=-1
+Feature: creating 'Future Enhancements'
+  [DRY-RUN] Would create Feature : Future Enhancements
+  -> Feature id=-1
+Feature: creating 'Summary'
+  [DRY-RUN] Would create Feature : Summary
+  -> Feature id=-1
+Feature: creating 'Change summary (2026-01-21)'
+  [DRY-RUN] Would create Feature : Change summary (2026-01-21)
+  -> Feature id=-1
+PBI: creating '[F06-03-001] Workstation constraint summary'
+  [DRY-RUN] Would create Product Backlog Item : [F06-03-001] Workstation constraint summary
+  -> PBI id=-1
+PBI: creating '[F06-03-002] Baseline execution environment'
+  [DRY-RUN] Would create Product Backlog Item : [F06-03-002] Baseline execution environment
+  -> PBI id=-1
+PBI: creating '[F06-03-003] Alternate execution paths (documented only)'
+  [DRY-RUN] Would create Product Backlog Item : [F06-03-003] Alternate execution paths (documented only)
+  -> PBI id=-1
+PBI: creating '[F06-04-001] Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F06-04-001] Objectives
+  -> PBI id=-1
+PBI: creating '[F06-04-002] Tasks'
+  [DRY-RUN] Would create Product Backlog Item : [F06-04-002] Tasks
+  -> PBI id=-1
+PBI: creating '[F06-04-003] Deliverables'
+  [DRY-RUN] Would create Product Backlog Item : [F06-04-003] Deliverables
+  -> PBI id=-1
+PBI: creating '[F06-05-001] Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F06-05-001] Objectives
+  -> PBI id=-1
+PBI: creating '[F06-05-002] Architecture Decisions'
+  [DRY-RUN] Would create Product Backlog Item : [F06-05-002] Architecture Decisions
+  -> PBI id=-1
+PBI: creating '[F06-05-003] Tasks'
+  [DRY-RUN] Would create Product Backlog Item : [F06-05-003] Tasks
+  -> PBI id=-1
+PBI: creating '[F06-05-004] Deliverables'
+  [DRY-RUN] Would create Product Backlog Item : [F06-05-004] Deliverables
+  -> PBI id=-1
+PBI: creating '[F06-07-001] Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F06-07-001] Objectives
+  -> PBI id=-1
+PBI: creating '[F06-07-002] Citation Formats'
+  [DRY-RUN] Would create Product Backlog Item : [F06-07-002] Citation Formats
+  -> PBI id=-1
+PBI: creating '[F06-07-003] Parsing Algorithm'
+  [DRY-RUN] Would create Product Backlog Item : [F06-07-003] Parsing Algorithm
+  -> PBI id=-1
+PBI: creating '[F06-07-004] Deliverables'
+  [DRY-RUN] Would create Product Backlog Item : [F06-07-004] Deliverables
+  -> PBI id=-1
+PBI: creating '[F06-08-001] Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F06-08-001] Objectives
+  -> PBI id=-1
+PBI: creating '[F06-08-002] Output Formats'
+  [DRY-RUN] Would create Product Backlog Item : [F06-08-002] Output Formats
+  -> PBI id=-1
+PBI: creating '[F06-08-003] Logging Strategy'
+  [DRY-RUN] Would create Product Backlog Item : [F06-08-003] Logging Strategy
+  -> PBI id=-1
+PBI: creating '[F06-08-004] Deliverables'
+  [DRY-RUN] Would create Product Backlog Item : [F06-08-004] Deliverables
+  -> PBI id=-1
+PBI: creating '[F06-10-001] Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F06-10-001] Objectives
+  -> PBI id=-1
+PBI: creating '[F06-10-002] Error Scenarios'
+  [DRY-RUN] Would create Product Backlog Item : [F06-10-002] Error Scenarios
+  -> PBI id=-1
+PBI: creating '[F06-10-003] Resilience Features'
+  [DRY-RUN] Would create Product Backlog Item : [F06-10-003] Resilience Features
+  -> PBI id=-1
+PBI: creating '[F06-10-004] Deliverables'
+  [DRY-RUN] Would create Product Backlog Item : [F06-10-004] Deliverables
+  -> PBI id=-1
+PBI: creating '[F06-11-001] Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F06-11-001] Objectives
+  -> PBI id=-1
+PBI: creating '[F06-11-002] Validation Strategy'
+  [DRY-RUN] Would create Product Backlog Item : [F06-11-002] Validation Strategy
+  -> PBI id=-1
+PBI: creating '[F06-11-003] Success Criteria'
+  [DRY-RUN] Would create Product Backlog Item : [F06-11-003] Success Criteria
+  -> PBI id=-1
+PBI: creating '[F06-11-004] Deliverables'
+  [DRY-RUN] Would create Product Backlog Item : [F06-11-004] Deliverables
+  -> PBI id=-1
+PBI: creating '[F06-12-001] Dependencies'
+  [DRY-RUN] Would create Product Backlog Item : [F06-12-001] Dependencies
+  -> PBI id=-1
+PBI: creating '[F06-12-002] System Requirements'
+  [DRY-RUN] Would create Product Backlog Item : [F06-12-002] System Requirements
+  -> PBI id=-1
+PBI: creating '[F06-12-003] Performance Expectations'
+  [DRY-RUN] Would create Product Backlog Item : [F06-12-003] Performance Expectations
+  -> PBI id=-1
+PBI: creating '[F06-12-004] Maintenance Considerations'
+  [DRY-RUN] Would create Product Backlog Item : [F06-12-004] Maintenance Considerations
+  -> PBI id=-1
+PBI: creating '[F06-13-001] High Risk'
+  [DRY-RUN] Would create Product Backlog Item : [F06-13-001] High Risk
+  -> PBI id=-1
+PBI: creating '[F06-13-002] Medium Risk'
+  [DRY-RUN] Would create Product Backlog Item : [F06-13-002] Medium Risk
+  -> PBI id=-1
+PBI: creating '[F06-13-003] Low Risk'
+  [DRY-RUN] Would create Product Backlog Item : [F06-13-003] Low Risk
+  -> PBI id=-1
+PBI: creating '[F06-14-001] Phase 7+ (Not Included)'
+  [DRY-RUN] Would create Product Backlog Item : [F06-14-001] Phase 7+ (Not Included)
+  -> PBI id=-1
+
+=== Import Summary: 06-jp-auto-extraction ===
+Epic id  : -1
+Features : 16
+PBIs     : 34
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F06-03-001 -1 New   (dry-run)
+F06-03-002 -1 New   (dry-run)
+F06-03-003 -1 New   (dry-run)
+F06-04-001 -1 New   (dry-run)
+F06-04-002 -1 New   (dry-run)
+F06-04-003 -1 New   (dry-run)
+F06-05-001 -1 New   (dry-run)
+F06-05-002 -1 New   (dry-run)
+F06-05-003 -1 New   (dry-run)
+F06-05-004 -1 New   (dry-run)
+F06-07-001 -1 New   (dry-run)
+F06-07-002 -1 New   (dry-run)
+F06-07-003 -1 New   (dry-run)
+F06-07-004 -1 New   (dry-run)
+F06-08-001 -1 New   (dry-run)
+F06-08-002 -1 New   (dry-run)
+F06-08-003 -1 New   (dry-run)
+F06-08-004 -1 New   (dry-run)
+F06-10-001 -1 New   (dry-run)
+F06-10-002 -1 New   (dry-run)
+F06-10-003 -1 New   (dry-run)
+F06-10-004 -1 New   (dry-run)
+F06-11-001 -1 New   (dry-run)
+F06-11-002 -1 New   (dry-run)
+F06-11-003 -1 New   (dry-run)
+F06-11-004 -1 New   (dry-run)
+F06-12-001 -1 New   (dry-run)
+F06-12-002 -1 New   (dry-run)
+F06-12-003 -1 New   (dry-run)
+F06-12-004 -1 New   (dry-run)
+F06-13-001 -1 New   (dry-run)
+F06-13-002 -1 New   (dry-run)
+F06-13-003 -1 New   (dry-run)
+F06-14-001 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083255
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083256
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\07-foundation-layer.json -DryRun
+Process ID: 17120
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 07-foundation-layer ===
+Project maturity : active
+GitHub repo      : eva-foundry/07-foundation-layer
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 07-foundation-layer
+Feature: creating 'Goal'
+  [DRY-RUN] Would create Feature : Goal
+  -> Feature id=-1
+Feature: creating 'Key Discovery Findings'
+  [DRY-RUN] Would create Feature : Key Discovery Findings
+  -> Feature id=-1
+Feature: creating 'Project Phases'
+  [DRY-RUN] Would create Feature : Project Phases
+  -> Feature id=-1
+Feature: creating 'Project Structure'
+  [DRY-RUN] Would create Feature : Project Structure
+  -> Feature id=-1
+Feature: creating 'Success Criteria'
+  [DRY-RUN] Would create Feature : Success Criteria
+  -> Feature id=-1
+Feature: creating 'Deploying Project 07 to Other Projects'
+  [DRY-RUN] Would create Feature : Deploying Project 07 to Other Projects
+  -> Feature id=-1
+Feature: creating 'Troubleshooting'
+  [DRY-RUN] Would create Feature : Troubleshooting
+  -> Feature id=-1
+Feature: creating 'References'
+  [DRY-RUN] Would create Feature : References
+  -> Feature id=-1
+Feature: creating 'Change Log'
+  [DRY-RUN] Would create Feature : Change Log
+  -> Feature id=-1
+PBI: creating '[F07-02-001] **?? CRITICAL Pattern #1: Windows Enterprise Encoding Safety**'
+  [DRY-RUN] Would create Product Backlog Item : [F07-02-001] **?? CRITICAL Pattern #1: Windows Enterprise Encoding Safety**
+  -> PBI id=-1
+PBI: creating '[F07-02-002] **? Pattern #2: Professional Component Architecture**'
+  [DRY-RUN] Would create Product Backlog Item : [F07-02-002] **? Pattern #2: Professional Component Architecture**
+  -> PBI id=-1
+PBI: creating '[F07-02-003] **? Pattern #3: Zero-Setup Execution**'
+  [DRY-RUN] Would create Product Backlog Item : [F07-02-003] **? Pattern #3: Zero-Setup Execution**
+  -> PBI id=-1
+PBI: creating '[F07-02-004] **?? Patterns Pending Broader Validation**'
+  [DRY-RUN] Would create Product Backlog Item : [F07-02-004] **?? Patterns Pending Broader Validation**
+  -> PBI id=-1
+PBI: creating '[F07-03-001] Phase 1: Discovery (?? IN PROGRESS)'
+  [DRY-RUN] Would create Product Backlog Item : [F07-03-001] Phase 1: Discovery (?? IN PROGRESS)
+  -> PBI id=-1
+PBI: creating '[F07-03-002] Phase 2: Design (complete - January 29, 2026)'
+  [DRY-RUN] Would create Product Backlog Item : [F07-03-002] Phase 2: Design (complete - January 29, 2026)
+  -> PBI id=-1
+PBI: creating '[F07-03-003] Phase 5: Workspace Management (? TESTED - v1.5.2 - January 30, 2026)'
+  [DRY-RUN] Would create Product Backlog Item : [F07-03-003] Phase 5: Workspace Management (? TESTED - v1.5.2 - January 30, 2026)
+  -> PBI id=-1
+PBI: creating '[F07-03-004] Phase 3: Development (? COMPLETE - January 29, 2026)'
+  [DRY-RUN] Would create Product Backlog Item : [F07-03-004] Phase 3: Development (? COMPLETE - January 29, 2026)
+  -> PBI id=-1
+PBI: creating '[F07-03-005] Phase 4: Testing (? READY - Pester 5.x Upgraded)'
+  [DRY-RUN] Would create Product Backlog Item : [F07-03-005] Phase 4: Testing (? READY - Pester 5.x Upgraded)
+  -> PBI id=-1
+PBI: creating '[F07-03-006] Phase 5: Implementation (?? ON HOLD - Waiting for Testing)'
+  [DRY-RUN] Would create Product Backlog Item : [F07-03-006] Phase 5: Implementation (?? ON HOLD - Waiting for Testing)
+  -> PBI id=-1
+PBI: creating '[F07-05-001] **Primary Success Metrics**'
+  [DRY-RUN] Would create Product Backlog Item : [F07-05-001] **Primary Success Metrics**
+  -> PBI id=-1
+PBI: creating '[F07-05-002] **Secondary Success Metrics**'
+  [DRY-RUN] Would create Product Backlog Item : [F07-05-002] **Secondary Success Metrics**
+  -> PBI id=-1
+PBI: creating '[F07-06-001] Quick Deployment Guide'
+  [DRY-RUN] Would create Product Backlog Item : [F07-06-001] Quick Deployment Guide
+  -> PBI id=-1
+PBI: creating '[F07-06-002] Deployment Decision Tree'
+  [DRY-RUN] Would create Product Backlog Item : [F07-06-002] Deployment Decision Tree
+  -> PBI id=-1
+PBI: creating '[F07-06-003] What Gets Deployed'
+  [DRY-RUN] Would create Product Backlog Item : [F07-06-003] What Gets Deployed
+  -> PBI id=-1
+PBI: creating '[F07-06-004] Supported Project Types'
+  [DRY-RUN] Would create Product Backlog Item : [F07-06-004] Supported Project Types
+  -> PBI id=-1
+PBI: creating '[F07-07-001] Common Issues'
+  [DRY-RUN] Would create Product Backlog Item : [F07-07-001] Common Issues
+  -> PBI id=-1
+PBI: creating '[F07-08-001] Deployment Tools'
+  [DRY-RUN] Would create Product Backlog Item : [F07-08-001] Deployment Tools
+  -> PBI id=-1
+PBI: creating '[F07-08-002] Documentation'
+  [DRY-RUN] Would create Product Backlog Item : [F07-08-002] Documentation
+  -> PBI id=-1
+
+=== Import Summary: 07-foundation-layer ===
+Epic id  : -1
+Features : 9
+PBIs     : 19
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F07-02-001 -1 New   (dry-run)
+F07-02-002 -1 New   (dry-run)
+F07-02-003 -1 New   (dry-run)
+F07-02-004 -1 New   (dry-run)
+F07-03-001 -1 New   (dry-run)
+F07-03-002 -1 New   (dry-run)
+F07-03-003 -1 New   (dry-run)
+F07-03-004 -1 New   (dry-run)
+F07-03-005 -1 New   (dry-run)
+F07-03-006 -1 New   (dry-run)
+F07-05-001 -1 New   (dry-run)
+F07-05-002 -1 New   (dry-run)
+F07-06-001 -1 New   (dry-run)
+F07-06-002 -1 New   (dry-run)
+F07-06-003 -1 New   (dry-run)
+F07-06-004 -1 New   (dry-run)
+F07-07-001 -1 New   (dry-run)
+F07-08-001 -1 New   (dry-run)
+F07-08-002 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083256
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083258
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\09-eva-repo-documentation.json -DryRun
+Process ID: 10932
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 09-eva-repo-documentation ===
+Project maturity : active
+GitHub repo      : eva-foundry/09-eva-repo-documentation
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 09-eva-repo-documentation
+Feature: creating 'EXECUTIVE SUMMARY'
+  [DRY-RUN] Would create Feature : EXECUTIVE SUMMARY
+  -> Feature id=-1
+Feature: creating 'PROPOSED DIAGRAM CATALOG'
+  [DRY-RUN] Would create Feature : PROPOSED DIAGRAM CATALOG
+  -> Feature id=-1
+Feature: creating 'KEY FEATURES'
+  [DRY-RUN] Would create Feature : KEY FEATURES
+  -> Feature id=-1
+Feature: creating 'IMPLEMENTATION ESTIMATE'
+  [DRY-RUN] Would create Feature : IMPLEMENTATION ESTIMATE
+  -> Feature id=-1
+PBI: creating '[F09-02-001] Part 1: Infrastructure Architecture (4 diagrams)'
+  [DRY-RUN] Would create Product Backlog Item : [F09-02-001] Part 1: Infrastructure Architecture (4 diagrams)
+  -> PBI id=-1
+PBI: creating '[F09-02-002] Part 2: Application Architecture (4 diagrams)'
+  [DRY-RUN] Would create Product Backlog Item : [F09-02-002] Part 2: Application Architecture (4 diagrams)
+  -> PBI id=-1
+PBI: creating '[F09-02-003] Part 3: Document Ingestion (6 diagrams)'
+  [DRY-RUN] Would create Product Backlog Item : [F09-02-003] Part 3: Document Ingestion (6 diagrams)
+  -> PBI id=-1
+PBI: creating '[F09-02-004] Part 4: RAG Query Execution (5 diagrams)'
+  [DRY-RUN] Would create Product Backlog Item : [F09-02-004] Part 4: RAG Query Execution (5 diagrams)
+  -> PBI id=-1
+PBI: creating '[F09-02-005] Part 5: Data Flows (4 diagrams)'
+  [DRY-RUN] Would create Product Backlog Item : [F09-02-005] Part 5: Data Flows (4 diagrams)
+  -> PBI id=-1
+PBI: creating '[F09-02-006] Part 6: Security Architecture (2 diagrams)'
+  [DRY-RUN] Would create Product Backlog Item : [F09-02-006] Part 6: Security Architecture (2 diagrams)
+  -> PBI id=-1
+
+=== Import Summary: 09-eva-repo-documentation ===
+Epic id  : -1
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F09-02-001 -1 New   (dry-run)
+F09-02-002 -1 New   (dry-run)
+F09-02-003 -1 New   (dry-run)
+F09-02-004 -1 New   (dry-run)
+F09-02-005 -1 New   (dry-run)
+F09-02-006 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083258
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225083259
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\10-mkdocs-poc.json -DryRun
+Process ID: 20852
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+
+=== ADO Import: 10-mkdocs-poc ===
+Project maturity : poc
+GitHub repo      : eva-foundry/10-mkdocs-poc
+Dry run          : True
+
+  [DRY-RUN] Would find-or-create Epic: 10-mkdocs-poc
+Feature: creating 'Executive Summary'
+  [DRY-RUN] Would create Feature : Executive Summary
+  -> Feature id=-1
+Feature: creating 'Goals'
+  [DRY-RUN] Would create Feature : Goals
+  -> Feature id=-1
+Feature: creating 'Quick Start (Zero-Setup Execution)'
+  [DRY-RUN] Would create Feature : Quick Start (Zero-Setup Execution)
+  -> Feature id=-1
+Feature: creating 'Project Structure'
+  [DRY-RUN] Would create Feature : Project Structure
+  -> Feature id=-1
+Feature: creating 'MkDocs Sample Content'
+  [DRY-RUN] Would create Feature : MkDocs Sample Content
+  -> Feature id=-1
+Feature: creating 'Hosting Test Strategy'
+  [DRY-RUN] Would create Feature : Hosting Test Strategy
+  -> Feature id=-1
+Feature: creating 'Validation Checklist'
+  [DRY-RUN] Would create Feature : Validation Checklist
+  -> Feature id=-1
+Feature: creating 'Success Criteria'
+  [DRY-RUN] Would create Feature : Success Criteria
+  -> Feature id=-1
+Feature: creating 'Technology Stack'
+  [DRY-RUN] Would create Feature : Technology Stack
+  -> Feature id=-1
+Feature: creating 'Key Findings (To Be Updated Post-Testing)'
+  [DRY-RUN] Would create Feature : Key Findings (To Be Updated Post-Testing)
+  -> Feature id=-1
+Feature: creating 'References'
+  [DRY-RUN] Would create Feature : References
+  -> Feature id=-1
+Feature: creating 'Maintainers'
+  [DRY-RUN] Would create Feature : Maintainers
+  -> Feature id=-1
+Feature: creating 'Change Log'
+  [DRY-RUN] Would create Feature : Change Log
+  -> Feature id=-1
+PBI: creating '[F10-02-001] Primary Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F10-02-001] Primary Objectives
+  -> PBI id=-1
+PBI: creating '[F10-02-002] Secondary Objectives'
+  [DRY-RUN] Would create Product Backlog Item : [F10-02-002] Secondary Objectives
+  -> PBI id=-1
+PBI: creating '[F10-03-001] Prerequisites'
+  [DRY-RUN] Would create Product Backlog Item : [F10-03-001] Prerequisites
+  -> PBI id=-1
+PBI: creating '[F10-03-002] Run the PoC'
+  [DRY-RUN] Would create Product Backlog Item : [F10-03-002] Run the PoC
+  -> PBI id=-1
+PBI: creating '[F10-03-003] Manual Execution (for development)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-03-003] Manual Execution (for development)
+  -> PBI id=-1
+PBI: creating '[F10-05-001] Asset Integration (98+ Files from EVA-JP-reference-0113)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-05-001] Asset Integration (98+ Files from EVA-JP-reference-0113)
+  -> PBI id=-1
+PBI: creating '[F10-05-002] Content Validation Points'
+  [DRY-RUN] Would create Product Backlog Item : [F10-05-002] Content Validation Points
+  -> PBI id=-1
+PBI: creating '[F10-05-003] Example Pages'
+  [DRY-RUN] Would create Product Backlog Item : [F10-05-003] Example Pages
+  -> PBI id=-1
+PBI: creating '[F10-06-001] Test 1: SharePoint Online Document Library'
+  [DRY-RUN] Would create Product Backlog Item : [F10-06-001] Test 1: SharePoint Online Document Library
+  -> PBI id=-1
+PBI: creating '[F10-06-002] Test 2: Azure Static Website (Baseline)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-06-002] Test 2: Azure Static Website (Baseline)
+  -> PBI id=-1
+PBI: creating '[F10-07-001] MkDocs site builds without errors (validated with `mkdocs build`)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-001] MkDocs site builds without errors (validated with `mkdocs build`)
+  -> PBI id=-1
+PBI: creating '[F10-07-002] Link validation script created (`mkdocs-sample/scripts/validate_links.py`)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-002] Link validation script created (`mkdocs-sample/scripts/validate_links.py`)
+  -> PBI id=-1
+PBI: creating '[F10-07-003] Navigation sidebar renders correctly (manual browser test required)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-003] Navigation sidebar renders correctly (manual browser test required)
+  -> PBI id=-1
+PBI: creating '[F10-07-004] Internal links navigate correctly (run link validator)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-004] Internal links navigate correctly (run link validator)
+  -> PBI id=-1
+PBI: creating '[F10-07-005] Deep links scroll to anchors (manual test required)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-005] Deep links scroll to anchors (manual test required)
+  -> PBI id=-1
+PBI: creating '[F10-07-006] Tables render properly (manual test required)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-006] Tables render properly (manual test required)
+  -> PBI id=-1
+PBI: creating '[F10-07-007] Callouts/admonitions display correctly (manual test required)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-007] Callouts/admonitions display correctly (manual test required)
+  -> PBI id=-1
+PBI: creating '[F10-07-008] Code blocks have syntax highlighting (manual test required)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-008] Code blocks have syntax highlighting (manual test required)
+  -> PBI id=-1
+PBI: creating '[F10-07-009] CSS/JS assets load without 404s (check browser DevTools)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-009] CSS/JS assets load without 404s (check browser DevTools)
+  -> PBI id=-1
+PBI: creating '[F10-07-010] Mobile responsive design works (manual test required)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-07-010] Mobile responsive design works (manual test required)
+  -> PBI id=-1
+PBI: creating '[F10-08-001] Phase 1: Generation ? **COMPLETE**'
+  [DRY-RUN] Would create Product Backlog Item : [F10-08-001] Phase 1: Generation ? **COMPLETE**
+  -> PBI id=-1
+PBI: creating '[F10-08-002] Phase 2: SharePoint Online Testing ? **READY TO START**'
+  [DRY-RUN] Would create Product Backlog Item : [F10-08-002] Phase 2: SharePoint Online Testing ? **READY TO START**
+  -> PBI id=-1
+PBI: creating '[F10-08-003] Phase 3: Azure Static Website Testing ? **READY TO START**'
+  [DRY-RUN] Would create Product Backlog Item : [F10-08-003] Phase 3: Azure Static Website Testing ? **READY TO START**
+  -> PBI id=-1
+PBI: creating '[F10-08-004] Phase 4: Analysis & Recommendation ? **BLOCKED** (Requires Phase 2 & 3)'
+  [DRY-RUN] Would create Product Backlog Item : [F10-08-004] Phase 4: Analysis & Recommendation ? **BLOCKED** (Requires Phase 2 & 3)
+  -> PBI id=-1
+PBI: creating '[F10-10-001] SharePoint Online'
+  [DRY-RUN] Would create Product Backlog Item : [F10-10-001] SharePoint Online
+  -> PBI id=-1
+PBI: creating '[F10-10-002] Azure Static Website'
+  [DRY-RUN] Would create Product Backlog Item : [F10-10-002] Azure Static Website
+  -> PBI id=-1
+
+=== Import Summary: 10-mkdocs-poc ===
+Epic id  : -1
+Features : 13
+PBIs     : 26
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+F10-02-001 -1 New   (dry-run)
+F10-02-002 -1 New   (dry-run)
+F10-03-001 -1 New   (dry-run)
+F10-03-002 -1 New   (dry-run)
+F10-03-003 -1 New   (dry-run)
+F10-05-001 -1 New   (dry-run)
+F10-05-002 -1 New   (dry-run)
+F10-05-003 -1 New   (dry-run)
+F10-06-001 -1 New   (dry-run)
+F10-06-002 -1 New   (dry-run)
+F10-07-001 -1 New   (dry-run)
+F10-07-002 -1 New   (dry-run)
+F10-07-003 -1 New   (dry-run)
+F10-07-004 -1 New   (dry-run)
+F10-07-005 -1 New   (dry-run)
+F10-07-006 -1 New   (dry-run)
+F10-07-007 -1 New   (dry-run)
+F10-07-008 -1 New   (dry-run)
+F10-07-009 -1 New   (dry-run)
+F10-07-010 -1 New   (dry-run)
+F10-08-001 -1 New   (dry-run)
+F10-08-002 -1 New   (dry-run)
+F10-08-003 -1 New   (dry-run)
+F10-08-004 -1 New   (dry-run)
+F10-10-001 -1 New   (dry-run)
+F10-10-002 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260225083259
+**********************

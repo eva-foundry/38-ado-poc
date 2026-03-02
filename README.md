@@ -78,12 +78,12 @@ All 18 eva-foundation projects are loaded. Full board: `https://dev.azure.com/ma
 | `34-eva-agents` | 27 | idea | 2 | 0 |
 | `35-agentic-code-fixing` | 28 | poc | 2 | 1 |
 | `36-red-teaming` | 29 | active | 3 | 1 |
-| `37-data-model` | 30 | complete | 4 | 4 |
+| `37-data-model` | 30 | active | 7 | 6 |
 | `38-ado-poc` | 31 | active | 5 | 2 |
 | `39-ado-dashboard` | 32 | poc | 2 | 0 |
 
-**Totals:** 18 Epics · 47 Features · 52 PBIs · 25 Done / 27 New  
-**Last import:** run6, 2026-02-21, zero errors
+**Totals:** 18 Epics · 48 Features · 55 PBIs · 27 Done / 28 New  
+**Last import:** run6 + 37-data-model API import, 2026-02-21, zero errors
 
 ---
 

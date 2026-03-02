@@ -1,0 +1,140 @@
+{
+  "schema": "eva.veritas-plan.v1",
+  "generated_at": "2026-02-25T06:37:40.350Z",
+  "generated_from": [
+    "PLAN.md"
+  ],
+  "format_detected": "veritas",
+  "prefix": "F38",
+  "features": [
+    {
+      "id": "F38-01",
+      "title": "1. Problem Statement",
+      "source_heading": "## Feature: 1. Problem Statement [ID=F38-01]",
+      "stories": []
+    },
+    {
+      "id": "F38-02",
+      "title": "2. Solution: EVA ADO Command Center",
+      "source_heading": "## Feature: 2. Solution: EVA ADO Command Center [ID=F38-02]",
+      "stories": []
+    },
+    {
+      "id": "F38-03",
+      "title": "3. Architecture ? 5 Layers",
+      "source_heading": "## Feature: 3. Architecture ? 5 Layers [ID=F38-03]",
+      "stories": [
+        {
+          "id": "F38-03-001",
+          "title": "Layer 1: `29-foundry` ? Central Agentic Capabilities Hub",
+          "feature_id": "F38-03",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-03-002",
+          "title": "Layer 2: `38-ado-poc` ? EVA ADO Command Center (this repo)",
+          "feature_id": "F38-03",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-03-003",
+          "title": "Layer 3: Project Runners",
+          "feature_id": "F38-03",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-03-004",
+          "title": "Layer 4: `17-apim` ? API Gateway + Cost Attribution",
+          "feature_id": "F38-03",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-03-005",
+          "title": "Layer 5: `39-ado-dashboard` ? EVA Portal + ADO Views",
+          "feature_id": "F38-03",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F38-04",
+      "title": "4. Data Flow: ADO ? `37-data-model`",
+      "source_heading": "## Feature: 4. Data Flow: ADO ? `37-data-model` [ID=F38-04]",
+      "stories": []
+    },
+    {
+      "id": "F38-05",
+      "title": "5. Design Decisions",
+      "source_heading": "## Feature: 5. Design Decisions [ID=F38-05]",
+      "stories": [
+        {
+          "id": "F38-05-001",
+          "title": "D1: Isolated personal org first, ESDC-AICoE later",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-05-002",
+          "title": "D2: Scrum process template",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-05-003",
+          "title": "D3: Two-call PBI state (create then PATCH)",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-05-004",
+          "title": "D4: PAT never in any file",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-05-005",
+          "title": "D5: Tags as semantic WI identifiers",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-05-006",
+          "title": "D6: `29-foundry` as single skill master",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-05-007",
+          "title": "D7: ADO is source of truth over `SESSION-STATE.md`",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        },
+        {
+          "id": "F38-05-008",
+          "title": "D8: Cost attribution is a first-class architectural concern, not a FinOps add-on",
+          "feature_id": "F38-05",
+          "source": "heading",
+          "tasks": []
+        }
+      ]
+    },
+    {
+      "id": "F38-06",
+      "title": "6. Phasing",
+      "source_heading": "## Feature: 6. Phasing [ID=F38-06]",
+      "stories": []
+    }
+  ]
+}

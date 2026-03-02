@@ -1,0 +1,169 @@
+**********************
+PowerShell transcript start
+Start time: 20260221210304
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 17376
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-2103-ado-import-40-eva-control-plane-live.log
+
+=== ADO Import: EVA Automation Control Plane ===
+Project maturity : active
+GitHub repo      : eva-foundry/40-eva-control-plane
+Dry run          : False
+
+PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+>> TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+>> TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
+The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:223:5
+Line |
+ 223 |  if ($a.sprints_needed) {
+     |      ~~~~~~~~~~~~~~~~~
+     | The property 'sprints_needed' cannot be found on this object. Verify
+     | that the property exists.
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c40-eva-control-planePS C:\AICOE\eva-foundation\40-eva-control-plane> ]633;B
+PS>$env:ADO_PAT = "rbibHftTSqxzfSx5VjV1XMX6jon3Ripg5m37RwnAKQrWAfVJylLkJQQJ99CBACAAAAAAAAAAAAASAZDO43uS"; cd "C:\AICOE\eva-foundation\40-eva-control-plane"; .\ado-import.ps1 2>&1 | Select-Object -Last 30
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-2103-ado-import-40-eva-control-plane-live.log
+
+=== ADO Import: EVA Automation Control Plane ===
+Project maturity : active
+GitHub repo      : eva-foundry/40-eva-control-plane
+Dry run          : False
+
+Epic: creating 'EVA Automation Control Plane'
+  -> Epic id=142
+Feature: creating 'Runtime API — FastAPI (port 8020)'
+  -> Feature id=143
+Feature: creating 'Two-Plane Evidence Spine'
+  -> Feature id=144
+Feature: creating 'GitHub Actions Runbooks (RB-001, RB-002)'
+  -> Feature id=145
+Feature: creating 'Control-Plane Data Models and Seeds'
+  -> Feature id=146
+PS>TerminatingError(): "The property 'user_stories' cannot be found on this object. Verify that the property exists."
+>> TerminatingError(): "The property 'user_stories' cannot be found on this object. Verify that the property exists."
+>> TerminatingError(): "The property 'user_stories' cannot be found on this object. Verify that the property exists."
+The property 'user_stories' cannot be found on this object. Verify that the property exists.
+ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:291:17
+Line |
+ 291 |  foreach ($wi in $a.user_stories) {
+     |                  ~~~~~~~~~~~~~~~
+     | The property 'user_stories' cannot be found on this object. Verify
+     | that the property exists.
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c40-eva-control-planePS C:\AICOE\eva-foundation\40-eva-control-plane> ]633;B
+PS>Get-Content "C:\AICOE\eva-foundation\41-eva-cli\ado-artifacts.json" | ConvertFrom-Json | Select-Object schema_version, project_maturity, @{n='epic';e={$_.epic.title}}, @{n='features';e={$_.features.Count}}, @{n='user_stories';e={$_.user_stories.Count}}, @{n='sprints';e={$_.sprints_needed.Count}}
+
+schema_version   : 1.0
+project_maturity : active
+epic             : EVA ADO Command Center CLI
+features         : 4
+user_stories     : 6
+sprints          : 0
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c40-eva-control-planePS C:\AICOE\eva-foundation\40-eva-control-plane> ]633;B
+PS>$env:ADO_PAT = "rbibHftTSqxzfSx5VjV1XMX6jon3Ripg5m37RwnAKQrWAfVJylLkJQQJ99CBACAAAAAAAAAAAAASAZDO43uS"; cd "C:\AICOE\eva-foundation\40-eva-control-plane"; .\ado-import.ps1 2>&1 | Select-Object -Last 25
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-2106-ado-import-40-eva-control-plane-live.log
+
+=== ADO Import: EVA Automation Control Plane ===
+Project maturity : active
+GitHub repo      : eva-foundry/40-eva-control-plane
+Dry run          : False
+
+Epic: existing id=142 — 'EVA Automation Control Plane'
+Feature: existing id=143 — 'Runtime API — FastAPI (port 8020)'
+Feature: existing id=144 — 'Two-Plane Evidence Spine'
+Feature: existing id=145 — 'GitHub Actions Runbooks (RB-001, RB-002)'
+Feature: existing id=146 — 'Control-Plane Data Models and Seeds'
+PBI: creating 'FastAPI Runtime API — 8 routes, Swagger at /docs'
+  -> PBI id=147
+PBI: creating 'Evidence Spine — evidence_id propagation across planes'
+  -> PBI id=148
+PBI: creating 'RB-001 — PR CI Evidence Workflow (GitHub Actions)'
+  -> PBI id=149
+PBI: creating 'RB-002 — Promote to DEV Workflow (stub)'
+  -> PBI id=150
+PBI: creating 'Pydantic v2 Models — Run, StepRun, Artifact'
+  -> PBI id=151
+PBI: creating 'pack-evidence.py — Evidence Pack Assembler'
+  -> PBI id=152
+
+=== Import Summary: EVA Automation Control Plane ===
+Epic id  : 142
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag      Id State Url
+---      -- ----- ---
+cp-wi-1 147 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+cp-wi-2 148 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+cp-wi-3 149 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+cp-wi-4 150 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+cp-wi-5 151 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+cp-wi-6 152 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c40-eva-control-planePS C:\AICOE\eva-foundation\40-eva-control-plane> ]633;B
+PS>$env:ADO_PAT = "rbibHftTSqxzfSx5VjV1XMX6jon3Ripg5m37RwnAKQrWAfVJylLkJQQJ99CBACAAAAAAAAAAAAASAZDO43uS"; cd "C:\AICOE\eva-foundation\41-eva-cli"; .\ado-import.ps1 2>&1 | Select-Object -Last 30
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-2107-ado-import-41-eva-cli-live.log
+
+=== ADO Import: EVA ADO Command Center CLI ===
+Project maturity : active
+GitHub repo      : eva-foundry/41-eva-cli
+Dry run          : False
+
+Epic: creating 'EVA ADO Command Center CLI'
+  -> Epic id=153
+Feature: creating 'CLI Core — Config, Context, Models'
+  -> Feature id=154
+Feature: creating 'Adapters — ADO, GitHub, Azure'
+  -> Feature id=155
+Feature: creating 'Command Groups — ado, gh, runbook, evidence, promote'
+  -> Feature id=156
+Feature: creating 'Tests — CLI + Adapter Mocks'
+  -> Feature id=157
+PBI: creating '[CLI-WI-1] eva init + dotenv loading + .env.example'
+  -> PBI id=158
+PBI: creating '[CLI-WI-2] ADO adapter — create, update, link, WIQL idempotency'
+  -> PBI id=159
+PBI: creating '[CLI-WI-3] GitHub adapter — PR, check-runs, artifacts'
+  -> PBI id=160
+PBI: creating '[CLI-WI-4] promote dev — full 10-step evidence receipt flow'
+  -> PBI id=161
+PBI: creating '[CLI-WI-5] runbook list/show/run + catalog API fallback'
+  -> PBI id=162
+PBI: creating '[CLI-WI-6] 33-test suite — CLI + adapter mocks (respx)'
+  -> PBI id=163
+
+=== Import Summary: EVA ADO Command Center CLI ===
+Epic id  : 153
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag       Id State Url
+---       -- ----- ---
+cli-wi-1 158 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+cli-wi-2 159 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+cli-wi-3 160 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+cli-wi-4 161 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+cli-wi-5 162 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+cli-wi-6 163 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c41-eva-cliPS C:\AICOE\eva-foundation\41-eva-cli> ]633;B

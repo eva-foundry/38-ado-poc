@@ -1,0 +1,116 @@
+**********************
+PowerShell transcript start
+Start time: 20260224155507
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15876
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260224-1555-ado-import-ADO-live.log
+
+=== ADO Import: EVA Veritas -- MCP Integration (EO-06 to EO-10) ===
+Project maturity : active
+GitHub repo      : eva-foundry/48-eva-veritas
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=177 — 'EVA Veritas -- MCP Integration (EO-06 to EO-10)'
+Feature: existing id=178 — 'EO-07 -- eva-veritas MCP Server (48-eva-veritas)'
+Feature: existing id=179 — 'EO-10 -- 29-foundry Registration + Copilot Skill'
+Feature: existing id=180 — 'EO-08 -- 37-Data-Model MTI Write-back'
+Feature: existing id=181 — 'EO-09 -- 38-ADO-Poc Gap Seeder'
+Feature: existing id=182 — 'EO-06 -- CLI Hardening Pre-conditions (48-eva-veritas)'
+PBI: existing id=183 — '[EO-07-001] MCP server scaffold (src/mcp-server.js)'
+PBI: existing id=184 — '[EO-07-002] Tool: audit_repo (full pipeline)'
+PBI: existing id=185 — '[EO-07-003] Tool: get_trust_score (fast path)'
+PBI: existing id=186 — '[EO-07-004] Tool: get_coverage (artifact coverage)'
+PBI: existing id=187 — '[EO-07-005] Tool: generate_ado_items (CSV export)'
+PBI: existing id=188 — '[EO-07-006] Tool: scan_portfolio (portfolio-level)'
+PBI: existing id=189 — '[EO-10-001a] Add eva-veritas to .vscode/mcp.json'
+PBI: existing id=190 — '[EO-10-001b] Create mcp-servers/eva-veritas/config.json'
+PBI: existing id=191 — '[EO-10-001c] Create mcp-servers/eva-veritas/README.md'
+PBI: existing id=192 — '[EO-10-002a] Create 08-veritas-evidence-scanner.skill.md'
+PBI: existing id=193 — '[EO-10-002b] Register cross-08 in skill-catalog.json'
+PBI: existing id=194 — '[EO-08-001] model-sync.js -- write MTI to 37-data-model'
+PBI: existing id=195 — '[EO-08-002] --no-sync flag on eva audit/compute-trust'
+PBI: existing id=196 — '[EO-08-003a] Add mti fields to 37-data-model projects layer'
+PBI: existing id=197 — '[EO-08-003b] GET /model/admin/mti-summary endpoint'
+PBI: existing id=198 — '[EO-09-002a] ado-gap-seeder.js (calls generate_ado_items MCP tool)'
+PBI: existing id=199 — '[EO-09-002b] seed-gaps.yml GitHub Action (weekly schedule)'
+PBI: existing id=200 — '[EO-09-003] Portfolio gap seed (--portfolio flag)'
+PBI: existing id=201 — '[EO-06-001] docs/EVIDENCE-CONVENTION.md'
+PBI: existing id=202 — '[EO-06-002] Staleness guard in compute-trust'
+PBI: existing id=203 — '[EO-06-003] MTI trend delta (trust.prev.json)'
+PBI: existing id=204 — '[EO-06-004] Orphan report shows file paths'
+PBI: existing id=205 — '[EO-06-005] .evaignore file support in scan-repo.js'
+
+=== Import Summary: EVA Veritas -- MCP Integration (EO-06 to EO-10) ===
+Epic id  : 177
+Features : 5
+PBIs     : 23
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag                 Id State Url
+---                 -- ----- ---
+EO-07-001          183 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-07-002          184 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-07-003          185 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-07-004          186 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-07-005          187 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-07-006          188 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-10-001-mcp-json 189 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-10-001-mcp-dir  190 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-10-001-readme   191 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-10-002-skill    192 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-10-002-catalog  193 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-08-001          194 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-08-002          195 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-08-003-fields   196 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-08-003-endpoint 197 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-09-002-seeder   198 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-09-002-workflow 199 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-09-003          200 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-06-001          201 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-06-002          202 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-06-003          203 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-06-004          204 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+EO-06-005          205 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+
+**********************
+PowerShell transcript end
+End time: 20260224155510
+**********************

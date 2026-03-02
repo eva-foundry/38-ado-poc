@@ -1,0 +1,59 @@
+**********************
+PowerShell transcript start
+Start time: 20260221210704
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 17376
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-2107-ado-import-41-eva-cli-live.log
+
+=== ADO Import: EVA ADO Command Center CLI ===
+Project maturity : active
+GitHub repo      : eva-foundry/41-eva-cli
+Dry run          : False
+
+Epic: creating 'EVA ADO Command Center CLI'
+  -> Epic id=153
+Feature: creating 'CLI Core — Config, Context, Models'
+  -> Feature id=154
+Feature: creating 'Adapters — ADO, GitHub, Azure'
+  -> Feature id=155
+Feature: creating 'Command Groups — ado, gh, runbook, evidence, promote'
+  -> Feature id=156
+Feature: creating 'Tests — CLI + Adapter Mocks'
+  -> Feature id=157
+PBI: creating '[CLI-WI-1] eva init + dotenv loading + .env.example'
+  -> PBI id=158
+PBI: creating '[CLI-WI-2] ADO adapter — create, update, link, WIQL idempotency'
+  -> PBI id=159
+PBI: creating '[CLI-WI-3] GitHub adapter — PR, check-runs, artifacts'
+  -> PBI id=160
+PBI: creating '[CLI-WI-4] promote dev — full 10-step evidence receipt flow'
+  -> PBI id=161
+PBI: creating '[CLI-WI-5] runbook list/show/run + catalog API fallback'
+  -> PBI id=162
+PBI: creating '[CLI-WI-6] 33-test suite — CLI + adapter mocks (respx)'
+  -> PBI id=163
+
+=== Import Summary: EVA ADO Command Center CLI ===
+Epic id  : 153
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221210717
+**********************

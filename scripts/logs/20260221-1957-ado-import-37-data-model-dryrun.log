@@ -1,0 +1,74 @@
+**********************
+PowerShell transcript start
+Start time: 20260221195700
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 18836
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1957-ado-import-37-data-model-dryrun.log
+
+=== ADO Import: EVA Data Model ===
+Project maturity : complete
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA Data Model
+Feature: creating 'Core Model Layers (1–6)'
+  [DRY-RUN] Would create Feature : Core Model Layers (1–6)
+  -> Feature id=-1
+Feature: creating 'Extended Model Layers (7–11)'
+  [DRY-RUN] Would create Feature : Extended Model Layers (7–11)
+  -> Feature id=-1
+Feature: creating 'Model Tooling — Validation & Assembly'
+  [DRY-RUN] Would create Feature : Model Tooling — Validation & Assembly
+  -> Feature id=-1
+Feature: creating 'Model API — HTTP Service (FastAPI, port 8010)'
+  [DRY-RUN] Would create Feature : Model API — HTTP Service (FastAPI, port 8010)
+  -> Feature id=-1
+PBI: creating '[DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-0] Layers 1–6 complete — services, endpoints, schemas, containers, personas, feature flags
+  -> PBI id=-1
+PBI: creating '[DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-1] Layers 7–11 complete — screens, literals, agents, requirements, infrastructure
+  -> PBI id=-1
+PBI: creating '[DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-2] Model tooling — validate-model.ps1, assemble-model.ps1, impact-analysis.ps1
+  -> PBI id=-1
+PBI: creating '[DM-WI-4] Model API core — FastAPI port 8010, dual-mode store/cache, Siebel audit columns'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-4] Model API core — FastAPI port 8010, dual-mode store/cache, Siebel audit columns
+  -> PBI id=-1
+PBI: creating '[DM-WI-5] Cross-layer impact analysis — GET /model/impact?container=X'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-5] Cross-layer impact analysis — GET /model/impact?container=X
+  -> PBI id=-1
+PBI: creating '[DM-WI-6] Endpoint filter — GET /model/endpoints/filter?status=stub&cosmos_writes=jobs&auth=admin'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-6] Endpoint filter — GET /model/endpoints/filter?status=stub&cosmos_writes=jobs&auth=admin
+  -> PBI id=-1
+PBI: creating '[DM-WI-3] ADO-Data Model bidirectional tagging'
+  [DRY-RUN] Would create Product Backlog Item : [DM-WI-3] ADO-Data Model bidirectional tagging
+  -> PBI id=-1
+
+=== Import Summary: EVA Data Model ===
+Epic id  : -1
+Features : 4
+PBIs     : 7
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+**********************
+PowerShell transcript end
+End time: 20260221195700
+**********************

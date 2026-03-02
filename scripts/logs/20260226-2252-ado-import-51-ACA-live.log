@@ -1,0 +1,209 @@
+**********************
+PowerShell transcript start
+Start time: 20260226225210
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -File C:\AICOE\eva-foundry\51-ACA\ado-import.ps1
+Process ID: 5576
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260226-2252-ado-import-51-ACA-live.log
+
+=== ADO Import: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Project maturity : active
+GitHub repo      : eva-foundry/51-ACA
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-1
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-1' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+  Sprint: Sprint-2
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-2' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+  Sprint: Sprint-3
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+}"
+  Sprint 'Sprint-3' exists (team assignment skipped: ADO Post https://dev.azure.com/marcopresta/51-aca/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 404 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "The team with id \u0027eva-poc Team\u0027 does not exist, or you do not have permission to access it.",
+  "typeName": "Microsoft.TeamFoundation.Core.WebApi.TeamNotFoundException, Microsoft.TeamFoundation.Core.WebApi",
+  "typeKey": "TeamNotFoundException",
+  "errorCode": 0,
+  "eventId": 3000
+})
+Epic: creating 'Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS'
+  -> Epic id=2730
+Feature: creating 'Foundation -- Repo Scaffold, Docker, CI, Health endpoints'
+  -> Feature id=2731
+Feature: creating 'Collection -- MSAL Auth, Resource Graph, Cost Management pull'
+  -> Feature id=2732
+Feature: creating 'Analysis -- 12-rule heuristic engine, FindingsAssembler'
+  -> Feature id=2733
+Feature: creating 'API -- FastAPI service: auth, collection, billing, admin, APIM'
+  -> Feature id=2734
+Feature: creating 'Frontend -- React 19, Fluent UI v9, 10 Spark screens'
+  -> Feature id=2735
+Feature: creating 'Billing -- Stripe Checkout, Webhook lifecycle, Entitlements'
+  -> Feature id=2736
+Feature: creating 'Delivery -- Jinja2 templates, ZIP packager, Blob SAS URLs'
+  -> Feature id=2737
+Feature: creating 'Observability -- App Insights, Log Analytics, GA4, Clarity'
+  -> Feature id=2738
+Feature: creating 'i18n and a11y -- 5 locales, multi-currency, WCAG 2.1 AA'
+  -> Feature id=2739
+Feature: creating 'Hardening -- APIM cache, rate limiting, idempotency, PIPEDA'
+  -> Feature id=2740
+Feature: creating 'Phase 2 Infra -- Terraform private landing zone, Lighthouse Mode C'
+  -> Feature id=2741
+Feature: creating 'Data Model -- ACA model server (port 8011), WBS tracking'
+  -> Feature id=2742
+PBI: creating '[ACA-S01] Repo scaffold + docker-compose + health endpoint verified'
+  -> PBI id=2743
+PBI: creating '[ACA-S02] Data model server on port 8011 seeded -- 27 endpoints, 11 containers, 10 screens'
+  -> PBI id=2744
+PBI: creating '[ACA-S03] ADO project 51-aca created -- ado-artifacts.json + ado-import.ps1'
+  -> PBI id=2745
+PBI: creating '[ACA-S04] Mode A delegated MSAL auth -- POST /v1/auth/connect implemented'
+  -> PBI id=2746
+PBI: creating '[ACA-S05] Resource Graph + Cost Management collector job implemented'
+  -> PBI id=2747
+PBI: creating '[ACA-S06] 12-rule heuristic analysis engine -- AnalysisJob exits 0 with findings'
+  -> PBI id=2748
+PBI: creating '[ACA-S07] GET /v1/reports/tier1 returns findings for authenticated subscriber'
+  -> PBI id=2749
+PBI: creating '[ACA-S08] Admin endpoints -- kpis, customers, grant, lock, reconcile, runs all return 200'
+  -> PBI id=2750
+PBI: creating '[ACA-S09] Stripe checkout + webhook + entitlements flow end-to-end'
+  -> PBI id=2751
+PBI: creating '[ACA-S10] APIM entitlement cache policy deployed -- 60s TTL, tier gating template'
+  -> PBI id=2752
+PBI: creating '[ACA-S11] 5 customer-facing Spark screens -- LoginPage through UpgradePage'
+  -> PBI id=2753
+PBI: creating '[ACA-S12] 5 admin Spark screens -- AdminDashboard through AdminControls'
+  -> PBI id=2754
+PBI: creating '[ACA-S13] Phase 1 infrastructure -- Cosmos + Container Apps + ACR deployed via bootstrap.sh'
+  -> PBI id=2755
+PBI: creating '[ACA-S14] GA4 + Clarity instrumentation -- analytics-spec.md events firing'
+  -> PBI id=2756
+PBI: creating '[ACA-S15] Delivery service -- ZIP packager + Blob SAS URL + SHA-256 verification'
+  -> PBI id=2757
+PBI: creating '[ACA-S16] Veritas trust score >= 0.50 -- EVA-STORY tags in source files'
+  -> PBI id=2758
+
+=== Import Summary: Azure Cost Advisor (ACA) -- Phase 1 Commercial SaaS ===
+Epic id  : 2730
+Features : 12
+PBIs     : 16
+Board    : https://dev.azure.com/marcopresta/51-aca/_workitems
+
+
+Tag       Id State Url
+---       -- ----- ---
+aca-s01 2743 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s02 2744 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s03 2745 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s04 2746 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s05 2747 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s06 2748 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s07 2749 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s08 2750 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s09 2751 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s10 2752 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s11 2753 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s12 2754 Done  https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s13 2755 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s14 2756 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s15 2757 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+aca-s16 2758 New   https://dev.azure.com/marcopresta/51-aca/_workitems/edit/27…
+
+**********************
+PowerShell transcript end
+End time: 20260226225229
+**********************

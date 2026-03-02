@@ -1,0 +1,209 @@
+**********************
+PowerShell transcript start
+Start time: 20260225085141
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\01-documentation-generator.json
+Process ID: 21372
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0851-ado-import-artifacts-live.log
+
+=== ADO Import: 01-documentation-generator ===
+Project maturity : active
+GitHub repo      : eva-foundry/01-documentation-generator
+Dry run          : False
+
+Epic: creating '01-documentation-generator'
+  -> Epic id=206
+Feature: creating 'Overview'
+  -> Feature id=207
+Feature: creating 'Project Structure'
+  -> Feature id=208
+Feature: creating 'Features'
+  -> Feature id=209
+Feature: creating 'Setup Instructions'
+  -> Feature id=210
+Feature: creating 'Usage (After Full Migration)'
+  -> Feature id=211
+Feature: creating 'Migration Status'
+  -> Feature id=212
+Feature: creating 'Development'
+  -> Feature id=213
+Feature: creating 'Related Documentation'
+  -> Feature id=214
+Feature: creating 'Contributing'
+  -> Feature id=215
+Feature: creating 'License'
+  -> Feature id=216
+PBI: creating '[F01-03-001] ? Completed (Migrated from automation/)'
+  -> PBI id=217
+PBI: creating '[F01-03-002] ?? Pending Migration (See PLAN.md)'
+  -> PBI id=218
+PBI: creating '[F01-04-001] 1. Prerequisites'
+  -> PBI id=219
+PBI: creating '[F01-04-002] 2. Installation'
+  -> PBI id=220
+PBI: creating '[F01-04-003] 3. Configuration'
+  -> PBI id=221
+PBI: creating '[F01-04-004] 4. Run Tests'
+  -> PBI id=222
+PBI: creating '[F01-05-001] Basic Generation'
+  -> PBI id=223
+PBI: creating '[F01-05-002] CLI (Coming in Phase 4)'
+  -> PBI id=224
+PBI: creating '[F01-07-001] Running Tests During Development'
+  -> PBI id=225
+PBI: creating '[F01-07-002] Adding New Validators'
+  -> PBI id=226
+PBI: creating '[F01-07-003] Code Quality'
+  -> PBI id=227
+
+=== Import Summary: 01-documentation-generator ===
+Epic id  : 206
+Features : 10
+PBIs     : 11
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+F01-03-001 217 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-03-002 218 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-04-001 219 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-04-002 220 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-04-003 221 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-04-004 222 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-05-001 223 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-05-002 224 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-07-001 225 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-07-002 226 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F01-07-003 227 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+**********************
+PowerShell transcript end
+End time: 20260225085153
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225085157
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\02-poc-agent-skills.json
+Process ID: 22716
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0851-ado-import-artifacts-live.log
+
+=== ADO Import: 02-poc-agent-skills ===
+Project maturity : poc
+GitHub repo      : eva-foundry/02-poc-agent-skills
+Dry run          : False
+
+Epic: creating '02-poc-agent-skills'
+  -> Epic id=228
+Feature: creating 'Timeline: 3 Weeks (15 working days)'
+  -> Feature id=229
+Feature: creating 'Week 1: Foundation Extraction (Days 1-5)'
+  -> Feature id=230
+Feature: creating 'Week 2: First Skills + Orchestrator (Days 6-10)'
+  -> Feature id=231
+Feature: creating 'Week 3: Additional Skills + Demonstration (Days 11-15)'
+  -> Feature id=232
+Feature: creating 'Success Criteria'
+  -> Feature id=233
+Feature: creating 'Risk Mitigation'
+  -> Feature id=234
+Feature: creating 'Integration with POC #2'
+  -> Feature id=235
+Feature: creating 'Next Steps After POC'
+  -> Feature id=236
+PBI: creating '[F02-02-001] Day 1: AgentSkillBase Abstract Class'
+  -> PBI id=237
+PBI: creating '[F02-02-002] Day 2: PromptTemplate System'
+  -> PBI id=238
+PBI: creating '[F02-02-003] Day 3: ValidatorFramework'
+  -> PBI id=239
+PBI: creating '[F02-02-004] Day 4: EvidenceCollector System'
+  -> PBI id=240
+PBI: creating '[F02-02-005] Day 5: Integration Testing + Documentation'
+  -> PBI id=241
+PBI: creating '[F02-03-001] Day 6: DocumentationGeneratorSkill (Part 1)'
+  -> PBI id=242
+PBI: creating '[F02-03-002] Day 7: DocumentationGeneratorSkill (Part 2) + Manifest'
+  -> PBI id=243
+PBI: creating '[F02-03-003] Day 8: Skill Manifest System'
+  -> PBI id=244
+PBI: creating '[F02-03-004] Day 9: SkillOrchestrator (Part 1)'
+  -> PBI id=245
+PBI: creating '[F02-03-005] Day 10: SkillOrchestrator (Part 2) + Integration Tests'
+  -> PBI id=246
+PBI: creating '[F02-04-001] Day 11: CodeGeneratorSkill (New Capability)'
+  -> PBI id=247
+PBI: creating '[F02-04-002] Day 12: ArchitectureAnalyzerSkill (New Capability)'
+  -> PBI id=248
+PBI: creating '[F02-04-003] Day 13: Multi-Skill Workflow Demonstration'
+  -> PBI id=249
+PBI: creating '[F02-04-004] Day 14: Comprehensive Documentation'
+  -> PBI id=250
+PBI: creating '[F02-04-005] Day 15: Testing, Refinement, and POC Presentation'
+  -> PBI id=251
+PBI: creating '[F02-05-001] Technical Metrics'
+  -> PBI id=252
+PBI: creating '[F02-05-002] Quality Metrics'
+  -> PBI id=253
+PBI: creating '[F02-05-003] Strategic Metrics'
+  -> PBI id=254
+
+=== Import Summary: 02-poc-agent-skills ===
+Epic id  : 228
+Features : 8
+PBIs     : 18
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+F02-02-001 237 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-02-002 238 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-02-003 239 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-02-004 240 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-02-005 241 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-03-001 242 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-03-002 243 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-03-003 244 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-03-004 245 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-03-005 246 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-04-001 247 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-04-002 248 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-04-003 249 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-04-004 250 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-04-005 251 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-05-001 252 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-05-002 253 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+F02-05-003 254 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+**********************
+PowerShell transcript end
+End time: 20260225085205
+**********************

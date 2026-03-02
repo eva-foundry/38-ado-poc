@@ -1,3 +1,17 @@
+﻿# EVA-FEATURE: F38-03
+# EVA-STORY: F38-03-001
+# EVA-STORY: F38-03-002
+# EVA-STORY: F38-03-003
+# EVA-STORY: F38-03-004
+# EVA-STORY: F38-03-005
+# EVA-STORY: F38-05-001
+# EVA-STORY: F38-05-002
+# EVA-STORY: F38-05-003
+# EVA-STORY: F38-05-004
+# EVA-STORY: F38-05-005
+# EVA-STORY: F38-05-006
+# EVA-STORY: F38-05-007
+# EVA-STORY: F38-05-008
 # ado-import-project.ps1
 # Shared ADO import engine — reads ado-artifacts.json and creates work items in eva-poc.
 # Called by each project's ado-import.ps1 (which just sets the path and delegates here).
@@ -29,7 +43,11 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-if (-not $DryRun -and -not $env:ADO_PAT) { throw "ADO_PAT not set. Set it before running this script." }
+if (-not $DryRun -and -not $env:ADO_PAT) {
+    Write-Host "[INFO] ADO_PAT not set -- fetching from Key Vault marcosandkv20260203..." -ForegroundColor DarkGray
+    $env:ADO_PAT = (az keyvault secret show --vault-name marcosandkv20260203 --name ADO-PAT --query value -o tsv 2>$null)
+    if (-not $env:ADO_PAT) { throw "ADO_PAT not set and Key Vault fetch failed. Set `$env:ADO_PAT or store secret ADO-PAT in marcosandkv20260203." }
+}
 if (-not (Test-Path $ArtifactsFile)) { throw "Artifacts file not found: $ArtifactsFile" }
 
 # ── Per-project log (only when run standalone, not under orchestrator transcript)

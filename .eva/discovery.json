@@ -1,0 +1,1674 @@
+{
+  "meta": {
+    "schema": "eva.discovery.v2",
+    "generated_at": "2026-02-25T06:37:40.883Z",
+    "repo": "C:\\AICOE\\eva-foundation\\38-ado-poc"
+  },
+  "project": null,
+  "planned": {
+    "epic": {
+      "title": "38-ado-poc — EVA ADO Command Center",
+      "source": "README.md"
+    },
+    "features": [
+      {
+        "id": "F38-01",
+        "title": "1. Problem Statement",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-02",
+        "title": "2. Solution: EVA ADO Command Center",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-03",
+        "title": "3. Architecture ? 5 Layers",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-04",
+        "title": "4. Data Flow: ADO ? `37-data-model`",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05",
+        "title": "5. Design Decisions",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-06",
+        "title": "6. Phasing",
+        "source": "veritas-plan.json"
+      }
+    ],
+    "stories": [
+      {
+        "id": "F38-03-001",
+        "title": "Layer 1: `29-foundry` ? Central Agentic Capabilities Hub",
+        "feature_id": "F38-03",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-03-002",
+        "title": "Layer 2: `38-ado-poc` ? EVA ADO Command Center (this repo)",
+        "feature_id": "F38-03",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-03-003",
+        "title": "Layer 3: Project Runners",
+        "feature_id": "F38-03",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-03-004",
+        "title": "Layer 4: `17-apim` ? API Gateway + Cost Attribution",
+        "feature_id": "F38-03",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-03-005",
+        "title": "Layer 5: `39-ado-dashboard` ? EVA Portal + ADO Views",
+        "feature_id": "F38-03",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-001",
+        "title": "D1: Isolated personal org first, ESDC-AICoE later",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-002",
+        "title": "D2: Scrum process template",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-003",
+        "title": "D3: Two-call PBI state (create then PATCH)",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-004",
+        "title": "D4: PAT never in any file",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-005",
+        "title": "D5: Tags as semantic WI identifiers",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-006",
+        "title": "D6: `29-foundry` as single skill master",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-007",
+        "title": "D7: ADO is source of truth over `SESSION-STATE.md`",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      },
+      {
+        "id": "F38-05-008",
+        "title": "D8: Cost attribution is a first-class architectural concern, not a FinOps add-on",
+        "feature_id": "F38-05",
+        "source": "veritas-plan.json"
+      }
+    ],
+    "tasks": [],
+    "acceptance": [
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Org `dev.azure.com/marcopresta` is accessible",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Project `eva-poc` exists with **Scrum** process template",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Team `eva-poc Team` exists",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Sprint-0 through Sprint-6 iterations are created and assigned to the team",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Epic `EVA Platform` (id=4) exists",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Feature `EVA Brain v2` (id=5) is a child of the Epic",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Feature `EVA Faces Admin` (id=6) is a child of the Epic",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "PBIs WI-0 through WI-7 exist as children of Feature id=5",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "PBIs WI-1 through WI-10 (Faces) exist as children of Feature id=6 ← **PENDING**",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "WI-0 through WI-6: State = **Done**",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "WI-7: State = **New** (active sprint, not yet started)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Faces WIs WI-1 through WI-10: State = **Done** ← **PENDING**",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Title includes `[WI-N]` prefix",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Iteration path set to correct sprint (e.g. `eva-poc\\Sprint-5`)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Acceptance Criteria (DoD) field populated",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Tags set: `eva-brain;wi-N` (lowercase)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Parent link to correct Feature",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`ado-setup.ps1` can be re-run with `-ExistingEpicId 4 -ExistingFeatureBrainId 5 -ExistingFeatureFacesId 6 -SkipWiIds @(\"WI-0\",\"WI-1\",...,\"WI-7\")` without creating duplicates",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`New-Iteration` gracefully handles duplicate sprint names via GET fallback",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`ado-bootstrap-pull.ps1` produces a markdown WI table matching SESSION-STATE.md",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`ado-close-wi.ps1` finds a PBI by tag, transitions it to Done, and posts a comment",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`ado-create-bug.ps1` creates a Bug with Severity, Sprint, and repro steps",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "All three operations skip gracefully when `$env:ADO_PAT` is not set",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "PAT is **never** written to any file in any repo",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`.env.ado` contains only IDs, URLs, and team name — zero credentials",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "All scripts throw immediately if `$env:ADO_PAT` is unset",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`.env.ado` is safe to commit (no secrets)",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`README.md` — overview, quick start, folder structure",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`PLAN.md` — architecture, design decisions, phasing",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`ACCEPTANCE.md` — this file",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`STATUS.md` — verified current board state",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`ANNOUNCEMENT.md` — stakeholder communication",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`APIS.md` — every ADO REST endpoint used",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "`URLS.md` — all board, backlog, and query links",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": true,
+        "text": "Script copies in `38-ado-poc/scripts/`",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Org admin at `ESDC-AICoE` grants board write + iteration management permissions",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "Pattern validated in personal org for minimum 2 full sprints",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "`ado-setup.ps1` extended with all Faces WIs and Brain v2 WI-7+ history",
+        "source": "ACCEPTANCE.md"
+      },
+      {
+        "story_id": null,
+        "checked": false,
+        "text": "`ado-sync.md` skill reviewed by a second engineer",
+        "source": "ACCEPTANCE.md"
+      }
+    ],
+    "declared_status": {}
+  },
+  "actual": {
+    "artifacts": [
+      {
+        "path": ".env.ado",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "ACCEPTANCE.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "ado-artifacts.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "ado-import.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "ANNOUNCEMENT.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "APIS.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "DEPENDENCIES.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "FOUNDRY-PLAN.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "OBSERVABILITY.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "PIPELINE-SPEC.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "PLAN.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "PLAN.md.bak",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "PROJECT-39.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "README.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "ROADMAP.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "STATUS.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "URLS.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "VERITAS-INTEGRATION.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": ".github/copilot-instructions.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "functions/host.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/ado-bootstrap-pull.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/ado-close-wi.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/ado-create-bug.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/ado-generate-artifacts.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/ado-import-project.ps1",
+        "type": "code",
+        "story_tags": [
+          "F38-03-001",
+          "F38-03-002",
+          "F38-03-003",
+          "F38-03-004",
+          "F38-03-005",
+          "F38-05-001",
+          "F38-05-002",
+          "F38-05-003",
+          "F38-05-004",
+          "F38-05-005",
+          "F38-05-006",
+          "F38-05-007",
+          "F38-05-008"
+        ]
+      },
+      {
+        "path": "scripts/ado-onboard-all.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/ado-setup.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/smoke-test-server.ps1",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": ".github/copilot-skills/00-skill-index.skill.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": ".github/workflows/ado-idea-intake.yml",
+        "type": "config",
+        "story_tags": []
+      },
+      {
+        "path": ".github/workflows/ado-pr-bridge.yml",
+        "type": "config",
+        "story_tags": []
+      },
+      {
+        "path": ".github/workflows/morning-summary.yml",
+        "type": "config",
+        "story_tags": []
+      },
+      {
+        "path": ".github/workflows/sprint-execute.yml",
+        "type": "config",
+        "story_tags": []
+      },
+      {
+        "path": ".github/workflows/watchdog-poll.yml",
+        "type": "config",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/ado-artifacts.json",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/ONBOARDING.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/THREE-SYSTEM-WIRING.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "functions/ado-webhook-bridge/function.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "functions/ado-webhook-bridge/function_app.py",
+        "type": "code",
+        "story_tags": []
+      },
+      {
+        "path": "functions/ado-webhook-bridge/requirements.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-14-az-finops-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-15-cdc-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-16-engineered-case-law-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-17-apim-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-18-azure-best-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-19-ai-gov-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-20-AssistMe-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-24-eva-brain-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-29-foundry-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-30-ui-bench-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-31-eva-faces-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-33-eva-brain-v2-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-34-eva-agents-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-35-agentic-code-fixing-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-36-red-teaming-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-37-data-model-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-38-ado-poc-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-import-39-ado-dashboard-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1037-ado-onboard-all-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-14-az-finops-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-15-cdc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-16-engineered-case-law-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-17-apim-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-18-azure-best-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-19-ai-gov-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-20-AssistMe-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-24-eva-brain-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-29-foundry-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-30-ui-bench-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-31-eva-faces-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-33-eva-brain-v2-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-34-eva-agents-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-35-agentic-code-fixing-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-36-red-teaming-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-37-data-model-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-38-ado-poc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-import-39-ado-dashboard-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-ado-onboard-all-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1039-live-run.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-14-az-finops-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-15-cdc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-16-engineered-case-law-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-17-apim-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-18-azure-best-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-19-ai-gov-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-20-AssistMe-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-24-eva-brain-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-29-foundry-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-30-ui-bench-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-31-eva-faces-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-33-eva-brain-v2-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-34-eva-agents-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-35-agentic-code-fixing-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-import-36-red-teaming-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-ado-onboard-all-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1042-run2.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-14-az-finops-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-15-cdc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-16-engineered-case-law-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-17-apim-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-18-azure-best-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-19-ai-gov-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-20-AssistMe-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-24-eva-brain-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-29-foundry-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-30-ui-bench-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-31-eva-faces-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-33-eva-brain-v2-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-34-eva-agents-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-35-agentic-code-fixing-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-36-red-teaming-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-37-data-model-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-38-ado-poc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-import-39-ado-dashboard-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-ado-onboard-all-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1043-run2.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-14-az-finops-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-15-cdc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-16-engineered-case-law-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-17-apim-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-18-azure-best-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-19-ai-gov-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-20-AssistMe-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-24-eva-brain-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-29-foundry-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-30-ui-bench-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-31-eva-faces-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-33-eva-brain-v2-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-34-eva-agents-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-35-agentic-code-fixing-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-36-red-teaming-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-37-data-model-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-import-38-ado-poc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-ado-onboard-all-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1054-run3.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1055-ado-import-39-ado-dashboard-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1627-ado-onboard-all-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1627-run4.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-14-az-finops-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-15-cdc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-16-engineered-case-law-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-17-apim-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-18-azure-best-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-19-ai-gov-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-20-AssistMe-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-24-eva-brain-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-29-foundry-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-30-ui-bench-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-31-eva-faces-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-33-eva-brain-v2-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-34-eva-agents-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-35-agentic-code-fixing-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-36-red-teaming-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-37-data-model-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-38-ado-poc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-import-39-ado-dashboard-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-ado-onboard-all-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1628-run5.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1644-ado-onboard-all-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1644-run6-final.txt",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-14-az-finops-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-15-cdc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-16-engineered-case-law-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-17-apim-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-18-azure-best-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-19-ai-gov-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-20-AssistMe-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-24-eva-brain-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-29-foundry-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-30-ui-bench-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-31-eva-faces-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-33-eva-brain-v2-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-34-eva-agents-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-35-agentic-code-fixing-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-36-red-teaming-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-37-data-model-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-38-ado-poc-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1645-ado-import-39-ado-dashboard-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1956-ado-onboard-all-review.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-1957-ado-import-37-data-model-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-2026-37-data-model-api.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-2026-ado-import-37-data-model-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-2103-ado-import-40-eva-control-plane-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-2106-ado-import-40-eva-control-plane-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260221-2107-ado-import-41-eva-cli-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260222-1113-ado-import-idea-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260222-1114-ado-import-idea-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260224-1547-ado-import-ADO-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260224-1554-ado-import-ADO-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260224-1555-ado-import-ADO-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260224-1612-ado-import-ADO-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/20260221-EVA-CC-AGENT.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/ACCEPTANCE.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/ACCEPTANCE.md.template",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/PLAN.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/PLAN.md.template",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/README.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/README.md.template",
+        "type": "doc",
+        "story_tags": []
+      }
+    ],
+    "story_artifact_map": {
+      "F38-03-001": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-03-002": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-03-003": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-03-004": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-03-005": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-001": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-002": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-003": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-004": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-005": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-006": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-007": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      },
+      "F38-05-008": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-import-project.ps1",
+            "type": "code",
+            "story_tags": [
+              "F38-03-001",
+              "F38-03-002",
+              "F38-03-003",
+              "F38-03-004",
+              "F38-03-005",
+              "F38-05-001",
+              "F38-05-002",
+              "F38-05-003",
+              "F38-05-004",
+              "F38-05-005",
+              "F38-05-006",
+              "F38-05-007",
+              "F38-05-008"
+            ]
+          }
+        ]
+      }
+    },
+    "commit_evidence_map": {}
+  }
+}

@@ -1,0 +1,78 @@
+**********************
+PowerShell transcript start
+Start time: 20260302141309
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -File scripts\ado-bidirectional-sync.ps1 -Mode Push -Project 37-data-model -DryRun
+Process ID: 12960
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+[INFO] Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260302-1413-ado-sync-push.log
+
+=== ADO Bidirectional Sync ===
+Mode         : Push
+Data Model   : https://marco-eva-data-model.livelyflower-7990bc7b.canadacentral.azurecontainerapps.io
+ADO Project  : https://dev.azure.com/marcopresta/eva-poc
+Project      : 37-data-model
+Dry Run      : True
+
+
+--- Push: WBS -> ADO ---
+[INFO] Querying WBS for stories with sprint != null AND ado_id == null...
+[ERROR] WBS query failed: The property 'Count' cannot be found on this object. Verify that the property exists.
+PS>TerminatingError(): "The property 'Count' cannot be found on this object. Verify that the property exists."
+
+[FATAL] Sync failed: The property 'Count' cannot be found on this object. Verify that the property exists.
+**********************
+PowerShell transcript end
+End time: 20260302141310
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260302141322
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -File scripts\ado-bidirectional-sync.ps1 -Mode Push -Project 37-data-model -DryRun
+Process ID: 3340
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+[INFO] Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260302-1413-ado-sync-push.log
+
+=== ADO Bidirectional Sync ===
+Mode         : Push
+Data Model   : https://marco-eva-data-model.livelyflower-7990bc7b.canadacentral.azurecontainerapps.io
+ADO Project  : https://dev.azure.com/marcopresta/eva-poc
+Project      : 37-data-model
+Dry Run      : True
+
+
+--- Push: WBS -> ADO ---
+[INFO] Querying WBS for stories with sprint != null AND ado_id == null...
+[INFO] Found 0 stories to create in ADO
+[INFO] No stories to push to ADO
+
+[SUCCESS] ADO bidirectional sync complete
+**********************
+PowerShell transcript end
+End time: 20260302141324
+**********************

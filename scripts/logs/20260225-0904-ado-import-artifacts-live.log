@@ -1,0 +1,520 @@
+**********************
+PowerShell transcript start
+Start time: 20260225090412
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\37-data-model.json
+Process ID: 22700
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+
+=== ADO Import: 37-data-model ===
+Project maturity : active
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : False
+
+Epic: creating '37-data-model'
+  -> Epic id=2291
+Feature: creating 'OBJ_IDPATH API [ID=F37-OBJ_IDPATH]'
+  -> Feature id=2292
+Feature: creating 'Layer Build Order'
+  -> Feature id=2293
+Feature: creating 'Sprint 1 ? Foundation Layers (L0?L2) ? DONE'
+  -> Feature id=2294
+Feature: creating 'Sprint 2 ? Data and API Layers (L3?L5) ? DONE'
+  -> Feature id=2295
+Feature: creating 'Sprint 3 ? UI Layers (L6?L7) ? DONE'
+  -> Feature id=2296
+Feature: creating 'Sprint 4 ? Agent Fleet + Infrastructure Layers (L8?L9) ? DONE'
+  -> Feature id=2297
+Feature: creating 'Sprint 5 ? Requirements Traceability Layer (L10) ? DONE'
+  -> Feature id=2298
+Feature: creating 'Ongoing ? How the Model Grows and Is Maintained'
+  -> Feature id=2299
+Feature: creating 'Dependencies'
+  -> Feature id=2300
+Feature: existing id=437 — 'HEALTH API'
+Feature: existing id=1006 — 'READY API'
+Feature: existing id=1056 — 'MODEL API'
+Feature: creating 'SEED API'
+  -> Feature id=2301
+Feature: existing id=1038 — 'EXPORT API'
+Feature: existing id=1005 — 'CACHE API'
+Feature: creating 'BACKFILL API'
+  -> Feature id=2302
+Feature: existing id=2106 — 'AUDIT API'
+Feature: creating 'VALIDATE API'
+  -> Feature id=2303
+Feature: creating 'COMMIT API'
+  -> Feature id=2304
+Feature: creating 'AUDITREPO API'
+  -> Feature id=2305
+Feature: existing id=436 — 'API API'
+Feature: creating 'FILTER API'
+  -> Feature id=2306
+Feature: creating 'EDGETYPES API'
+  -> Feature id=2307
+Feature: creating 'OBJ_IDPATH API'
+  -> Feature id=2308
+PBI: creating '[F37-01-001] GET /{obj_id:path} [ID=F37-OBJ_IDPATH-001]'
+  -> PBI id=2309
+PBI: creating '[F37-01-002] PUT /{obj_id:path} [ID=F37-OBJ_IDPATH-002]'
+  -> PBI id=2310
+PBI: creating '[F37-01-003] DELETE /{obj_id:path} [ID=F37-OBJ_IDPATH-003]'
+  -> PBI id=2311
+PBI: creating '[F37-03-001] Deliverables'
+  -> PBI id=2312
+PBI: creating '[F37-03-002] Acceptance'
+  -> PBI id=2313
+PBI: creating '[F37-04-001] Deliverables'
+  -> PBI id=2314
+PBI: creating '[F37-04-002] Acceptance'
+  -> PBI id=2315
+PBI: creating '[F37-05-001] Deliverables'
+  -> PBI id=2316
+PBI: creating '[F37-05-002] Acceptance'
+  -> PBI id=2317
+PBI: creating '[F37-06-001] Deliverables'
+  -> PBI id=2318
+PBI: creating '[F37-06-002] Acceptance'
+  -> PBI id=2319
+PBI: creating '[F37-07-001] Deliverables'
+  -> PBI id=2320
+PBI: creating '[F37-07-002] Acceptance'
+  -> PBI id=2321
+PBI: creating '[F37-08-001] Growth Path 1 ? Same-PR Rule (day-to-day)'
+  -> PBI id=2322
+PBI: creating '[F37-08-002] Growth Path 2 ? Sprint-Close Audit (every sprint)'
+  -> PBI id=2323
+PBI: creating '[F37-08-003] Growth Path 3 ? Ecosystem Expansion (new service or repository)'
+  -> PBI id=2324
+PBI: creating '[F37-08-004] Growth Path 4 ? New Model Layer (extending the schema)'
+  -> PBI id=2325
+PBI: creating '[F37-08-005] Validation Gate (all paths)'
+  -> PBI id=2326
+PBI: creating '[F37-08-006] Drift Signals ? How to Know the Model Is Stale'
+  -> PBI id=2327
+PBI: creating '[F37-08-007] Governance'
+  -> PBI id=2328
+PBI: creating '[F37-HEALTH-001] GET /health'
+  -> PBI id=2329
+PBI: creating '[F37-HEALTH-002] GET /v1/health'
+  -> PBI id=2330
+PBI: creating '[F37-HEALTH-003] GET /v1/health'
+  -> PBI id=2331
+PBI: creating '[F37-READY-001] GET /ready'
+  -> PBI id=2332
+PBI: creating '[F37-MODEL-001] GET /model/agent-summary'
+  -> PBI id=2333
+PBI: creating '[F37-MODEL-002] GET /model/agent-guide'
+  -> PBI id=2334
+PBI: creating '[F37-SEED-001] POST /seed'
+  -> PBI id=2335
+PBI: creating '[F37-EXPORT-001] POST /export'
+  -> PBI id=2336
+PBI: creating '[F37-CACHE-001] POST /cache/flush'
+  -> PBI id=2337
+PBI: creating '[F37-BACKFILL-001] POST /backfill'
+  -> PBI id=2338
+PBI: creating '[F37-AUDIT-001] GET /audit'
+  -> PBI id=2339
+PBI: creating '[F37-VALIDATE-001] GET /validate'
+  -> PBI id=2340
+PBI: creating '[F37-COMMIT-001] POST /commit'
+  -> PBI id=2341
+PBI: creating '[F37-AUDITREPO-001] POST /audit-repo'
+  -> PBI id=2342
+PBI: creating '[F37-API-001] GET /'
+  -> PBI id=2343
+PBI: creating '[F37-API-002] GET /'
+  -> PBI id=2344
+PBI: creating '[F37-API-003] GET /'
+  -> PBI id=2345
+PBI: creating '[F37-FILTER-001] GET /filter'
+  -> PBI id=2346
+PBI: creating '[F37-EDGETYPES-001] GET /edge-types'
+  -> PBI id=2347
+PBI: creating '[F37-OBJ_IDPATH-001] GET /{obj_id:path}'
+  -> PBI id=2348
+PBI: creating '[F37-OBJ_IDPATH-002] PUT /{obj_id:path}'
+  -> PBI id=2349
+PBI: creating '[F37-OBJ_IDPATH-003] DELETE /{obj_id:path}'
+  -> PBI id=2350
+
+=== Import Summary: 37-data-model ===
+Epic id  : 2291
+Features : 24
+PBIs     : 42
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag                  Id State Url
+---                  -- ----- ---
+F37-01-001         2309 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-01-002         2310 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-01-003         2311 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-03-001         2312 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-03-002         2313 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-04-001         2314 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-04-002         2315 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-05-001         2316 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-05-002         2317 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-06-001         2318 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-06-002         2319 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-07-001         2320 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-07-002         2321 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-08-001         2322 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-08-002         2323 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-08-003         2324 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-08-004         2325 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-08-005         2326 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-08-006         2327 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-08-007         2328 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-HEALTH-001     2329 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-HEALTH-002     2330 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-HEALTH-003     2331 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-READY-001      2332 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-MODEL-001      2333 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-MODEL-002      2334 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-SEED-001       2335 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-EXPORT-001     2336 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-CACHE-001      2337 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-BACKFILL-001   2338 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-AUDIT-001      2339 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-VALIDATE-001   2340 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-COMMIT-001     2341 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-AUDITREPO-001  2342 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-API-001        2343 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-API-002        2344 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-API-003        2345 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-FILTER-001     2346 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-EDGETYPES-001  2347 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-OBJ_IDPATH-001 2348 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-OBJ_IDPATH-002 2349 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+F37-OBJ_IDPATH-003 2350 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+
+**********************
+PowerShell transcript end
+End time: 20260225090429
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225090433
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json
+Process ID: 20892
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+
+=== ADO Import: 38-ado-poc ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : False
+
+Epic: creating '38-ado-poc'
+  -> Epic id=2351
+Feature: creating '1. Problem Statement'
+  -> Feature id=2352
+Feature: creating '2. Solution: EVA ADO Command Center'
+  -> Feature id=2353
+Feature: creating '3. Architecture ? 5 Layers'
+  -> Feature id=2354
+Feature: creating '4. Data Flow: ADO ? `37-data-model`'
+  -> Feature id=2355
+Feature: creating '5. Design Decisions'
+  -> Feature id=2356
+Feature: creating '6. Phasing'
+  -> Feature id=2357
+PBI: creating '[F38-03-001] Layer 1: `29-foundry` ? Central Agentic Capabilities Hub'
+  -> PBI id=2358
+PBI: creating '[F38-03-002] Layer 2: `38-ado-poc` ? EVA ADO Command Center (this repo)'
+  -> PBI id=2359
+PBI: creating '[F38-03-003] Layer 3: Project Runners'
+  -> PBI id=2360
+PBI: creating '[F38-03-004] Layer 4: `17-apim` ? API Gateway + Cost Attribution'
+  -> PBI id=2361
+PBI: creating '[F38-03-005] Layer 5: `39-ado-dashboard` ? EVA Portal + ADO Views'
+  -> PBI id=2362
+PBI: creating '[F38-05-001] D1: Isolated personal org first, ESDC-AICoE later'
+  -> PBI id=2363
+PBI: creating '[F38-05-002] D2: Scrum process template'
+  -> PBI id=2364
+PBI: creating '[F38-05-003] D3: Two-call PBI state (create then PATCH)'
+  -> PBI id=2365
+PBI: creating '[F38-05-004] D4: PAT never in any file'
+  -> PBI id=2366
+PBI: creating '[F38-05-005] D5: Tags as semantic WI identifiers'
+  -> PBI id=2367
+PBI: creating '[F38-05-006] D6: `29-foundry` as single skill master'
+  -> PBI id=2368
+PBI: creating '[F38-05-007] D7: ADO is source of truth over `SESSION-STATE.md`'
+  -> PBI id=2369
+PBI: creating '[F38-05-008] D8: Cost attribution is a first-class architectural concern, not a FinOps add-on'
+  -> PBI id=2370
+
+=== Import Summary: 38-ado-poc ===
+Epic id  : 2351
+Features : 6
+PBIs     : 13
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag          Id State Url
+---          -- ----- ---
+F38-03-001 2358 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-03-002 2359 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-03-003 2360 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-03-004 2361 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-03-005 2362 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-001 2363 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-002 2364 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-003 2365 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-004 2366 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-005 2367 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-006 2368 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-007 2369 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+F38-05-008 2370 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+
+**********************
+PowerShell transcript end
+End time: 20260225090439
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225090443
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json
+Process ID: 7352
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+
+=== ADO Import: 39-ado-dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : False
+
+Epic: creating '39-ado-dashboard'
+  -> Epic id=2371
+Feature: creating 'Sprint Plan'
+  -> Feature id=2372
+Feature: creating 'ADO Setup Checklist (do once)'
+  -> Feature id=2373
+Feature: creating 'Environment Variables Needed'
+  -> Feature id=2374
+Feature: creating '31-eva-faces Integration Checklist'
+  -> Feature id=2375
+Feature: creating 'Relationship to eva-faces'
+  -> Feature id=2376
+Feature: existing id=2109 — 'DASHBOARD API'
+Feature: existing id=2110 — 'SUMMARY API'
+Feature: existing id=1100 — 'UI Pages'
+PBI: creating '[F39-01-001] Sprint 1 ? Backend + APIM gateway *(blocked on WI-7 deploy)*'
+  -> PBI id=2377
+PBI: creating '[F39-01-002] Sprint 2 ? EVA Home page *(can start in parallel with Sprint 1)*'
+  -> PBI id=2378
+PBI: creating '[F39-01-003] Sprint 3 ? Sprint Board page'
+  -> PBI id=2379
+PBI: creating '[F39-01-004] Sprint 4 ? Velocity + entity tags'
+  -> PBI id=2380
+PBI: creating '[F39-01-005] Milestone backlog (post-Sprint 4)'
+  -> PBI id=2381
+PBI: creating '[F39-02-001] Create Feature `EVA ADO Dashboard` under Epic id=4 in ADO'
+  -> PBI id=2382
+PBI: creating '[F39-02-002] Create WI-0 through WI-6 as User Stories'
+  -> PBI id=2383
+PBI: creating '[F39-02-003] Set sprint assignments per table above'
+  -> PBI id=2384
+PBI: creating '[F39-02-004] Link WI-1 ? WI-7 (Blocked By)'
+  -> PBI id=2385
+PBI: creating '[F39-02-005] Set `ADO_EPIC_ID=4` in `33-eva-brain-v2` `.env`'
+  -> PBI id=2386
+PBI: creating '[F39-02-006] Set `ADO_PAT`, `ADO_ORG_URL`, `ADO_PROJECT` in brain `.env`'
+  -> PBI id=2387
+PBI: creating '[F39-02-007] Create Cosmos container `scrum-cache` (see Sprint 1 setup above)'
+  -> PBI id=2388
+PBI: creating '[F39-04-001] Build `EVAHomePage` per epic spec (route `/`)'
+  -> PBI id=2389
+PBI: creating '[F39-04-002] Build `SprintBoardPage` per epic spec (route `/devops/sprint`)'
+  -> PBI id=2390
+PBI: creating '[F39-04-003] Add "Sprint Board" to sidebar nav (role guard: `viewer` and above)'
+  -> PBI id=2391
+PBI: creating '[F39-04-004] Wire `userRole`, `userName`, `defaultLocale` from eva-faces auth context'
+  -> PBI id=2392
+PBI: creating '[F39-04-005] Confirm CORS / auth headers flow through APIM for `/v1/scrum/*`'
+  -> PBI id=2393
+PBI: creating '[F39-04-006] Create ADO WIs FACES-WI-A, FACES-WI-B, FACES-WI-C under eva-faces Feature'
+  -> PBI id=2394
+PBI: creating '[F39-DASHBOARD-001] GET /dashboard'
+  -> PBI id=2395
+PBI: creating '[F39-SUMMARY-001] GET /summary'
+  -> PBI id=2396
+PBI: creating '[F39-UI-001] EVAHOMEPAGE page'
+  -> PBI id=2397
+PBI: creating '[F39-UI-002] SPRINTBOARDP page'
+  -> PBI id=2398
+
+=== Import Summary: 39-ado-dashboard ===
+Epic id  : 2371
+Features : 8
+PBIs     : 22
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag                 Id State Url
+---                 -- ----- ---
+F39-01-001        2377 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-01-002        2378 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-01-003        2379 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-01-004        2380 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-01-005        2381 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-02-001        2382 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-02-002        2383 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-02-003        2384 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-02-004        2385 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-02-005        2386 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-02-006        2387 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-02-007        2388 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-04-001        2389 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-04-002        2390 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-04-003        2391 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-04-004        2392 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-04-005        2393 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-04-006        2394 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-DASHBOARD-001 2395 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-SUMMARY-001   2396 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-UI-001        2397 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+F39-UI-002        2398 New   https://dev.azure.com/marcopresta/eva-poc/_workit…
+
+**********************
+PowerShell transcript end
+End time: 20260225090453
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260225090458
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json
+Process ID: 5524
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+
+=== ADO Import: 40-eva-control-plane ===
+Project maturity : active
+GitHub repo      : eva-foundry/40-eva-control-plane
+Dry run          : False
+
+Epic: creating '40-eva-control-plane'
+  -> Epic id=2399
+Feature: creating 'ARTIFACT_ID API [ID=F40-ARTIFACT_ID]'
+  -> Feature id=2400
+Feature: creating 'EVIDENCE_ID API [ID=F40-EVIDENCE_ID]'
+  -> Feature id=2401
+Feature: creating 'RUN_ID API [ID=F40-RUN_ID]'
+  -> Feature id=2402
+Feature: creating 'Runbooks implemented'
+  -> Feature id=2403
+Feature: creating 'Runtime API (port 8020)'
+  -> Feature id=2404
+Feature: existing id=885 — 'Quick start'
+Feature: creating 'Relationship with 37-data-model'
+  -> Feature id=2405
+Feature: creating 'Evidence pack schema'
+  -> Feature id=2406
+Feature: creating 'Guardrails enforced'
+  -> Feature id=2407
+Feature: existing id=437 — 'HEALTH API'
+Feature: creating 'ARTIFACT_ID API'
+  -> Feature id=2408
+Feature: creating 'EVIDENCE_ID API'
+  -> Feature id=2409
+Feature: creating 'RUN_ID API'
+  -> Feature id=2410
+PBI: creating '[F40-01-001] GET /{artifact_id} [ID=F40-ARTIFACT_ID-001]'
+  -> PBI id=2411
+PBI: creating '[F40-02-001] GET /{evidence_id} [ID=F40-EVIDENCE_ID-001]'
+  -> PBI id=2412
+PBI: creating '[F40-03-001] GET /{run_id} [ID=F40-RUN_ID-001]'
+  -> PBI id=2413
+PBI: creating '[F40-03-002] PATCH /{run_id} [ID=F40-RUN_ID-002]'
+  -> PBI id=2414
+PBI: creating '[F40-HEALTH-001] GET /health'
+  -> PBI id=2415
+PBI: creating '[F40-ARTIFACT_ID-001] GET /{artifact_id}'
+  -> PBI id=2416
+PBI: creating '[F40-EVIDENCE_ID-001] GET /{evidence_id}'
+  -> PBI id=2417
+PBI: creating '[F40-RUN_ID-001] GET /{run_id}'
+  -> PBI id=2418
+PBI: creating '[F40-RUN_ID-002] PATCH /{run_id}'
+  -> PBI id=2419
+
+=== Import Summary: 40-eva-control-plane ===
+Epic id  : 2399
+Features : 13
+PBIs     : 9
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag                   Id State Url
+---                   -- ----- ---
+F40-01-001          2411 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-02-001          2412 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-03-001          2413 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-03-002          2414 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-HEALTH-001      2415 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-ARTIFACT_ID-001 2416 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-EVIDENCE_ID-001 2417 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-RUN_ID-001      2418 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+F40-RUN_ID-002      2419 New   https://dev.azure.com/marcopresta/eva-poc/_work…
+
+**********************
+PowerShell transcript end
+End time: 20260225090504
+**********************

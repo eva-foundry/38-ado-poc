@@ -1,0 +1,63 @@
+**********************
+PowerShell transcript start
+Start time: 20260221195650
+Username: HRDC-DRHC\marco.presta
+RunAs User: HRDC-DRHC\marco.presta
+Configuration Name: 
+Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll -noexit -command try { . "c:\Users\marco.presta\AppData\Local\Programs\Microsoft VS Code\072586267e\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 18836
+PSVersion: 7.6.0-preview.6
+PSEdition: Core
+GitCommitId: 7.6.0-preview.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1956-ado-onboard-all-review.log
+
+EVA ADO Onboard — Project Registry Review
+Foundation : C:\AICOE\eva-foundation
+Date       : 2026-02-21 19:56 ET
+
+
+Projects ready to import (18 of 18):
+  14-az-finops
+  15-cdc
+  16-engineered-case-law
+  17-apim
+  18-azure-best
+  19-ai-gov
+  20-AssistMe
+  24-eva-brain
+  29-foundry
+  30-ui-bench
+  31-eva-faces
+  33-eva-brain-v2
+  34-eva-agents
+  35-agentic-code-fixing
+  36-red-teaming
+  37-data-model
+  38-ado-poc
+  39-ado-dashboard
+
+To import a single project:
+  $env:ADO_PAT = "<pat>"
+  cd C:\AICOE\eva-foundation\<NN-project>
+  .\ado-import.ps1 -DryRun   # preview first
+  .\ado-import.ps1
+
+To dry-run ALL ready projects (no ADO writes):
+  .\ado-onboard-all.ps1 -RunImport -DryRun
+
+To import ALL ready projects (REVIEW ARTIFACTS FIRST):
+  $env:ADO_PAT = "<pat>"
+  .\ado-onboard-all.ps1 -RunImport
+
+**********************
+PowerShell transcript end
+End time: 20260221195651
+**********************

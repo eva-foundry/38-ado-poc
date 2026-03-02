@@ -71,9 +71,32 @@ function First-NonEmpty([string[]]$lines) {
     return ""
 }
 
+function First-Paragraph([string[]]$lines) {
+    # Returns the first non-empty paragraph (lines until blank line or heading)
+    $para = @()
+    $started = $false
+    foreach ($l in $lines) {
+        $t = $l.Trim()
+        if (-not $started) {
+            if ($t -and -not $t.StartsWith('#') -and -not $t.StartsWith('---') -and -not $t.StartsWith('<!--')) {
+                $started = $true
+                $para += $t
+            }
+        } else {
+            if (-not $t -or $t.StartsWith('#') -or $t.StartsWith('---')) { break }
+            $para += $t
+        }
+    }
+    return ($para -join ' ')
+}
+
 function Extract-IdHint([string[]]$lines) {
     foreach ($l in $lines) {
-        if ($l -match '\*\*ID hint\*\*\s*:\s*`([^`]+)`') { return $Matches[1].Trim() }
+        # Handles: **ID hint:** `value`  (colon inside **)
+        if ($l -match '\*\*ID hint[^*]*\*\*\s*`([^`]+)`') { return $Matches[1].Trim() }
+        # Handles: **ID hint**: `value`  (colon outside **)
+        if ($l -match '\*\*ID hint\*\*\s*:\s*`([^`]+)`')  { return $Matches[1].Trim() }
+        # Fallback plain text
         if ($l -match 'ID hint[:\s]+`([^`]+)`') { return $Matches[1].Trim() }
     }
     return $null
@@ -81,7 +104,13 @@ function Extract-IdHint([string[]]$lines) {
 
 function Extract-Sprint([string[]]$lines) {
     foreach ($l in $lines) {
-        if ($l -match '\*\*Sprint\b[^:]*\*\*\s*:\s*(.+)$') {
+        # Handles: **Sprint assignment:** Sprint-X  (colon inside **)
+        if ($l -match '\*\*Sprint[^*]*:\*\*\s*(.+)$') {
+            $v = $Matches[1].Trim() -replace '\s*\(.*\)',''
+            return $v.Trim()
+        }
+        # Handles: **Sprint:** Sprint-X  (colon outside **)
+        if ($l -match '\*\*Sprint[^*]*\*\*\s*:\s*(.+)$') {
             $v = $Matches[1].Trim() -replace '\s*\(.*\)',''
             return $v.Trim()
         }
@@ -97,11 +126,30 @@ function Acceptance-IsChecked([string[]]$lines) {
     return ($unchecked.Count -eq 0)
 }
 
-function Get-AcceptanceCriteria([hashtable[]]$accSections, [string]$idHint, [string]$storyTitle) {
+function Get-AcceptanceCriteria($accSections, [string]$idHint, [string]$storyTitle) {
+    # Clean story title: strip leading [id-hint] prefix for matching
+    $cleanTitle = $storyTitle -replace '^\[[^\]]+\]\s*',''
     foreach ($s in $accSections) {
-        if ($s.Title -match [regex]::Escape($idHint) -or $s.Title -match [regex]::Escape($storyTitle)) {
-            $criteria = $s.Lines | Where-Object { $_ -match '^\s*- \[' } | ForEach-Object { $_.Trim() -replace '^\s*- \[[xX ]\]\s*','' }
-            return ($criteria -join ". ")
+        $titleMatch = ($s.Title -like "*$idHint*") -or ($s.Title -like "*$cleanTitle*")
+        if ($titleMatch) {
+            # Collect all content lines: checkbox items (including continuation lines) + plain text
+            $result = @()
+            $inItem = $false
+            foreach ($l in $s.Lines) {
+                if ($l -match '^\s*- \[') {
+                    # Start of a checkbox item - strip the checkbox marker
+                    $result += $l.Trim() -replace '^\s*- \[[xX ]\]\s*',''
+                    $inItem = $true
+                } elseif ($inItem -and $l -match '^\s{2,}\S') {
+                    # Continuation line (indented) — append to last item
+                    if ($result.Count -gt 0) {
+                        $result[-1] = $result[-1].TrimEnd() + ' ' + $l.Trim()
+                    }
+                } elseif ($l -match '^\*\*' -or -not $l.Trim()) {
+                    $inItem = $false
+                }
+            }
+            if ($result.Count -gt 0) { return ($result -join "`n") }
         }
     }
     return "TBD — add to docs/ADO/idea/ACCEPTANCE.md"
@@ -138,15 +186,27 @@ $epicSlug     = Slugify $epicTitle
 if (-not $githubRepo) { $githubRepo = "eva-foundry/$(Split-Path $RepoRoot -Leaf)" }
 if (-not $maturity)   { $maturity   = "idea" }
 
-# Description: first non-empty paragraph after metadata block
+# Description: first paragraph from a meaningful H2 section (Context/Purpose/Summary/Problem)
 $descLine = ""
-$inMeta = $false
-foreach ($l in $readmeLines) {
-    if ($l -match '^```')    { $inMeta = -not $inMeta; continue }
-    if ($inMeta)              { continue }
-    if ($l -match '^#')       { continue }
-    $t = $l.Trim()
-    if ($t -and -not $t.StartsWith('<!--')) { $descLine = $t; break }
+$preferredSections = @('Context','Purpose','Summary','Problem Statement','Overview','Background')
+$readmeSections = Extract-H2Sections $readmeLines
+foreach ($pref in $preferredSections) {
+    $sec = $readmeSections | Where-Object { $_.Title -like "*$pref*" } | Select-Object -First 1
+    if ($sec) {
+        $descLine = First-Paragraph $sec.Lines
+        if ($descLine) { break }
+    }
+}
+# Fallback: first non-empty, non-separator paragraph in the whole file
+if (-not $descLine) {
+    $inMeta = $false
+    foreach ($l in $readmeLines) {
+        if ($l -match '^```')    { $inMeta = -not $inMeta; continue }
+        if ($inMeta)              { continue }
+        if ($l -match '^#|-^---$') { continue }
+        $t = $l.Trim()
+        if ($t -and $t -ne '---' -and -not $t.StartsWith('<!--')) { $descLine = $t; break }
+    }
 }
 if (-not $descLine) { $descLine = $epicTitle }
 
@@ -162,7 +222,7 @@ if (Test-Path $planPath) {
 
     foreach ($fsec in $featureSecs) {
         $featSlug  = Slugify $fsec.Title
-        $featDesc  = First-NonEmpty $fsec.Lines
+        $featDesc  = First-Paragraph $fsec.Lines
         $features += @{
             id_hint     = $featSlug
             type        = "Feature"
@@ -178,6 +238,19 @@ if (Test-Path $planPath) {
             if (-not $idHint) { $idHint  = "$($epicSlug.ToUpper().Substring(0,[Math]::Min(4,$epicSlug.Length)))-WI-$(($userStories.Count))" }
             $sprint  = Extract-Sprint $ssec.Lines
             $iterPath = "eva-poc\$sprint"
+            # Extract tasks from - [ ] lines under **Tasks:** heading
+            $tasks = @()
+            $inTasks = $false
+            foreach ($tl in $ssec.Lines) {
+                if ($tl -match '^\*\*Tasks') { $inTasks = $true; continue }
+                if ($inTasks) {
+                    if ($tl -match '^\s*- \[ \]\s*(.+)$') {
+                        $tasks += @{ title = $Matches[1].Trim(); assigned_to = "" }
+                    } elseif ($tl -match '^\*\*') {
+                        $inTasks = $false
+                    }
+                }
+            }
             $userStories += @{
                 id_hint              = $idHint
                 type                 = "Product Backlog Item"
@@ -187,6 +260,7 @@ if (Test-Path $planPath) {
                 iteration_path       = $iterPath
                 state                = "New"   # updated from ACCEPTANCE.md below
                 parent               = $featSlug
+                tasks                = $tasks
                 evidence             = @{ test_count = $null; coverage_pct = $null; notes = "" }
             }
         }
@@ -198,15 +272,15 @@ if (Test-Path $planPath) {
 # ─────────────────────────────────────────────────────────
 if (Test-Path $acceptancePath) {
     $accLines   = Get-Content $acceptancePath
-    $accSections = Extract-H2Sections $accLines | Where-Object { $_.Title -notmatch '^Definition' }
+    $accSections = @(Extract-H2Sections $accLines | Where-Object { $_.Title -notmatch '^Definition' })
 
     for ($i = 0; $i -lt $userStories.Count; $i++) {
         $s = $userStories[$i]
         $ac = Get-AcceptanceCriteria $accSections $s.id_hint $s.title
 
         # Find the section to check Done state
-        $matched = $accSections | Where-Object { $_.Title -match [regex]::Escape($s.id_hint) -or $_.Title -match [regex]::Escape(($s.title -replace '^\[[^\]]+\]\s*','')) }
-        $isDone  = if ($matched) { Acceptance-IsChecked $matched[0].Lines } else { $false }
+        $matched = @($accSections | Where-Object { $_.Title -like "*$($s.id_hint)*" })
+        $isDone  = if ($matched.Count -gt 0) { Acceptance-IsChecked $matched[0].Lines } else { $false }
 
         $userStories[$i].acceptance_criteria = $ac
         $userStories[$i].state               = if ($isDone) { "Done" } else { "New" }
