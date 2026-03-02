@@ -1,0 +1,89 @@
+name: ADO Bidirectional Sync
+# Veritas-Model-ADO Workflow Enhancement 1
+# Scheduled sync: every 4 hours
+# Purpose: Keep WBS layer in sync with ADO work items
+
+on:
+  schedule:
+    # Every 4 hours: at minute 0 past hours 0, 4, 8, 12, 16, and 20
+    - cron: '0 */4 * * *'
+  
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Sync mode'
+        required: true
+        default: 'Both'
+        type: choice
+        options:
+          - Both
+          - Pull
+          - Push
+      project:
+        description: 'Filter by project (optional, e.g., "37-data-model")'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Dry run mode'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  ado-sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      
+      - name: Setup PowerShell
+        shell: pwsh
+        run: |
+          Write-Host "[INFO] PowerShell $($PSVersionTable.PSVersion)"
+      
+      - name: Install Azure CLI
+        run: |
+          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+      
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      
+      - name: Run ADO Bidirectional Sync
+        shell: pwsh
+        env:
+          ADO_PAT: ${{ secrets.ADO_PAT }}
+        run: |
+          $mode = "${{ github.event.inputs.mode }}"
+          if (-not $mode) { $mode = "Both" }
+          
+          $project = "${{ github.event.inputs.project }}"
+          $dryRun = "${{ github.event.inputs.dry_run }}" -eq "true"
+          
+          Write-Host "[INFO] ADO Bidirectional Sync"
+          Write-Host "  Mode: $mode"
+          Write-Host "  Project: $($project ? $project : '(all)')"
+          Write-Host "  Dry Run: $dryRun"
+          
+          $params = @{
+            Mode = $mode
+          }
+          if ($project) { $params.Project = $project }
+          if ($dryRun) { $params.DryRun = $true }
+          
+          & ./scripts/ado-bidirectional-sync.ps1 @params
+      
+      - name: Upload Logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: ado-sync-logs
+          path: scripts/logs/*.log
+          retention-days: 30
+      
+      - name: Notify on Failure
+        if: failure()
+        run: |
+          echo "::error::ADO bidirectional sync failed. Check logs for details."
