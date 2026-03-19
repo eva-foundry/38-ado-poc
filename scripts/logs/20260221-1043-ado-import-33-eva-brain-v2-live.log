@@ -17,7 +17,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-33-eva-brain-v2-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-33-eva-brain-v2-live.log
 
 === ADO Import: EVA Brain v2 ===
 Project maturity : active
@@ -325,7 +325,7 @@ ERROR in 33-eva-brain-v2: Index was outside the bounds of the array.
 
 >>> 34-eva-agents
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-34-eva-agents-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-34-eva-agents-live.log
 
 === ADO Import: EVA Agents ===
 Project maturity : idea
@@ -387,7 +387,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 >>> 35-agentic-code-fixing
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-35-agentic-code-fixing-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-35-agentic-code-fixing-live.log
 
 === ADO Import: Agentic Code Fixing ===
 Project maturity : poc
@@ -504,7 +504,7 @@ ERROR in 35-agentic-code-fixing: ADO Patch https://dev.azure.com/marcopresta/eva
 
 >>> 36-red-teaming
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-36-red-teaming-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-36-red-teaming-live.log
 
 === ADO Import: Red Teaming & Evaluation Framework ===
 Project maturity : active
@@ -621,7 +621,7 @@ ERROR in 36-red-teaming: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_ap
 
 >>> 37-data-model
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
 
 === ADO Import: EVA Data Model ===
 Project maturity : complete
@@ -738,7 +738,7 @@ ERROR in 37-data-model: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_api
 
 >>> 38-ado-poc
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
 
 === ADO Import: ADO Command Center ===
 Project maturity : active
@@ -897,7 +897,7 @@ ERROR in 38-ado-poc: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/w
 
 >>> 39-ado-dashboard
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
 
 === ADO Import: EVA ADO Dashboard ===
 Project maturity : poc
@@ -962,4 +962,4 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 Batch import complete.
 DONE
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B

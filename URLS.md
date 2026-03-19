@@ -68,13 +68,13 @@
 
 | Item | Path |
 |------|------|
-| EVA Brain v2 repo | `C:\AICOE\eva-foundation\33-eva-brain-v2` |
-| EVA Faces repo | `C:\AICOE\eva-foundation\31-eva-faces` |
-| ADO scripts | `C:\AICOE\eva-foundation\33-eva-brain-v2\scripts\ado-*.ps1` |
-| ADO skill | `C:\AICOE\eva-foundation\33-eva-brain-v2\.github\copilot-skills\ado-sync.md` |
-| Config (no PAT) | `C:\AICOE\eva-foundation\33-eva-brain-v2\.env.ado` |
-| Config template | `C:\AICOE\eva-foundation\33-eva-brain-v2\.env.ado.example` |
-| This PoC docs | `C:\AICOE\eva-foundation\38-ado-poc\` |
+| EVA Brain v2 repo | `C:\eva-foundry\eva-foundation\33-eva-brain-v2` |
+| EVA Faces repo | `C:\eva-foundry\eva-foundation\31-eva-faces` |
+| ADO scripts | `C:\eva-foundry\eva-foundation\33-eva-brain-v2\scripts\ado-*.ps1` |
+| ADO skill | `C:\eva-foundry\eva-foundation\33-eva-brain-v2\.github\copilot-skills\ado-sync.md` |
+| Config (no PAT) | `C:\eva-foundry\eva-foundation\33-eva-brain-v2\.env.ado` |
+| Config template | `C:\eva-foundry\eva-foundation\33-eva-brain-v2\.env.ado.example` |
+| This PoC docs | `C:\eva-foundry\eva-foundation\38-ado-poc\` |
 
 ---
 

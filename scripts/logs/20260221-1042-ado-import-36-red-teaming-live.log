@@ -17,8 +17,8 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: Red Teaming & Evaluation Framework ==="
@@ -168,8 +168,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 37-data-model[0m"
 >>> 37-data-model
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Data Model ==="
@@ -319,8 +319,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 38-ado-poc[0m"
 >>> 38-ado-poc
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: ADO Command Center ==="
@@ -516,8 +516,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 39-ado-dashboard[0m"
 >>> 39-ado-dashboard
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA ADO Dashboard ==="
@@ -621,18 +621,18 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="[32mBatch import complete.[0m"
 Batch import complete.
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
 PS>Write-Host "EXIT:$LASTEXITCODE"
 EXIT:0
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Get-ChildItem "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\*run2*" 2>$null | Format-Table Name, Length, LastWriteTime
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Get-ChildItem "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\*run2*" 2>$null | Format-Table Name, Length, LastWriteTime
 
 Name                   Length LastWriteTime
 ----                   ------ -------------
 20260221-1042-run2.txt  23187 2026-02-21 10:43:07 AM
 
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Get-ChildItem "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\" | Sort-Object LastWriteTime -Descending | Select-Object -First 3 | Format-Table Name, Length, LastWriteTime
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Get-ChildItem "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\" | Sort-Object LastWriteTime -Descending | Select-Object -First 3 | Format-Table Name, Length, LastWriteTime
 
 Name                                                     Length LastWriteTime
 ----                                                     ------ -------------
@@ -640,4 +640,4 @@ Name                                                     Length LastWriteTime
 20260221-1042-ado-import-16-engineered-case-law-live.log 139612 2026-02-21 10:43:07…
 20260221-1039-ado-import-31-eva-faces-live.log           224552 2026-02-21 10:43:07…
 
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B

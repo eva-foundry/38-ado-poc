@@ -1,13 +1,13 @@
 {
   "meta": {
     "schema": "eva.discovery.v2",
-    "generated_at": "2026-02-25T06:37:40.883Z",
-    "repo": "C:\\AICOE\\eva-foundation\\38-ado-poc"
+    "generated_at": "2026-03-08T00:47:06.044Z",
+    "repo": "C:\\eva-foundry\\eva-foundry\\38-ado-poc"
   },
   "project": null,
   "planned": {
     "epic": {
-      "title": "38-ado-poc — EVA ADO Command Center",
+      "title": "38-ado-poc ? EVA ADO Command Center",
       "source": "README.md"
     },
     "features": [
@@ -394,6 +394,16 @@
         "story_tags": []
       },
       {
+        "path": "CODE_OF_CONDUCT.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
         "path": "DEPENDENCIES.md",
         "type": "doc",
         "story_tags": []
@@ -401,6 +411,11 @@
       {
         "path": "FOUNDRY-PLAN.md",
         "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "LICENSE",
+        "type": "other",
         "story_tags": []
       },
       {
@@ -439,6 +454,11 @@
         "story_tags": []
       },
       {
+        "path": "SECURITY.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
         "path": "STATUS.md",
         "type": "doc",
         "story_tags": []
@@ -459,9 +479,11 @@
         "story_tags": []
       },
       {
-        "path": "functions/host.json",
-        "type": "data",
-        "story_tags": []
+        "path": "scripts/ado-bidirectional-sync.ps1",
+        "type": "code",
+        "story_tags": [
+          "Enhancement-1"
+        ]
       },
       {
         "path": "scripts/ado-bootstrap-pull.ps1",
@@ -518,6 +540,31 @@
         "story_tags": []
       },
       {
+        "path": "functions/.funcignore",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "functions/host.json",
+        "type": "data",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/ado-artifacts.json",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/ONBOARDING.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/THREE-SYSTEM-WIRING.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
         "path": ".github/copilot-skills/00-skill-index.skill.md",
         "type": "doc",
         "story_tags": []
@@ -529,6 +576,11 @@
       },
       {
         "path": ".github/workflows/ado-pr-bridge.yml",
+        "type": "config",
+        "story_tags": []
+      },
+      {
+        "path": ".github/workflows/ado-sync.yml",
         "type": "config",
         "story_tags": []
       },
@@ -548,21 +600,6 @@
         "story_tags": []
       },
       {
-        "path": "docs/ADO/ado-artifacts.json",
-        "type": "doc",
-        "story_tags": []
-      },
-      {
-        "path": "docs/ADO/ONBOARDING.md",
-        "type": "doc",
-        "story_tags": []
-      },
-      {
-        "path": "docs/ADO/THREE-SYSTEM-WIRING.md",
-        "type": "doc",
-        "story_tags": []
-      },
-      {
         "path": "functions/ado-webhook-bridge/function.json",
         "type": "data",
         "story_tags": []
@@ -575,6 +612,41 @@
       {
         "path": "functions/ado-webhook-bridge/requirements.txt",
         "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/20260221-EVA-CC-AGENT.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/ACCEPTANCE.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/ACCEPTANCE.md.template",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/PLAN.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/PLAN.md.template",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/README.md",
+        "type": "doc",
+        "story_tags": []
+      },
+      {
+        "path": "docs/ADO/idea/README.md.template",
+        "type": "doc",
         "story_tags": []
       },
       {
@@ -1333,42 +1405,163 @@
         "story_tags": []
       },
       {
-        "path": "docs/ADO/idea/20260221-EVA-CC-AGENT.md",
-        "type": "doc",
+        "path": "scripts/logs/20260225-0828-ado-import-artifacts-dryrun.log",
+        "type": "other",
         "story_tags": []
       },
       {
-        "path": "docs/ADO/idea/ACCEPTANCE.md",
-        "type": "doc",
+        "path": "scripts/logs/20260225-0829-ado-import-artifacts-dryrun.log",
+        "type": "other",
         "story_tags": []
       },
       {
-        "path": "docs/ADO/idea/ACCEPTANCE.md.template",
-        "type": "doc",
+        "path": "scripts/logs/20260225-0831-ado-import-artifacts-dryrun.log",
+        "type": "other",
         "story_tags": []
       },
       {
-        "path": "docs/ADO/idea/PLAN.md",
-        "type": "doc",
+        "path": "scripts/logs/20260225-0832-ado-import-artifacts-dryrun.log",
+        "type": "other",
         "story_tags": []
       },
       {
-        "path": "docs/ADO/idea/PLAN.md.template",
-        "type": "doc",
+        "path": "scripts/logs/20260225-0833-ado-import-artifacts-dryrun.log",
+        "type": "other",
         "story_tags": []
       },
       {
-        "path": "docs/ADO/idea/README.md",
-        "type": "doc",
+        "path": "scripts/logs/20260225-0851-ado-import-artifacts-live.log",
+        "type": "other",
         "story_tags": []
       },
       {
-        "path": "docs/ADO/idea/README.md.template",
-        "type": "doc",
+        "path": "scripts/logs/20260225-0852-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0853-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0854-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0855-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0856-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0901-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0902-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0903-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0904-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0905-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0906-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260225-0910-ado-import-artifacts-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260226-2251-ado-import-51-ACA-dryrun.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260226-2251-ado-import-51-ACA-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260226-2252-ado-import-51-ACA-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260228-0723-ado-import-51-ACA-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260228-0731-ado-import-51-ACA-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260228-0745-ado-import-51-ACA-live.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260302-1412-ado-sync-pull.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260302-1412-ado-sync-push.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260302-1413-ado-sync-both.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260302-1413-ado-sync-pull.log",
+        "type": "other",
+        "story_tags": []
+      },
+      {
+        "path": "scripts/logs/20260302-1413-ado-sync-push.log",
+        "type": "other",
         "story_tags": []
       }
     ],
     "story_artifact_map": {
+      "Enhancement-1": {
+        "artifacts": [
+          {
+            "path": "scripts/ado-bidirectional-sync.ps1",
+            "type": "code",
+            "story_tags": [
+              "Enhancement-1"
+            ]
+          }
+        ]
+      },
       "F38-03-001": {
         "artifacts": [
           {
@@ -1669,6 +1862,7 @@
         ]
       }
     },
-    "commit_evidence_map": {}
+    "commit_evidence_map": {},
+    "code_complexity": {}
   }
 }

@@ -7,7 +7,7 @@
 #
 # USAGE:
 #   # Start server first (in a separate terminal):
-#   #   PYTHONPATH=C:\AICOE\eva-foundation\29-foundry
+#   #   PYTHONPATH=C:\eva-foundry\eva-foundation\29-foundry
 #   #   SKIP_AUTH=true uvicorn server.main:app --host 127.0.0.1 --port 8080
 #
 #   .\scripts\smoke-test-server.ps1 [-Endpoint "http://127.0.0.1:8080"]

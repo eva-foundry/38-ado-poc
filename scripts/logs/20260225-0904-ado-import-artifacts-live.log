@@ -5,7 +5,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\37-data-model.json
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\37-data-model.json
 Process ID: 22700
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -17,7 +17,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
 
 === ADO Import: 37-data-model ===
 Project maturity : active
@@ -215,7 +215,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json
 Process ID: 20892
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -227,7 +227,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
 
 === ADO Import: 38-ado-poc ===
 Project maturity : active
@@ -309,7 +309,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json
 Process ID: 7352
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -321,7 +321,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
 
 === ADO Import: 39-ado-dashboard ===
 Project maturity : poc
@@ -431,7 +431,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json
 Process ID: 5524
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -443,7 +443,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0904-ado-import-artifacts-live.log
 
 === ADO Import: 40-eva-control-plane ===
 Project maturity : active

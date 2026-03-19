@@ -1,0 +1,23 @@
+{
+  "schema": "eva.export-to-model.evidence.v1",
+  "timestamp": "2026-03-08T00:47:14.340Z",
+  "project_id": "38-ado-poc",
+  "actor": "agent:veritas",
+  "action": "export-to-model",
+  "layers_exported": [
+    "wbs",
+    "evidence",
+    "decisions",
+    "risks"
+  ],
+  "record_counts": {
+    "wbs_count": 20,
+    "evidence_count": 14,
+    "decisions_count": 0,
+    "risks_count": 0,
+    "mti_score": null
+  },
+  "output_path": "C:\\eva-foundry\\eva-foundry\\38-ado-poc\\.eva\\model-export.json",
+  "discovery_path": "C:\\eva-foundry\\eva-foundry\\38-ado-poc\\.eva\\discovery.json",
+  "reconciliation_path": "C:\\eva-foundry\\eva-foundry\\38-ado-poc\\.eva\\reconciliation.json"
+}

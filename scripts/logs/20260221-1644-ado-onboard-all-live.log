@@ -17,10 +17,10 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1644-ado-onboard-all-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1644-ado-onboard-all-live.log
 
 EVA ADO Onboard — Project Registry Review
-Foundation : C:\AICOE\eva-foundation
+Foundation : C:\eva-foundry\eva-foundation
 Date       : 2026-02-21 16:44 ET
 
 
@@ -46,7 +46,7 @@ Projects ready to import (18 of 18):
 
 To import a single project:
   $env:ADO_PAT = "<pat>"
-  cd C:\AICOE\eva-foundation\<NN-project>
+  cd C:\eva-foundry\eva-foundation\<NN-project>
   .\ado-import.ps1 -DryRun   # preview first
   .\ado-import.ps1
 
@@ -60,7 +60,7 @@ To import ALL ready projects (REVIEW ARTIFACTS FIRST):
 Running batch import (LIVE)...
 
 >>> 14-az-finops
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-14-az-finops-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-14-az-finops-live.log
 
 === ADO Import: AZ FinOps Pipeline ===
 Project maturity : empty
@@ -104,7 +104,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 15-cdc
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-15-cdc-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-15-cdc-live.log
 
 === ADO Import: CDC Integration (placeholder) ===
 Project maturity : empty
@@ -146,7 +146,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 16-engineered-case-law
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-16-engineered-case-law-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-16-engineered-case-law-live.log
 
 === ADO Import: Engineered Case Law Pipeline ===
 Project maturity : poc
@@ -191,7 +191,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 17-apim
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-17-apim-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-17-apim-live.log
 
 === ADO Import: APIM Gateway — IA Web API ===
 Project maturity : poc
@@ -239,7 +239,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 18-azure-best
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-18-azure-best-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-18-azure-best-live.log
 
 === ADO Import: Azure Best Practices Reference Library ===
 Project maturity : active
@@ -286,7 +286,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 19-ai-gov
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-19-ai-gov-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-19-ai-gov-live.log
 
 === ADO Import: AI Governance Automation ===
 Project maturity : poc
@@ -331,7 +331,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 20-AssistMe
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-20-AssistMe-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-20-AssistMe-live.log
 
 === ADO Import: AssistMe Knowledge Management ===
 Project maturity : poc
@@ -377,7 +377,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 24-eva-brain
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-24-eva-brain-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-24-eva-brain-live.log
 
 === ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
 Project maturity : retired
@@ -420,7 +420,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 29-foundry
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-29-foundry-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-29-foundry-live.log
 
 === ADO Import: EVA Foundry Hub ===
 Project maturity : active
@@ -467,7 +467,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 30-ui-bench
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-30-ui-bench-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-30-ui-bench-live.log
 
 === ADO Import: EVA UI Testing Bench ===
 Project maturity : poc
@@ -512,7 +512,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 31-eva-faces
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-31-eva-faces-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-31-eva-faces-live.log
 
 === ADO Import: EVA Faces ===
 Project maturity : active
@@ -562,7 +562,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 33-eva-brain-v2
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-33-eva-brain-v2-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-33-eva-brain-v2-live.log
 
 === ADO Import: EVA Brain v2 ===
 Project maturity : active
@@ -753,7 +753,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 34-eva-agents
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-34-eva-agents-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-34-eva-agents-live.log
 
 === ADO Import: EVA Agents ===
 Project maturity : idea
@@ -795,7 +795,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 35-agentic-code-fixing
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-35-agentic-code-fixing-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-35-agentic-code-fixing-live.log
 
 === ADO Import: Agentic Code Fixing ===
 Project maturity : poc
@@ -841,7 +841,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 36-red-teaming
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-36-red-teaming-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-36-red-teaming-live.log
 
 === ADO Import: Red Teaming & Evaluation Framework ===
 Project maturity : active
@@ -887,7 +887,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 37-data-model
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-37-data-model-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-37-data-model-live.log
 
 === ADO Import: EVA Data Model ===
 Project maturity : complete
@@ -937,7 +937,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 38-ado-poc
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-38-ado-poc-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-38-ado-poc-live.log
 
 === ADO Import: ADO Command Center ===
 Project maturity : active
@@ -1012,7 +1012,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 
 >>> 39-ado-dashboard
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-39-ado-dashboard-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1645-ado-import-39-ado-dashboard-live.log
 
 === ADO Import: EVA ADO Dashboard ===
 Project maturity : poc

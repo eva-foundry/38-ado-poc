@@ -17,8 +17,8 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: ADO Command Center ==="
@@ -214,8 +214,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 39-ado-dashboard[0m"
 >>> 39-ado-dashboard
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA ADO Dashboard ==="
@@ -342,7 +342,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
 
 === ADO Import: ADO Command Center ===
 Project maturity : active
@@ -501,7 +501,7 @@ ERROR in 38-ado-poc: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/w
 
 >>> 39-ado-dashboard
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
 
 === ADO Import: EVA ADO Dashboard ===
 Project maturity : poc

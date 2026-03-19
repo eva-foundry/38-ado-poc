@@ -17,10 +17,10 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1956-ado-onboard-all-review.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1956-ado-onboard-all-review.log
 
 EVA ADO Onboard — Project Registry Review
-Foundation : C:\AICOE\eva-foundation
+Foundation : C:\eva-foundry\eva-foundation
 Date       : 2026-02-21 19:56 ET
 
 
@@ -46,7 +46,7 @@ Projects ready to import (18 of 18):
 
 To import a single project:
   $env:ADO_PAT = "<pat>"
-  cd C:\AICOE\eva-foundation\<NN-project>
+  cd C:\eva-foundry\eva-foundation\<NN-project>
   .\ado-import.ps1 -DryRun   # preview first
   .\ado-import.ps1
 

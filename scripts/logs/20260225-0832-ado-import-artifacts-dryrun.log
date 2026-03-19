@@ -5,7 +5,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json -DryRun
 Process ID: 17404
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -17,7 +17,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 38-ado-poc ===
 Project maturity : active
@@ -26,7 +26,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -44,7 +44,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json -DryRun
 Process ID: 17140
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -56,7 +56,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 39-ado-dashboard ===
 Project maturity : poc
@@ -65,7 +65,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -83,7 +83,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json -DryRun
 Process ID: 22712
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -95,7 +95,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 40-eva-control-plane ===
 Project maturity : active
@@ -104,7 +104,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -122,7 +122,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\41-eva-cli.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\41-eva-cli.json -DryRun
 Process ID: 16360
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -134,7 +134,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 41-eva-cli ===
 Project maturity : poc
@@ -143,7 +143,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -161,7 +161,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\42-learn-foundry.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\42-learn-foundry.json -DryRun
 Process ID: 17808
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -173,7 +173,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 42-learn-foundry ===
 Project maturity : poc
@@ -182,7 +182,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -200,7 +200,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\43-spark.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\43-spark.json -DryRun
 Process ID: 22308
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -212,7 +212,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 43-spark ===
 Project maturity : active
@@ -221,7 +221,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -239,7 +239,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\44-eva-jp-spark.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\44-eva-jp-spark.json -DryRun
 Process ID: 18060
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -251,7 +251,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 44-eva-jp-spark ===
 Project maturity : active
@@ -260,7 +260,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -278,7 +278,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\45-aicoe-page.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\45-aicoe-page.json -DryRun
 Process ID: 8020
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -290,7 +290,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 45-aicoe-page ===
 Project maturity : poc
@@ -299,7 +299,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -317,7 +317,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\46-accelerator.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\46-accelerator.json -DryRun
 Process ID: 20284
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -329,7 +329,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 46-accelerator ===
 Project maturity : poc
@@ -338,7 +338,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -356,7 +356,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\48-eva-veritas.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\48-eva-veritas.json -DryRun
 Process ID: 22328
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -368,7 +368,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 48-eva-veritas ===
 Project maturity : active
@@ -377,7 +377,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -395,7 +395,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\49-eva-dtl.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\49-eva-dtl.json -DryRun
 Process ID: 17636
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -407,7 +407,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 49-eva-dtl ===
 Project maturity : active
@@ -416,7 +416,7 @@ Dry run          : True
 
 PS>TerminatingError(): "The property 'sprints_needed' cannot be found on this object. Verify that the property exists."
 The property 'sprints_needed' cannot be found on this object. Verify that the property exists.
-ParentContainsErrorRecordException: C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
+ParentContainsErrorRecordException: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1:241:5
 Line |
  241 |  if ($a.sprints_needed) {
      |      ~~~~~~~~~~~~~~~~~
@@ -434,7 +434,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\01-documentation-generator.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\01-documentation-generator.json -DryRun
 Process ID: 20588
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -446,7 +446,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 01-documentation-generator ===
 Project maturity : active
@@ -550,7 +550,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\02-poc-agent-skills.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\02-poc-agent-skills.json -DryRun
 Process ID: 4272
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -562,7 +562,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 02-poc-agent-skills ===
 Project maturity : poc
@@ -688,7 +688,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\03-poc-enhanced-docs.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\03-poc-enhanced-docs.json -DryRun
 Process ID: 20196
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -700,7 +700,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 03-poc-enhanced-docs ===
 Project maturity : poc
@@ -837,7 +837,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\05-extract-cases.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\05-extract-cases.json -DryRun
 Process ID: 22532
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -849,7 +849,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 05-extract-cases ===
 Project maturity : active
@@ -935,7 +935,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\06-jp-auto-extraction.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\06-jp-auto-extraction.json -DryRun
 Process ID: 21344
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -947,7 +947,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 06-jp-auto-extraction ===
 Project maturity : poc
@@ -1161,7 +1161,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\07-foundation-layer.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\07-foundation-layer.json -DryRun
 Process ID: 17120
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1173,7 +1173,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 07-foundation-layer ===
 Project maturity : active
@@ -1306,7 +1306,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\09-eva-repo-documentation.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\09-eva-repo-documentation.json -DryRun
 Process ID: 10932
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1318,7 +1318,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 09-eva-repo-documentation ===
 Project maturity : active
@@ -1384,7 +1384,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\10-mkdocs-poc.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\10-mkdocs-poc.json -DryRun
 Process ID: 20852
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1396,7 +1396,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0832-ado-import-artifacts-dryrun.log
 
 === ADO Import: 10-mkdocs-poc ===
 Project maturity : poc

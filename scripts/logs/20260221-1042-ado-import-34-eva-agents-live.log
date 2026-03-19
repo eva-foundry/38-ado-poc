@@ -17,8 +17,8 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Agents ==="

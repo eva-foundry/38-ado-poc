@@ -37,7 +37,7 @@ Everything in the production architecture — Foundry dispatch, pipeline approva
 
 **Scope:**
 - Import each project repo from GitHub into ADO Repos under `eva-poc`
-- Repos: `31-eva-faces`, `33-eva-brain-v2`, `29-foundry`, `37-data-model`, `38-ado-poc`, `34-eva-agents`
+- Repos: `31-eva-faces`, `33-eva-brain-v2`, `29-foundry`, `37-data-model`, `38-ado-poc`, `63-factory-context-auditor`
 - Set ADO Repo as the new primary remote; GitHub becomes read mirror or is retired
 
 **ADO import command (per repo):**
@@ -244,7 +244,7 @@ See `PROJECT-39.md` for full scope.
 | 30 | UI Bench | `30-ui-bench` | Existing | — |
 | 31 | EVA Faces | `31-eva-faces` | Active | ALL frontend: EVA-JP pages + 24+ admin screens |
 | 33 | EVA Brain v2 | `33-eva-brain-v2` | Active — Sprint 6 | WI-7 active |
-| 34 | EVA Agents | `34-eva-agents` | Future | — |
+| 63 | Factory Context Auditor | `63-factory-context-auditor` | Future | — |
 | 35 | Agentic Code Fixing | `35-agentic-code-fixing` | Future | — |
 | 36 | Red Teaming | `36-red-teaming` | Existing | — |
 | 37 | EVA Data Model | `37-data-model` | Active | Canonical entity definitions |

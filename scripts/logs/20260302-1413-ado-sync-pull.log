@@ -17,7 +17,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-[INFO] Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260302-1413-ado-sync-pull.log
+[INFO] Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260302-1413-ado-sync-pull.log
 
 === ADO Bidirectional Sync ===
 Mode         : Pull
@@ -56,7 +56,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-[INFO] Log: C:\AICOE\eva-foundry\38-ado-poc\scripts\logs\20260302-1413-ado-sync-pull.log
+[INFO] Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260302-1413-ado-sync-pull.log
 
 === ADO Bidirectional Sync ===
 Mode         : Pull

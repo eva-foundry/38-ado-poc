@@ -17,10 +17,10 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-onboard-all-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-onboard-all-live.log
 
 EVA ADO Onboard — Project Registry Review
-Foundation : C:\AICOE\eva-foundation
+Foundation : C:\eva-foundry\eva-foundation
 Date       : 2026-02-21 10:43 ET
 
 
@@ -46,7 +46,7 @@ Projects ready to import (18 of 18):
 
 To import a single project:
   $env:ADO_PAT = "<pat>"
-  cd C:\AICOE\eva-foundation\<NN-project>
+  cd C:\eva-foundry\eva-foundation\<NN-project>
   .\ado-import.ps1 -DryRun   # preview first
   .\ado-import.ps1
 
@@ -61,7 +61,7 @@ Running batch import (LIVE)...
 
 >>> 14-az-finops
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-14-az-finops-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-14-az-finops-live.log
 
 === ADO Import: AZ FinOps Pipeline ===
 Project maturity : empty
@@ -125,7 +125,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 >>> 15-cdc
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-15-cdc-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-15-cdc-live.log
 
 === ADO Import: CDC Integration (placeholder) ===
 Project maturity : empty
@@ -187,7 +187,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 >>> 16-engineered-case-law
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-16-engineered-case-law-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-16-engineered-case-law-live.log
 
 === ADO Import: Engineered Case Law Pipeline ===
 Project maturity : poc
@@ -303,7 +303,7 @@ ERROR in 16-engineered-case-law: ADO Patch https://dev.azure.com/marcopresta/eva
 
 >>> 17-apim
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-17-apim-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-17-apim-live.log
 
 === ADO Import: APIM Gateway — IA Web API ===
 Project maturity : poc
@@ -420,7 +420,7 @@ ERROR in 17-apim: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wit/
 
 >>> 18-azure-best
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-18-azure-best-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-18-azure-best-live.log
 
 === ADO Import: Azure Best Practices Reference Library ===
 Project maturity : active
@@ -537,7 +537,7 @@ ERROR in 18-azure-best: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_api
 
 >>> 19-ai-gov
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-19-ai-gov-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-19-ai-gov-live.log
 
 === ADO Import: AI Governance Automation ===
 Project maturity : poc
@@ -653,7 +653,7 @@ ERROR in 19-ai-gov: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/wi
 
 >>> 20-AssistMe
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-20-AssistMe-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-20-AssistMe-live.log
 
 === ADO Import: AssistMe Knowledge Management ===
 Project maturity : poc
@@ -770,7 +770,7 @@ ERROR in 20-AssistMe: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/
 
 >>> 24-eva-brain
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-24-eva-brain-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-24-eva-brain-live.log
 
 === ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ===
 Project maturity : retired
@@ -885,7 +885,7 @@ ERROR in 24-eva-brain: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis
 
 >>> 29-foundry
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-29-foundry-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-29-foundry-live.log
 
 === ADO Import: EVA Foundry Hub ===
 Project maturity : active
@@ -1002,7 +1002,7 @@ ERROR in 29-foundry: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/w
 
 >>> 30-ui-bench
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-30-ui-bench-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-30-ui-bench-live.log
 
 === ADO Import: EVA UI Testing Bench ===
 Project maturity : poc
@@ -1118,7 +1118,7 @@ ERROR in 30-ui-bench: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/
 
 >>> 31-eva-faces
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-31-eva-faces-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-31-eva-faces-live.log
 
 === ADO Import: EVA Faces ===
 Project maturity : active
@@ -1236,7 +1236,7 @@ ERROR in 31-eva-faces: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis
 
 >>> 33-eva-brain-v2
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-33-eva-brain-v2-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-33-eva-brain-v2-live.log
 
 === ADO Import: EVA Brain v2 ===
 Project maturity : active
@@ -1544,7 +1544,7 @@ ERROR in 33-eva-brain-v2: Index was outside the bounds of the array.
 
 >>> 34-eva-agents
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-34-eva-agents-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-34-eva-agents-live.log
 
 === ADO Import: EVA Agents ===
 Project maturity : idea
@@ -1606,7 +1606,7 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 >>> 35-agentic-code-fixing
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-35-agentic-code-fixing-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-35-agentic-code-fixing-live.log
 
 === ADO Import: Agentic Code Fixing ===
 Project maturity : poc
@@ -1723,7 +1723,7 @@ ERROR in 35-agentic-code-fixing: ADO Patch https://dev.azure.com/marcopresta/eva
 
 >>> 36-red-teaming
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-36-red-teaming-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-36-red-teaming-live.log
 
 === ADO Import: Red Teaming & Evaluation Framework ===
 Project maturity : active
@@ -1840,7 +1840,7 @@ ERROR in 36-red-teaming: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_ap
 
 >>> 37-data-model
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
 
 === ADO Import: EVA Data Model ===
 Project maturity : complete
@@ -1957,7 +1957,7 @@ ERROR in 37-data-model: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_api
 
 >>> 38-ado-poc
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
 
 === ADO Import: ADO Command Center ===
 Project maturity : active
@@ -2116,7 +2116,7 @@ ERROR in 38-ado-poc: ADO Patch https://dev.azure.com/marcopresta/eva-poc/_apis/w
 
 >>> 39-ado-dashboard
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
 
 === ADO Import: EVA ADO Dashboard ===
 Project maturity : poc
@@ -2181,4 +2181,4 @@ Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
 
 Batch import complete.
 DONE
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B

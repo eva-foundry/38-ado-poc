@@ -1,21 +1,24 @@
 {
   "meta": {
     "schema": "eva.trust.v2",
-    "generated_at": "2026-02-25T06:37:40.907Z",
-    "repo": "C:\\AICOE\\eva-foundation\\38-ado-poc",
-    "reconciliation_path": "C:\\AICOE\\eva-foundation\\38-ado-poc\\.eva\\reconciliation.json"
+    "generated_at": "2026-03-08T00:47:13.929Z",
+    "repo": "C:\\eva-foundry\\eva-foundry\\38-ado-poc",
+    "reconciliation_path": "C:\\eva-foundry\\eva-foundry\\38-ado-poc\\.eva\\reconciliation.json"
   },
-  "score": 50,
+  "score": 42,
   "stale": false,
-  "sparkline": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 50",
-  "sparkline_delta": "+50",
+  "sparkline": "0 -> 0 -> 0 -> 0 -> 0 -> 0 -> 50 -> 42",
+  "sparkline_delta": "-8",
   "components": {
     "coverage": 1,
     "evidenceCompleteness": 0,
-    "consistencyScore": 0
+    "consistencyScore": 0,
+    "complexityCoverage": 0,
+    "fieldPopulationScore": 0.23,
+    "formula": "4-component-field-population"
   },
   "actions": [
-    "review-required",
-    "no-deploy"
+    "block",
+    "investigate"
   ]
 }

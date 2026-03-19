@@ -1,3 +1,13 @@
+<!-- eva-primed-plan -->
+
+## EVA Ecosystem Tools
+
+- Data model: GET https://msub-eva-data-model.victoriousgrass-30debbd3.canadacentral.azurecontainerapps.io/model/projects/38-ado-poc
+- 29-foundry agents: C:\eva-foundry\eva-foundation\29-foundry\agents\
+- 48-eva-veritas audit: run audit_repo MCP tool
+
+---
+
 # Project Plan
 
 <!-- veritas-normalized 2026-02-25 prefix=F38 source=PLAN.md -->

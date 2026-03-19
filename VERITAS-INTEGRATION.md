@@ -34,9 +34,9 @@ eva generate-ado \       (gaps[] identified)
 ## Step 1 -- Run the gap pipeline
 
 ```powershell
-cd C:\AICOE\eva-foundation\{project-folder}
-node C:\AICOE\eva-foundation\48-eva-veritas\src\cli.js audit --repo .
-node C:\AICOE\eva-foundation\48-eva-veritas\src\cli.js generate-ado --repo . --gaps-only
+cd C:\eva-foundry\eva-foundation\{project-folder}
+node C:\eva-foundry\eva-foundation\48-eva-veritas\src\cli.js audit --repo .
+node C:\eva-foundry\eva-foundation\48-eva-veritas\src\cli.js generate-ado --repo . --gaps-only
 ```
 
 Or use the data model proxy (requires eva-veritas MCP server running):
@@ -122,7 +122,7 @@ To identify the highest-priority gaps across all EVA projects:
 ```powershell
 $portfolio = Invoke-RestMethod "http://localhost:8031/tools/scan_portfolio" `
     -Method POST -ContentType "application/json" `
-    -Body '{"portfolio_root":"C:\\AICOE\\eva-foundation"}'
+    -Body '{"portfolio_root":"C:\\eva-foundry\\eva-foundation"}'
 
 $portfolio.result.projects | Sort-Object trust_score | Format-Table id, trust_score, gap_count
 ```

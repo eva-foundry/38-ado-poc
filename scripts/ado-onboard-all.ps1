@@ -10,7 +10,7 @@
 #   .\ado-onboard-all.ps1 -Foundation "D:\repos\eva-foundation"
 
 param(
-    [string]$Foundation = "C:\AICOE\eva-foundation",
+    [string]$Foundation = "C:\eva-foundry\eva-foundation",
     [switch]$RunImport,
     [switch]$DryRun,
     [string]$LogDir     = ""
@@ -99,7 +99,7 @@ foreach ($r in $ready) {
 Write-Host ""
 Write-Host "${CYAN}To import a single project:${RESET}"
 Write-Host '  $env:ADO_PAT = "<pat>"'
-Write-Host '  cd C:\AICOE\eva-foundation\<NN-project>'
+Write-Host '  cd C:\eva-foundry\eva-foundation\<NN-project>'
 Write-Host '  .\ado-import.ps1 -DryRun   # preview first'
 Write-Host '  .\ado-import.ps1'
 Write-Host ""

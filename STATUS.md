@@ -42,13 +42,13 @@ Script: `48-eva-veritas/.evidence/20260225-ado-seed/wbs-to-ado.ps1`
 | Metric | Value |
 |--------|-------|
 | Import runs | 6 (run6 = zero errors) |
-| Projects loaded | 18 / 18 ✅ |
-| Epics created | 18 (ids 15–32) |
-| Features created | 48 (ids 33–95 + 138) |
+| Projects loaded | 18 / 18 ? |
+| Epics created | 18 (ids 15?32) |
+| Features created | 48 (ids 33?95 + 138) |
 | PBIs total | 55 |
 | PBIs Done | 27 |
 | PBIs New (active/backlog) | 28 |
-| Sprints assigned to team | 25 / 25 ✅ |
+| Sprints assigned to team | 25 / 25 ? |
 | Last run log | `scripts/logs/20260221-2026-37-data-model-api.log` |
 
 ---
@@ -69,7 +69,7 @@ Script: `48-eva-veritas/.evidence/20260225-ado-seed/wbs-to-ado.ps1`
 | `30-ui-bench` | 24 | UI Benchmark | 2 | 3 | 1 | 2 |
 | `31-eva-faces` | 25 | EVA Faces Admin | 3 | 4 | 2 | 2 |
 | `33-eva-brain-v2` | 26 | EVA Brain v2 | 3 | 7 | 6 | 1 |
-| `34-eva-agents` | 27 | EVA Agents | 2 | 2 | 0 | 2 |
+| `63-factory-context-auditor` | 27 | Factory Context Auditor | 2 | 2 | 0 | 2 |
 | `35-agentic-code-fixing` | 28 | Agentic Code Fixing | 2 | 2 | 1 | 1 |
 | `36-red-teaming` | 29 | Red Teaming | 3 | 3 | 1 | 2 |
 | `37-data-model` | 30 | EVA Data Model | 4 | 7 | 6 | 1 |
@@ -86,28 +86,28 @@ ADO board (Epics view): `https://dev.azure.com/marcopresta/eva-poc/_boards/board
 |-----------|-------|
 | Connection name | `eva-foundry` |
 | Auth type | GitHub App |
-| Status | ✅ Connected |
+| Status | ? Connected |
 | GitHub App | `ADO eva-poc` |
 | Repos with ADO WI links | Active as `[WI-ID:N]` tags appear in PRs |
 
 **Repo linking via `[WI-ID:N]`:** Any PR branch name or commit message containing `[WI-ID:<number>]` links
 that commit to the ADO work item via `ado-pr-bridge.yml`.  
-The three-system wiring (GitHub → ADO state machines on merge/close) is **pending deployment** — see below.
+The three-system wiring (GitHub ? ADO state machines on merge/close) is **pending deployment** ? see below.
 
 ---
 
-## Three-System Wiring — Deployment Status
+## Three-System Wiring ? Deployment Status
 
 See [`docs/ADO/THREE-SYSTEM-WIRING.md`](docs/ADO/THREE-SYSTEM-WIRING.md) for full architecture.
 
 | Component | Status | Notes |
 |-----------|--------|-------|
-| GitHub App `ADO eva-poc` connected | ✅ Done | |
-| `ado-pr-bridge.yml` (per-repo workflow) | ⏳ Pending | Must be copied to each eva-foundry repo |
-| `ado-webhook-bridge` Azure Function | ⏳ Pending | Deploy to `EsDAICoE-Sandbox` |
-| ADO Service Hook (`workitem.updated`) | ⏳ Pending | Requires Function URL |
-| `ado-idea-intake.yml` (default branch) | ⏳ Pending | One per repo |
-| `ADO_PAT` secret on all 30 repos | ⏳ Pending | `gh secret set --org eva-foundry` |
+| GitHub App `ADO eva-poc` connected | ? Done | |
+| `ado-pr-bridge.yml` (per-repo workflow) | ? Pending | Must be copied to each eva-foundry repo |
+| `ado-webhook-bridge` Azure Function | ? Pending | Deploy to `EsDAICoE-Sandbox` |
+| ADO Service Hook (`workitem.updated`) | ? Pending | Requires Function URL |
+| `ado-idea-intake.yml` (default branch) | ? Pending | One per repo |
+| `ADO_PAT` secret on all 30 repos | ? Pending | `gh secret set --org eva-foundry` |
 
 ---
 
@@ -145,7 +145,7 @@ ONE_FAILED     = 29-foundry F29-18-008 title 299 chars (ADO limit 255); fixed + 
 
 | Issue | Severity | Notes |
 |-------|----------|-------|
-| Scrum state machine requires sequential PATCH calls | Medium | New→Approved→Committed→Done; 350ms between steps. Handled in scripts. |
+| Scrum state machine requires sequential PATCH calls | Medium | New?Approved?Committed?Done; 350ms between steps. Handled in scripts. |
 | Scrum process pre-creates Sprint-1/2/3 | Low | `Ensure-Sprint` uses GET fallback on 409; extracts `.identifier` GUID for team assignment. |
 | PAT expiry | High | Renew at `dev.azure.com/marcopresta/_usersSettings/tokens` before running scripts. |
 | PS7 `ConvertTo-Json` unwraps single-element arrays | Fixed | `ConvertTo-Json -InputObject $Body` used throughout. |
@@ -164,7 +164,7 @@ ONE_FAILED     = 29-foundry F29-18-008 title 299 chars (ADO limit 255); fixed + 
 | Register ADO Service Hook for `workitem.updated` | ADO-WI-5 | developer | Sprint-7 |
 | Smoke test: open PR with `[WI-ID:7]`, verify state transitions | ADO-WI-5 | developer | Sprint-7 |
 | Close WI-7 (brain v2 Sprint-6 sandbox deploy) | WI-7 | developer | Sprint-6 |
-| Port command center pattern to `ESDC-AICoE` org | — | developer | TBD |
+| Port command center pattern to `ESDC-AICoE` org | ? | developer | TBD |
 
 ---
 
@@ -178,3 +178,14 @@ ONE_FAILED     = 29-foundry F29-18-008 title 299 chars (ADO limit 255); fixed + 
 | [`ACCEPTANCE.md`](ACCEPTANCE.md) | Definition of done for the Command Center itself |
 | [`docs/ADO/idea/`](docs/ADO/idea/) | Idea intake templates and examples |
 
+
+
+---
+
+## 2026-03-03 -- Re-primed by agent:copilot
+
+<!-- eva-primed-status -->
+
+Data model: GET http://localhost:8010/model/projects/38-ado-poc
+29-foundry agents: C:\eva-foundry\eva-foundation\29-foundry\agents\
+48-eva-veritas: run audit_repo MCP tool

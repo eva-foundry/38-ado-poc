@@ -17,7 +17,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-34-eva-agents-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-34-eva-agents-live.log
 
 === ADO Import: EVA Agents ===
 Project maturity : idea
@@ -131,7 +131,7 @@ ERROR in 34-eva-agents: ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis
 
 >>> 35-agentic-code-fixing
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-35-agentic-code-fixing-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-35-agentic-code-fixing-live.log
 
 === ADO Import: Agentic Code Fixing ===
 Project maturity : poc
@@ -245,7 +245,7 @@ ERROR in 35-agentic-code-fixing: ADO Post https://dev.azure.com/marcopresta/eva-
 
 >>> 36-red-teaming
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-36-red-teaming-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-36-red-teaming-live.log
 
 === ADO Import: Red Teaming & Evaluation Framework ===
 Project maturity : active
@@ -359,7 +359,7 @@ ERROR in 36-red-teaming: ADO Post https://dev.azure.com/marcopresta/eva-poc/_api
 
 >>> 37-data-model
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-37-data-model-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-37-data-model-live.log
 
 === ADO Import: EVA Data Model ===
 Project maturity : complete
@@ -473,7 +473,7 @@ ERROR in 37-data-model: ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis
 
 >>> 38-ado-poc
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-38-ado-poc-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-38-ado-poc-live.log
 
 === ADO Import: ADO Command Center ===
 Project maturity : active
@@ -628,7 +628,7 @@ ERROR in 38-ado-poc: ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wi
 
 >>> 39-ado-dashboard
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-39-ado-dashboard-live.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-39-ado-dashboard-live.log
 
 === ADO Import: EVA ADO Dashboard ===
 Project maturity : poc
@@ -742,8 +742,8 @@ ERROR in 39-ado-dashboard: ADO Post https://dev.azure.com/marcopresta/eva-poc/_a
 
 Batch import complete.
 DONE exit=0
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Get-ChildItem "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\" | Sort-Object LastWriteTime -Descending | Select-Object -First 5 | Format-Table Name, Length, LastWriteTime
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Get-ChildItem "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\" | Sort-Object LastWriteTime -Descending | Select-Object -First 5 | Format-Table Name, Length, LastWriteTime
 
 Name                                                     Length LastWriteTime
 ----                                                     ------ -------------
@@ -753,8 +753,8 @@ Name                                                     Length LastWriteTime
 20260221-1039-ado-import-35-agentic-code-fixing-live.log  29725 2026-02-21 10:39:15…
 20260221-1039-ado-import-34-eva-agents-live.log           35087 2026-02-21 10:39:15…
 
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Get-ChildItem "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\*live*.log" | Sort-Object Name | Format-Table Name, Length, LastWriteTime
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Get-ChildItem "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\*live*.log" | Sort-Object Name | Format-Table Name, Length, LastWriteTime
 
 Name                                                     Length LastWriteTime
 ----                                                     ------ -------------
@@ -778,8 +778,8 @@ Name                                                     Length LastWriteTime
 20260221-1039-ado-import-39-ado-dashboard-live.log         6089 2026-02-21 10:39:15…
 20260221-1039-ado-onboard-all-live.log                   112803 2026-02-21 10:39:26…
 
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Select-String -Path "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-onboard-all-live.log" -Pattern 'ERROR in|-> Epic id|-> Feature id|-> PBI id|Import Summary|Batch import complete|Epic id  :' | Select-Object -ExpandProperty Line
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Select-String -Path "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-onboard-all-live.log" -Pattern 'ERROR in|-> Epic id|-> Feature id|-> PBI id|Import Summary|Batch import complete|Epic id  :' | Select-Object -ExpandProperty Line
   -> Epic id=15
 ERROR in 14-az-finops: ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/wiql?api-version=7.1 => HTTP 400 :
   -> Epic id=16
@@ -817,8 +817,8 @@ ERROR in 38-ado-poc: ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wi
   -> Epic id=32
 ERROR in 39-ado-dashboard: ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/wiql?api-version=7.1 => HTTP 400 :
 Batch import complete.
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Select-String -Path "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-14-az-finops-live.log" -Pattern 'HTTP 400|WIQL|wiql|Feature|Epic' | Select-Object -First 15 -ExpandProperty Line
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Select-String -Path "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1039-ado-import-14-az-finops-live.log" -Pattern 'HTTP 400|WIQL|wiql|Feature|Epic' | Select-Object -First 15 -ExpandProperty Line
 >> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/eva-poc%20Team/_apis/work/teamsettings/iterations?api-version=7.1 => HTTP 400 :
 Epic: creating 'AZ FinOps Pipeline'
   -> Epic id=15
@@ -834,20 +834,20 @@ Epic: creating 'CDC Integration (placeholder)'
 >> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/wiql?api-version=7.1 => HTTP 400 :
 >> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/wiql?api-version=7.1 => HTTP 400 :
 >> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/wiql?api-version=7.1 => HTTP 400 :
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
 PS>$env:ADO_PAT = "rbibHftTSqxzfSx5VjV1XMX6jon3Ripg5m37RwnAKQrWAfVJylLkJQQJ99CBACAAAAAAAAAAAAASAZDO43uS"
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>cd "C:\AICOE\eva-foundation\38-ado-poc\scripts"
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>cd "C:\eva-foundry\eva-foundation\38-ado-poc\scripts"
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
 PS>.\ado-onboard-all.ps1 -RunImport *> "logs\$(Get-Date -Format 'yyyyMMdd-HHmm')-run2.txt"
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-onboard-all-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-onboard-all-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-onboard-all-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-onboard-all-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36mEVA ADO Onboard — Project Registry Review[0m"
 EVA ADO Onboard — Project Registry Review
-PS>ParameterBinding(Out-File): name="InputObject"; value="Foundation : C:\AICOE\eva-foundation"
-Foundation : C:\AICOE\eva-foundation
+PS>ParameterBinding(Out-File): name="InputObject"; value="Foundation : C:\eva-foundry\eva-foundation"
+Foundation : C:\eva-foundry\eva-foundation
 PS>ParameterBinding(Out-File): name="InputObject"; value="Date       : 2026-02-21 10:42 ET"
 Date       : 2026-02-21 10:42 ET
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
@@ -920,8 +920,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value="[36mTo import a singl
 To import a single project:
 PS>ParameterBinding(Out-File): name="InputObject"; value="  $env:ADO_PAT = "<pat>""
   $env:ADO_PAT = "<pat>"
-PS>ParameterBinding(Out-File): name="InputObject"; value="  cd C:\AICOE\eva-foundation\<NN-project>"
-  cd C:\AICOE\eva-foundation\<NN-project>
+PS>ParameterBinding(Out-File): name="InputObject"; value="  cd C:\eva-foundry\eva-foundation\<NN-project>"
+  cd C:\eva-foundry\eva-foundation\<NN-project>
 PS>ParameterBinding(Out-File): name="InputObject"; value="  .\ado-import.ps1 -DryRun   # preview first"
   .\ado-import.ps1 -DryRun   # preview first
 PS>ParameterBinding(Out-File): name="InputObject"; value="  .\ado-import.ps1"
@@ -949,8 +949,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 14-az-finops[0m"
 >>> 14-az-finops
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-14-az-finops-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-14-az-finops-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-14-az-finops-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-14-az-finops-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: AZ FinOps Pipeline ==="
@@ -1050,8 +1050,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 15-cdc[0m"
 >>> 15-cdc
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-15-cdc-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-15-cdc-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-15-cdc-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-15-cdc-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: CDC Integration (placeholder) ==="
@@ -1142,8 +1142,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 16-engineered-case-law[0m"
 >>> 16-engineered-case-law
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-16-engineered-case-law-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-16-engineered-case-law-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-16-engineered-case-law-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-16-engineered-case-law-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: Engineered Case Law Pipeline ==="
@@ -1289,8 +1289,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 17-apim[0m"
 >>> 17-apim
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-17-apim-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-17-apim-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-17-apim-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-17-apim-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: APIM Gateway — IA Web API ==="
@@ -1440,8 +1440,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 18-azure-best[0m"
 >>> 18-azure-best
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-18-azure-best-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-18-azure-best-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-18-azure-best-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-18-azure-best-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: Azure Best Practices Reference Library ==="
@@ -1591,8 +1591,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 19-ai-gov[0m"
 >>> 19-ai-gov
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-19-ai-gov-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-19-ai-gov-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-19-ai-gov-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-19-ai-gov-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: AI Governance Automation ==="
@@ -1738,8 +1738,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 20-AssistMe[0m"
 >>> 20-AssistMe
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-20-AssistMe-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-20-AssistMe-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-20-AssistMe-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-20-AssistMe-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: AssistMe Knowledge Management ==="
@@ -1889,8 +1889,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 24-eva-brain[0m"
 >>> 24-eva-brain
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-24-eva-brain-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-24-eva-brain-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-24-eva-brain-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-24-eva-brain-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Brain v1 (Retired — superseded by 33-eva-brain-v2) ==="
@@ -2032,8 +2032,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 29-foundry[0m"
 >>> 29-foundry
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-29-foundry-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-29-foundry-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-29-foundry-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-29-foundry-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Foundry Hub ==="
@@ -2183,8 +2183,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 30-ui-bench[0m"
 >>> 30-ui-bench
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-30-ui-bench-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-30-ui-bench-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-30-ui-bench-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-30-ui-bench-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA UI Testing Bench ==="
@@ -2330,8 +2330,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 31-eva-faces[0m"
 >>> 31-eva-faces
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-31-eva-faces-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-31-eva-faces-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-31-eva-faces-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-31-eva-faces-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Faces ==="
@@ -2485,8 +2485,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 33-eva-brain-v2[0m"
 >>> 33-eva-brain-v2
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-33-eva-brain-v2-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-33-eva-brain-v2-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-33-eva-brain-v2-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-33-eva-brain-v2-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Brain v2 ==="
@@ -2825,8 +2825,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 34-eva-agents[0m"
 >>> 34-eva-agents
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-34-eva-agents-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Agents ==="
@@ -2917,8 +2917,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 35-agentic-code-fixing[0m"
 >>> 35-agentic-code-fixing
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-35-agentic-code-fixing-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-35-agentic-code-fixing-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-35-agentic-code-fixing-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-35-agentic-code-fixing-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: Agentic Code Fixing ==="
@@ -3068,8 +3068,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 36-red-teaming[0m"
 >>> 36-red-teaming
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1042-ado-import-36-red-teaming-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: Red Teaming & Evaluation Framework ==="
@@ -3219,8 +3219,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 37-data-model[0m"
 >>> 37-data-model
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-37-data-model-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA Data Model ==="
@@ -3370,8 +3370,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 38-ado-poc[0m"
 >>> 38-ado-poc
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-38-ado-poc-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: ADO Command Center ==="
@@ -3567,8 +3567,8 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 PS>ParameterBinding(Out-File): name="InputObject"; value="[36m>>> 39-ado-dashboard[0m"
 >>> 39-ado-dashboard
 PS>TerminatingError(Get-Variable): "The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: Cannot find a variable with the name 'Transcript'."
-PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log"
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
+PS>ParameterBinding(Out-File): name="InputObject"; value="Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log"
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260221-1043-ado-import-39-ado-dashboard-live.log
 PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="=== ADO Import: EVA ADO Dashboard ==="
@@ -3672,18 +3672,18 @@ PS>ParameterBinding(Out-File): name="InputObject"; value=""
 
 PS>ParameterBinding(Out-File): name="InputObject"; value="[32mBatch import complete.[0m"
 Batch import complete.
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
 PS>Write-Host "EXIT:$LASTEXITCODE"
 EXIT:0
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Get-ChildItem "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\*run2*" 2>$null | Format-Table Name, Length, LastWriteTime
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Get-ChildItem "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\*run2*" 2>$null | Format-Table Name, Length, LastWriteTime
 
 Name                   Length LastWriteTime
 ----                   ------ -------------
 20260221-1042-run2.txt  23187 2026-02-21 10:43:07 AM
 
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
-PS>Get-ChildItem "C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\" | Sort-Object LastWriteTime -Descending | Select-Object -First 3 | Format-Table Name, Length, LastWriteTime
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B
+PS>Get-ChildItem "C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\" | Sort-Object LastWriteTime -Descending | Select-Object -First 3 | Format-Table Name, Length, LastWriteTime
 
 Name                                                     Length LastWriteTime
 ----                                                     ------ -------------
@@ -3691,4 +3691,4 @@ Name                                                     Length LastWriteTime
 20260221-1042-ado-import-16-engineered-case-law-live.log 139612 2026-02-21 10:43:07…
 20260221-1039-ado-import-31-eva-faces-live.log           224552 2026-02-21 10:43:07…
 
-]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\AICOE\eva-foundation\38-ado-poc\scripts> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cAICOE\x5ceva-foundation\x5c38-ado-poc\x5cscriptsPS C:\eva-foundry\eva-foundation\38-ado-poc\scripts> ]633;B

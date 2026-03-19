@@ -98,7 +98,7 @@ The **shared import engine** (`38-ado-poc/scripts/ado-import-project.ps1`) reads
 ### `ado-import-project.ps1` — Shared Engine
 
 ```
-C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1
+C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1
 ```
 
 **Parameters:**
@@ -125,7 +125,7 @@ C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1
 ```powershell
 # Single project — dry-run
 $env:ADO_PAT = "<pat>"
-cd C:\AICOE\eva-foundation\33-eva-brain-v2
+cd C:\eva-foundry\eva-foundation\33-eva-brain-v2
 .\ado-import.ps1 -DryRun
 
 # Single project — live
@@ -137,14 +137,14 @@ cd C:\AICOE\eva-foundation\33-eva-brain-v2
 ### `ado-onboard-all.ps1` — Orchestrator
 
 ```
-C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-onboard-all.ps1
+C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-onboard-all.ps1
 ```
 
 **Parameters:**
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `-Foundation` | `C:\AICOE\eva-foundation` | Root folder containing numbered project dirs |
+| `-Foundation` | `C:\eva-foundry\eva-foundation` | Root folder containing numbered project dirs |
 | `-RunImport` | `false` | If set, runs import for all ready projects |
 | `-DryRun` | `false` | Combined with `-RunImport`: preview only, no ADO writes |
 | `-LogDir` | `<script-dir>/logs` | Override log output directory |
@@ -159,7 +159,7 @@ C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-onboard-all.ps1
 **Usage:**
 
 ```powershell
-cd C:\AICOE\eva-foundation\38-ado-poc\scripts
+cd C:\eva-foundry\eva-foundation\38-ado-poc\scripts
 
 # Review table only (no ADO calls)
 .\ado-onboard-all.ps1
@@ -177,7 +177,7 @@ $env:ADO_PAT = "<pat>"
 ### `ado-generate-artifacts.ps1` — Idea Intake Parser
 
 ```
-C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-generate-artifacts.ps1
+C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-generate-artifacts.ps1
 ```
 
 Reads the three idea intake documents from `docs/ADO/idea/` and writes `docs/ADO/ado-artifacts.json`:
@@ -197,7 +197,7 @@ Invoked automatically by the `ado-idea-intake.yml` GitHub Action on push to any 
 All runs write timestamped logs to:
 
 ```
-C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\
+C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\
 ```
 
 Naming convention:

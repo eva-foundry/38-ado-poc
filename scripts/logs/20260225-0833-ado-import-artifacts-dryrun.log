@@ -5,7 +5,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\11-ms-infojp.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\11-ms-infojp.json -DryRun
 Process ID: 22164
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -17,7 +17,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 11-ms-infojp ===
 Project maturity : active
@@ -916,7 +916,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\12-work-spc-reorg.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\12-work-spc-reorg.json -DryRun
 Process ID: 21168
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -928,7 +928,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 12-work-spc-reorg ===
 Project maturity : poc
@@ -1154,7 +1154,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\13-vscode-tools.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\13-vscode-tools.json -DryRun
 Process ID: 11584
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1166,7 +1166,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 13-vscode-tools ===
 Project maturity : poc
@@ -1395,7 +1395,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\16-engineered-case-law.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\16-engineered-case-law.json -DryRun
 Process ID: 17704
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1407,7 +1407,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 16-engineered-case-law ===
 Project maturity : poc
@@ -1547,7 +1547,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\17-apim.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\17-apim.json -DryRun
 Process ID: 6024
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1559,7 +1559,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 17-apim ===
 Project maturity : poc
@@ -1700,7 +1700,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\18-azure-best.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\18-azure-best.json -DryRun
 Process ID: 19032
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1712,7 +1712,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 18-azure-best ===
 Project maturity : active
@@ -1863,7 +1863,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\19-ai-gov.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\19-ai-gov.json -DryRun
 Process ID: 19484
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1875,7 +1875,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 19-ai-gov ===
 Project maturity : active
@@ -1939,7 +1939,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\20-AssistMe.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\20-AssistMe.json -DryRun
 Process ID: 21528
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -1951,7 +1951,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 20-AssistMe ===
 Project maturity : poc
@@ -2077,7 +2077,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\21-habit-tracker.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\21-habit-tracker.json -DryRun
 Process ID: 23360
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -2089,7 +2089,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 21-habit-tracker ===
 Project maturity : poc
@@ -2251,7 +2251,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\22-rg-sandbox.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\22-rg-sandbox.json -DryRun
 Process ID: 23332
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -2263,7 +2263,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 22-rg-sandbox ===
 Project maturity : active
@@ -2448,7 +2448,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\23-ei-dsst-rewrite.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\23-ei-dsst-rewrite.json -DryRun
 Process ID: 14420
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -2460,7 +2460,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 23-ei-dsst-rewrite ===
 Project maturity : poc
@@ -2548,7 +2548,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\25-eva-suite.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\25-eva-suite.json -DryRun
 Process ID: 6556
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -2560,7 +2560,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 25-eva-suite ===
 Project maturity : poc
@@ -2646,7 +2646,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\26-eva-gh.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\26-eva-gh.json -DryRun
 Process ID: 21072
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -2658,7 +2658,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 26-eva-gh ===
 Project maturity : poc
@@ -6026,7 +6026,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\27-devbench.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\27-devbench.json -DryRun
 Process ID: 21168
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -6038,7 +6038,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 27-devbench ===
 Project maturity : poc
@@ -6140,7 +6140,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\28-rbac.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\28-rbac.json -DryRun
 Process ID: 18644
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -6152,7 +6152,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 28-rbac ===
 Project maturity : active
@@ -6414,7 +6414,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\29-foundry.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\29-foundry.json -DryRun
 Process ID: 13492
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -6426,7 +6426,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 29-foundry ===
 Project maturity : active
@@ -6743,7 +6743,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\30-ui-bench.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\30-ui-bench.json -DryRun
 Process ID: 16684
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -6755,7 +6755,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 30-ui-bench ===
 Project maturity : poc
@@ -6826,7 +6826,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\31-eva-faces.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\31-eva-faces.json -DryRun
 Process ID: 15716
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -6838,7 +6838,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 31-eva-faces ===
 Project maturity : active
@@ -7230,7 +7230,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\32-logging.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\32-logging.json -DryRun
 Process ID: 18700
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -7242,7 +7242,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 32-logging ===
 Project maturity : poc
@@ -7317,7 +7317,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\33-eva-brain-v2.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\33-eva-brain-v2.json -DryRun
 Process ID: 10428
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -7329,7 +7329,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 33-eva-brain-v2 ===
 Project maturity : active
@@ -7920,7 +7920,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\35-agentic-code-fixing.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\35-agentic-code-fixing.json -DryRun
 Process ID: 4564
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -7932,7 +7932,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 35-agentic-code-fixing ===
 Project maturity : poc
@@ -8091,7 +8091,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\36-red-teaming.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\36-red-teaming.json -DryRun
 Process ID: 12856
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -8103,7 +8103,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 36-red-teaming ===
 Project maturity : active
@@ -8240,7 +8240,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\37-data-model.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\37-data-model.json -DryRun
 Process ID: 20692
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -8252,7 +8252,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 37-data-model ===
 Project maturity : active
@@ -8522,7 +8522,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\38-ado-poc.json -DryRun
 Process ID: 10788
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -8534,7 +8534,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 38-ado-poc ===
 Project maturity : active
@@ -8634,7 +8634,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\39-ado-dashboard.json -DryRun
 Process ID: 19832
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -8646,7 +8646,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 39-ado-dashboard ===
 Project maturity : poc
@@ -8788,7 +8788,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\40-eva-control-plane.json -DryRun
 Process ID: 21412
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -8800,7 +8800,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 40-eva-control-plane ===
 Project maturity : active
@@ -8905,7 +8905,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\41-eva-cli.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\41-eva-cli.json -DryRun
 Process ID: 19600
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -8917,7 +8917,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 41-eva-cli ===
 Project maturity : poc
@@ -9025,7 +9025,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\42-learn-foundry.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\42-learn-foundry.json -DryRun
 Process ID: 16580
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -9037,7 +9037,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 42-learn-foundry ===
 Project maturity : poc
@@ -9352,7 +9352,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\43-spark.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\43-spark.json -DryRun
 Process ID: 23508
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -9364,7 +9364,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 43-spark ===
 Project maturity : active
@@ -9450,7 +9450,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\44-eva-jp-spark.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\44-eva-jp-spark.json -DryRun
 Process ID: 4976
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -9462,7 +9462,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 44-eva-jp-spark ===
 Project maturity : active
@@ -9615,7 +9615,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\45-aicoe-page.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\45-aicoe-page.json -DryRun
 Process ID: 22432
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -9627,7 +9627,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 45-aicoe-page ===
 Project maturity : poc
@@ -9758,7 +9758,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\46-accelerator.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\46-accelerator.json -DryRun
 Process ID: 1656
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -9770,7 +9770,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 46-accelerator ===
 Project maturity : poc
@@ -9910,7 +9910,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\48-eva-veritas.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\48-eva-veritas.json -DryRun
 Process ID: 17584
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -9922,7 +9922,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 48-eva-veritas ===
 Project maturity : active
@@ -10218,7 +10218,7 @@ Username: HRDC-DRHC\marco.presta
 RunAs User: HRDC-DRHC\marco.presta
 Configuration Name: 
 Machine: CPC-marco-KKGR0 (Microsoft Windows NT 10.0.22631.0)
-Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\AICOE\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\AICOE\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\49-eva-dtl.json -DryRun
+Host Application: C:\Program Files\PowerShell\7-preview\pwsh.dll C:\eva-foundry\eva-foundation\38-ado-poc\scripts\ado-import-project.ps1 -ArtifactsFile C:\eva-foundry\eva-foundation\48-eva-veritas\.evidence\20260225-ado-seed\artifacts\49-eva-dtl.json -DryRun
 Process ID: 21456
 PSVersion: 7.6.0-preview.6
 PSEdition: Core
@@ -10230,7 +10230,7 @@ PSRemotingProtocolVersion: 2.4
 SerializationVersion: 1.1.0.1
 WSManStackVersion: 3.0
 **********************
-Log: C:\AICOE\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
+Log: C:\eva-foundry\eva-foundation\38-ado-poc\scripts\logs\20260225-0833-ado-import-artifacts-dryrun.log
 
 === ADO Import: 49-eva-dtl ===
 Project maturity : active

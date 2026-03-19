@@ -4,7 +4,7 @@
 # Invoked by skill 07-ado-idea-intake or by the GitHub Action ado-idea-intake.yml
 #
 # Usage:
-#   .\scripts\ado-generate-artifacts.ps1 -RepoRoot "C:\AICOE\eva-foundation\33-eva-brain-v2"
+#   .\scripts\ado-generate-artifacts.ps1 -RepoRoot "C:\eva-foundry\eva-foundation\33-eva-brain-v2"
 #   .\scripts\ado-generate-artifacts.ps1  # uses $PWD as RepoRoot
 #   .\scripts\ado-generate-artifacts.ps1 -DryRun  # prints JSON, does not write file
 #

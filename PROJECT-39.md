@@ -1,7 +1,7 @@
 # PROJECT-39.md — ARCHIVED
 
 **Archived:** 2026-02-20 10:55 ET
-**Moved to:** `C:\AICOE\eva-foundation\39-ado-dashboard\PROJECT-39.md`
+**Moved to:** `C:\eva-foundry\eva-foundation\39-ado-dashboard\PROJECT-39.md`
 
 This file has been migrated to the project's own folder.
 Pending tasks and sprint plan are in [39-ado-dashboard/PLAN.md](../39-ado-dashboard/PLAN.md).

@@ -1,9 +1,9 @@
 {
   "meta": {
     "schema": "eva.reconciliation.v2",
-    "generated_at": "2026-02-25T06:37:40.899Z",
-    "repo": "C:\\AICOE\\eva-foundation\\38-ado-poc",
-    "discovery_path": "C:\\AICOE\\eva-foundation\\38-ado-poc\\.eva\\discovery.json"
+    "generated_at": "2026-03-08T00:47:06.059Z",
+    "repo": "C:\\eva-foundry\\eva-foundry\\38-ado-poc",
+    "discovery_path": "C:\\eva-foundry\\eva-foundry\\38-ado-poc\\.eva\\discovery.json"
   },
   "coverage": {
     "stories_total": 13,
@@ -73,5 +73,11 @@
       "gap_count": 0
     }
   ],
-  "gaps": []
+  "gaps": [
+    {
+      "type": "orphan_story_tag",
+      "story_id": "Enhancement-1",
+      "title": null
+    }
+  ]
 }
