@@ -31,7 +31,7 @@ param(
     [ValidateSet("Pull", "Push", "Both")]
     [string]$Mode = "Both",
     
-    [string]$DataModelUrl = "https://marco-eva-data-model.livelyflower-7990bc7b.canadacentral.azurecontainerapps.io",
+    [string]$DataModelUrl = "https://msub-eva-data-model.victoriousgrass-30debbd3.canadacentral.azurecontainerapps.io",
     
     [string]$OrgUrl = "https://dev.azure.com/marcopresta",
     [string]$AdoProject = "eva-poc",
@@ -44,6 +44,17 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+
+try {
+    $health = Invoke-RestMethod "$DataModelUrl/health" -TimeoutSec 10 -ErrorAction Stop
+    if ($health.status -ne "ok") {
+        throw "Data model health returned status '$($health.status)'"
+    }
+    Write-Host "[PASS] Data model API reachable" -ForegroundColor Green
+} catch {
+    Write-Host "[ERROR] Data model API pre-flight failed: $($_.Exception.Message)" -ForegroundColor Red
+    exit 2
+}
 
 # ── ADO Authentication
 if (-not $DryRun -and -not $env:ADO_PAT) {
@@ -58,7 +69,7 @@ $base64Pat  = if ($env:ADO_PAT) { [Convert]::ToBase64String([Text.Encoding]::ASC
 $authHeader = if ($base64Pat) { "Basic $base64Pat" } else { "Bearer dry-run" }
 
 # ── Logging
-$timestamp = Get-Date -Format "yyyyMMdd-HHmm"
+$timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
 $logDir = Join-Path $PSScriptRoot "logs"
 if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
 $logFile = Join-Path $logDir "$timestamp-ado-sync-$($Mode.ToLower()).log"
@@ -248,7 +259,7 @@ function Sync-PullAdoToWbs {
             }
             
             # Strip audit fields before PUT
-            $updatePayload = $story | Select-Object * -ExcludeProperty layer, modified_by, modified_at, created_by, created_at, row_version, source_file
+            $updatePayload = $story | Select-Object * -ExcludeProperty obj_id, layer, modified_by, modified_at, created_by, created_at, row_version, source_file
             
             # PUT updated record
             $result = Invoke-DataModel -Method PUT -Path "/model/wbs/$storyId" -Body $updatePayload
@@ -332,7 +343,7 @@ function Sync-PushWbsToAdo {
                     
                     # Backfill ado_id in WBS
                     $story.ado_id = $adoId
-                    $updatePayload = $story | Select-Object * -ExcludeProperty layer, modified_by, modified_at, created_by, created_at, row_version, source_file
+                    $updatePayload = $story | Select-Object * -ExcludeProperty obj_id, layer, modified_by, modified_at, created_by, created_at, row_version, source_file
                     Invoke-DataModel -Method PUT -Path "/model/wbs/$storyId" -Body $updatePayload | Out-Null
                     Write-Host "  [PASS] Backfilled ado_id=$adoId for $storyId" -ForegroundColor Green
                     
@@ -341,7 +352,7 @@ function Sync-PushWbsToAdo {
                 }
                 
                 # Create new ADO work item
-                $workItemType = "Product Backlog Item"  # Could be mapped from story.story_type
+                $workItemType = "Product Backlog Item"
                 $fields = @(
                     @{ path = "System.Title"; value = $title }
                     @{ path = "System.Description"; value = $story.description ? $story.description : "" }
@@ -360,7 +371,7 @@ function Sync-PushWbsToAdo {
                 }
                 
                 $typeEncoded = [Uri]::EscapeDataString($workItemType)
-                $createUri = "$OrgUrl/$AdoProject/_apis/wit/workitems/`$$typeEncoded`?api-version=7.1"
+                $createUri = "$OrgUrl/$AdoProject/_apis/wit/workitems/`$${typeEncoded}?api-version=7.1"
                 $result = Invoke-Ado -Uri $createUri -Method Post -Body $body
                 
                 $adoId = $result.id
@@ -368,7 +379,7 @@ function Sync-PushWbsToAdo {
                 
                 # Backfill ado_id in WBS
                 $story.ado_id = $adoId
-                $updatePayload = $story | Select-Object * -ExcludeProperty layer, modified_by, modified_at, created_by, created_at, row_version, source_file
+                $updatePayload = $story | Select-Object * -ExcludeProperty obj_id, layer, modified_by, modified_at, created_by, created_at, row_version, source_file
                 Invoke-DataModel -Method PUT -Path "/model/wbs/$storyId" -Body $updatePayload | Out-Null
                 Write-Host "  [PASS] Backfilled ado_id=$adoId for $storyId" -ForegroundColor Green
                 

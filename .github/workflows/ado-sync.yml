@@ -32,29 +32,43 @@ on:
 jobs:
   ado-sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DATA_MODEL_URL: https://msub-eva-data-model.victoriousgrass-30debbd3.canadacentral.azurecontainerapps.io
+      X_ACTOR: github-actions:ado-bidirectional-sync
+      ADO_PAT: ${{ secrets.ADO_PAT }}
     
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Setup PowerShell
         shell: pwsh
         run: |
           Write-Host "[INFO] PowerShell $($PSVersionTable.PSVersion)"
-      
-      - name: Install Azure CLI
+
+      - name: Pre-flight checks
+        shell: pwsh
         run: |
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-      
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          if (-not $env:ADO_PAT) {
+            Write-Host "[ERROR] Missing ADO_PAT secret"
+            exit 1
+          }
+
+          try {
+            $health = Invoke-RestMethod "$env:DATA_MODEL_URL/health" -TimeoutSec 10 -ErrorAction Stop
+            if ($health.status -ne 'ok') {
+              Write-Host "[ERROR] Data model API health is not ok"
+              exit 1
+            }
+            Write-Host "[PASS] Data model API reachable"
+          } catch {
+            Write-Host "[ERROR] Data model API pre-flight failed: $($_.Exception.Message)"
+            exit 1
+          }
       
       - name: Run ADO Bidirectional Sync
         shell: pwsh
-        env:
-          ADO_PAT: ${{ secrets.ADO_PAT }}
         run: |
           $mode = "${{ github.event.inputs.mode }}"
           if (-not $mode) { $mode = "Both" }
@@ -73,11 +87,16 @@ jobs:
           if ($project) { $params.Project = $project }
           if ($dryRun) { $params.DryRun = $true }
           
+          $params.DataModelUrl = $env:DATA_MODEL_URL
+
           & ./scripts/ado-bidirectional-sync.ps1 @params
+          if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+          }
       
       - name: Upload Logs
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ado-sync-logs
           path: scripts/logs/*.log
