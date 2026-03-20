@@ -1,0 +1,78 @@
+**********************
+PowerShell transcript start
+Start time: 20260320101914
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1019-ado-import-39-ado-dashboard-dryrun.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: EVA ADO Dashboard
+Feature: creating 'Reference Components & Type Contract'
+  [DRY-RUN] Would create Feature : Reference Components & Type Contract
+  -> Feature id=-1
+Feature: creating 'APIM Data Route (/v1/scrum/dashboard)'
+  [DRY-RUN] Would create Feature : APIM Data Route (/v1/scrum/dashboard)
+  -> Feature id=-1
+Feature: creating 'Thread Graph and Operations Views'
+  [DRY-RUN] Would create Feature : Thread Graph and Operations Views
+  -> Feature id=-1
+PBI: creating '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache
+  -> PBI id=-1
+PBI: creating '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim
+  -> PBI id=-1
+PBI: creating '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge
+  -> PBI id=-1
+PBI: creating '[DASH-WI-3] Thread graph board — lanes, dependencies, and critical path'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-3] Thread graph board — lanes, dependencies, and critical path
+  -> PBI id=-1
+PBI: creating '[DASH-WI-4] Ready queue and blocked lane views — operator projection'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-4] Ready queue and blocked lane views — operator projection
+  -> PBI id=-1
+PBI: creating '[DASH-WI-5] Execution health summary — retries, evidence freshness, lane throughput'
+  [DRY-RUN] Would create Product Backlog Item : [DASH-WI-5] Execution health summary — retries, evidence freshness, lane throughput
+  -> PBI id=-1
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : -1
+Features : 3
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag       Id State Url
+---       -- ----- ---
+dash-wi-0 -1 New   (dry-run)
+dash-wi-1 -1 New   (dry-run)
+dash-wi-2 -1 New   (dry-run)
+dash-wi-3 -1 New   (dry-run)
+dash-wi-4 -1 New   (dry-run)
+dash-wi-5 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260320101914
+**********************

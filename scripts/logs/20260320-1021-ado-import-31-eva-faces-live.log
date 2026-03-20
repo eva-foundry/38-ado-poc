@@ -1,0 +1,91 @@
+**********************
+PowerShell transcript start
+Start time: 20260320102102
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1021-ado-import-31-eva-faces-live.log
+
+=== ADO Import: EVA Faces ===
+Project maturity : active
+GitHub repo      : eva-foundry/31-eva-faces
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=25 — 'EVA Faces'
+Feature: existing id=66 — 'Admin Face — 24+ Admin Screens'
+Feature: existing id=67 — 'EVA-JP Jurisprudence Pages'
+Feature: existing id=68 — 'ADO Dashboard Pages (FACES-WI-A/B/C)'
+Feature: existing id=69 — 'Auth & RBAC Integration'
+Feature: creating 'Control Plane Operations Views'
+  -> Feature id=3233
+PBI: existing id=70 — '[FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService'
+  id=70 already Done — skipping state transitions
+PBI: existing id=109 — '[FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested'
+PBI: existing id=110 — '[FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories'
+PBI: existing id=111 — '[FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts'
+PBI: existing id=112 — '[FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages'
+PBI: creating '[FACES-WI-D] Thread Board page — visualize lanes, dependencies, and critical path'
+  -> PBI id=3234
+PBI: creating '[FACES-WI-E] Blocked lane and retry drawer — surface blockers, retries, and handoff state'
+  -> PBI id=3235
+PBI: creating '[FACES-WI-F] Execution health widgets — ready queue, blocked queue, evidence freshness'
+  -> PBI id=3236
+
+=== Import Summary: EVA Faces ===
+Epic id  : 25
+Features : 5
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag          Id State Url
+---          -- ----- ---
+faces-wi-0   70 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-1  109 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-a  110 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-b  111 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-c  112 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-d 3234 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-e 3235 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-f 3236 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+
+**********************
+PowerShell transcript end
+End time: 20260320102106
+**********************

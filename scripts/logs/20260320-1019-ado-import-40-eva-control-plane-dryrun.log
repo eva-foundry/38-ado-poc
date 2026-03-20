@@ -1,0 +1,93 @@
+**********************
+PowerShell transcript start
+Start time: 20260320101915
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1019-ado-import-40-eva-control-plane-dryrun.log
+
+=== ADO Import: EVA Automation Control Plane ===
+Project maturity : active
+GitHub repo      : eva-foundry/40-eva-control-plane
+Dry run          : True
+
+Epic: pinned to existing id=142 (skip_if_id_exists)
+Feature: creating 'Runtime API — FastAPI (port 8020)'
+  [DRY-RUN] Would create Feature : Runtime API — FastAPI (port 8020)
+  -> Feature id=-1
+Feature: creating 'Two-Plane Evidence Spine'
+  [DRY-RUN] Would create Feature : Two-Plane Evidence Spine
+  -> Feature id=-1
+Feature: creating 'GitHub Actions Runbooks (RB-001, RB-002)'
+  [DRY-RUN] Would create Feature : GitHub Actions Runbooks (RB-001, RB-002)
+  -> Feature id=-1
+Feature: creating 'Control-Plane Data Models and Seeds'
+  [DRY-RUN] Would create Feature : Control-Plane Data Models and Seeds
+  -> Feature id=-1
+Feature: creating 'Thread Runtime and Execution Graph'
+  [DRY-RUN] Would create Feature : Thread Runtime and Execution Graph
+  -> Feature id=-1
+PBI: creating 'FastAPI Runtime API — 8 routes, Swagger at /docs'
+  [DRY-RUN] Would create Product Backlog Item : FastAPI Runtime API — 8 routes, Swagger at /docs
+  -> PBI id=-1
+PBI: creating 'Evidence Spine — evidence_id propagation across planes'
+  [DRY-RUN] Would create Product Backlog Item : Evidence Spine — evidence_id propagation across planes
+  -> PBI id=-1
+PBI: creating 'RB-001 — PR CI Evidence Workflow (GitHub Actions)'
+  [DRY-RUN] Would create Product Backlog Item : RB-001 — PR CI Evidence Workflow (GitHub Actions)
+  -> PBI id=-1
+PBI: creating 'RB-002 — Promote to DEV Workflow (stub)'
+  [DRY-RUN] Would create Product Backlog Item : RB-002 — Promote to DEV Workflow (stub)
+  -> PBI id=-1
+PBI: creating 'Pydantic v2 Models — Run, StepRun, Artifact'
+  [DRY-RUN] Would create Product Backlog Item : Pydantic v2 Models — Run, StepRun, Artifact
+  -> PBI id=-1
+PBI: creating 'pack-evidence.py — Evidence Pack Assembler'
+  [DRY-RUN] Would create Product Backlog Item : pack-evidence.py — Evidence Pack Assembler
+  -> PBI id=-1
+PBI: creating 'Thread runtime records — thread runs, dependency state, heartbeats'
+  [DRY-RUN] Would create Product Backlog Item : Thread runtime records — thread runs, dependency state, heartbeats
+  -> PBI id=-1
+PBI: creating 'Blocker, retry, and handoff events — runtime lineage for thread execution'
+  [DRY-RUN] Would create Product Backlog Item : Blocker, retry, and handoff events — runtime lineage for thread execution
+  -> PBI id=-1
+PBI: creating 'Thread aggregates and execution snapshots — ready queue, blocked queue, critical path runtime'
+  [DRY-RUN] Would create Product Backlog Item : Thread aggregates and execution snapshots — ready queue, blocked queue, critical path runtime
+  -> PBI id=-1
+
+=== Import Summary: EVA Automation Control Plane ===
+Epic id  : 142
+Features : 5
+PBIs     : 9
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag     Id State Url
+---     -- ----- ---
+cp-wi-1 -1 New   (dry-run)
+cp-wi-2 -1 New   (dry-run)
+cp-wi-3 -1 New   (dry-run)
+cp-wi-4 -1 New   (dry-run)
+cp-wi-5 -1 New   (dry-run)
+cp-wi-6 -1 New   (dry-run)
+cp-wi-7 -1 New   (dry-run)
+cp-wi-8 -1 New   (dry-run)
+cp-wi-9 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260320101915
+**********************

@@ -1,0 +1,80 @@
+**********************
+PowerShell transcript start
+Start time: 20260320103207
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-39-ado-dashboard-live.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=32 — 'EVA ADO Dashboard'
+Feature: existing id=94 — 'Reference Components & Type Contract'
+Feature: existing id=95 — 'APIM Data Route (/v1/scrum/dashboard)'
+Feature: existing id=3217 — 'Thread Graph and Operations Views'
+PBI: existing id=96 — '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+PBI: existing id=97 — '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+PBI: existing id=98 — '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+PBI: existing id=3218 — '[DASH-WI-3] Thread graph board — lanes, dependencies, and critical path'
+PBI: existing id=3219 — '[DASH-WI-4] Ready queue and blocked lane views — operator projection'
+PBI: existing id=3220 — '[DASH-WI-5] Execution health summary — retries, evidence freshness, lane throughput'
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : 32
+Features : 3
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+dash-wi-0   96 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-1   97 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-2   98 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-3 3218 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-4 3219 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-5 3220 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+**********************
+PowerShell transcript end
+End time: 20260320103209
+**********************

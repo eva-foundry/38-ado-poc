@@ -1,0 +1,74 @@
+**********************
+PowerShell transcript start
+Start time: 20260320101915
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1019-ado-import-19-ai-gov-dryrun.log
+
+=== ADO Import: AI Governance Automation ===
+Project maturity : poc
+GitHub repo      : eva-foundry/19-ai-gov
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: AI Governance Automation
+Feature: creating 'Governance Automation Schemas'
+  [DRY-RUN] Would create Feature : Governance Automation Schemas
+  -> Feature id=-1
+Feature: creating 'Policy-as-Code CI Gate'
+  [DRY-RUN] Would create Feature : Policy-as-Code CI Gate
+  -> Feature id=-1
+Feature: creating 'Governed Thread Orchestration'
+  [DRY-RUN] Would create Feature : Governed Thread Orchestration
+  -> Feature id=-1
+PBI: creating '[GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card
+  -> PBI id=-1
+PBI: creating '[GOV-WI-1] Policy-as-code CI gate — red-teaming evidence fed into ATO schema'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-1] Policy-as-code CI gate — red-teaming evidence fed into ATO schema
+  -> PBI id=-1
+PBI: creating '[GOV-WI-2] Governance gate model for thread activation, blocking, retry, and closure'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-2] Governance gate model for thread activation, blocking, retry, and closure
+  -> PBI id=-1
+PBI: creating '[GOV-WI-3] Decision and exception payloads for threaded control-plane transitions'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-3] Decision and exception payloads for threaded control-plane transitions
+  -> PBI id=-1
+PBI: creating '[GOV-WI-4] Governance evidence extension for threaded runs and lane health'
+  [DRY-RUN] Would create Product Backlog Item : [GOV-WI-4] Governance evidence extension for threaded runs and lane health
+  -> PBI id=-1
+
+=== Import Summary: AI Governance Automation ===
+Epic id  : -1
+Features : 3
+PBIs     : 5
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag      Id State Url
+---      -- ----- ---
+gov-wi-0 -1 Done  (dry-run)
+gov-wi-1 -1 New   (dry-run)
+gov-wi-2 -1 New   (dry-run)
+gov-wi-3 -1 New   (dry-run)
+gov-wi-4 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260320101915
+**********************

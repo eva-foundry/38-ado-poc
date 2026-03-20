@@ -1,0 +1,86 @@
+**********************
+PowerShell transcript start
+Start time: 20260320102058
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1020-ado-import-29-foundry-live.log
+
+=== ADO Import: EVA Foundry Hub ===
+Project maturity : active
+GitHub repo      : eva-foundry/29-foundry
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=23 — 'EVA Foundry Hub'
+Feature: existing id=59 — 'Core Technical Skills Library'
+Feature: existing id=60 — 'DPDCA Session Workflow & Skill Versioning'
+Feature: existing id=61 — 'Azure AI Foundry Hub Deployment'
+Feature: creating 'Thread Planning and Execution Agents'
+  -> Feature id=3229
+PBI: existing id=62 — '[FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills'
+  id=62 already Done — skipping state transitions
+PBI: existing id=106 — '[FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners'
+PBI: existing id=107 — '[FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection'
+PBI: creating '[FOUNDRY-WI-3] Thread planner skill pack — dependency resolution, ready queue, concurrency hints'
+  -> PBI id=3230
+PBI: creating '[FOUNDRY-WI-4] Thread executor and monitor agents — run, observe, and hand off lane work'
+  -> PBI id=3231
+PBI: creating '[FOUNDRY-WI-5] Thread handoff and memory contract — durable state between planner, executor, and governance agents'
+  -> PBI id=3232
+
+=== Import Summary: EVA Foundry Hub ===
+Epic id  : 23
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag            Id State Url
+---            -- ----- ---
+foundry-wi-0   62 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-1  106 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-2  107 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-3 3230 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-4 3231 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-5 3232 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+
+**********************
+PowerShell transcript end
+End time: 20260320102102
+**********************

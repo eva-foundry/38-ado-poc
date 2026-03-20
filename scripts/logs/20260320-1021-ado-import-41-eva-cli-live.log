@@ -1,0 +1,75 @@
+**********************
+PowerShell transcript start
+Start time: 20260320102117
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1021-ado-import-41-eva-cli-live.log
+
+=== ADO Import: EVA ADO Command Center CLI ===
+Project maturity : active
+GitHub repo      : eva-foundry/41-eva-cli
+Dry run          : False
+
+Epic: pinned to existing id=153 (skip_if_id_exists)
+Feature: existing id=154 — 'CLI Core — Config, Context, Models'
+Feature: existing id=155 — 'Adapters — ADO, GitHub, Azure'
+Feature: existing id=156 — 'Command Groups — ado, gh, runbook, evidence, promote'
+Feature: existing id=157 — 'Tests — CLI + Adapter Mocks'
+Feature: creating 'Thread Operations Commands'
+  -> Feature id=3241
+PBI: existing id=158 — '[CLI-WI-1] eva init + dotenv loading + .env.example'
+  id=158 already Done — skipping state transitions
+PBI: existing id=159 — '[CLI-WI-2] ADO adapter — create, update, link, WIQL idempotency'
+  id=159 already Done — skipping state transitions
+PBI: existing id=160 — '[CLI-WI-3] GitHub adapter — PR, check-runs, artifacts'
+  id=160 already Done — skipping state transitions
+PBI: existing id=161 — '[CLI-WI-4] promote dev — full 10-step evidence receipt flow'
+  id=161 already Done — skipping state transitions
+PBI: existing id=162 — '[CLI-WI-5] runbook list/show/run + catalog API fallback'
+  id=162 already Done — skipping state transitions
+PBI: existing id=163 — '[CLI-WI-6] 33-test suite — CLI + adapter mocks (respx)'
+  id=163 already Done — skipping state transitions
+PBI: creating '[CLI-WI-7] eva thread list/show — inspect thread graph, lane state, and dependencies'
+  -> PBI id=3242
+PBI: creating '[CLI-WI-8] eva thread dispatch/retry — governed operator commands'
+  -> PBI id=3243
+PBI: creating '[CLI-WI-9] eva thread summary — ready queue, blocked queue, critical path, evidence health'
+  -> PBI id=3244
+
+=== Import Summary: EVA ADO Command Center CLI ===
+Epic id  : 153
+Features : 5
+PBIs     : 9
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+cli-wi-1  158 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-2  159 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-3  160 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-4  161 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-5  162 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-6  163 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-7 3242 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-8 3243 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-9 3244 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+
+**********************
+PowerShell transcript end
+End time: 20260320102122
+**********************

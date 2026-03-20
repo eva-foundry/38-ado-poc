@@ -1,0 +1,59 @@
+**********************
+PowerShell transcript start
+Start time: 20260320101914
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1019-ado-import-17-apim-dryrun.log
+
+=== ADO Import: APIM Thread Governance Surface ===
+Project maturity : active
+GitHub repo      : eva-foundry/17-apim
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: APIM Thread Governance Surface
+Feature: creating 'Thread-Aware Header and Policy Contract'
+  [DRY-RUN] Would create Feature : Thread-Aware Header and Policy Contract
+  -> Feature id=-1
+Feature: creating 'Thread Projection and Command Routes'
+  [DRY-RUN] Would create Feature : Thread Projection and Command Routes
+  -> Feature id=-1
+PBI: creating '[APIM-THREAD-WI-1] APIM policy injects and normalizes thread identity headers'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-THREAD-WI-1] APIM policy injects and normalizes thread identity headers
+  -> PBI id=-1
+PBI: creating '[APIM-THREAD-WI-2] APIM publishes governed thread projection routes'
+  [DRY-RUN] Would create Product Backlog Item : [APIM-THREAD-WI-2] APIM publishes governed thread projection routes
+  -> PBI id=-1
+
+=== Import Summary: APIM Thread Governance Surface ===
+Epic id  : -1
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag              Id State Url
+---              -- ----- ---
+apim-thread-wi-1 -1 New   (dry-run)
+apim-thread-wi-2 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260320101914
+**********************

@@ -1,0 +1,71 @@
+**********************
+PowerShell transcript start
+Start time: 20260320103230
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-14-az-finops-live.log
+
+=== ADO Import: FinOps Thread Cost Attribution ===
+Project maturity : active
+GitHub repo      : eva-foundry/14-az-finops
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=3208 — 'FinOps Thread Cost Attribution'
+Feature: existing id=3209 — 'Thread-Level Cost Dimensions'
+Feature: existing id=3210 — 'Thread Cost Reporting'
+PBI: existing id=3211 — '[FINOPS-THREAD-WI-1] normalized_costs captures thread, lane, and run lineage'
+PBI: existing id=3212 — '[FINOPS-THREAD-WI-2] FinOps reporting shows cost by critical path, lane, and retry overhead'
+
+=== Import Summary: FinOps Thread Cost Attribution ===
+Epic id  : 3208
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag                  Id State Url
+---                  -- ----- ---
+finops-thread-wi-1 3211 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+finops-thread-wi-2 3212 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+
+**********************
+PowerShell transcript end
+End time: 20260320103231
+**********************

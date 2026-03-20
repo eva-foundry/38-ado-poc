@@ -1,0 +1,907 @@
+**********************
+PowerShell transcript start
+Start time: 20260320103156
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1031-ado-import-39-ado-dashboard-live.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=32 — 'EVA ADO Dashboard'
+Feature: existing id=94 — 'Reference Components & Type Contract'
+Feature: existing id=95 — 'APIM Data Route (/v1/scrum/dashboard)'
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+]633;D;1]633;A]633;P;Cwd=C:\x5ceva-foundryPS C:\eva-foundry> ]633;B
+PS>$env:ADO_PAT = (az keyvault secret show --vault-name msubsandkv202603031449 --name ado-pat --query value -o tsv); $script = 'c:\eva-foundry\38-ado-poc\scripts\ado-import-project.ps1'; $files = @('c:\eva-foundry\37-data-model\ado-artifacts.json','c:\eva-foundry\19-ai-gov\ado-artifacts.json','c:\eva-foundry\38-ado-poc\ado-artifacts.json','c:\eva-foundry\39-ado-dashboard\ado-artifacts.json','c:\eva-foundry\40-eva-control-plane\ado-artifacts.json','c:\eva-foundry\33-eva-brain-v2\ado-artifacts.json','c:\eva-foundry\31-eva-faces\ado-artifacts.json','c:\eva-foundry\41-eva-cli\ado-artifacts.json','c:\eva-foundry\29-foundry\ado-artifacts.json','c:\eva-foundry\17-apim\ado-artifacts.json','c:\eva-foundry\14-az-finops\ado-artifacts.json'); foreach ($file in $files) { Write-Host "`n[IMPORT] $file" -ForegroundColor Cyan; & $script -ArtifactsFile $file; if ($LASTEXITCODE -ne 0) { throw "Import failed for $file with exit code $LASTEXITCODE" } }; Write-Host "[DONE] Imported $($files.Count) artifact sets." -ForegroundColor Green
+
+[IMPORT] c:\eva-foundry\37-data-model\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1031-ado-import-37-data-model-live.log
+
+=== ADO Import: EVA Data Model V1 — Thread Graph Authority ===
+Project maturity : active
+GitHub repo      : eva-foundry/37-data-model
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=3197 — 'EVA Data Model V1 — Thread Graph Authority'
+Feature: existing id=3198 — 'Thread Graph Catalog'
+Feature: existing id=3199 — 'Nested D3PDCA PM Model'
+PBI: existing id=3200 — '[DM-THREAD-WI-1] Thread graph catalog — templates, edges, concurrency lanes, activation rules'
+PBI: existing id=3201 — '[DM-THREAD-WI-2] WBS and project_work support nested D3PDCA thread packets'
+PBI: existing id=3202 — '[DM-THREAD-WI-3] Thread graph read models for 33, 38, 39, and 40'
+
+=== Import Summary: EVA Data Model V1 — Thread Graph Authority ===
+Epic id  : 3197
+Features : 2
+PBIs     : 3
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag              Id State Url
+---              -- ----- ---
+dm-thread-wi-1 3200 New   https://dev.azure.com/marcopresta/eva-poc/_workitems…
+dm-thread-wi-2 3201 New   https://dev.azure.com/marcopresta/eva-poc/_workitems…
+dm-thread-wi-3 3202 New   https://dev.azure.com/marcopresta/eva-poc/_workitems…
+
+
+[IMPORT] c:\eva-foundry\19-ai-gov\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-19-ai-gov-live.log
+
+=== ADO Import: AI Governance Automation ===
+Project maturity : poc
+GitHub repo      : eva-foundry/19-ai-gov
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=20 — 'AI Governance Automation'
+Feature: existing id=50 — 'Governance Automation Schemas'
+Feature: existing id=51 — 'Policy-as-Code CI Gate'
+Feature: existing id=3225 — 'Governed Thread Orchestration'
+PBI: existing id=52 — '[GOV-WI-0] Governance schemas authored — AI incident, ATO evidence, ITSG-33 controls, model card'
+  id=52 already Done — skipping state transitions
+PBI: existing id=104 — '[GOV-WI-1] Policy-as-code CI gate — red-teaming evidence fed into ATO schema'
+PBI: existing id=3226 — '[GOV-WI-2] Governance gate model for thread activation, blocking, retry, and closure'
+PBI: existing id=3227 — '[GOV-WI-3] Decision and exception payloads for threaded control-plane transitions'
+PBI: existing id=3228 — '[GOV-WI-4] Governance evidence extension for threaded runs and lane health'
+
+=== Import Summary: AI Governance Automation ===
+Epic id  : 20
+Features : 3
+PBIs     : 5
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+gov-wi-0   52 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+gov-wi-1  104 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+gov-wi-2 3226 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+gov-wi-3 3227 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+gov-wi-4 3228 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+
+
+[IMPORT] c:\eva-foundry\38-ado-poc\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-38-ado-poc-live.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-6
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-6' assigned to team.
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=31 — 'ADO Command Center'
+Feature: existing id=89 — 'ADO Infrastructure & Scripts'
+Feature: existing id=90 — 'GitHub-ADO Async Bridge'
+Feature: existing id=91 — 'Project Onboarding Workflow'
+Feature: existing id=92 — 'ADO Idea Intake Pipeline'
+Feature: existing id=3213 — 'Dependency-Aware Thread Dispatch'
+PBI: existing id=93 — '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+  id=93 already Done — skipping state transitions
+PBI: existing id=118 — '[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App'
+  id=118 already Done — skipping state transitions
+PBI: existing id=119 — '[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete'
+PBI: existing id=120 — '[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml'
+PBI: existing id=121 — '[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml'
+  id=121 already Done — skipping state transitions
+PBI: existing id=122 — '[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function'
+PBI: existing id=3214 — '[ADO-WI-6] Dispatch manifest synthesis — convert backlog and dependencies into executable thread packets'
+PBI: existing id=3215 — '[ADO-WI-7] Ready queue and concurrency groups — run dependent and independent lanes systematically'
+PBI: existing id=3216 — '[ADO-WI-8] Activation gates and handoff orchestration — open, pause, retry, and hand off thread execution'
+
+=== Import Summary: ADO Command Center ===
+Epic id  : 31
+Features : 5
+PBIs     : 9
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+ado-wi-0   93 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-1  118 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-2  119 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-3  120 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-4  121 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-5  122 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-6 3214 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-7 3215 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+ado-wi-8 3216 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+
+
+[IMPORT] c:\eva-foundry\39-ado-dashboard\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-39-ado-dashboard-live.log
+
+=== ADO Import: EVA ADO Dashboard ===
+Project maturity : poc
+GitHub repo      : eva-foundry/39-ado-dashboard
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=32 — 'EVA ADO Dashboard'
+Feature: existing id=94 — 'Reference Components & Type Contract'
+Feature: existing id=95 — 'APIM Data Route (/v1/scrum/dashboard)'
+Feature: existing id=3217 — 'Thread Graph and Operations Views'
+PBI: existing id=96 — '[DASH-WI-0] eva-brain /v1/scrum/dashboard endpoint — ADO REST + Cosmos cache'
+PBI: existing id=97 — '[DASH-WI-1] APIM route /v1/scrum/dashboard registered in marco-sandbox-apim'
+PBI: existing id=98 — '[DASH-WI-2] Reference components — EVAHomePage, SprintBoardPage, ProductTile, SprintBadge'
+PBI: existing id=3218 — '[DASH-WI-3] Thread graph board — lanes, dependencies, and critical path'
+PBI: existing id=3219 — '[DASH-WI-4] Ready queue and blocked lane views — operator projection'
+PBI: existing id=3220 — '[DASH-WI-5] Execution health summary — retries, evidence freshness, lane throughput'
+
+=== Import Summary: EVA ADO Dashboard ===
+Epic id  : 32
+Features : 3
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag         Id State Url
+---         -- ----- ---
+dash-wi-0   96 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-1   97 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-2   98 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-3 3218 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-4 3219 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+dash-wi-5 3220 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit…
+
+
+[IMPORT] c:\eva-foundry\40-eva-control-plane\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-40-eva-control-plane-live.log
+
+=== ADO Import: EVA Automation Control Plane ===
+Project maturity : active
+GitHub repo      : eva-foundry/40-eva-control-plane
+Dry run          : False
+
+Epic: pinned to existing id=142 (skip_if_id_exists)
+Feature: existing id=143 — 'Runtime API — FastAPI (port 8020)'
+Feature: existing id=144 — 'Two-Plane Evidence Spine'
+Feature: existing id=145 — 'GitHub Actions Runbooks (RB-001, RB-002)'
+Feature: existing id=146 — 'Control-Plane Data Models and Seeds'
+Feature: existing id=3221 — 'Thread Runtime and Execution Graph'
+PBI: existing id=147 — 'FastAPI Runtime API — 8 routes, Swagger at /docs'
+PBI: existing id=148 — 'Evidence Spine — evidence_id propagation across planes'
+PBI: existing id=149 — 'RB-001 — PR CI Evidence Workflow (GitHub Actions)'
+PBI: existing id=150 — 'RB-002 — Promote to DEV Workflow (stub)'
+PBI: existing id=151 — 'Pydantic v2 Models — Run, StepRun, Artifact'
+PBI: existing id=152 — 'pack-evidence.py — Evidence Pack Assembler'
+PBI: existing id=3222 — 'Thread runtime records — thread runs, dependency state, heartbeats'
+PBI: existing id=3223 — 'Blocker, retry, and handoff events — runtime lineage for thread execution'
+PBI: existing id=3224 — 'Thread aggregates and execution snapshots — ready queue, blocked queue, critical path runtime'
+
+=== Import Summary: EVA Automation Control Plane ===
+Epic id  : 142
+Features : 5
+PBIs     : 9
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag       Id State Url
+---       -- ----- ---
+cp-wi-1  147 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/1…
+cp-wi-2  148 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/1…
+cp-wi-3  149 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/1…
+cp-wi-4  150 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/1…
+cp-wi-5  151 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/1…
+cp-wi-6  152 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/1…
+cp-wi-7 3222 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/3…
+cp-wi-8 3223 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/3…
+cp-wi-9 3224 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/3…
+
+
+[IMPORT] c:\eva-foundry\33-eva-brain-v2\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-33-eva-brain-v2-live.log
+
+=== ADO Import: EVA Brain v2 ===
+Project maturity : active
+GitHub repo      : eva-foundry/33-eva-brain-v2
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-0
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-0 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-0 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-0' assigned to team.
+  Sprint: Sprint-1
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-1 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-1' assigned to team.
+  Sprint: Sprint-2
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-2 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-2' assigned to team.
+  Sprint: Sprint-3
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-3 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-3' assigned to team.
+  Sprint: Sprint-4
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-4 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-4 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-4' assigned to team.
+  Sprint: Sprint-5
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-5 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-5 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-5' assigned to team.
+  Sprint: Sprint-6
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-6 is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-6' assigned to team.
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=26 — 'EVA Brain v2'
+Feature: existing id=71 — 'Core API Restoration'
+Feature: existing id=72 — 'Test Quality & Coverage'
+Feature: existing id=73 — 'API Surface — Routes & Endpoints'
+Feature: existing id=74 — 'Sandbox Deployment & APIM'
+Feature: existing id=3237 — 'Thread Plane API'
+PBI: existing id=8 — '[WI-0] File Recovery — 25 missing files, config, models, decorators, middleware, services, routes'
+  id=8 already Done — skipping state transitions
+PBI: existing id=9 — '[WI-1] eva-roles-api reconstruction — 9 files, port 8002, 6 endpoints'
+  id=9 already Done — skipping state transitions
+PBI: existing id=10 — '[WI-2] Integration verification — pytest -v --cov=app, POST /v1/roles/acting-as, POST /v1/chat'
+  id=10 already Done — skipping state transitions
+PBI: existing id=11 — '[WI-3] Phase 3 integration tests — test_ingest_pipeline.py (14 scenarios)'
+  id=11 already Done — skipping state transitions
+PBI: existing id=12 — '[WI-4] Coverage to 70% — +248 tests across embedding, indexing, cosmos, pipeline, sessions, rag, tags'
+  id=12 already Done — skipping state transitions
+PBI: existing id=13 — '[WI-5] Phase 5 routes — translations CRUD, settings API, assistants (7 ep), logs (8 ep)'
+  id=13 already Done — skipping state transitions
+PBI: existing id=14 — '[WI-6] Apps registry API (G3) — 7 endpoints'
+  id=14 already Done — skipping state transitions
+PBI: existing id=7 — '[WI-7] Sprint 6 — deploy eva-brain-api + eva-roles-api to sandbox; verify APIM routing'
+PBI: existing id=3238 — '[WI-8] Thread projection endpoints — /v1/threads and /v1/threads/{id}'
+PBI: existing id=3239 — '[WI-9] Thread critical-path and ready-queue endpoints — /v1/threads/critical-path, /v1/threads/ready-queue'
+PBI: existing id=3240 — '[WI-10] Thread execution health summary — blocked lanes, retries, evidence freshness'
+
+=== Import Summary: EVA Brain v2 ===
+Epic id  : 26
+Features : 5
+PBIs     : 11
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag     Id State Url
+---     -- ----- ---
+wi-0     8 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/8
+wi-1     9 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/9
+wi-2    10 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/10
+wi-3    11 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/11
+wi-4    12 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/12
+wi-5    13 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/13
+wi-6    14 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/14
+wi-7     7 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/7
+wi-8  3238 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/3238
+wi-9  3239 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/3239
+wi-10 3240 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/3240
+
+
+[IMPORT] c:\eva-foundry\31-eva-faces\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-31-eva-faces-live.log
+
+=== ADO Import: EVA Faces ===
+Project maturity : active
+GitHub repo      : eva-foundry/31-eva-faces
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=25 — 'EVA Faces'
+Feature: existing id=66 — 'Admin Face — 24+ Admin Screens'
+Feature: existing id=67 — 'EVA-JP Jurisprudence Pages'
+Feature: existing id=68 — 'ADO Dashboard Pages (FACES-WI-A/B/C)'
+Feature: existing id=69 — 'Auth & RBAC Integration'
+Feature: existing id=3233 — 'Control Plane Operations Views'
+PBI: existing id=70 — '[FACES-WI-0] Admin face scaffold — 24 screens, routing, MockBackendService'
+  id=70 already Done — skipping state transitions
+PBI: existing id=109 — '[FACES-WI-1] Admin face real backend integration — all 29 endpoints smoke-tested'
+PBI: existing id=110 — '[FACES-WI-A] EVA Home page — product tile grid, 23+ products, 5 categories'
+PBI: existing id=111 — '[FACES-WI-B] Sprint Board page — /devops/sprint, WI cards, feature rollup, velocity charts'
+PBI: existing id=112 — '[FACES-WI-C] Auth context exposed — user.role and language to ADO dashboard pages'
+PBI: existing id=3234 — '[FACES-WI-D] Thread Board page — visualize lanes, dependencies, and critical path'
+PBI: existing id=3235 — '[FACES-WI-E] Blocked lane and retry drawer — surface blockers, retries, and handoff state'
+PBI: existing id=3236 — '[FACES-WI-F] Execution health widgets — ready queue, blocked queue, evidence freshness'
+
+=== Import Summary: EVA Faces ===
+Epic id  : 25
+Features : 5
+PBIs     : 8
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag          Id State Url
+---          -- ----- ---
+faces-wi-0   70 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-1  109 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-a  110 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-b  111 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-c  112 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-d 3234 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-e 3235 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+faces-wi-f 3236 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edi…
+
+
+[IMPORT] c:\eva-foundry\41-eva-cli\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-41-eva-cli-live.log
+
+=== ADO Import: EVA ADO Command Center CLI ===
+Project maturity : active
+GitHub repo      : eva-foundry/41-eva-cli
+Dry run          : False
+
+Epic: pinned to existing id=153 (skip_if_id_exists)
+Feature: existing id=154 — 'CLI Core — Config, Context, Models'
+Feature: existing id=155 — 'Adapters — ADO, GitHub, Azure'
+Feature: existing id=156 — 'Command Groups — ado, gh, runbook, evidence, promote'
+Feature: existing id=157 — 'Tests — CLI + Adapter Mocks'
+Feature: existing id=3241 — 'Thread Operations Commands'
+PBI: existing id=158 — '[CLI-WI-1] eva init + dotenv loading + .env.example'
+  id=158 already Done — skipping state transitions
+PBI: existing id=159 — '[CLI-WI-2] ADO adapter — create, update, link, WIQL idempotency'
+  id=159 already Done — skipping state transitions
+PBI: existing id=160 — '[CLI-WI-3] GitHub adapter — PR, check-runs, artifacts'
+  id=160 already Done — skipping state transitions
+PBI: existing id=161 — '[CLI-WI-4] promote dev — full 10-step evidence receipt flow'
+  id=161 already Done — skipping state transitions
+PBI: existing id=162 — '[CLI-WI-5] runbook list/show/run + catalog API fallback'
+  id=162 already Done — skipping state transitions
+PBI: existing id=163 — '[CLI-WI-6] 33-test suite — CLI + adapter mocks (respx)'
+  id=163 already Done — skipping state transitions
+PBI: existing id=3242 — '[CLI-WI-7] eva thread list/show — inspect thread graph, lane state, and dependencies'
+PBI: existing id=3243 — '[CLI-WI-8] eva thread dispatch/retry — governed operator commands'
+PBI: existing id=3244 — '[CLI-WI-9] eva thread summary — ready queue, blocked queue, critical path, evidence health'
+
+=== Import Summary: EVA ADO Command Center CLI ===
+Epic id  : 153
+Features : 5
+PBIs     : 9
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag        Id State Url
+---        -- ----- ---
+cli-wi-1  158 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-2  159 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-3  160 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-4  161 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-5  162 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-6  163 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-7 3242 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-8 3243 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+cli-wi-9 3244 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/edit/…
+
+
+[IMPORT] c:\eva-foundry\29-foundry\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-29-foundry-live.log
+
+=== ADO Import: EVA Foundry Hub ===
+Project maturity : active
+GitHub repo      : eva-foundry/29-foundry
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=23 — 'EVA Foundry Hub'
+Feature: existing id=59 — 'Core Technical Skills Library'
+Feature: existing id=60 — 'DPDCA Session Workflow & Skill Versioning'
+Feature: existing id=61 — 'Azure AI Foundry Hub Deployment'
+Feature: existing id=3229 — 'Thread Planning and Execution Agents'
+PBI: existing id=62 — '[FOUNDRY-WI-0] Core skills library complete — 6 technical + 6 cross-cutting skills'
+  id=62 already Done — skipping state transitions
+PBI: existing id=106 — '[FOUNDRY-WI-1] SKILL_VERSION added + sourcing protocol defined for project runners'
+PBI: existing id=107 — '[FOUNDRY-WI-2] Azure AI Foundry Hub eva-aicoe provisioned — SP, Key Vault, ADO service connection'
+PBI: existing id=3230 — '[FOUNDRY-WI-3] Thread planner skill pack — dependency resolution, ready queue, concurrency hints'
+PBI: existing id=3231 — '[FOUNDRY-WI-4] Thread executor and monitor agents — run, observe, and hand off lane work'
+PBI: existing id=3232 — '[FOUNDRY-WI-5] Thread handoff and memory contract — durable state between planner, executor, and governance agents'
+
+=== Import Summary: EVA Foundry Hub ===
+Epic id  : 23
+Features : 4
+PBIs     : 6
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag            Id State Url
+---            -- ----- ---
+foundry-wi-0   62 Done  https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-1  106 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-2  107 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-3 3230 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-4 3231 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+foundry-wi-5 3232 New   https://dev.azure.com/marcopresta/eva-poc/_workitems/e…
+
+
+[IMPORT] c:\eva-foundry\17-apim\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-17-apim-live.log
+
+=== ADO Import: APIM Thread Governance Surface ===
+Project maturity : active
+GitHub repo      : eva-foundry/17-apim
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=3203 — 'APIM Thread Governance Surface'
+Feature: existing id=3204 — 'Thread-Aware Header and Policy Contract'
+Feature: existing id=3205 — 'Thread Projection and Command Routes'
+PBI: existing id=3206 — '[APIM-THREAD-WI-1] APIM policy injects and normalizes thread identity headers'
+PBI: existing id=3207 — '[APIM-THREAD-WI-2] APIM publishes governed thread projection routes'
+
+=== Import Summary: APIM Thread Governance Surface ===
+Epic id  : 3203
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag                Id State Url
+---                -- ----- ---
+apim-thread-wi-1 3206 New   https://dev.azure.com/marcopresta/eva-poc/_workite…
+apim-thread-wi-2 3207 New   https://dev.azure.com/marcopresta/eva-poc/_workite…
+
+
+[IMPORT] c:\eva-foundry\14-az-finops\ado-artifacts.json
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1032-ado-import-14-az-finops-live.log
+
+=== ADO Import: FinOps Thread Cost Attribution ===
+Project maturity : active
+GitHub repo      : eva-foundry/14-az-finops
+Dry run          : False
+
+Ensuring sprints...
+  Sprint: Sprint-Backlog
+PS>TerminatingError(Invoke-RestMethod): "
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+>> TerminatingError(): "ADO Post https://dev.azure.com/marcopresta/eva-poc/_apis/wit/classificationnodes/iterations?api-version=7.1 => HTTP 409 : 
+{
+  "$id": "1",
+  "innerException": null,
+  "message": "VS402371: Classification node name Sprint-Backlog is already in use by a different child of parent classification node 0c02019e-b01b-4461-8d1f-b07bc9d478f4. Choose a different name and try again.",
+  "typeName": "Microsoft.TeamFoundation.WorkItemTracking.Server.Metadata.ClassificationNodeDuplicateNameException, Microsoft.TeamFoundation.WorkItemTracking.Server",
+  "typeKey": "ClassificationNodeDuplicateNameException",
+  "errorCode": 0,
+  "eventId": 3200
+}"
+  Sprint 'Sprint-Backlog' assigned to team.
+Epic: existing id=3208 — 'FinOps Thread Cost Attribution'
+Feature: existing id=3209 — 'Thread-Level Cost Dimensions'
+Feature: existing id=3210 — 'Thread Cost Reporting'
+PBI: existing id=3211 — '[FINOPS-THREAD-WI-1] normalized_costs captures thread, lane, and run lineage'
+PBI: existing id=3212 — '[FINOPS-THREAD-WI-2] FinOps reporting shows cost by critical path, lane, and retry overhead'
+
+=== Import Summary: FinOps Thread Cost Attribution ===
+Epic id  : 3208
+Features : 2
+PBIs     : 2
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag                  Id State Url
+---                  -- ----- ---
+finops-thread-wi-1 3211 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+finops-thread-wi-2 3212 New   https://dev.azure.com/marcopresta/eva-poc/_worki…
+
+[DONE] Imported 11 artifact sets.
+]633;D;0]633;A]633;P;Cwd=C:\x5ceva-foundryPS C:\eva-foundry> ]633;B
+PS>$pat = az keyvault secret show --vault-name msubsandkv202603031449 --name ado-pat --query value -o tsv; $auth = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":" + $pat)); $headers = @{ Authorization = "Basic $auth"; 'Content-Type' = 'application/json' }; $wiql = @{ query = @"
+SELECT [System.Id], [System.Title], [System.State]
+FROM WorkItems
+WHERE [System.TeamProject] = 'eva-poc'
+AND (
+    [System.Title] = '[DASH-WI-3] Thread graph board — lanes, dependencies, and critical path'
+    OR [System.Title] = 'Thread runtime records — thread runs, dependency state, heartbeats'
+    OR [System.Title] = '[WI-8] Thread projection endpoints — /v1/threads and /v1/threads/{id}'
+    OR [System.Title] = '[FACES-WI-D] Thread Board page — visualize lanes, dependencies, and critical path'
+    OR [System.Title] = '[CLI-WI-7] eva thread list/show — inspect thread graph, lane state, and dependencies'
+    OR [System.Title] = '[FOUNDRY-WI-3] Thread planner skill pack — dependency resolution, ready queue, concurrency hints'
+    OR [System.Title] = '[APIM-THREAD-WI-1] APIM policy injects and normalizes thread identity headers'
+    OR [System.Title] = '[FINOPS-THREAD-WI-1] normalized_costs captures thread, lane, and run lineage'
+)
+ORDER BY [System.Id]
+"@ } | ConvertTo-Json -Depth 5; $result = Invoke-RestMethod 'https://dev.azure.com/marcopresta/eva-poc/_apis/wit/wiql?api-version=7.1' -Method Post -Headers $headers -Body $wiql; if (-not $result.workItems) { throw 'No matching thread work items found.' }; $ids = ($result.workItems | ForEach-Object { $_.id }) -join ','; $items = Invoke-RestMethod "https://dev.azure.com/marcopresta/eva-poc/_apis/wit/workitems?ids=$ids&fields=System.Id,System.Title,System.State&api-version=7.1" -Headers $headers; $items.value | Select-Object @{Name='Id';Expression={$_.fields.'System.Id'}}, @{Name='State';Expression={$_.fields.'System.State'}}, @{Name='Title';Expression={$_.fields.'System.Title'}} | Format-Table -AutoSize | Out-String
+
+  Id State Title
+  -- ----- -----
+3206 New   [APIM-THREAD-WI-1] APIM policy injects and normalizes thread identit…
+3211 New   [FINOPS-THREAD-WI-1] normalized_costs captures thread, lane, and run…
+3218 New   [DASH-WI-3] Thread graph board — lanes, dependencies, and critical p…
+3222 New   Thread runtime records — thread runs, dependency state, heartbeats
+3230 New   [FOUNDRY-WI-3] Thread planner skill pack — dependency resolution, re…
+3234 New   [FACES-WI-D] Thread Board page — visualize lanes, dependencies, and …
+3238 New   [WI-8] Thread projection endpoints — /v1/threads and /v1/threads/{id}
+3242 New   [CLI-WI-7] eva thread list/show — inspect thread graph, lane state, …
+]633;D;0]633;A]633;P;Cwd=C:\x5ceva-foundryPS C:\eva-foundry> ]633;B
+**********************
+PowerShell transcript end
+End time: 20260320105641
+**********************

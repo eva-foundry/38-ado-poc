@@ -47,6 +47,14 @@
       "description": "Self-service work item creation from repo docs. Developer drops README/PLAN/ACCEPTANCE into docs/ADO/idea/. Skill 07 reads the files, generates ado-artifacts.json, GitHub Action imports to ADO. PR bridge (ado-pr-bridge.yml) keeps WI state in sync with PR lifecycle. ADO webhook bridge Azure Function propagates ADO events back to GitHub. Three-system model fully wired.",
       "tags": "ado-command-center;ado-idea-intake",
       "parent": "epic"
+    },
+    {
+      "id_hint": "ado-thread-control-plane",
+      "type": "Feature",
+      "title": "Dependency-Aware Thread Dispatch",
+      "description": "Elevate the command center from work-item dispatch to dependency-aware thread orchestration. Builds dispatch manifests, resolves ready queues, applies concurrency groups, and opens governed activation gates for cloud agents.",
+      "tags": "ado-command-center;ado-thread-control-plane",
+      "parent": "epic"
     }
   ],
 
@@ -116,6 +124,39 @@
       "state": "New",
       "parent": "ado-idea-intake",
       "evidence": { "test_count": null, "coverage_pct": null, "notes": "Files created 2026-02-21. Needs: GITHUB_TOKEN secret, ADO_PAT secret, Azure Function deployment, ADO webhook registration." }
+    },
+    {
+      "id_hint": "ado-wi-6",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-6] Dispatch manifest synthesis — convert backlog and dependencies into executable thread packets",
+      "acceptance_criteria": "38-ado-poc produces a dependency-aware dispatch manifest per sprint packet. Manifest identifies thread ids, parent-child relationships, blockers, lane assignments, and activation prerequisites for each executable thread.",
+      "tags": "ado-command-center;ado-thread-control-plane;ado-wi-6",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "ado-thread-control-plane",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Moves 38 from work-item dispatch to thread-graph dispatch." }
+    },
+    {
+      "id_hint": "ado-wi-7",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-7] Ready queue and concurrency groups — run dependent and independent lanes systematically",
+      "acceptance_criteria": "Command Center computes ready queue, blocked queue, and concurrency groups from the thread graph. Independent lanes can run in parallel while dependent lanes remain gated until prerequisites pass.",
+      "tags": "ado-command-center;ado-thread-control-plane;ado-wi-7",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "ado-thread-control-plane",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Core scheduling behavior for the control plane." }
+    },
+    {
+      "id_hint": "ado-wi-8",
+      "type": "Product Backlog Item",
+      "title": "[ADO-WI-8] Activation gates and handoff orchestration — open, pause, retry, and hand off thread execution",
+      "acceptance_criteria": "38-ado-poc supports governed activation gates, human approval holds, retry routing, and handoff targets for each thread packet. Gate decisions are exported to 40 and 19 surfaces.",
+      "tags": "ado-command-center;ado-thread-control-plane;ado-wi-8",
+      "iteration_path": "eva-poc\\Sprint-Backlog",
+      "state": "New",
+      "parent": "ado-thread-control-plane",
+      "evidence": { "test_count": null, "coverage_pct": null, "notes": "Required for multi-thread execution under governance." }
     }
   ],
 

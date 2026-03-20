@@ -1,0 +1,98 @@
+**********************
+PowerShell transcript start
+Start time: 20260320101914
+Username: MSILAPTOP\marco
+RunAs User: MSILAPTOP\marco
+Configuration Name: 
+Machine: MSILAPTOP (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\marco\AppData\Local\Programs\Microsoft VS Code\ce099c1ed2\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 33660
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Log: C:\eva-foundry\38-ado-poc\scripts\logs\20260320-1019-ado-import-38-ado-poc-dryrun.log
+
+=== ADO Import: ADO Command Center ===
+Project maturity : active
+GitHub repo      : eva-foundry/38-ado-poc
+Dry run          : True
+
+Ensuring sprints...
+  Sprint: Sprint-6
+  [DRY-RUN] Would ensure sprint: Sprint-6
+  Sprint: Sprint-Backlog
+  [DRY-RUN] Would ensure sprint: Sprint-Backlog
+  [DRY-RUN] Would find-or-create Epic: ADO Command Center
+Feature: creating 'ADO Infrastructure & Scripts'
+  [DRY-RUN] Would create Feature : ADO Infrastructure & Scripts
+  -> Feature id=-1
+Feature: creating 'GitHub-ADO Async Bridge'
+  [DRY-RUN] Would create Feature : GitHub-ADO Async Bridge
+  -> Feature id=-1
+Feature: creating 'Project Onboarding Workflow'
+  [DRY-RUN] Would create Feature : Project Onboarding Workflow
+  -> Feature id=-1
+Feature: creating 'ADO Idea Intake Pipeline'
+  [DRY-RUN] Would create Feature : ADO Idea Intake Pipeline
+  -> Feature id=-1
+Feature: creating 'Dependency-Aware Thread Dispatch'
+  [DRY-RUN] Would create Feature : Dependency-Aware Thread Dispatch
+  -> Feature id=-1
+PBI: creating '[ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-0] ADO project eva-poc scaffolded — Epic, Features, Sprints, Scripts
+  -> PBI id=-1
+PBI: creating '[ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-1] GitHub org eva-foundry connected to ADO eva-poc via GitHub App
+  -> PBI id=-1
+PBI: creating '[ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-2] All 18 eva-foundation projects onboarded to ADO — ado-artifacts.json + import complete
+  -> PBI id=-1
+PBI: creating '[ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-3] GitHub-ADO async bridge — sprint-execute.yml, watchdog-poll.yml, morning-summary.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-4] Idea intake pipeline — skill 07, templates, ado-generate-artifacts.ps1, ado-idea-intake.yml
+  -> PBI id=-1
+PBI: creating '[ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-5] Three-system wiring — ado-pr-bridge.yml + ado-webhook-bridge Azure Function
+  -> PBI id=-1
+PBI: creating '[ADO-WI-6] Dispatch manifest synthesis — convert backlog and dependencies into executable thread packets'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-6] Dispatch manifest synthesis — convert backlog and dependencies into executable thread packets
+  -> PBI id=-1
+PBI: creating '[ADO-WI-7] Ready queue and concurrency groups — run dependent and independent lanes systematically'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-7] Ready queue and concurrency groups — run dependent and independent lanes systematically
+  -> PBI id=-1
+PBI: creating '[ADO-WI-8] Activation gates and handoff orchestration — open, pause, retry, and hand off thread execution'
+  [DRY-RUN] Would create Product Backlog Item : [ADO-WI-8] Activation gates and handoff orchestration — open, pause, retry, and hand off thread execution
+  -> PBI id=-1
+
+=== Import Summary: ADO Command Center ===
+Epic id  : -1
+Features : 5
+PBIs     : 9
+Board    : https://dev.azure.com/marcopresta/eva-poc/_workitems
+
+
+Tag      Id State Url
+---      -- ----- ---
+ado-wi-0 -1 Done  (dry-run)
+ado-wi-1 -1 Done  (dry-run)
+ado-wi-2 -1 New   (dry-run)
+ado-wi-3 -1 New   (dry-run)
+ado-wi-4 -1 Done  (dry-run)
+ado-wi-5 -1 New   (dry-run)
+ado-wi-6 -1 New   (dry-run)
+ado-wi-7 -1 New   (dry-run)
+ado-wi-8 -1 New   (dry-run)
+
+**********************
+PowerShell transcript end
+End time: 20260320101914
+**********************
